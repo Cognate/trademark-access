@@ -1,0 +1,5 @@
+--exit
+--timeout 50000
+--require test/mocha.js
+--reporter spec
+test/**/*.test.js

@@ -1,0 +1,46 @@
+{
+  "name": "trademark-access",
+  "version": "1.0.0",
+  "description": "access Cognate trademark data on the Ethereum network",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint --ext .js .",
+    "lint:fix": "npm run lint -- --fix",
+    "test": "npm run lint && LOG_LEVEL=silent nyc mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cognate/trademark-access.git"
+  },
+  "keywords": [
+    "typescript",
+    "trademarks",
+    "ethereum",
+    "cognate"
+  ],
+  "author": "mtrubs",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Cognate/trademark-access/issues"
+  },
+  "homepage": "https://github.com/Cognate/trademark-access#readme",
+  "dependencies": {
+    "bluebird": "^3.5.5",
+    "cog-asset": "file:cog-asset-0.4.2.tgz",
+    "truffle-contract": "~3.0.8",
+    "web3": "~0.20.7",
+    "web3-provider-engine": "~13.6.6"
+  },
+  "devDependencies": {
+    "@types/chai": "~4.2.0",
+    "@types/mocha": "~5.2.6",
+    "@types/node": "~12.7.2",
+    "chai": "~4.2.0",
+    "eslint": "~6.2.2",
+    "eslint-config-prettier": "~6.1.0",
+    "eslint-plugin-prettier": "~3.1.0",
+    "mocha": "~6.2.0",
+    "nyc": "~14.1.1",
+    "prettier": "~1.18.2"
+  }
+}
