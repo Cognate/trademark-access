@@ -29,77 +29,162 @@ engine.start();
 
 log(INFO, 'loading contracts...');
 const Contracts = {};
+Contracts.v4 = loadContracts('v4', web3);
 Contracts.v3 = loadContracts('v3', web3);
 Contracts.v2 = loadContracts('v2', web3);
+log(INFO, 'completed loading contracts');
 
 function loadContracts(version, web3) {
   const results = {};
-  const files = fs.readdirSync(`node_modules/cog-asset/builds-versioned/${version}/contracts`);
+  const path = version === 'v4' ? 'cog-asset/build/contracts' : `cog-asset/builds-versioned/${version}/contracts`;
+  const files = fs.readdirSync(`node_modules/${path}`);
   for (const file of files) {
     const name = file.split('.')[0];
-    const path = `cog-asset/builds-versioned/${version}/contracts/${file}`;
-    const Contract = contract(require(path));
+    const filePath = `${path}/${file}`;
+    const Contract = contract(require(filePath));
     Contract.setProvider(web3.currentProvider);
-    log(DEBUG, ` - loaded: ${path}`);
+    log(DEBUG, ` - loaded: ${filePath}`);
     results[name] = Contract;
   }
   return results;
 }
 
-const V4_TRADEMARK_CODE =
-  '0x606060405236156100725763ffffffff60e060020a6000350416632f64d386811461007757806341c0e1b5146101045780634c8fe52614610';
-const V3_TRADEMARK_CODE =
-  '0x6060604052600436106100a4576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680631';
+// TODO: poor mans byte map
+const ContractMap = {
+  '0x606060405236156100725763ffffffff60e060020a6000350416632f64d386811461007757806341c0e1b5146101045780634c8fe526146101': {
+    context: 'v2',
+    contract: Contracts.v2.Trademark,
+    handler: processTrademark,
+  },
+  '0x6060604052600436106100a4576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806317': {
+    context: 'v3',
+    contract: Contracts.v3.Trademark,
+    handler: processTrademark,
+  },
+  '0x6080604052600436106100985763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166317a541': {
+    context: 'v4',
+    contract: Contracts.v4.WordMarkWithInitialProof,
+    handler: processTrademark,
+  },
+  '0x6060604052600436106100af576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806309': {
+    context: 'v3',
+    contract: Contracts.v3.Timeline,
+    handler: processTimeline,
+  },
+  '0x6080604052600436106100b95763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416630900f0': {
+    context: 'v4',
+    contract: Contracts.v4.Timeline,
+    handler: processTimeline,
+  },
+  '0x6060604052600436106100af576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806303': {
+    context: 'v3',
+    contract: Contracts.v3.AreaOfUse,
+    handler: processAreaOfUse,
+  },
+  '0x6060604052600436106100af576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806343': {
+    context: 'v3',
+    contract: Contracts.v3.Classification,
+    handler: processClassification,
+  },
+  '0x6060604052600436106100a4576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806309': {
+    context: 'v3',
+    contract: Contracts.v3.ProofDocument,
+    handler: processProofOfUse,
+  },
+  '0x6060604052600436106100a4576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806345': {
+    context: 'v3',
+    contract: Contracts.v3.Assignment,
+    handler: processAssignment,
+  },
+  '0x6080604052600436106100b95763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166303c108': {
+    context: 'v4',
+    contract: Contracts.v4.AreaOfUse,
+    handler: processAreaOfUse,
+  },
+  '0x6080604052600436106100b95763ffffffff7c0100000000000000000000000000000000000000000000000000000000600035041663435d53': {
+    context: 'v4',
+    contract: Contracts.v4.Classification,
+    handler: processClassification,
+  },
+  '0x6080604052600436106100ae5763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166309bd5a': {
+    context: 'v4',
+    contract: Contracts.v4.ProofDocument,
+    handler: processProofOfUse,
+  },
+};
 
-const V4_TRADEMARK = 'v4';
-const V3_TRADEMARK = 'v3';
-
-async function getTrademark(address) {
-  const code = await web3.eth.getCodeAsync(address);
-  let trademark;
-  if (code.startsWith(V4_TRADEMARK_CODE)) {
-    // TODO: v4
-    trademark = await Contracts.v3.Trademark.at(address);
-    trademark.type = V4_TRADEMARK;
-  } else if (code.startsWith(V3_TRADEMARK_CODE)) {
-    trademark = await Contracts.v3.Trademark.at(address);
-    trademark.type = V3_TRADEMARK;
-  } else {
+async function process(address) {
+  const code = (await web3.eth.getCodeAsync(address)).substring(0, 116);
+  const lookup = ContractMap[code];
+  if (!lookup) {
+    console.log(code);
     throw new Error('unidentifiable byte code for trademark');
   }
-  const timestamp = await trademark.timestamp();
-  const design = await trademark.design();
-  const word = await trademark.word();
-  // console.log(await trademark.initialProof()); // TODO: v4
-  // console.log(await trademark.initialProofLocation()); // TODO: v4
+  return lookup.handler(await lookup.contract.at(address), address, lookup.context);
+}
 
+async function processTrademark(trademark, address, context) {
+  log(DEBUG, `processing Trademark ${context}`);
   const result = {};
   result.address = address;
-  if (design !== '0x0000000000000000000000000000000000000000000000000000000000000000') {
-    result.design = design;
-    result.designLocation = 'TODO'; // TODO: await trademark.designLocation();
-  }
-  result.timeline = await getTimeline(await trademark.timeline());
   // TODO: Better way to check this?
+  const timestamp = await trademark.timestamp();
   if (timestamp.greaterThan(0)) {
     result.timestamp = timestamp.toNumber();
   }
-  if (word !== '') {
-    result.word = word;
+  if (trademark.design) {
+    const design = await trademark.design();
+    if (design !== '0x0000000000000000000000000000000000000000000000000000000000000000') {
+      result.design = design;
+      result.designLocation = 'TODO'; // TODO: await trademark.designLocation();
+    }
   }
-  return result;
+  if (trademark.word) {
+    const word = await trademark.word();
+    if (word !== '') {
+      result.word = word;
+    }
+  }
+  if (trademark.timeline) {
+    const timeline = await trademark.timeline();
+    if (timeline !== '0x') {
+      result.timeline = await process(timeline);
+    }
+  } else {
+    result.timeline = {
+      address: address,
+      documents: [],
+    };
+  }
+  if (trademark.initialProof) {
+    const proof = {
+      address: address,
+      hash: await trademark.initialProof(),
+      location: await trademark.initialProofLocation(),
+      type: 'ProofOfUse',
+    };
+    if (timestamp.greaterThan(0)) {
+      proof.timestamp = timestamp.toNumber();
+    }
+    // push to beginning of the array
+    result.timeline.documents.unshift(sort(proof));
+  }
+  if (result.timeline.documents.length === 0) {
+    delete result.timeline;
+  }
+  return sort(result);
 }
 
-async function getTimeline(address) {
-  if (address === '0x') {
-    return undefined;
-  }
-  const timeline = await Contracts.v3.Timeline.at(address);
+async function processTimeline(timeline, address, context) {
+  log(DEBUG, `processing Timeline ${context}`);
   const documents = [];
   // loop over all the timeline documents
   let next = await timeline.next();
   while (next) {
-    let document = await getTimelineDocument(next);
+    if (next === '0x0000000000000000000000000000000000000000') {
+      break;
+    }
+    let document = await process(next);
     documents.push(document);
     next = document.next;
     delete document.next;
@@ -108,90 +193,115 @@ async function getTimeline(address) {
   const result = {};
   result.address = address;
   result.documents = documents;
-  return result;
+  return sort(result);
 }
 
-// poor mans byte code mapping (V3 and V4)
-const AREA_OF_USE_CODE =
-  '0x6060604052600436106100af576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680630';
-const ASSIGNMENT_CODE =
-  '0x6060604052600436106100a4576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680634';
-const CLASSIFICATION_CODE =
-  '0x6060604052600436106100af576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680634';
-const PROOF_OF_USE_CODE =
-  '0x6060604052600436106100a4576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680630';
-
-const AREA_OF_USE = 'AreaOfUse';
-const ASSIGNMENT = 'Assignment';
-const CLASSIFICATION = 'Classification';
-const PROOF_OF_USE = 'ProofOfUse';
-
-async function getTimelineDocument(address) {
-  const code = await web3.eth.getCodeAsync(address);
-  let timelineDocument;
-  if (code.startsWith(ASSIGNMENT_CODE)) {
-    timelineDocument = await Contracts.v3.Assignment.at(address);
-    timelineDocument.type = ASSIGNMENT;
-  } else if (code.startsWith(AREA_OF_USE_CODE)) {
-    timelineDocument = await Contracts.v3.AreaOfUse.at(address);
-    timelineDocument.type = AREA_OF_USE;
-  } else if (code.startsWith(CLASSIFICATION_CODE)) {
-    timelineDocument = await Contracts.v3.Classification.at(address);
-    timelineDocument.type = CLASSIFICATION;
-  } else if (code.startsWith(PROOF_OF_USE_CODE)) {
-    timelineDocument = await Contracts.v3.ProofDocument.at(address);
-    timelineDocument.type = PROOF_OF_USE;
-  } else {
-    throw new Error('unidentifiable byte code for timeline document');
-  }
-
-  const timestamp = await timelineDocument.timestamp();
-  const next = await timelineDocument.next();
+async function processAreaOfUse(areaOfUse, address, context) {
+  log(DEBUG, `processing Area of Use ${context}`);
+  const timestamp = await areaOfUse.timestamp();
+  const next = await areaOfUse.next();
 
   const result = {};
   result.address = address;
-  if (timelineDocument.type === CLASSIFICATION) {
-    result.classOfGoods = await timelineDocument.classOfGoods();
-  }
-  if (timelineDocument.type === ASSIGNMENT) {
-    result.companyName = await timelineDocument.companyName();
-  }
-  if (timelineDocument.type === AREA_OF_USE) {
-    result.countries = await timelineDocument.countries();
-  }
-  if (timelineDocument.type === CLASSIFICATION) {
-    result.details = await timelineDocument.details();
-  }
-  if (timelineDocument.type === ASSIGNMENT) {
-    result.firstName = await timelineDocument.firstName();
-  }
-  if (timelineDocument.type === PROOF_OF_USE) {
-    result.hash = await timelineDocument.hash();
-  }
-  if (timelineDocument.type === ASSIGNMENT) {
-    result.lastName = await timelineDocument.lastName();
-  }
-  if (timelineDocument.type === PROOF_OF_USE) {
-    result.location = await timelineDocument.location();
-  }
+  result.countries = await areaOfUse.countries();
   if (next !== '0x0000000000000000000000000000000000000000') {
     result.next = next;
   }
-  if (timelineDocument.type === CLASSIFICATION || timelineDocument.type === AREA_OF_USE) {
-    const proofs = await timelineDocument.proofs();
-    if (proofs.length) {
-      result.proofs = proofs;
-    }
+  const proofs = await areaOfUse.proofs();
+  if (proofs.length) {
+    result.proofs = proofs;
   }
-  if (timelineDocument.type === AREA_OF_USE) {
-    result.regions = await timelineDocument.regions();
+  const regions = await areaOfUse.regions();
+  if (regions !== '') {
+    result.regions = regions;
   }
   // TODO: Better way to check this?
   if (timestamp.greaterThan(0)) {
     result.timestamp = timestamp.toNumber();
   }
-  result.type = timelineDocument.type;
-  return result;
+  result.type = 'AreaOfUse';
+  return sort(result);
+}
+
+async function processClassification(classification, address, context) {
+  log(DEBUG, `processing Classification ${context}`);
+  const timestamp = await classification.timestamp();
+  const next = await classification.next();
+
+  const result = {};
+  result.address = address;
+  result.classOfGoods = await classification.classOfGoods();
+  result.details = await classification.details();
+  if (next !== '0x0000000000000000000000000000000000000000') {
+    result.next = next;
+  }
+  const proofs = await classification.proofs();
+  if (proofs.length) {
+    result.proofs = proofs;
+  }
+  // TODO: Better way to check this?
+  if (timestamp.greaterThan(0)) {
+    result.timestamp = timestamp.toNumber();
+  }
+  result.type = 'Classification';
+  return sort(result);
+}
+
+async function processProofOfUse(proofOfUse, address, context) {
+  log(DEBUG, `processing Proof of Use ${context}`);
+  const timestamp = await proofOfUse.timestamp();
+  const next = await proofOfUse.next();
+
+  const result = {};
+  result.address = address;
+  result.hash = await proofOfUse.hash();
+  result.location = await proofOfUse.location();
+  if (next !== '0x0000000000000000000000000000000000000000') {
+    result.next = next;
+  }
+  // TODO: Better way to check this?
+  if (timestamp.greaterThan(0)) {
+    result.timestamp = timestamp.toNumber();
+  }
+  result.type = 'ProofOfUse';
+  return sort(result);
+}
+
+async function processAssignment(assignment, address, context) {
+  log(DEBUG, `processing Assignment ${context}`);
+  const timestamp = await assignment.timestamp();
+
+  const result = {};
+  result.address = address;
+  result.companyName = await assignment.companyName();
+  result.firstName = await assignment.firstName();
+  result.lastName = await assignment.lastName();
+
+  const next = await assignment.next();
+  if (next !== '0x0000000000000000000000000000000000000000') {
+    result.next = next;
+  }
+  // TODO: Better way to check this?
+  if (timestamp.greaterThan(0)) {
+    result.timestamp = timestamp.toNumber();
+  }
+  result.type = 'Assignment';
+  return sort(result);
+}
+
+async function getTrademark(address) {
+  log(INFO, `getting trademark at: ${address}`);
+  return process(address);
+}
+
+function sort(unordered) {
+  const ordered = {};
+  Object.keys(unordered)
+    .sort()
+    .forEach(key => {
+      ordered[key] = unordered[key];
+    });
+  return ordered;
 }
 
 module.exports.getTrademark = getTrademark;
