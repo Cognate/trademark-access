@@ -10,8 +10,8 @@ const INFO = 1;
 // const WARN = 2;
 // const ERROR = 3;
 
-const ethereumUrl = 'https://mainnet.infura.io/uLI2u8INr7rEARc0acDF';
-const LEVEL = DEBUG;
+const ethereumUrl = 'https://mainnet.infura.io/v3/6c62a9b1a3b640d587a70b105cbc3be9';
+const LEVEL = INFO;
 
 function log(level, text) {
   if (level >= LEVEL) {
@@ -308,9 +308,6 @@ async function processClassification(classification, address, context) {
 }
 
 async function processProofOfUse(proofOfUse, address, context) {
-  if (true) {
-    return {};
-  }
   log(DEBUG, ` - processing Proof of Use ${context}`);
   const result = {};
   result.address = address;
