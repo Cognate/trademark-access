@@ -183,18 +183,22 @@ async function processTrademark(trademark, address, context) {
     };
   }
   if (trademark.initialProof) {
-    log(DEBUG, `adding initial proof ${context}`);
-    const proof = {
-      address: address,
-      hash: await trademark.initialProof(),
-      location: await trademark.initialProofLocation(),
-      type: 'ProofOfUse',
-    };
-    if (timestamp.greaterThan(0)) {
-      proof.timestamp = timestamp.toNumber();
+    log(DEBUG, `getting initial proof ${context}`);
+    const initialProof = await trademark.initialProof();
+    if (initialProof !== '0x') {
+      log(DEBUG, `adding initial proof ${context}`);
+      const proof = {
+        address: address,
+        hash: await trademark.initialProof(),
+        location: await trademark.initialProofLocation(),
+        type: 'ProofOfUse',
+      };
+      if (timestamp.greaterThan(0)) {
+        proof.timestamp = timestamp.toNumber();
+      }
+      // push to beginning of the array
+      result.timeline.documents.unshift(sort(proof));
     }
-    // push to beginning of the array
-    result.timeline.documents.unshift(sort(proof));
   }
   if (result.timeline.documents.length === 0) {
     log(DEBUG, `deleting empty timeline ${context}`);

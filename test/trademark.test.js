@@ -68,7 +68,7 @@ describe('Pulling Trademarks from Ethereum', () => {
       });
     });
 
-    it.only('Word', async () => {
+    it('Word', async () => {
       // listing id 1023562
       await assertTrademark({
         address: '0xf11fc8d56cc93577b215c6242198bc5583abb705',
@@ -152,6 +152,42 @@ describe('Pulling Trademarks from Ethereum', () => {
         },
         timestamp: 1535302654,
         word: 'CU4 Love',
+      });
+    });
+
+    it('Word and Design 2 (initial)', async () => {
+      // listing id 1023468
+      await assertTrademark({
+        address: '0xbe2779c097ce2c1192d50a6de7a01b31e6990338',
+        timeline: {
+          address: '0x2eceb99187504e199330758e8cb517a14752dcb1',
+          documents: [
+            {
+              address: '0x5092ad92358d7e849cc6835adda29290a5a8e2b8',
+              countries: 'AT,AU,BE,CA,CH,CN,CV,CZ,DE,DK,ES,FR,GB,IE,IT,JP,MC,MX,NL,NZ,PT,RU,SM,US,VA',
+              regions:
+                'CT,MA,ME,NH,RI,VT,NJ,NY,DC,DE,MD,PA,VA,WV,AL,FL,GA,KY,MS,NC,SC,TN,IL,IN,MI,MN,OH,WI,AR,LA,NM,OK,TX,IA,KS,MO,NE,CO,MT,ND,SD,UT,WY,AZ,CA,HI,NV,AK,ID,OR,WA,AS,FM,GU,MH,MP,PR,PW,VI',
+              timestamp: 1529596170,
+              type: 'AreaOfUse',
+            },
+            {
+              address: '0xae87de21b6c9194a3021b12be5d772e9599c46c2',
+              classOfGoods: '31',
+              details: 'Dried flowers',
+              timestamp: 1529596883,
+              type: 'Classification',
+            },
+            {
+              address: '0x2aa53637f8455a8435f336f8f3ab11d8f4fcb333',
+              hash: '0x9ba2cf7c95c37e2bb2670f7f8b213775379bd089df4ba1919164b25f14a6df30',
+              location: 'https://s3.amazonaws.com/cog-usage-documents/L1023468/P4162',
+              timestamp: 1529597251,
+              type: 'ProofOfUse',
+            },
+          ],
+        },
+        timestamp: 1529595157,
+        word: 'Lush Tree',
       });
     });
   });
@@ -247,7 +283,63 @@ describe('Pulling Trademarks from Ethereum', () => {
       });
     });
 
-    it('Word and Design');
+    it('Word and Design', async () => {
+      // listing id 1021552
+      await assertTrademark({
+        address: '0xa73a94d6d2e4de40c5a89df585385b8ae2cdf95c',
+        timeline: {
+          address: '0xb563a1918a94e0acf38dbf099bb5f24a7d722690',
+          documents: [
+            {
+              address: '0xc5584d63625d2ae7d1be7061f4170a57f3d786bd',
+              companyName: 'Lightworkers of the Sphere, LLC',
+              firstName: 'Martin',
+              lastName: 'Alberti',
+              timestamp: 1523364495,
+              type: 'Assignment',
+            },
+            {
+              address: '0x6cfb4711dc0f0247bab90f1241c6c7df5cd63471',
+              countries: 'CA,GB,US',
+              regions:
+                'CT,MA,ME,NH,RI,VT,NJ,NY,DC,DE,MD,PA,VA,WV,AL,FL,GA,KY,MS,NC,SC,TN,IL,IN,MI,MN,OH,WI,AR,LA,NM,OK,TX,IA,KS,MO,NE,CO,MT,ND,SD,UT,WY,AZ,CA,HI,NV,AK,ID,OR,WA,AS,FM,GU,MH,MP,PR,PW,VI',
+              timestamp: 1523364835,
+              type: 'AreaOfUse',
+            },
+            {
+              address: '0x427b136a0071cf877c0d31e357fd6479b822ed56',
+              classOfGoods: '42',
+              details: `Providing online non-downloadable software for social networking and interacting in virtual reality in the field(s) of self-help, personal empowerment, behavioral and mental health, addiction recovery, and personal transformation through multi-step wellness programs|Software as a service (SaaS) services featuring software enabling and providing a virtual reality experience for personal lifestyle performance assessments by means of the users' inputted preferences and social network data|Software as a service (SaaS) services featuring voice-enabled software applications in the field(s) of self-help, personal empowerment, behavioral and mental health, addiction recovery, and personal transformation through multi-step wellness programs`,
+              timestamp: 1523365494,
+              type: 'Classification',
+            },
+            {
+              address: '0x533e8332346db7b808f679cf76a75b53733d5737',
+              classOfGoods: '45',
+              details: `Conducting on-line personal lifestyle performance assessments based on principles of emotional happiness by means of the users' inputted preferences and social network|Providing a website featuring information regarding self-improvement|Providing online information in the field(s) of self-help, personal empowerment, behavioral and mental health, addiction recovery, and personal transformation through multi-step wellness programs|Providing online social networking services in the field(s) of self-improvement through multi-step wellness programs`,
+              timestamp: 1523366987,
+              type: 'Classification',
+            },
+            {
+              address: '0xe17e034f214e402231fb1b3b23efb9b16c1a5bcc',
+              hash: '0xe540a6320b6b4649f9975c538d521d08654e8c061c9719c248b22ef06b25f2cf',
+              location: 'https://s3.amazonaws.com/cog-usage-documents/2456/2454',
+              timestamp: 1523367516,
+              type: 'ProofOfUse',
+            },
+            {
+              address: '0x5bf955d2d0bc45f8343ca4efa2632cc89d1fb050',
+              hash: '0x54fd476850714a360166d6caa0ca7b6dee7a56e4906981726c89fc31c9663aeb',
+              location: 'https://s3.amazonaws.com/cog-usage-documents/L1021552/P4133',
+              timestamp: 1528140660,
+              type: 'ProofOfUse',
+            },
+          ],
+        },
+        timestamp: 1523364095,
+        word: 'FORGIVE',
+      });
+    });
   });
 
   describe('V2 Contracts', () => {
