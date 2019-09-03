@@ -237,7 +237,7 @@ async function processAreaOfUse(areaOfUse, address, context) {
   const countries = await areaOfUse.countries();
   if (countries !== '') {
     log(DEBUG, `   - adding countries ${context}`);
-    result.countries = countries.split(',');
+    result.countries = countries.split(',').sort();
   }
   log(DEBUG, `   - getting next ${context}`);
   const next = await areaOfUse.next();
@@ -255,7 +255,7 @@ async function processAreaOfUse(areaOfUse, address, context) {
   const regions = await areaOfUse.regions();
   if (regions !== '') {
     log(DEBUG, `   - adding regions ${context}`);
-    result.regions = regions.split(',');
+    result.regions = regions.split(',').sort();
   }
   // TODO: Better way to check this?
   log(DEBUG, `   - getting timestamp ${context}`);
@@ -282,7 +282,7 @@ async function processClassification(classification, address, context) {
   const details = await classification.details();
   if (details) {
     log(DEBUG, `   - adding details ${context}`);
-    result.details = details.split('|');
+    result.details = details.split('|').sort();
   }
   log(DEBUG, `   - getting next ${context}`);
   const next = await classification.next();
@@ -308,6 +308,9 @@ async function processClassification(classification, address, context) {
 }
 
 async function processProofOfUse(proofOfUse, address, context) {
+  if (true) {
+    return {};
+  }
   log(DEBUG, ` - processing Proof of Use ${context}`);
   const result = {};
   result.address = address;
