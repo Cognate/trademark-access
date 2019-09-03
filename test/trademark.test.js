@@ -47,7 +47,7 @@ describe('Pulling Trademarks from Ethereum', () => {
       });
     });
 
-    it.only('Word2', async () => {
+    it('Word2', async () => {
       // listing id 1024725
       await assertTrademark({
         address: '0x68b122d62d3d2e4dbbcb7c49e805d4b2dd4df8cd',

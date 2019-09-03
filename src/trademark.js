@@ -128,35 +128,46 @@ async function processTrademark(trademark, address, context) {
   const result = {};
   result.address = address;
   // TODO: Better way to check this?
+  log(DEBUG, ` - getting timestamp ${context}`);
   const timestamp = await trademark.timestamp();
   if (timestamp.greaterThan(0)) {
+    log(DEBUG, ` - adding timestamp ${context}`);
     result.timestamp = timestamp.toNumber();
   }
   if (trademark.design) {
+    log(DEBUG, ` - getting design ${context}`);
     const design = await trademark.design();
     if (design !== '0x0000000000000000000000000000000000000000000000000000000000000000') {
+      log(DEBUG, ` - adding design ${context}`);
       result.design = design;
+      log(DEBUG, ` - adding design location ${context}`);
       result.designLocation = 'TODO'; // TODO: await trademark.designLocation();
     }
   }
   if (trademark.word) {
+    log(DEBUG, ` - getting word ${context}`);
     const word = await trademark.word();
     if (word !== '') {
+      log(DEBUG, ` - adding word ${context}`);
       result.word = word;
     }
   }
   if (trademark.timeline) {
+    log(DEBUG, ` - getting timeline ${context}`);
     const timeline = await trademark.timeline();
     if (timeline !== '0x') {
+      log(DEBUG, ` - adding timeline ${context}`);
       result.timeline = await process(timeline);
     }
   } else {
+    log(DEBUG, `adding empty timeline ${context}`);
     result.timeline = {
       address: address,
       documents: [],
     };
   }
   if (trademark.initialProof) {
+    log(DEBUG, `adding initial proof ${context}`);
     const proof = {
       address: address,
       hash: await trademark.initialProof(),
@@ -170,6 +181,7 @@ async function processTrademark(trademark, address, context) {
     result.timeline.documents.unshift(sort(proof));
   }
   if (result.timeline.documents.length === 0) {
+    log(DEBUG, `deleting empty timeline ${context}`);
     delete result.timeline;
   }
   return sort(result);
@@ -179,9 +191,11 @@ async function processTimeline(timeline, address, context) {
   log(DEBUG, `processing Timeline ${context}`);
   const documents = [];
   // loop over all the timeline documents
+  log(DEBUG, ` - getting first ${context}`);
   let next = await timeline.next();
   while (next) {
     if (next === '0x0000000000000000000000000000000000000000') {
+      log(DEBUG, ` - documents complete ${context}`);
       break;
     }
     let document = await process(next);
@@ -189,7 +203,6 @@ async function processTimeline(timeline, address, context) {
     next = document.next;
     delete document.next;
   }
-
   const result = {};
   result.address = address;
   result.documents = documents;
@@ -197,26 +210,34 @@ async function processTimeline(timeline, address, context) {
 }
 
 async function processAreaOfUse(areaOfUse, address, context) {
-  log(DEBUG, `processing Area of Use ${context}`);
-  const timestamp = await areaOfUse.timestamp();
-  const next = await areaOfUse.next();
-
+  log(DEBUG, ` - processing Area of Use ${context}`);
   const result = {};
   result.address = address;
+  log(DEBUG, `   - adding countries ${context}`);
   result.countries = await areaOfUse.countries();
+  log(DEBUG, `   - getting next ${context}`);
+  const next = await areaOfUse.next();
   if (next !== '0x0000000000000000000000000000000000000000') {
+    log(DEBUG, `   - adding next ${context}`);
     result.next = next;
   }
+  log(DEBUG, `   - getting proofs ${context}`);
   const proofs = await areaOfUse.proofs();
   if (proofs.length) {
+    log(DEBUG, `   - adding proofs ${context}`);
     result.proofs = proofs;
   }
+  log(DEBUG, `   - getting regions ${context}`);
   const regions = await areaOfUse.regions();
   if (regions !== '') {
+    log(DEBUG, `   - adding regions ${context}`);
     result.regions = regions;
   }
   // TODO: Better way to check this?
+  log(DEBUG, `   - getting timestamp ${context}`);
+  const timestamp = await areaOfUse.timestamp();
   if (timestamp.greaterThan(0)) {
+    log(DEBUG, `   - adding timestamp ${context}`);
     result.timestamp = timestamp.toNumber();
   }
   result.type = 'AreaOfUse';
@@ -224,23 +245,30 @@ async function processAreaOfUse(areaOfUse, address, context) {
 }
 
 async function processClassification(classification, address, context) {
-  log(DEBUG, `processing Classification ${context}`);
-  const timestamp = await classification.timestamp();
-  const next = await classification.next();
-
+  log(DEBUG, ` - processing Classification ${context}`);
   const result = {};
   result.address = address;
+  log(DEBUG, `   - adding class of goods ${context}`);
   result.classOfGoods = await classification.classOfGoods();
+  log(DEBUG, `   - adding details ${context}`);
   result.details = await classification.details();
+  log(DEBUG, `   - getting next ${context}`);
+  const next = await classification.next();
   if (next !== '0x0000000000000000000000000000000000000000') {
+    log(DEBUG, `   - adding next ${context}`);
     result.next = next;
   }
+  log(DEBUG, `   - getting proofs ${context}`);
   const proofs = await classification.proofs();
   if (proofs.length) {
+    log(DEBUG, `   - adding proofs ${context}`);
     result.proofs = proofs;
   }
   // TODO: Better way to check this?
+  log(DEBUG, `   - getting timestamp ${context}`);
+  const timestamp = await classification.timestamp();
   if (timestamp.greaterThan(0)) {
+    log(DEBUG, `   - adding timestamp ${context}`);
     result.timestamp = timestamp.toNumber();
   }
   result.type = 'Classification';
@@ -248,19 +276,24 @@ async function processClassification(classification, address, context) {
 }
 
 async function processProofOfUse(proofOfUse, address, context) {
-  log(DEBUG, `processing Proof of Use ${context}`);
-  const timestamp = await proofOfUse.timestamp();
-  const next = await proofOfUse.next();
-
+  log(DEBUG, ` - processing Proof of Use ${context}`);
   const result = {};
   result.address = address;
+  log(DEBUG, `   - adding hash ${context}`);
   result.hash = await proofOfUse.hash();
+  log(DEBUG, `   - adding location ${context}`);
   result.location = await proofOfUse.location();
+  log(DEBUG, `   - getting next ${context}`);
+  const next = await proofOfUse.next();
   if (next !== '0x0000000000000000000000000000000000000000') {
+    log(DEBUG, `   - adding next ${context}`);
     result.next = next;
   }
   // TODO: Better way to check this?
+  log(DEBUG, `   - getting timestamp ${context}`);
+  const timestamp = await proofOfUse.timestamp();
   if (timestamp.greaterThan(0)) {
+    log(DEBUG, `   - adding timestamp ${context}`);
     result.timestamp = timestamp.toNumber();
   }
   result.type = 'ProofOfUse';
@@ -268,21 +301,26 @@ async function processProofOfUse(proofOfUse, address, context) {
 }
 
 async function processAssignment(assignment, address, context) {
-  log(DEBUG, `processing Assignment ${context}`);
-  const timestamp = await assignment.timestamp();
-
+  log(DEBUG, ` - processing Assignment ${context}`);
   const result = {};
   result.address = address;
+  log(DEBUG, `   - adding company name ${context}`);
   result.companyName = await assignment.companyName();
+  log(DEBUG, `   - adding first name ${context}`);
   result.firstName = await assignment.firstName();
+  log(DEBUG, `   - adding last name ${context}`);
   result.lastName = await assignment.lastName();
-
+  log(DEBUG, `   - getting next ${context}`);
   const next = await assignment.next();
   if (next !== '0x0000000000000000000000000000000000000000') {
+    log(DEBUG, `   - adding next ${context}`);
     result.next = next;
   }
   // TODO: Better way to check this?
+  log(DEBUG, `   - getting timestamp ${context}`);
+  const timestamp = await assignment.timestamp();
   if (timestamp.greaterThan(0)) {
+    log(DEBUG, `   - adding timestamp ${context}`);
     result.timestamp = timestamp.toNumber();
   }
   result.type = 'Assignment';
