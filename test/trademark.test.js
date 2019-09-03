@@ -27,9 +27,11 @@ describe('Pulling Trademarks from Ethereum', () => {
             },
             {
               address: '0xd96e607eabb0d569989e569e6d12efedf23a3b0b',
-              classOfGoods: '35',
-              details:
-                'Advertising services, namely, creating corporate and brand identity for others|Business management consulting with relation to strategy, marketing, production, personnel and retail sale matters',
+              classOfGoods: 35,
+              details: [
+                'Advertising services, namely, creating corporate and brand identity for others',
+                'Business management consulting with relation to strategy, marketing, production, personnel and retail sale matters',
+              ],
               timestamp: 1536602559,
               type: 'Classification',
             },
@@ -85,9 +87,27 @@ describe('Pulling Trademarks from Ethereum', () => {
             },
             {
               address: '0xfd3ce1405634e1df8ad6383959c068c3b1e355a3',
-              classOfGoods: '35',
-              details:
-                'Advertising and marketing|Advertising and marketing consultancy|Advertising, marketing, and promoting the goods and services of others via a proprietary system of cutting edge direct and indirect sales, marketing and branding strategies - specifically utilizing Sales & Marketing Funnels|Business consultation and management regarding marketing activities and launching of new products|Business management consulting with relation to strategy, marketing, sales, operation, product design particularly specializing in the use of analytic and statistic models for the understanding and predicting of consumers, businesses, and market trends and actions|Business marketing consulting services|Business monitoring and consulting services, namely, tracking web sites and applications of others to provide strategy, insight, marketing, sales, operation, product design, particularly specializing in the use of analytic and statistic models for the understanding and predicting of consumers, businesses, and market trends and actions|Business to business direct marketing services|Consultation services, namely, creative and strategic consultation regarding development and production of marketing campaigns for others|Consulting in the field of sales methods, sales management, and sales improvement|Consumer strategy business consulting in the fields of marketing, sales, operation, and product design particularly specializing in the use of analytic models for the understanding and predicting of consumer, business, and retail market trends and actions|Development of marketing strategies and concepts|Direct marketing consulting services|Direct marketing services|Information about sales methods|Marketing advisory services|On-line advertising and marketing services|Promoting, advertising and marketing of the brands, products, services and online websites of individuals, businesses and nonprofit organizations',
+              classOfGoods: 35,
+              details: [
+                'Advertising and marketing',
+                'Advertising and marketing consultancy',
+                'Advertising, marketing, and promoting the goods and services of others via a proprietary system of cutting edge direct and indirect sales, marketing and branding strategies - specifically utilizing Sales & Marketing Funnels',
+                'Business consultation and management regarding marketing activities and launching of new products',
+                'Business management consulting with relation to strategy, marketing, sales, operation, product design particularly specializing in the use of analytic and statistic models for the understanding and predicting of consumers, businesses, and market trends and actions',
+                'Business marketing consulting services',
+                'Business monitoring and consulting services, namely, tracking web sites and applications of others to provide strategy, insight, marketing, sales, operation, product design, particularly specializing in the use of analytic and statistic models for the understanding and predicting of consumers, businesses, and market trends and actions',
+                'Business to business direct marketing services',
+                'Consultation services, namely, creative and strategic consultation regarding development and production of marketing campaigns for others',
+                'Consulting in the field of sales methods, sales management, and sales improvement',
+                'Consumer strategy business consulting in the fields of marketing, sales, operation, and product design particularly specializing in the use of analytic models for the understanding and predicting of consumer, business, and retail market trends and actions',
+                'Development of marketing strategies and concepts',
+                'Direct marketing consulting services',
+                'Direct marketing services',
+                'Information about sales methods',
+                'Marketing advisory services',
+                'On-line advertising and marketing services',
+                'Promoting, advertising and marketing of the brands, products, services and online websites of individuals, businesses and nonprofit organizations',
+              ],
               timestamp: 1534275097,
               type: 'Classification',
             },
@@ -172,8 +192,8 @@ describe('Pulling Trademarks from Ethereum', () => {
             },
             {
               address: '0xae87de21b6c9194a3021b12be5d772e9599c46c2',
-              classOfGoods: '31',
-              details: 'Dried flowers',
+              classOfGoods: 31,
+              details: ['Dried flowers'],
               timestamp: 1529596883,
               type: 'Classification',
             },
@@ -218,9 +238,12 @@ describe('Pulling Trademarks from Ethereum', () => {
             },
             {
               address: '0xb5b14dedb6112478a1f036014c17bff9c88d5fba',
-              classOfGoods: '45',
-              details:
-                'Domain name registrar services|Registration of domain names for identification of users on a global computer network [legal service]|Trademark Monitoring',
+              classOfGoods: 45,
+              details: [
+                'Domain name registrar services',
+                'Registration of domain names for identification of users on a global computer network [legal service]',
+                'Trademark Monitoring',
+              ],
               timestamp: 1523905206,
               type: 'Classification',
             },
@@ -264,9 +287,11 @@ describe('Pulling Trademarks from Ethereum', () => {
             },
             {
               address: '0xa7daef1f0e99d7193bab32c9a5309919e60803b1',
-              classOfGoods: '45',
-              details:
-                'Authentication, issuance and validation of digital certificates|Legal services, namely, trademark maintenance services',
+              classOfGoods: 45,
+              details: [
+                'Authentication, issuance and validation of digital certificates',
+                'Legal services, namely, trademark maintenance services',
+              ],
               timestamp: 1523904877,
               type: 'Classification',
             },
@@ -308,15 +333,15 @@ describe('Pulling Trademarks from Ethereum', () => {
             },
             {
               address: '0x427b136a0071cf877c0d31e357fd6479b822ed56',
-              classOfGoods: '42',
-              details: `Providing online non-downloadable software for social networking and interacting in virtual reality in the field(s) of self-help, personal empowerment, behavioral and mental health, addiction recovery, and personal transformation through multi-step wellness programs|Software as a service (SaaS) services featuring software enabling and providing a virtual reality experience for personal lifestyle performance assessments by means of the users' inputted preferences and social network data|Software as a service (SaaS) services featuring voice-enabled software applications in the field(s) of self-help, personal empowerment, behavioral and mental health, addiction recovery, and personal transformation through multi-step wellness programs`,
+              classOfGoods: 42,
+              details: `Providing online non-downloadable software for social networking and interacting in virtual reality in the field(s) of self-help, personal empowerment, behavioral and mental health, addiction recovery, and personal transformation through multi-step wellness programs','Software as a service (SaaS) services featuring software enabling and providing a virtual reality experience for personal lifestyle performance assessments by means of the users' inputted preferences and social network data','Software as a service (SaaS) services featuring voice-enabled software applications in the field(s) of self-help, personal empowerment, behavioral and mental health, addiction recovery, and personal transformation through multi-step wellness programs`,
               timestamp: 1523365494,
               type: 'Classification',
             },
             {
               address: '0x533e8332346db7b808f679cf76a75b53733d5737',
-              classOfGoods: '45',
-              details: `Conducting on-line personal lifestyle performance assessments based on principles of emotional happiness by means of the users' inputted preferences and social network|Providing a website featuring information regarding self-improvement|Providing online information in the field(s) of self-help, personal empowerment, behavioral and mental health, addiction recovery, and personal transformation through multi-step wellness programs|Providing online social networking services in the field(s) of self-improvement through multi-step wellness programs`,
+              classOfGoods: 45,
+              details: `Conducting on-line personal lifestyle performance assessments based on principles of emotional happiness by means of the users' inputted preferences and social network','Providing a website featuring information regarding self-improvement','Providing online information in the field(s) of self-help, personal empowerment, behavioral and mental health, addiction recovery, and personal transformation through multi-step wellness programs','Providing online social networking services in the field(s) of self-improvement through multi-step wellness programs`,
               timestamp: 1523366987,
               type: 'Classification',
             },

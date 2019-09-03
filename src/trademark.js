@@ -268,10 +268,18 @@ async function processClassification(classification, address, context) {
   log(DEBUG, ` - processing Classification ${context}`);
   const result = {};
   result.address = address;
-  log(DEBUG, `   - adding class of goods ${context}`);
-  result.classOfGoods = await classification.classOfGoods();
-  log(DEBUG, `   - adding details ${context}`);
-  result.details = await classification.details();
+  log(DEBUG, `   - getting class of goods ${context}`);
+  const classOfGoods = await classification.classOfGoods();
+  if (classOfGoods) {
+    log(DEBUG, `   - adding class of goods ${context}`);
+    result.classOfGoods = parseInt(classOfGoods);
+  }
+  log(DEBUG, `   - getting details ${context}`);
+  const details = await classification.details();
+  if (details) {
+    log(DEBUG, `   - adding details ${context}`);
+    result.details = details.split('|');
+  }
   log(DEBUG, `   - getting next ${context}`);
   const next = await classification.next();
   if (next !== '0x0000000000000000000000000000000000000000') {
