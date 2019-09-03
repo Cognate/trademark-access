@@ -233,8 +233,12 @@ async function processAreaOfUse(areaOfUse, address, context) {
   log(DEBUG, ` - processing Area of Use ${context}`);
   const result = {};
   result.address = address;
-  log(DEBUG, `   - adding countries ${context}`);
-  result.countries = await areaOfUse.countries();
+  log(DEBUG, `   - getting countries ${context}`);
+  const countries = await areaOfUse.countries();
+  if (countries !== '') {
+    log(DEBUG, `   - adding countries ${context}`);
+    result.countries = countries.split(',');
+  }
   log(DEBUG, `   - getting next ${context}`);
   const next = await areaOfUse.next();
   if (next !== '0x0000000000000000000000000000000000000000') {
@@ -251,7 +255,7 @@ async function processAreaOfUse(areaOfUse, address, context) {
   const regions = await areaOfUse.regions();
   if (regions !== '') {
     log(DEBUG, `   - adding regions ${context}`);
-    result.regions = regions;
+    result.regions = regions.split(',');
   }
   // TODO: Better way to check this?
   log(DEBUG, `   - getting timestamp ${context}`);
