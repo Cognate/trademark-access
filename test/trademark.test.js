@@ -4,7 +4,7 @@ const Trademark = require('../src/trademark');
 
 describe('Pulling Trademarks from Ethereum', () => {
   describe('V4 Contracts', () => {
-    it('Word', async () => {
+    it('Word (initial)', async () => {
       // listing id 1024571
       // TODO: this doesnt seem right
       await assertTrademark({
@@ -47,7 +47,7 @@ describe('Pulling Trademarks from Ethereum', () => {
       });
     });
 
-    it('Word2', async () => {
+    it('Word 2 (initial)', async () => {
       // listing id 1024725
       await assertTrademark({
         address: '0x68b122d62d3d2e4dbbcb7c49e805d4b2dd4df8cd',
@@ -68,7 +68,63 @@ describe('Pulling Trademarks from Ethereum', () => {
       });
     });
 
-    it('Word (initial)');
+    it.only('Word', async () => {
+      // listing id 1023562
+      await assertTrademark({
+        address: '0xf11fc8d56cc93577b215c6242198bc5583abb705',
+        timeline: {
+          address: '0x3182fd716b08109011dfa0dbb938693f49b7d503',
+          documents: [
+            {
+              address: '0x4fe802fe8d7982049c1002aa32b09f15584f1d9a',
+              countries: 'AU,CA,EPO,EUIPO,FR,GB,IE,MX,NL,NO,NZ,PH,RU,SG,US,ZA',
+              regions:
+                'CT,MA,ME,NH,RI,VT,NJ,NY,DC,DE,MD,PA,VA,WV,AL,FL,GA,KY,MS,NC,SC,TN,IL,IN,MI,MN,OH,WI,AR,LA,NM,OK,TX,IA,KS,MO,NE,CO,MT,ND,SD,UT,WY,AZ,CA,HI,NV,AK,ID,OR,WA,AS,FM,GU,MH,MP,PR,PW,VI',
+              timestamp: 1534274219,
+              type: 'AreaOfUse',
+            },
+            {
+              address: '0xfd3ce1405634e1df8ad6383959c068c3b1e355a3',
+              classOfGoods: '35',
+              details:
+                'Advertising and marketing|Advertising and marketing consultancy|Advertising, marketing, and promoting the goods and services of others via a proprietary system of cutting edge direct and indirect sales, marketing and branding strategies - specifically utilizing Sales & Marketing Funnels|Business consultation and management regarding marketing activities and launching of new products|Business management consulting with relation to strategy, marketing, sales, operation, product design particularly specializing in the use of analytic and statistic models for the understanding and predicting of consumers, businesses, and market trends and actions|Business marketing consulting services|Business monitoring and consulting services, namely, tracking web sites and applications of others to provide strategy, insight, marketing, sales, operation, product design, particularly specializing in the use of analytic and statistic models for the understanding and predicting of consumers, businesses, and market trends and actions|Business to business direct marketing services|Consultation services, namely, creative and strategic consultation regarding development and production of marketing campaigns for others|Consulting in the field of sales methods, sales management, and sales improvement|Consumer strategy business consulting in the fields of marketing, sales, operation, and product design particularly specializing in the use of analytic models for the understanding and predicting of consumer, business, and retail market trends and actions|Development of marketing strategies and concepts|Direct marketing consulting services|Direct marketing services|Information about sales methods|Marketing advisory services|On-line advertising and marketing services|Promoting, advertising and marketing of the brands, products, services and online websites of individuals, businesses and nonprofit organizations',
+              timestamp: 1534275097,
+              type: 'Classification',
+            },
+            {
+              address: '0xcbdd85024fdd3efe8dfafa7ec3d5b248c4ee3b63',
+              hash: '0x60c1fa13fdec2cd3de3932413a7309997bc2f7d5a44cd9d54c37692fb474df19',
+              location: 'https://s3.amazonaws.com/cog-usage-documents/4204/4203',
+              timestamp: 1534275666,
+              type: 'ProofOfUse',
+            },
+            {
+              address: '0x31b942c3d4a7a046cf4e5a17d10ef702ef6c6f8f',
+              hash: '0x8084e737c7ddad256843807ba06545d50a993ed9907c3b7a76301f4532f959d3',
+              location: 'https://s3.amazonaws.com/cog-usage-documents/L1023562/P4204',
+              timestamp: 1534275855,
+              type: 'ProofOfUse',
+            },
+            {
+              address: '0x20bcc1c67b38433f8183227434fa59394a94b6c7',
+              hash: '0x61696fb6c2f1d5b9367fc45e0beebcba4fe1c9e1d689212660f5a9b56cf847c3',
+              location: 'https://s3.amazonaws.com/cog-usage-documents/L1023562/P4205',
+              timestamp: 1534276212,
+              type: 'ProofOfUse',
+            },
+            {
+              address: '0xd602001a9708c7d97286bd0cbdb706f241275828',
+              hash: '0xc75029be47d48ee878cdeb488c532942c62d7fdeaf7df9be8e8688e72f01de3a',
+              location: 'https://s3.amazonaws.com/cog-usage-documents/L1023562/P4206',
+              timestamp: 1534276683,
+              type: 'ProofOfUse',
+            },
+          ],
+        },
+        timestamp: 1534272732,
+        word: 'Frictionless Funnel',
+      });
+    });
 
     it('Design');
 
@@ -76,7 +132,7 @@ describe('Pulling Trademarks from Ethereum', () => {
 
     it('Word and Design');
 
-    it.only('Word and Design (initial)', async () => {
+    it('Word and Design (initial)', async () => {
       // listing id 1023727
       await assertTrademark({
         address: '0x28e89eb6400e09e979320ed712f9e08fb2207cae',

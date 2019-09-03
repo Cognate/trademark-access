@@ -11,7 +11,7 @@ const INFO = 1;
 // const ERROR = 3;
 
 const ethereumUrl = 'https://mainnet.infura.io/uLI2u8INr7rEARc0acDF';
-const LEVEL = INFO;
+const LEVEL = DEBUG;
 
 function log(level, text) {
   if (level >= LEVEL) {
@@ -59,6 +59,11 @@ const ContractMap = {
   '0x6060604052600436106100a4576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806317': {
     context: 'v3',
     contract: Contracts.v3.Trademark,
+    handler: processTrademark,
+  },
+  '0x6080604052600436106100825763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166317a541': {
+    context: 'v4',
+    contract: Contracts.v4.WordMark,
     handler: processTrademark,
   },
   '0x6080604052600436106100985763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166317a541': {
