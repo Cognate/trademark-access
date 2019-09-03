@@ -150,8 +150,10 @@ async function processTrademark(trademark, address, context) {
     if (design !== '0x0000000000000000000000000000000000000000000000000000000000000000') {
       log(DEBUG, ` - adding design ${context}`);
       result.design = design;
-      log(DEBUG, ` - adding design location ${context}`);
-      result.designLocation = 'TODO'; // TODO: await trademark.designLocation();
+      if (trademark.designLocation) {
+        log(DEBUG, ` - adding design location ${context}`);
+        result.designLocation = await trademark.designLocation();
+      }
     }
   }
   if (trademark.word) {

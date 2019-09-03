@@ -6,7 +6,6 @@ describe('Pulling Trademarks from Ethereum', () => {
   describe('V4 Contracts', () => {
     it('Word (initial)', async () => {
       // listing id 1024571
-      // TODO: this doesnt seem right
       await assertTrademark({
         address: '0x032b847a8ced9ccd63c02853ebb4ac6588156eaf',
         timeline: {
@@ -233,7 +232,7 @@ describe('Pulling Trademarks from Ethereum', () => {
       await assertTrademark({
         address: '0x28e89eb6400e09e979320ed712f9e08fb2207cae',
         design: '0x0ceb54a02272b7d30f9b6d005102b7dc2dd7887f9faf273fc6cc15439d9a979b',
-        designLocation: 'TODO',
+        designLocation: 'https://s3.amazonaws.com/cog-design-marks/1023727_design',
         timeline: {
           address: '0x28e89eb6400e09e979320ed712f9e08fb2207cae',
           documents: [
@@ -485,7 +484,7 @@ describe('Pulling Trademarks from Ethereum', () => {
       await assertTrademark({
         address: '0xca6823878b5fc9390c21c652405b000e1daa734f',
         design: '0xf54f3b87eda462770230d060fce9b9f4876cb68fe8cd38d14c00356bcff7d690',
-        designLocation: 'TODO',
+        designLocation: 'https://s3.amazonaws.com/cog-design-marks/1021806_design',
         timeline: {
           address: '0xe0679701c5c4258a4f6374acc7d384fe6b0c9308',
           documents: [
@@ -708,7 +707,6 @@ describe('Pulling Trademarks from Ethereum', () => {
       await assertTrademark({
         address: '0xa2a423a147ef2fe82f4613227f8c576fe635ec9b',
         design: '0xd0470b0caabac1bed10bf1f958d14117f8996a85d4caaa8c3fc363994180b414',
-        designLocation: 'TODO',
         word: 'COGNATE',
       });
     });
