@@ -66,6 +66,11 @@ const ContractMap = {
     contract: Contracts.v4.WordMarkWithInitialProof,
     handler: processTrademark,
   },
+  '0x6080604052600436106100ae5763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166317a541': {
+    context: 'v4',
+    contract: Contracts.v4.WordAndDesignMarkWithInitialProof,
+    handler: processTrademark,
+  },
   '0x6060604052600436106100af576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806309': {
     context: 'v3',
     contract: Contracts.v3.Timeline,
@@ -155,9 +160,15 @@ async function processTrademark(trademark, address, context) {
   if (trademark.timeline) {
     log(DEBUG, ` - getting timeline ${context}`);
     const timeline = await trademark.timeline();
-    if (timeline !== '0x') {
+    if (timeline !== '0x' && timeline !== '0x0000000000000000000000000000000000000000') {
       log(DEBUG, ` - adding timeline ${context}`);
       result.timeline = await process(timeline);
+    } else {
+      log(DEBUG, `adding empty timeline ${context}`);
+      result.timeline = {
+        address: address,
+        documents: [],
+      };
     }
   } else {
     log(DEBUG, `adding empty timeline ${context}`);

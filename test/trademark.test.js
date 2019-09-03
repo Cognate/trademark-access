@@ -76,7 +76,28 @@ describe('Pulling Trademarks from Ethereum', () => {
 
     it('Word and Design');
 
-    it('Word and Design (initial)');
+    it.only('Word and Design (initial)', async () => {
+      // listing id 1023727
+      await assertTrademark({
+        address: '0x28e89eb6400e09e979320ed712f9e08fb2207cae',
+        design: '0x0ceb54a02272b7d30f9b6d005102b7dc2dd7887f9faf273fc6cc15439d9a979b',
+        designLocation: 'TODO',
+        timeline: {
+          address: '0x28e89eb6400e09e979320ed712f9e08fb2207cae',
+          documents: [
+            {
+              address: '0x28e89eb6400e09e979320ed712f9e08fb2207cae',
+              hash: '0xf8cdac9753c950521f812e9ff444f06f23f425e8679cbad6fe8c1cd85d1a20ce',
+              location: 'https://s3.amazonaws.com/cog-usage-documents/L1023727/P4364',
+              timestamp: 1535302654,
+              type: 'ProofOfUse',
+            },
+          ],
+        },
+        timestamp: 1535302654,
+        word: 'CU4 Love',
+      });
+    });
   });
 
   describe('V3 Contracts', () => {
