@@ -13,8 +13,8 @@ describe('Pulling Trademarks from Ethereum', () => {
           documents: [
             {
               address: '0x032b847a8ced9ccd63c02853ebb4ac6588156eaf',
+              deprecatedLocation: 'https://s3.amazonaws.com/cog-usage-documents/5234/5239',
               hash: '0x34684ded799294c0ded938f4ab5f0dce1faa867ed827ba37832c5fc06abf4af5',
-              location: 'https://s3.amazonaws.com/cog-usage-documents/5234/5239',
               timestamp: 1536602333,
               type: 'ProofOfUse',
             },
@@ -36,8 +36,8 @@ describe('Pulling Trademarks from Ethereum', () => {
             },
             {
               address: '0x7b0ea23bcf259c21ed2a7fc2afee50e259f9f488',
+              deprecatedLocation: 'https://s3.amazonaws.com/cog-usage-documents/L1024571/P5382',
               hash: '0xe75749c987abf89b77c413151d5c27416577bb882623887ee663ad152e5dcbcf',
-              location: 'https://s3.amazonaws.com/cog-usage-documents/L1024571/P5382',
               timestamp: 1536602849,
               type: 'ProofOfUse',
             },
@@ -57,8 +57,8 @@ describe('Pulling Trademarks from Ethereum', () => {
           documents: [
             {
               address: '0x68b122d62d3d2e4dbbcb7c49e805d4b2dd4df8cd',
+              deprecatedLocation: 'https://s3.amazonaws.com/cog-usage-documents/L1024725/P5405',
               hash: '0x99362a2d31acbd08d9d51a925384b1af5f13b70e71c7c04cc85a22c3f87d12c9',
-              location: 'https://s3.amazonaws.com/cog-usage-documents/L1024725/P5405',
               timestamp: 1536597754,
               type: 'ProofOfUse',
             },
@@ -188,29 +188,29 @@ describe('Pulling Trademarks from Ethereum', () => {
             },
             {
               address: '0xcbdd85024fdd3efe8dfafa7ec3d5b248c4ee3b63',
+              deprecatedLocation: 'https://s3.amazonaws.com/cog-usage-documents/4204/4203',
               hash: '0x60c1fa13fdec2cd3de3932413a7309997bc2f7d5a44cd9d54c37692fb474df19',
-              location: 'https://s3.amazonaws.com/cog-usage-documents/4204/4203',
               timestamp: 1534275666,
               type: 'ProofOfUse',
             },
             {
               address: '0x31b942c3d4a7a046cf4e5a17d10ef702ef6c6f8f',
+              deprecatedLocation: 'https://s3.amazonaws.com/cog-usage-documents/L1023562/P4204',
               hash: '0x8084e737c7ddad256843807ba06545d50a993ed9907c3b7a76301f4532f959d3',
-              location: 'https://s3.amazonaws.com/cog-usage-documents/L1023562/P4204',
               timestamp: 1534275855,
               type: 'ProofOfUse',
             },
             {
               address: '0x20bcc1c67b38433f8183227434fa59394a94b6c7',
+              deprecatedLocation: 'https://s3.amazonaws.com/cog-usage-documents/L1023562/P4205',
               hash: '0x61696fb6c2f1d5b9367fc45e0beebcba4fe1c9e1d689212660f5a9b56cf847c3',
-              location: 'https://s3.amazonaws.com/cog-usage-documents/L1023562/P4205',
               timestamp: 1534276212,
               type: 'ProofOfUse',
             },
             {
               address: '0xd602001a9708c7d97286bd0cbdb706f241275828',
+              deprecatedLocation: 'https://s3.amazonaws.com/cog-usage-documents/L1023562/P4206',
               hash: '0xc75029be47d48ee878cdeb488c532942c62d7fdeaf7df9be8e8688e72f01de3a',
-              location: 'https://s3.amazonaws.com/cog-usage-documents/L1023562/P4206',
               timestamp: 1534276683,
               type: 'ProofOfUse',
             },
@@ -231,15 +231,17 @@ describe('Pulling Trademarks from Ethereum', () => {
       // listing id 1023727
       await assertTrademark({
         address: '0x28e89eb6400e09e979320ed712f9e08fb2207cae',
+        deprecatedDesignLocation: 'https://s3.amazonaws.com/cog-design-marks/1023727_design',
         design: '0x0ceb54a02272b7d30f9b6d005102b7dc2dd7887f9faf273fc6cc15439d9a979b',
-        designLocation: 'https://s3.amazonaws.com/cog-design-marks/1023727_design',
+        migratedHash: 'TODO',
+        migratedLocation: 'https://raw.github.com/Cognate/trademark-access/master/design_marks/1023727_design',
         timeline: {
           address: '0x28e89eb6400e09e979320ed712f9e08fb2207cae',
           documents: [
             {
               address: '0x28e89eb6400e09e979320ed712f9e08fb2207cae',
+              deprecatedLocation: 'https://s3.amazonaws.com/cog-usage-documents/L1023727/P4364',
               hash: '0xf8cdac9753c950521f812e9ff444f06f23f425e8679cbad6fe8c1cd85d1a20ce',
-              location: 'https://s3.amazonaws.com/cog-usage-documents/L1023727/P4364',
               timestamp: 1535302654,
               type: 'ProofOfUse',
             },
@@ -359,8 +361,8 @@ describe('Pulling Trademarks from Ethereum', () => {
             },
             {
               address: '0x2aa53637f8455a8435f336f8f3ab11d8f4fcb333',
+              deprecatedLocation: 'https://s3.amazonaws.com/cog-usage-documents/L1023468/P4162',
               hash: '0x9ba2cf7c95c37e2bb2670f7f8b213775379bd089df4ba1919164b25f14a6df30',
-              location: 'https://s3.amazonaws.com/cog-usage-documents/L1023468/P4162',
               timestamp: 1529597251,
               type: 'ProofOfUse',
             },
@@ -460,15 +462,15 @@ describe('Pulling Trademarks from Ethereum', () => {
             },
             {
               address: '0x1f427bf99b504ccb6a6c76d743238359028fc4fc',
+              deprecatedLocation: 'https://s3.amazonaws.com/cog-usage-documents/177/177',
               hash: '0x6abc38ef9586c9f5b4b75fffc0cd96b60c58cf302415359fb08589dec5dfb8a4',
-              location: 'https://s3.amazonaws.com/cog-usage-documents/177/177',
               timestamp: 1523905695,
               type: 'ProofOfUse',
             },
             {
               address: '0x26912d2871704202aae90c46f919c22723b45ffd',
+              deprecatedLocation: 'https://s3.amazonaws.com/cog-usage-documents/218/218',
               hash: '0x1e3db66dc68727e760392bf7e6aeee18687a521b768eba0268fe8bbc9bad5eb3',
-              location: 'https://s3.amazonaws.com/cog-usage-documents/218/218',
               timestamp: 1523906494,
               type: 'ProofOfUse',
             },
@@ -483,8 +485,10 @@ describe('Pulling Trademarks from Ethereum', () => {
       // listing id 1021806
       await assertTrademark({
         address: '0xca6823878b5fc9390c21c652405b000e1daa734f',
+        deprecatedDesignLocation: 'https://s3.amazonaws.com/cog-design-marks/1021806_design',
         design: '0xf54f3b87eda462770230d060fce9b9f4876cb68fe8cd38d14c00356bcff7d690',
-        designLocation: 'https://s3.amazonaws.com/cog-design-marks/1021806_design',
+        migratedHash: 'TODO',
+        migratedLocation: 'https://raw.github.com/Cognate/trademark-access/master/design_marks/1021806_design',
         timeline: {
           address: '0xe0679701c5c4258a4f6374acc7d384fe6b0c9308',
           documents: [
@@ -559,8 +563,8 @@ describe('Pulling Trademarks from Ethereum', () => {
             },
             {
               address: '0x87eb5999771af7c700640acd755434ac186a23da',
+              deprecatedLocation: 'https://s3.amazonaws.com/cog-usage-documents/2563/2561',
               hash: '0x907f585ce27cafb16bc307245f2c022f67bd3f90beedb3c71ed04bbeff25de20',
-              location: 'https://s3.amazonaws.com/cog-usage-documents/2563/2561',
               timestamp: 1523905612,
               type: 'ProofOfUse',
             },
@@ -677,15 +681,15 @@ describe('Pulling Trademarks from Ethereum', () => {
             },
             {
               address: '0xe17e034f214e402231fb1b3b23efb9b16c1a5bcc',
+              deprecatedLocation: 'https://s3.amazonaws.com/cog-usage-documents/2456/2454',
               hash: '0xe540a6320b6b4649f9975c538d521d08654e8c061c9719c248b22ef06b25f2cf',
-              location: 'https://s3.amazonaws.com/cog-usage-documents/2456/2454',
               timestamp: 1523367516,
               type: 'ProofOfUse',
             },
             {
               address: '0x5bf955d2d0bc45f8343ca4efa2632cc89d1fb050',
+              deprecatedLocation: 'https://s3.amazonaws.com/cog-usage-documents/L1021552/P4133',
               hash: '0x54fd476850714a360166d6caa0ca7b6dee7a56e4906981726c89fc31c9663aeb',
-              location: 'https://s3.amazonaws.com/cog-usage-documents/L1021552/P4133',
               timestamp: 1528140660,
               type: 'ProofOfUse',
             },

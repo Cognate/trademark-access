@@ -7,10 +7,14 @@ const fs = require('fs');
 
 const DEBUG = 0;
 const INFO = 1;
-// const WARN = 2;
-// const ERROR = 3;
 
+/** base url for the deprecated S3 bucket location */
+const s3Base = 'https://s3.amazonaws.com/cog-design-marks/';
+/** base url for the github raw location */
+const githubBase = 'https://raw.github.com/Cognate/trademark-access/master/design_marks/';
+/** url to access Ethereum */
 const ethereumUrl = 'https://mainnet.infura.io/v3/6c62a9b1a3b640d587a70b105cbc3be9';
+/** level of logging */
 const LEVEL = INFO;
 
 function log(level, text) {
@@ -42,6 +46,7 @@ function loadContracts(version, web3) {
     const name = file.split('.')[0];
     const filePath = `${path}/${file}`;
     const Contract = contract(require(filePath));
+    // noinspection JSUnresolvedFunction
     Contract.setProvider(web3.currentProvider);
     log(DEBUG, ` - loaded: ${filePath}`);
     results[name] = Contract;
@@ -50,6 +55,7 @@ function loadContracts(version, web3) {
 }
 
 // TODO: poor mans byte map
+// noinspection JSUnresolvedVariable
 const ContractMap = {
   '0x606060405236156100725763ffffffff60e060020a6000350416632f64d386811461007757806341c0e1b5146101045780634c8fe526146101': {
     context: 'v2',
@@ -124,6 +130,7 @@ const ContractMap = {
 };
 
 async function process(address) {
+  // noinspection JSUnresolvedFunction
   const code = (await web3.eth.getCodeAsync(address)).substring(0, 116);
   const lookup = ContractMap[code];
   if (!lookup) {
@@ -152,7 +159,11 @@ async function processTrademark(trademark, address, context) {
       result.design = design;
       if (trademark.designLocation) {
         log(DEBUG, ` - adding design location ${context}`);
-        result.designLocation = await trademark.designLocation();
+        const designLocation = await trademark.designLocation();
+        result.deprecatedDesignLocation = designLocation;
+        result.migratedLocation = designLocation.replace(s3Base, githubBase);
+        // TODO: download the migrated location and calculate the SHA256
+        result.migratedHash = 'TODO';
       }
     }
   }
@@ -192,7 +203,7 @@ async function processTrademark(trademark, address, context) {
       const proof = {
         address: address,
         hash: await trademark.initialProof(),
-        location: await trademark.initialProofLocation(),
+        deprecatedLocation: await trademark.initialProofLocation(),
         type: 'ProofOfUse',
       };
       if (timestamp.greaterThan(0)) {
@@ -316,7 +327,7 @@ async function processProofOfUse(proofOfUse, address, context) {
   log(DEBUG, `   - adding hash ${context}`);
   result.hash = await proofOfUse.hash();
   log(DEBUG, `   - adding location ${context}`);
-  result.location = await proofOfUse.location();
+  result.deprecatedLocation = await proofOfUse.location();
   log(DEBUG, `   - getting next ${context}`);
   const next = await proofOfUse.next();
   if (next !== '0x0000000000000000000000000000000000000000') {
@@ -362,7 +373,7 @@ async function processAssignment(assignment, address, context) {
 }
 
 async function getTrademark(address) {
-  log(INFO, `getting trademark at: ${address}`);
+  log(DEBUG, `getting trademark at: ${address}`);
   return process(address);
 }
 
@@ -377,3 +388,5 @@ function sort(unordered) {
 }
 
 module.exports.getTrademark = getTrademark;
+module.exports.githubBase = githubBase;
+module.exports.s3Base = s3Base;
