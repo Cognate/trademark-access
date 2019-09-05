@@ -2,7 +2,6 @@
   "name": "trademark-access",
   "version": "1.0.0",
   "description": "access Cognate trademark data on the Ethereum network",
-  "main": "index.js",
   "scripts": {
     "lint": "eslint --ext .js .",
     "lint:fix": "npm run lint -- --fix",
@@ -26,8 +25,7 @@
   "homepage": "https://github.com/Cognate/trademark-access#readme",
   "dependencies": {
     "bluebird": "~3.5.5",
-    "cog-asset": "file:cog-asset-0.4.2.tgz",
-    "crypto": "~1.0.1",
+    "jquery": "^3.4.1",
     "truffle-contract": "~3.0.8",
     "web3": "~0.20.7",
     "web3-provider-engine": "~13.6.6"
@@ -42,6 +40,8 @@
     "eslint-plugin-prettier": "~3.1.0",
     "mocha": "~6.2.0",
     "nyc": "~14.1.1",
-    "prettier": "~1.18.2"
+    "prettier": "~1.18.2",
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.7"
   }
 }

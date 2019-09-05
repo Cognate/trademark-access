@@ -3,7 +3,7 @@ const Bluebird = require('bluebird');
 const Web3 = require('web3');
 const ProviderEngine = require('web3-provider-engine');
 const Web3SubProvider = require('web3-provider-engine/subproviders/web3.js');
-const fs = require('fs');
+const contractMap = require('./contracts/map');
 
 const DEBUG = 0;
 const INFO = 1;
@@ -32,6 +32,7 @@ engine.addProvider(new Web3SubProvider(new Web3.providers.HttpProvider(ethereumU
 engine.start();
 
 log(INFO, 'loading contracts...');
+
 const Contracts = {};
 Contracts.v4 = loadContracts('v4', web3);
 Contracts.v3 = loadContracts('v3', web3);
@@ -41,14 +42,13 @@ log(INFO, 'completed loading contracts');
 function loadContracts(version, web3) {
   const results = {};
   const path = version === 'v4' ? 'contracts/build/contracts' : `contracts/builds-versioned/${version}/contracts`;
-  const files = fs.readdirSync(`node_modules/${path}`);
+  const files = contractMap[version];
   for (const file of files) {
     const name = file.split('.')[0];
-    const filePath = `${path}/${file}`;
-    const Contract = contract(require(filePath));
+    const Contract = contract(require(`./${path}/${file}`));
     // noinspection JSUnresolvedFunction
     Contract.setProvider(web3.currentProvider);
-    log(DEBUG, ` - loaded: ${filePath}`);
+    log(DEBUG, ` - loaded: ${path}/${file}`);
     results[name] = Contract;
   }
   return results;
