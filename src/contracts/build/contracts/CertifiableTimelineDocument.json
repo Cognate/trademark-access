@@ -1,0 +1,555 @@
+{
+  "contractName": "CertifiableTimelineDocument",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "certifier",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "prev",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "next",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_owner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnershipTo",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "prev",
+          "type": "address"
+        }
+      ],
+      "name": "setPrev",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "next",
+          "type": "address"
+        }
+      ],
+      "name": "setNext",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "timestamp",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "interfaceID",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "updateCertifier",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x608060405260008054600160a060020a033316600160a060020a0319909116179055426001557f79056e9bb24f897d7f885dacdb2d506599944c0cdfd6b7495eb7f3ea624ac5af6002556103da806100586000396000f3006080604052600436106100a35763ffffffff7c0100000000000000000000000000000000000000000000000000000000600035041663120c7efd81146100a857806319b80324146100d9578063479c9254146100f05780634c8fe5261461010557806352effe111461011a5780638c1bb2a41461013b5780638da5cb5b1461015c578063b2b2b44d14610171578063b80777ea14610192578063ba19322d146101b9575b600080fd5b3480156100b457600080fd5b506100bd6101ce565b60408051600160a060020a039092168252519081900360200190f35b3480156100e557600080fd5b506100ee6101dd565b005b3480156100fc57600080fd5b506100bd610207565b34801561011157600080fd5b506100bd610216565b34801561012657600080fd5b506100ee600160a060020a0360043516610225565b34801561014757600080fd5b506100ee600160a060020a0360043516610284565b34801561016857600080fd5b506100bd610319565b34801561017d57600080fd5b506100ee600160a060020a0360043516610328565b34801561019e57600080fd5b506101a76103a2565b60408051918252519081900360200190f35b3480156101c557600080fd5b506101a76103a8565b600554600160a060020a031681565b6005805473ffffffffffffffffffffffffffffffffffffffff191633600160a060020a0316179055565b600454600160a060020a031690565b600354600160a060020a031690565b60005433600160a060020a0390811691161461024057600080fd5b600160a060020a038116151561025557600080fd5b6000805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0392909216919091179055565b604080517f4df23ab100000000000000000000000000000000000000000000000000000000815260026004820152600160a060020a0383166024820152905173__ITimelineDocumentLib__________________91634df23ab1916044808301926000929190829003018186803b1580156102fe57600080fd5b505af4158015610312573d6000803e3d6000fd5b5050505050565b600054600160a060020a031681565b604080517f2d637bc600000000000000000000000000000000000000000000000000000000815260026004820152600160a060020a0383166024820152905173__ITimelineDocumentLib__________________91632d637bc6916044808301926000929190829003018186803b1580156102fe57600080fd5b60015481565b600254905600a165627a7a723058203f293e10069a11eece2cfb80505790614b80b3a81a50790b015243e490125f290029",
+  "deployedBytecode": "0x6080604052600436106100a35763ffffffff7c0100000000000000000000000000000000000000000000000000000000600035041663120c7efd81146100a857806319b80324146100d9578063479c9254146100f05780634c8fe5261461010557806352effe111461011a5780638c1bb2a41461013b5780638da5cb5b1461015c578063b2b2b44d14610171578063b80777ea14610192578063ba19322d146101b9575b600080fd5b3480156100b457600080fd5b506100bd6101ce565b60408051600160a060020a039092168252519081900360200190f35b3480156100e557600080fd5b506100ee6101dd565b005b3480156100fc57600080fd5b506100bd610207565b34801561011157600080fd5b506100bd610216565b34801561012657600080fd5b506100ee600160a060020a0360043516610225565b34801561014757600080fd5b506100ee600160a060020a0360043516610284565b34801561016857600080fd5b506100bd610319565b34801561017d57600080fd5b506100ee600160a060020a0360043516610328565b34801561019e57600080fd5b506101a76103a2565b60408051918252519081900360200190f35b3480156101c557600080fd5b506101a76103a8565b600554600160a060020a031681565b6005805473ffffffffffffffffffffffffffffffffffffffff191633600160a060020a0316179055565b600454600160a060020a031690565b600354600160a060020a031690565b60005433600160a060020a0390811691161461024057600080fd5b600160a060020a038116151561025557600080fd5b6000805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0392909216919091179055565b604080517f4df23ab100000000000000000000000000000000000000000000000000000000815260026004820152600160a060020a0383166024820152905173__ITimelineDocumentLib__________________91634df23ab1916044808301926000929190829003018186803b1580156102fe57600080fd5b505af4158015610312573d6000803e3d6000fd5b5050505050565b600054600160a060020a031681565b604080517f2d637bc600000000000000000000000000000000000000000000000000000000815260026004820152600160a060020a0383166024820152905173__ITimelineDocumentLib__________________91632d637bc6916044808301926000929190829003018186803b1580156102fe57600080fd5b60015481565b600254905600a165627a7a723058203f293e10069a11eece2cfb80505790614b80b3a81a50790b015243e490125f290029",
+  "sourceMap": "295:182:32:-;;;324:5:17;:14;;-1:-1:-1;;;;;400:10:38;324:14:17;-1:-1:-1;;;;;;324:14:17;;;;;;467:3:18;324:14:17;455:15:18;644:66:38;612:16;:98;295:182:32;;;;;;",
+  "deployedSourceMap": "295:182:32:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;358:24;;8:9:-1;5:2;;;30:1;27;20:12;5:2;358:24:32;;;;;;;;-1:-1:-1;;;;;358:24:32;;;;;;;;;;;;;;389:86;;8:9:-1;5:2;;;30:1;27;20:12;5:2;389:86:32;;;;;;1263:101:38;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1263:101:38;;;;1156;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1156:101:38;;;;674:132:17;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;674:132:17;-1:-1:-1;;;;;674:132:17;;;;;912:94:38;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;912:94:38;-1:-1:-1;;;;;912:94:38;;;;;252:20:17;;8:9:-1;5:2;;;30:1;27;20:12;5:2;252:20:17;;;;768:94:38;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;768:94:38;-1:-1:-1;;;;;768:94:38;;;;;357:21:18;;8:9:-1;5:2;;;30:1;27;20:12;5:2;357:21:18;;;;;;;;;;;;;;;;;;;;1044:106:38;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1044:106:38;;;;358:24:32;;;-1:-1:-1;;;;;358:24:32;;:::o;389:86::-;446:9;:22;;-1:-1:-1;;446:22:32;458:10;-1:-1:-1;;;;;446:22:32;;;;389:86::o;1263:101:38:-;1335:22;;-1:-1:-1;;;;;1335:22:38;1263:101;:::o;1156:::-;1228:22;;-1:-1:-1;;;;;1228:22:38;1156:101;:::o;674:132:17:-;543:5;;529:10;-1:-1:-1;;;;;529:19:17;;;543:5;;529:19;521:28;;;;;;-1:-1:-1;;;;;754:20:17;;;;746:29;;;;;;785:5;:14;;-1:-1:-1;;785:14:17;-1:-1:-1;;;;;785:14:17;;;;;;;;;;674:132::o;912:94:38:-;969:30;;;;;;:16;:30;;;;-1:-1:-1;;;;;969:30:38;;;;;;;;:24;;;;:30;;;;;-1:-1:-1;;969:30:38;;;;;;;:24;:30;;;5:2:-1;;;;30:1;27;20:12;5:2;969:30:38;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;969:30:38;;;;912:94;:::o;252:20:17:-;;;-1:-1:-1;;;;;252:20:17;;:::o;768:94:38:-;825:30;;;;;;:16;:30;;;;-1:-1:-1;;;;;825:30:38;;;;;;;;:24;;;;:30;;;;;-1:-1:-1;;825:30:38;;;;;;;:24;:30;;;5:2:-1;;;;30:1;27;20:12;357:21:18;;;;:::o;1044:106:38:-;1114:16;:29;1044:106;:::o",
+  "source": "pragma solidity ^0.4.17;\n\nimport \"./TimelineDocument.sol\";\n\n/**\n * A TimelineDocument that has the ability to store a certifier address\n * indicating that it has been certified by accredited parties that the\n * document is accurate in it's intentions.\n *\n * Copyright (c) 2017 Cognate, Inc.\n */\ncontract CertifiableTimelineDocument is TimelineDocument {\n    address public certifier;\n\n    function updateCertifier() public {//onlyOwner {\n        certifier = msg.sender;\n    }\n}",
+  "sourcePath": "/Users/cmurdock/Cog/cog-asset/contracts/timeline/timelineDocuments/CertifiableTimelineDocument.sol",
+  "ast": {
+    "absolutePath": "/Users/cmurdock/Cog/cog-asset/contracts/timeline/timelineDocuments/CertifiableTimelineDocument.sol",
+    "exportedSymbols": {
+      "CertifiableTimelineDocument": [
+        1438
+      ]
+    },
+    "id": 1439,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1423,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".17"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:32"
+      },
+      {
+        "absolutePath": "/Users/cmurdock/Cog/cog-asset/contracts/timeline/timelineDocuments/TimelineDocument.sol",
+        "file": "./TimelineDocument.sol",
+        "id": 1424,
+        "nodeType": "ImportDirective",
+        "scope": 1439,
+        "sourceUnit": 1705,
+        "src": "26:32:32",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 1425,
+              "name": "TimelineDocument",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1704,
+              "src": "335:16:32",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_TimelineDocument_$1704",
+                "typeString": "contract TimelineDocument"
+              }
+            },
+            "id": 1426,
+            "nodeType": "InheritanceSpecifier",
+            "src": "335:16:32"
+          }
+        ],
+        "contractDependencies": [
+          578,
+          591,
+          1704
+        ],
+        "contractKind": "contract",
+        "documentation": "A TimelineDocument that has the ability to store a certifier address\nindicating that it has been certified by accredited parties that the\ndocument is accurate in it's intentions.\n * Copyright (c) 2017 Cognate, Inc.",
+        "fullyImplemented": true,
+        "id": 1438,
+        "linearizedBaseContracts": [
+          1438,
+          1704,
+          591,
+          578
+        ],
+        "name": "CertifiableTimelineDocument",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 1428,
+            "name": "certifier",
+            "nodeType": "VariableDeclaration",
+            "scope": 1438,
+            "src": "358:24:32",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 1427,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "358:7:32",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1436,
+              "nodeType": "Block",
+              "src": "423:52:32",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1434,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 1431,
+                      "name": "certifier",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1428,
+                      "src": "446:9:32",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 1432,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1830,
+                        "src": "458:3:32",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 1433,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "458:10:32",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "446:22:32",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 1435,
+                  "nodeType": "ExpressionStatement",
+                  "src": "446:22:32"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1437,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "updateCertifier",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1429,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "413:2:32"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1430,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "423:0:32"
+            },
+            "scope": 1438,
+            "src": "389:86:32",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 1439,
+        "src": "295:182:32"
+      }
+    ],
+    "src": "0:477:32"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/cmurdock/Cog/cog-asset/contracts/timeline/timelineDocuments/CertifiableTimelineDocument.sol",
+    "exportedSymbols": {
+      "CertifiableTimelineDocument": [
+        1438
+      ]
+    },
+    "id": 1439,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1423,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".17"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:32"
+      },
+      {
+        "absolutePath": "/Users/cmurdock/Cog/cog-asset/contracts/timeline/timelineDocuments/TimelineDocument.sol",
+        "file": "./TimelineDocument.sol",
+        "id": 1424,
+        "nodeType": "ImportDirective",
+        "scope": 1439,
+        "sourceUnit": 1705,
+        "src": "26:32:32",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 1425,
+              "name": "TimelineDocument",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1704,
+              "src": "335:16:32",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_TimelineDocument_$1704",
+                "typeString": "contract TimelineDocument"
+              }
+            },
+            "id": 1426,
+            "nodeType": "InheritanceSpecifier",
+            "src": "335:16:32"
+          }
+        ],
+        "contractDependencies": [
+          578,
+          591,
+          1704
+        ],
+        "contractKind": "contract",
+        "documentation": "A TimelineDocument that has the ability to store a certifier address\nindicating that it has been certified by accredited parties that the\ndocument is accurate in it's intentions.\n * Copyright (c) 2017 Cognate, Inc.",
+        "fullyImplemented": true,
+        "id": 1438,
+        "linearizedBaseContracts": [
+          1438,
+          1704,
+          591,
+          578
+        ],
+        "name": "CertifiableTimelineDocument",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 1428,
+            "name": "certifier",
+            "nodeType": "VariableDeclaration",
+            "scope": 1438,
+            "src": "358:24:32",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 1427,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "358:7:32",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1436,
+              "nodeType": "Block",
+              "src": "423:52:32",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1434,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 1431,
+                      "name": "certifier",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1428,
+                      "src": "446:9:32",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 1432,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1830,
+                        "src": "458:3:32",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 1433,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "458:10:32",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "446:22:32",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 1435,
+                  "nodeType": "ExpressionStatement",
+                  "src": "446:22:32"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1437,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "updateCertifier",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1429,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "413:2:32"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1430,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "423:0:32"
+            },
+            "scope": 1438,
+            "src": "389:86:32",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 1439,
+        "src": "295:182:32"
+      }
+    ],
+    "src": "0:477:32"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.23+commit.124ca40d.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.0",
+  "updatedAt": "2018-05-21T16:36:25.366Z"
+}

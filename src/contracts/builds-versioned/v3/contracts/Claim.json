@@ -1,0 +1,565 @@
+{
+  "contractName": "Claim",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "proofs",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address[]"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "next",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_owner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnershipTo",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "next",
+          "type": "address"
+        }
+      ],
+      "name": "setNext",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "timestamp",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "interfaceID",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "createdAt",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "proof",
+          "type": "address"
+        }
+      ],
+      "name": "addProof",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x606060405233806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555050426001819055507f79056e9bb24f897d7f885dacdb2d506599944c0cdfd6b7495eb7f3ea624ac5af600102600260000181600019169055506106708061008d6000396000f300606060405260043610610099576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063435d53f21461009e5780634c8fe5261461010857806352effe111461015d5780638da5cb5b14610196578063b2b2b44d146101eb578063b80777ea14610224578063ba19322d1461024d578063cf09e0d01461027e578063ec3d670c146102a7575b600080fd5b34156100a957600080fd5b6100b16102e0565b6040518080602001828103825283818151815260200191508051906020019060200280838360005b838110156100f45780820151818401526020810190506100d9565b505050509050019250505060405180910390f35b341561011357600080fd5b61011b610377565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b341561016857600080fd5b610194600480803573ffffffffffffffffffffffffffffffffffffffff169060200190919050506103a4565b005b34156101a157600080fd5b6101a961047e565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34156101f657600080fd5b610222600480803573ffffffffffffffffffffffffffffffffffffffff169060200190919050506104a3565b005b341561022f57600080fd5b61023761055b565b6040518082815260200191505060405180910390f35b341561025857600080fd5b610260610561565b60405180826000191660001916815260200191505060405180910390f35b341561028957600080fd5b61029161056e565b6040518082815260200191505060405180910390f35b34156102b257600080fd5b6102de600480803573ffffffffffffffffffffffffffffffffffffffff16906020019091905050610578565b005b6102e8610630565b600460000180548060200260200160405190810160405280929190818152602001828054801561036d57602002820191906000526020600020905b8160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019060010190808311610323575b5050505050905090565b6000600260010160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161415156103ff57600080fd5b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff161415151561043b57600080fd5b806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555050565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600273__ITimelineDocumentLib__________________632d637bc69091836040518363ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401808381526020018273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019250505060006040518083038186803b151561054457600080fd5b6102c65a03f4151561055557600080fd5b50505050565b60015481565b6000600260000154905090565b6000600154905090565b600473__ITimelineDocumentLib__________________63427221c19091836040518363ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401808381526020018273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019250505060006040518083038186803b151561061957600080fd5b6102c65a03f4151561062a57600080fd5b50505050565b6020604051908101604052806000815250905600a165627a7a72305820cda44c72fd87ab0318e26cd34bc3e86749e798b07e589f63179610cfc637a85f0029",
+  "deployedBytecode": "0x606060405260043610610099576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063435d53f21461009e5780634c8fe5261461010857806352effe111461015d5780638da5cb5b14610196578063b2b2b44d146101eb578063b80777ea14610224578063ba19322d1461024d578063cf09e0d01461027e578063ec3d670c146102a7575b600080fd5b34156100a957600080fd5b6100b16102e0565b6040518080602001828103825283818151815260200191508051906020019060200280838360005b838110156100f45780820151818401526020810190506100d9565b505050509050019250505060405180910390f35b341561011357600080fd5b61011b610377565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b341561016857600080fd5b610194600480803573ffffffffffffffffffffffffffffffffffffffff169060200190919050506103a4565b005b34156101a157600080fd5b6101a961047e565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34156101f657600080fd5b610222600480803573ffffffffffffffffffffffffffffffffffffffff169060200190919050506104a3565b005b341561022f57600080fd5b61023761055b565b6040518082815260200191505060405180910390f35b341561025857600080fd5b610260610561565b60405180826000191660001916815260200191505060405180910390f35b341561028957600080fd5b61029161056e565b6040518082815260200191505060405180910390f35b34156102b257600080fd5b6102de600480803573ffffffffffffffffffffffffffffffffffffffff16906020019091905050610578565b005b6102e8610630565b600460000180548060200260200160405190810160405280929190818152602001828054801561036d57602002820191906000526020600020905b8160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019060010190808311610323575b5050505050905090565b6000600260010160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161415156103ff57600080fd5b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff161415151561043b57600080fd5b806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555050565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600273__ITimelineDocumentLib__________________632d637bc69091836040518363ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401808381526020018273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019250505060006040518083038186803b151561054457600080fd5b6102c65a03f4151561055557600080fd5b50505050565b60015481565b6000600260000154905090565b6000600154905090565b600473__ITimelineDocumentLib__________________63427221c19091836040518363ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401808381526020018273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019250505060006040518083038186803b151561061957600080fd5b6102c65a03f4151561062a57600080fd5b50505050565b6020604051908101604052806000815250905600a165627a7a72305820cda44c72fd87ab0318e26cd34bc3e86749e798b07e589f63179610cfc637a85f0029",
+  "sourceMap": "311:416:34:-;;;400:10:39;327:6:17;319:5;;:14;;;;;;;;;;;;;;;;;;278:62;429:3:18;417:9;:15;;;;655:66:39;623:98;;:16;:29;;:98;;;;;;;311:416:34;;;;;;",
+  "deployedSourceMap": "311:416:34:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;634:91;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:2;8:100;;;99:1;94:3;90;84:5;80:1;75:3;71;64:6;52:2;49:1;45:3;40:15;;8:100;;;12:14;3:109;;;;;;;;;;;;;;;;;1172:98:39;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;669:132:17;;;;;;;;;;;;;;;;;;;;;;;;;;;;251:20;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;783:94:39;;;;;;;;;;;;;;;;;;;;;;;;;;;;356:21:18;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1063:103:39;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;445:85:18;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;514:78:34;;;;;;;;;;;;;;;;;;;;;;;;;;;;634:91;677:9;;:::i;:::-;705:5;:13;;698:20;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;634:91;:::o;1172:98:39:-;1206:16;1241;:22;;;;;;;;;;;;1234:29;;1172:98;:::o;669:132:17:-;538:5;;;;;;;;;;;524:19;;:10;:19;;;516:28;;;;;;;;767:1;749:20;;:6;:20;;;;741:29;;;;;;;;788:6;780:5;;:14;;;;;;;;;;;;;;;;;;669:132;:::o;251:20::-;;;;;;;;;;;;;:::o;783:94:39:-;840:16;:24;;;;865:4;840:30;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;783:94;:::o;356:21:18:-;;;;:::o;1063:103:39:-;1104:7;1130:16;:29;;;1123:36;;1063:103;:::o;445:85:18:-;491:4;514:9;;507:16;;445:85;:::o;514:78:34:-;564:5;:14;;;;579:5;564:21;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;514:78;:::o;311:416::-;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity ^0.4.8;\n\nimport \"./TimelineDocument.sol\";\n\n/**\n * A TimelineDocument that requires proof to backup the claim\n * of the data and intention of that document. Proof is represented\n * by the addresses of other contracts that store the proof documentation.\n *\n * Copyright (c) 2017 Cognate, Inc.\n */\ncontract Claim is TimelineDocument {\n    using ITimelineDocumentLib for ITimelineDocumentLib.ClaimStorage;\n\n    ITimelineDocumentLib.ClaimStorage claim;\n\n    // calls ITimelineDocumentLib.addProof()\n    function addProof(address proof) public {\n        claim.addProof(proof);\n    }\n\n\n    // Getters\n    //--------\n    \n    function proofs() public constant returns (address[]) {\n        return claim._proofs;\n    }\n}",
+  "sourcePath": "/Users/MasterChief/Cog/cog-contract/contracts/timeline/timelineDocuments/Claim.sol",
+  "ast": {
+    "attributes": {
+      "absolutePath": "/Users/MasterChief/Cog/cog-contract/contracts/timeline/timelineDocuments/Claim.sol",
+      "exportedSymbols": {
+        "Claim": [
+          1628
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.4",
+            ".8"
+          ]
+        },
+        "id": 1597,
+        "name": "PragmaDirective",
+        "src": "0:23:34"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 1832,
+          "absolutePath": "/Users/MasterChief/Cog/cog-contract/contracts/timeline/timelineDocuments/TimelineDocument.sol",
+          "file": "./TimelineDocument.sol",
+          "scope": 1629,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 1598,
+        "name": "ImportDirective",
+        "src": "25:32:34"
+      },
+      {
+        "attributes": {
+          "contractDependencies": [
+            776,
+            797,
+            1831
+          ],
+          "contractKind": "contract",
+          "documentation": "A TimelineDocument that requires proof to backup the claim\nof the data and intention of that document. Proof is represented\nby the addresses of other contracts that store the proof documentation.\n * Copyright (c) 2017 Cognate, Inc.",
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            1628,
+            1831,
+            797,
+            776
+          ],
+          "name": "Claim",
+          "scope": 1629
+        },
+        "children": [
+          {
+            "attributes": {
+              "arguments": [
+                null
+              ]
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "TimelineDocument",
+                  "referencedDeclaration": 1831,
+                  "type": "contract TimelineDocument"
+                },
+                "id": 1599,
+                "name": "UserDefinedTypeName",
+                "src": "329:16:34"
+              }
+            ],
+            "id": 1600,
+            "name": "InheritanceSpecifier",
+            "src": "329:16:34"
+          },
+          {
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "ITimelineDocumentLib",
+                  "referencedDeclaration": 1693,
+                  "type": "library ITimelineDocumentLib"
+                },
+                "id": 1601,
+                "name": "UserDefinedTypeName",
+                "src": "358:20:34"
+              },
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "ITimelineDocumentLib.ClaimStorage",
+                  "referencedDeclaration": 1666,
+                  "type": "struct ITimelineDocumentLib.ClaimStorage storage pointer"
+                },
+                "id": 1602,
+                "name": "UserDefinedTypeName",
+                "src": "383:33:34"
+              }
+            ],
+            "id": 1603,
+            "name": "UsingForDirective",
+            "src": "352:65:34"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "claim",
+              "scope": 1628,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "struct ITimelineDocumentLib.ClaimStorage storage ref",
+              "value": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "ITimelineDocumentLib.ClaimStorage",
+                  "referencedDeclaration": 1666,
+                  "type": "struct ITimelineDocumentLib.ClaimStorage storage pointer"
+                },
+                "id": 1604,
+                "name": "UserDefinedTypeName",
+                "src": "423:33:34"
+              }
+            ],
+            "id": 1605,
+            "name": "VariableDeclaration",
+            "src": "423:39:34"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "implemented": true,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "addProof",
+              "payable": false,
+              "scope": 1628,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "proof",
+                      "scope": 1617,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 1606,
+                        "name": "ElementaryTypeName",
+                        "src": "532:7:34"
+                      }
+                    ],
+                    "id": 1607,
+                    "name": "VariableDeclaration",
+                    "src": "532:13:34"
+                  }
+                ],
+                "id": 1608,
+                "name": "ParameterList",
+                "src": "531:15:34"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1609,
+                "name": "ParameterList",
+                "src": "554:0:34"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_address",
+                                  "typeString": "address"
+                                }
+                              ],
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "addProof",
+                              "referencedDeclaration": 1685,
+                              "type": "function (struct ITimelineDocumentLib.ClaimStorage storage pointer,address)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 1605,
+                                  "type": "struct ITimelineDocumentLib.ClaimStorage storage ref",
+                                  "value": "claim"
+                                },
+                                "id": 1610,
+                                "name": "Identifier",
+                                "src": "564:5:34"
+                              }
+                            ],
+                            "id": 1612,
+                            "name": "MemberAccess",
+                            "src": "564:14:34"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 1607,
+                              "type": "address",
+                              "value": "proof"
+                            },
+                            "id": 1613,
+                            "name": "Identifier",
+                            "src": "579:5:34"
+                          }
+                        ],
+                        "id": 1614,
+                        "name": "FunctionCall",
+                        "src": "564:21:34"
+                      }
+                    ],
+                    "id": 1615,
+                    "name": "ExpressionStatement",
+                    "src": "564:21:34"
+                  }
+                ],
+                "id": 1616,
+                "name": "Block",
+                "src": "554:38:34"
+              }
+            ],
+            "id": 1617,
+            "name": "FunctionDefinition",
+            "src": "514:78:34"
+          },
+          {
+            "attributes": {
+              "constant": true,
+              "implemented": true,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "proofs",
+              "payable": false,
+              "scope": 1628,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1618,
+                "name": "ParameterList",
+                "src": "649:2:34"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 1627,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address[] memory",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "length": null,
+                          "type": "address[] storage pointer"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "name": "address",
+                              "type": "address"
+                            },
+                            "id": 1619,
+                            "name": "ElementaryTypeName",
+                            "src": "677:7:34"
+                          }
+                        ],
+                        "id": 1620,
+                        "name": "ArrayTypeName",
+                        "src": "677:9:34"
+                      }
+                    ],
+                    "id": 1621,
+                    "name": "VariableDeclaration",
+                    "src": "677:9:34"
+                  }
+                ],
+                "id": 1622,
+                "name": "ParameterList",
+                "src": "676:11:34"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 1622
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "member_name": "_proofs",
+                          "referencedDeclaration": 1665,
+                          "type": "address[] storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 1605,
+                              "type": "struct ITimelineDocumentLib.ClaimStorage storage ref",
+                              "value": "claim"
+                            },
+                            "id": 1623,
+                            "name": "Identifier",
+                            "src": "705:5:34"
+                          }
+                        ],
+                        "id": 1624,
+                        "name": "MemberAccess",
+                        "src": "705:13:34"
+                      }
+                    ],
+                    "id": 1625,
+                    "name": "Return",
+                    "src": "698:20:34"
+                  }
+                ],
+                "id": 1626,
+                "name": "Block",
+                "src": "688:37:34"
+              }
+            ],
+            "id": 1627,
+            "name": "FunctionDefinition",
+            "src": "634:91:34"
+          }
+        ],
+        "id": 1628,
+        "name": "ContractDefinition",
+        "src": "311:416:34"
+      }
+    ],
+    "id": 1629,
+    "name": "SourceUnit",
+    "src": "0:727:34"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.18+commit.9cf6e910.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "1.0.1",
+  "updatedAt": "2018-01-15T19:32:46.201Z"
+}

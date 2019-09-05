@@ -1,0 +1,674 @@
+{
+  "contractName": "Domain",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "timeline",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "kill",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_owner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnershipTo",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "timestamp",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "domain",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_timeline",
+          "type": "bytes"
+        }
+      ],
+      "name": "upgradeTimeline",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "_domain",
+          "type": "string"
+        },
+        {
+          "name": "_timeline",
+          "type": "bytes"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    }
+  ],
+  "bytecode": "0x608060405234801561001057600080fd5b50604051610784380380610784833981016040528051602082015142600090815560018054600160a060020a03191633600160a060020a0316179055908301805192909301929182911015610173576040517f5281042700000000000000000000000000000000000000000000000000000000815260206004820181815283516024840152835173__IbaseLib______________________________9363528104279386939283926044019185019080838360005b838110156100dd5781810151838201526020016100c5565b50505050905090810190601f16801561010a5780820380516001836020036101000a031916815260200191505b509250505060206040518083038186803b15801561012757600080fd5b505af415801561013b573d6000803e3d6000fd5b505050506040513d602081101561015157600080fd5b505160028054600160a060020a031916600160a060020a039092169190911790555b50815161018790600390602085019061018f565b50505061022a565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106101d057805160ff19168380011785556101fd565b828001600101855582156101fd579182015b828111156101fd5782518255916020019190600101906101e2565b5061020992915061020d565b5090565b61022791905b808211156102095760008155600101610213565b90565b61054b806102396000396000f3006080604052600436106100825763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166317a5410b811461008757806341c0e1b5146100b857806352effe11146100cf5780638da5cb5b146100f0578063b80777ea14610105578063c2fb26a61461012c578063f6345414146101b6575b600080fd5b34801561009357600080fd5b5061009c61020f565b60408051600160a060020a039092168252519081900360200190f35b3480156100c457600080fd5b506100cd61021e565b005b3480156100db57600080fd5b506100cd600160a060020a0360043516610247565b3480156100fc57600080fd5b5061009c6102a6565b34801561011157600080fd5b5061011a6102b5565b60408051918252519081900360200190f35b34801561013857600080fd5b506101416102bb565b6040805160208082528351818301528351919283929083019185019080838360005b8381101561017b578181015183820152602001610163565b50505050905090810190601f1680156101a85780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b3480156101c257600080fd5b506040805160206004803580820135601f81018490048402850184019095528484526100cd9436949293602493928401919081908401838280828437509497506103499650505050505050565b600254600160a060020a031681565b60015433600160a060020a0390811691161461023957600080fd5b600154600160a060020a0316ff5b60015433600160a060020a0390811691161461026257600080fd5b600160a060020a038116151561027757600080fd5b6001805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0392909216919091179055565b600154600160a060020a031681565b60005481565b6003805460408051602060026001851615610100026000190190941693909304601f810184900484028201840190925281815292918301828280156103415780601f1061031657610100808354040283529160200191610341565b820191906000526020600020905b81548152906001019060200180831161032457829003601f168201915b505050505081565b60015460009033600160a060020a0390811691161461036757600080fd5b506002546040517f52810427000000000000000000000000000000000000000000000000000000008152602060048201818152845160248401528451600160a060020a039094169373__IbaseLib______________________________9363528104279387939283926044019185019080838360005b838110156103f55781810151838201526020016103dd565b50505050905090810190601f1680156104225780820380516001836020036101000a031916815260200191505b509250505060206040518083038186803b15801561043f57600080fd5b505af4158015610453573d6000803e3d6000fd5b505050506040513d602081101561046957600080fd5b50516002805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0392831617905581161561051b57600254604080517f0900f010000000000000000000000000000000000000000000000000000000008152600160a060020a039283166004820152905191831691630900f0109160248082019260009290919082900301818387803b15801561050257600080fd5b505af1158015610516573d6000803e3d6000fd5b505050505b50505600a165627a7a723058200d339f58adeb4828e7f9892c4f0c92adaf9686df541e2adbdab7f69c84537fbd0029",
+  "deployedBytecode": "0x6080604052600436106100825763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166317a5410b811461008757806341c0e1b5146100b857806352effe11146100cf5780638da5cb5b146100f0578063b80777ea14610105578063c2fb26a61461012c578063f6345414146101b6575b600080fd5b34801561009357600080fd5b5061009c61020f565b60408051600160a060020a039092168252519081900360200190f35b3480156100c457600080fd5b506100cd61021e565b005b3480156100db57600080fd5b506100cd600160a060020a0360043516610247565b3480156100fc57600080fd5b5061009c6102a6565b34801561011157600080fd5b5061011a6102b5565b60408051918252519081900360200190f35b34801561013857600080fd5b506101416102bb565b6040805160208082528351818301528351919283929083019185019080838360005b8381101561017b578181015183820152602001610163565b50505050905090810190601f1680156101a85780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b3480156101c257600080fd5b506040805160206004803580820135601f81018490048402850184019095528484526100cd9436949293602493928401919081908401838280828437509497506103499650505050505050565b600254600160a060020a031681565b60015433600160a060020a0390811691161461023957600080fd5b600154600160a060020a0316ff5b60015433600160a060020a0390811691161461026257600080fd5b600160a060020a038116151561027757600080fd5b6001805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0392909216919091179055565b600154600160a060020a031681565b60005481565b6003805460408051602060026001851615610100026000190190941693909304601f810184900484028201840190925281815292918301828280156103415780601f1061031657610100808354040283529160200191610341565b820191906000526020600020905b81548152906001019060200180831161032457829003601f168201915b505050505081565b60015460009033600160a060020a0390811691161461036757600080fd5b506002546040517f52810427000000000000000000000000000000000000000000000000000000008152602060048201818152845160248401528451600160a060020a039094169373__IbaseLib______________________________9363528104279387939283926044019185019080838360005b838110156103f55781810151838201526020016103dd565b50505050905090810190601f1680156104225780820380516001836020036101000a031916815260200191505b509250505060206040518083038186803b15801561043f57600080fd5b505af4158015610453573d6000803e3d6000fd5b505050506040513d602081101561046957600080fd5b50516002805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0392831617905581161561051b57600254604080517f0900f010000000000000000000000000000000000000000000000000000000008152600160a060020a039283166004820152905191831691630900f0109160248082019260009290919082900301818387803b15801561050257600080fd5b505af1158015610516573d6000803e3d6000fd5b505050505b50505600a165627a7a723058200d339f58adeb4828e7f9892c4f0c92adaf9686df541e2adbdab7f69c84537fbd0029",
+  "sourceMap": "152:162:2:-;;;210:102;8:9:-1;5:2;;;30:1;27;20:12;5:2;210:102:2;;;;;;;;;;;;;;;;;;;;467:3:18;455:9;:15;;;324:5:17;:14;;-1:-1:-1;;;;;;324:14:17;332:10:0;-1:-1:-1;;;;;324:14:17;;;;210:102:2;;;439:16:0;;210:102:2;;;;;;;;-1:-1:-1;435:115:0;;;495:43;;;;;;;;;;;;;;;;;;;;:8;;:32;;528:9;;495:43;;;;;;;;;;;;;8:100:-1;33:3;30:1;27:10;8:100;;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;;12:14;495:43:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;495:43:0;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;495:43:0;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;495:43:0;475:8;:64;;-1:-1:-1;;;;;;475:64:0;-1:-1:-1;;;;;475:64:0;;;;;;;;;435:115;-1:-1:-1;289:16:2;;;;:6;;:16;;;;;:::i;:::-;;210:102;;152:162;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;152:162:2;;;-1:-1:-1;152:162:2;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;",
+  "deployedSourceMap": "152:162:2:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;358:24:0;;8:9:-1;5:2;;;30:1;27;20:12;5:2;358:24:0;;;;;;;;-1:-1:-1;;;;;358:24:0;;;;;;;;;;;;;;232:69:16;;8:9:-1;5:2;;;30:1;27;20:12;5:2;232:69:16;;;;;;674:132:17;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;674:132:17;-1:-1:-1;;;;;674:132:17;;;;;252:20;;8:9:-1;5:2;;;30:1;27;20:12;5:2;252:20:17;;;;357:21:18;;8:9:-1;5:2;;;30:1;27;20:12;5:2;357:21:18;;;;;;;;;;;;;;;;;;;;183:20:2;;8:9:-1;5:2;;;30:1;27;20:12;5:2;183:20:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:100:-1;33:3;30:1;27:10;8:100;;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;;12:14;183:20:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;649:266:0;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;649:266:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;649:266:0;;-1:-1:-1;649:266:0;;-1:-1:-1;;;;;;;649:266:0;358:24;;;-1:-1:-1;;;;;358:24:0;;:::o;232:69:16:-;543:5:17;;529:10;-1:-1:-1;;;;;529:19:17;;;543:5;;529:19;521:28;;;;;;288:5:16;;-1:-1:-1;;;;;288:5:16;275:19;674:132:17;543:5;;529:10;-1:-1:-1;;;;;529:19:17;;;543:5;;529:19;521:28;;;;;;-1:-1:-1;;;;;754:20:17;;;;746:29;;;;;;785:5;:14;;-1:-1:-1;;785:14:17;-1:-1:-1;;;;;785:14:17;;;;;;;;;;674:132::o;252:20::-;;;-1:-1:-1;;;;;252:20:17;;:::o;357:21:18:-;;;;:::o;183:20:2:-;;;;;;;;;;;;;;;-1:-1:-1;;183:20:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;649:266:0:-;543:5:17;;718:17:0;;529:10:17;-1:-1:-1;;;;;529:19:17;;;543:5;;529:19;521:28;;;;;;-1:-1:-1;738:8:0;;776:43;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;738:8:0;;;;776;;:32;;809:9;;776:43;;;;;;;;;;;;738:8;8:100:-1;33:3;30:1;27:10;8:100;;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;;12:14;776:43:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;776:43:0;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;776:43:0;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;776:43:0;756:8;:64;;-1:-1:-1;;756:64:0;-1:-1:-1;;;;;756:64:0;;;;;;834:22;;;831:78;;889:8;;872:26;;;;;;-1:-1:-1;;;;;889:8:0;;;872:26;;;;;;:16;;;;;;:26;;;;;889:8;;872:26;;;;;;;;889:8;872:16;:26;;;5:2:-1;;;;30:1;27;20:12;5:2;872:26:0;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;872:26:0;;;;831:78;649:266;;:::o",
+  "source": "pragma solidity ^0.4.17;\n\nimport \"./Asset.sol\";\n\n/**\n * Base contract for representing a Domain chain asset.\n *\n * Copyright (c) 2017 Cognate, Inc.\n */\ncontract Domain is Asset {\n    string public domain;\n\n    constructor(string _domain, bytes _timeline) Asset(_timeline) public {\n        domain = _domain;\n    }\n}",
+  "sourcePath": "/Users/cmurdock/Cog/cog-asset/contracts/asset/Domain.sol",
+  "ast": {
+    "absolutePath": "/Users/cmurdock/Cog/cog-asset/contracts/asset/Domain.sol",
+    "exportedSymbols": {
+      "Domain": [
+        126
+      ]
+    },
+    "id": 127,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 105,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".17"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:2"
+      },
+      {
+        "absolutePath": "/Users/cmurdock/Cog/cog-asset/contracts/asset/Asset.sol",
+        "file": "./Asset.sol",
+        "id": 106,
+        "nodeType": "ImportDirective",
+        "scope": 127,
+        "sourceUnit": 73,
+        "src": "26:21:2",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 107,
+              "name": "Asset",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 72,
+              "src": "171:5:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Asset_$72",
+                "typeString": "contract Asset"
+              }
+            },
+            "id": 108,
+            "nodeType": "InheritanceSpecifier",
+            "src": "171:5:2"
+          }
+        ],
+        "contractDependencies": [
+          72,
+          532,
+          578,
+          591
+        ],
+        "contractKind": "contract",
+        "documentation": "Base contract for representing a Domain chain asset.\n * Copyright (c) 2017 Cognate, Inc.",
+        "fullyImplemented": true,
+        "id": 126,
+        "linearizedBaseContracts": [
+          126,
+          72,
+          532,
+          578,
+          591
+        ],
+        "name": "Domain",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 110,
+            "name": "domain",
+            "nodeType": "VariableDeclaration",
+            "scope": 126,
+            "src": "183:20:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_storage",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 109,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "183:6:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 124,
+              "nodeType": "Block",
+              "src": "279:33:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 122,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 120,
+                      "name": "domain",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 110,
+                      "src": "289:6:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_storage",
+                        "typeString": "string storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 121,
+                      "name": "_domain",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 112,
+                      "src": "298:7:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_memory_ptr",
+                        "typeString": "string memory"
+                      }
+                    },
+                    "src": "289:16:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage",
+                      "typeString": "string storage ref"
+                    }
+                  },
+                  "id": 123,
+                  "nodeType": "ExpressionStatement",
+                  "src": "289:16:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 125,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 117,
+                    "name": "_timeline",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 114,
+                    "src": "261:9:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_memory_ptr",
+                      "typeString": "bytes memory"
+                    }
+                  }
+                ],
+                "id": 118,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 116,
+                  "name": "Asset",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 72,
+                  "src": "255:5:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_type$_t_contract$_Asset_$72_$",
+                    "typeString": "type(contract Asset)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "255:16:2"
+              }
+            ],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 115,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 112,
+                  "name": "_domain",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 125,
+                  "src": "222:14:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 111,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "222:6:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 114,
+                  "name": "_timeline",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 125,
+                  "src": "238:15:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 113,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "238:5:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "221:33:2"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 119,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "279:0:2"
+            },
+            "scope": 126,
+            "src": "210:102:2",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 127,
+        "src": "152:162:2"
+      }
+    ],
+    "src": "0:314:2"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/cmurdock/Cog/cog-asset/contracts/asset/Domain.sol",
+    "exportedSymbols": {
+      "Domain": [
+        126
+      ]
+    },
+    "id": 127,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 105,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".17"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:2"
+      },
+      {
+        "absolutePath": "/Users/cmurdock/Cog/cog-asset/contracts/asset/Asset.sol",
+        "file": "./Asset.sol",
+        "id": 106,
+        "nodeType": "ImportDirective",
+        "scope": 127,
+        "sourceUnit": 73,
+        "src": "26:21:2",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 107,
+              "name": "Asset",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 72,
+              "src": "171:5:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Asset_$72",
+                "typeString": "contract Asset"
+              }
+            },
+            "id": 108,
+            "nodeType": "InheritanceSpecifier",
+            "src": "171:5:2"
+          }
+        ],
+        "contractDependencies": [
+          72,
+          532,
+          578,
+          591
+        ],
+        "contractKind": "contract",
+        "documentation": "Base contract for representing a Domain chain asset.\n * Copyright (c) 2017 Cognate, Inc.",
+        "fullyImplemented": true,
+        "id": 126,
+        "linearizedBaseContracts": [
+          126,
+          72,
+          532,
+          578,
+          591
+        ],
+        "name": "Domain",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 110,
+            "name": "domain",
+            "nodeType": "VariableDeclaration",
+            "scope": 126,
+            "src": "183:20:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_storage",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 109,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "183:6:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 124,
+              "nodeType": "Block",
+              "src": "279:33:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 122,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 120,
+                      "name": "domain",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 110,
+                      "src": "289:6:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_storage",
+                        "typeString": "string storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 121,
+                      "name": "_domain",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 112,
+                      "src": "298:7:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_memory_ptr",
+                        "typeString": "string memory"
+                      }
+                    },
+                    "src": "289:16:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage",
+                      "typeString": "string storage ref"
+                    }
+                  },
+                  "id": 123,
+                  "nodeType": "ExpressionStatement",
+                  "src": "289:16:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 125,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 117,
+                    "name": "_timeline",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 114,
+                    "src": "261:9:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_memory_ptr",
+                      "typeString": "bytes memory"
+                    }
+                  }
+                ],
+                "id": 118,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 116,
+                  "name": "Asset",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 72,
+                  "src": "255:5:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_type$_t_contract$_Asset_$72_$",
+                    "typeString": "type(contract Asset)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "255:16:2"
+              }
+            ],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 115,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 112,
+                  "name": "_domain",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 125,
+                  "src": "222:14:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 111,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "222:6:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 114,
+                  "name": "_timeline",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 125,
+                  "src": "238:15:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 113,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "238:5:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "221:33:2"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 119,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "279:0:2"
+            },
+            "scope": 126,
+            "src": "210:102:2",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 127,
+        "src": "152:162:2"
+      }
+    ],
+    "src": "0:314:2"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.23+commit.124ca40d.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.0",
+  "updatedAt": "2018-05-21T16:36:25.360Z"
+}

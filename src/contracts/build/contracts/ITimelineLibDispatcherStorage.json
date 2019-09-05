@@ -1,0 +1,830 @@
+{
+  "contractName": "ITimelineLibDispatcherStorage",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "bytes4"
+        }
+      ],
+      "name": "sizes",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_owner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnershipTo",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "lib",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_lib",
+          "type": "address"
+        }
+      ],
+      "name": "replace",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "_lib",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    }
+  ],
+  "bytecode": "0x608060405234801561001057600080fd5b506040516020806103a9833981016040525160008054600160a060020a03191633600160a060020a03161790558061004f640100000000610068810204565b61006181640100000000610104810204565b5050610141565b604080517f63616c6c46756e6374696f6e4f6628616464726573732c75696e743235362c6281527f79746573290000000000000000000000000000000000000000000000000000006020828101919091528251918290036025019091207fffffffff000000000000000000000000000000000000000000000000000000001660009081526002825291909120805463ffffffff19169091179055565b60005433600160a060020a0390811691161461011f57600080fd5b60018054600160a060020a031916600160a060020a0392909216919091179055565b610259806101506000396000f30060806040526004361061006c5763ffffffff7c0100000000000000000000000000000000000000000000000000000000600035041663206bd362811461007157806352effe11146100c45780638da5cb5b146100e75780639280123014610118578063cabfb9341461012d575b600080fd5b34801561007d57600080fd5b506100ab7fffffffff000000000000000000000000000000000000000000000000000000006004351661014e565b6040805163ffffffff9092168252519081900360200190f35b3480156100d057600080fd5b506100e5600160a060020a0360043516610166565b005b3480156100f357600080fd5b506100fc6101c5565b60408051600160a060020a039092168252519081900360200190f35b34801561012457600080fd5b506100fc6101d4565b34801561013957600080fd5b506100e5600160a060020a03600435166101e3565b60026020526000908152604090205463ffffffff1681565b60005433600160a060020a0390811691161461018157600080fd5b600160a060020a038116151561019657600080fd5b6000805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0392909216919091179055565b600054600160a060020a031681565b600154600160a060020a031681565b60005433600160a060020a039081169116146101fe57600080fd5b6001805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a03929092169190911790555600a165627a7a72305820971b8a1fe75f33b1f58cd919548ad55402101dd447868509e257dc2fdec994760029",
+  "deployedBytecode": "0x60806040526004361061006c5763ffffffff7c0100000000000000000000000000000000000000000000000000000000600035041663206bd362811461007157806352effe11146100c45780638da5cb5b146100e75780639280123014610118578063cabfb9341461012d575b600080fd5b34801561007d57600080fd5b506100ab7fffffffff000000000000000000000000000000000000000000000000000000006004351661014e565b6040805163ffffffff9092168252519081900360200190f35b3480156100d057600080fd5b506100e5600160a060020a0360043516610166565b005b3480156100f357600080fd5b506100fc6101c5565b60408051600160a060020a039092168252519081900360200190f35b34801561012457600080fd5b506100fc6101d4565b34801561013957600080fd5b506100e5600160a060020a03600435166101e3565b60026020526000908152604090205463ffffffff1681565b60005433600160a060020a0390811691161461018157600080fd5b600160a060020a038116151561019657600080fd5b6000805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0392909216919091179055565b600054600160a060020a031681565b600154600160a060020a031681565b60005433600160a060020a039081169116146101fe57600080fd5b6001805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a03929092169190911790555600a165627a7a72305820971b8a1fe75f33b1f58cd919548ad55402101dd447868509e257dc2fdec994760029",
+  "sourceMap": "218:432:27:-;;;285:59;8:9:-1;5:2;;;30:1;27;20:12;5:2;285:59:27;;;;;;;;;;;;;324:5:17;:14;;-1:-1:-1;;;;;;324:14:17;561:10:15;-1:-1:-1;;;;;324:14:17;;;;285:59:27;691:6:15;:4;;;;:6;:::i;:::-;707:13;715:4;707:7;;;;:13;:::i;:::-;648:79;285:59:27;218:432;;537:111;584:50;;;;;;;639:2;584:50;;;;;;;;;;;;;;;;;;571:65;;;;;;:5;:65;;;;;;:70;;-1:-1:-1;;571:70:27;;;;;;537:111::o;798:75:15:-;543:5:17;;529:10;-1:-1:-1;;;;;529:19:17;;;543:5;;529:19;521:28;;;;;;856:3:15;:10;;-1:-1:-1;;;;;;856:10:15;-1:-1:-1;;;;;856:10:15;;;;;;;;;;798:75::o;218:432:27:-;;;;;;;",
+  "deployedSourceMap": "218:432:27:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;603:38:15;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;603:38:15;;;;;;;;;;;;;;;;;;;;;;;;;;674:132:17;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;674:132:17;-1:-1:-1;;;;;674:132:17;;;;;;;252:20;;8:9:-1;5:2;;;30:1;27;20:12;5:2;252:20:17;;;;;;;;-1:-1:-1;;;;;252:20:17;;;;;;;;;;;;;;579:18:15;;8:9:-1;5:2;;;30:1;27;20:12;5:2;579:18:15;;;;798:75;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;798:75:15;-1:-1:-1;;;;;798:75:15;;;;;603:38;;;;;;;;;;;;;;;:::o;674:132:17:-;543:5;;529:10;-1:-1:-1;;;;;529:19:17;;;543:5;;529:19;521:28;;;;;;-1:-1:-1;;;;;754:20:17;;;;746:29;;;;;;785:5;:14;;-1:-1:-1;;785:14:17;-1:-1:-1;;;;;785:14:17;;;;;;;;;;674:132::o;252:20::-;;;-1:-1:-1;;;;;252:20:17;;:::o;579:18:15:-;;;-1:-1:-1;;;;;579:18:15;;:::o;798:75::-;543:5:17;;529:10;-1:-1:-1;;;;;529:19:17;;;543:5;;529:19;521:28;;;;;;856:3:15;:10;;-1:-1:-1;;856:10:15;-1:-1:-1;;;;;856:10:15;;;;;;;;;;798:75::o",
+  "source": "pragma solidity ^0.4.17;\n\nimport \"../base/dispatcher/DispatcherStorage.sol\";\n\n/**\n * Defines the storage space for the TimelineLibDispatcher which connects contracts with\n * the current version of the TimelineLib.\n */\ncontract ITimelineLibDispatcherStorage is DispatcherStorage {\n\n    constructor(address _lib) DispatcherStorage(_lib) public {}\n\n    /**\n     * Init function called by the base Dispatcher class that allows you to define the\n     * return value byte sizes for functions with return values in the TimelineLib.\n     */\n    function init() private {\n        sizes[bytes4(keccak256(\"callFunctionOf(address,uint256,bytes)\"))] = 32;\n    }\n}",
+  "sourcePath": "/Users/cmurdock/Cog/cog-asset/contracts/timeline/ITimelineLibDispatcherStorage.sol",
+  "ast": {
+    "absolutePath": "/Users/cmurdock/Cog/cog-asset/contracts/timeline/ITimelineLibDispatcherStorage.sol",
+    "exportedSymbols": {
+      "ITimelineLibDispatcherStorage": [
+        898
+      ]
+    },
+    "id": 899,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 871,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".17"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:27"
+      },
+      {
+        "absolutePath": "/Users/cmurdock/Cog/cog-asset/contracts/base/dispatcher/DispatcherStorage.sol",
+        "file": "../base/dispatcher/DispatcherStorage.sol",
+        "id": 872,
+        "nodeType": "ImportDirective",
+        "scope": 899,
+        "sourceUnit": 517,
+        "src": "26:50:27",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 873,
+              "name": "DispatcherStorage",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 516,
+              "src": "260:17:27",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_DispatcherStorage_$516",
+                "typeString": "contract DispatcherStorage"
+              }
+            },
+            "id": 874,
+            "nodeType": "InheritanceSpecifier",
+            "src": "260:17:27"
+          }
+        ],
+        "contractDependencies": [
+          516,
+          578
+        ],
+        "contractKind": "contract",
+        "documentation": "Defines the storage space for the TimelineLibDispatcher which connects contracts with\nthe current version of the TimelineLib.",
+        "fullyImplemented": true,
+        "id": 898,
+        "linearizedBaseContracts": [
+          898,
+          516,
+          578
+        ],
+        "name": "ITimelineLibDispatcherStorage",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 882,
+              "nodeType": "Block",
+              "src": "342:2:27",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 883,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 879,
+                    "name": "_lib",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 876,
+                    "src": "329:4:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  }
+                ],
+                "id": 880,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 878,
+                  "name": "DispatcherStorage",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 516,
+                  "src": "311:17:27",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_type$_t_contract$_DispatcherStorage_$516_$",
+                    "typeString": "type(contract DispatcherStorage)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "311:23:27"
+              }
+            ],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 877,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 876,
+                  "name": "_lib",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 883,
+                  "src": "297:12:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 875,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "297:7:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "296:14:27"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 881,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "342:0:27"
+            },
+            "scope": 898,
+            "src": "285:59:27",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 896,
+              "nodeType": "Block",
+              "src": "561:87:27",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 894,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 886,
+                        "name": "sizes",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 487,
+                        "src": "571:5:27",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_bytes4_$_t_uint32_$",
+                          "typeString": "mapping(bytes4 => uint32)"
+                        }
+                      },
+                      "id": 892,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "arguments": [
+                              {
+                                "argumentTypes": null,
+                                "hexValue": "63616c6c46756e6374696f6e4f6628616464726573732c75696e743235362c627974657329",
+                                "id": 889,
+                                "isConstant": false,
+                                "isLValue": false,
+                                "isPure": true,
+                                "kind": "string",
+                                "lValueRequested": false,
+                                "nodeType": "Literal",
+                                "src": "594:39:27",
+                                "subdenomination": null,
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_stringliteral_c7731028c5c2b127126578b64b29b7473ced3cae39560a0d2bf19fbfb3e041b3",
+                                  "typeString": "literal_string \"callFunctionOf(address,uint256,bytes)\""
+                                },
+                                "value": "callFunctionOf(address,uint256,bytes)"
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_stringliteral_c7731028c5c2b127126578b64b29b7473ced3cae39560a0d2bf19fbfb3e041b3",
+                                  "typeString": "literal_string \"callFunctionOf(address,uint256,bytes)\""
+                                }
+                              ],
+                              "id": 888,
+                              "name": "keccak256",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 1824,
+                              "src": "584:9:27",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_function_sha3_pure$__$returns$_t_bytes32_$",
+                                "typeString": "function () pure returns (bytes32)"
+                              }
+                            },
+                            "id": 890,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "functionCall",
+                            "lValueRequested": false,
+                            "names": [],
+                            "nodeType": "FunctionCall",
+                            "src": "584:50:27",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_bytes32",
+                              "typeString": "bytes32"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_bytes32",
+                              "typeString": "bytes32"
+                            }
+                          ],
+                          "id": 887,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "nodeType": "ElementaryTypeNameExpression",
+                          "src": "577:6:27",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_bytes4_$",
+                            "typeString": "type(bytes4)"
+                          },
+                          "typeName": "bytes4"
+                        },
+                        "id": 891,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "577:58:27",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes4",
+                          "typeString": "bytes4"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "571:65:27",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint32",
+                        "typeString": "uint32"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "3332",
+                      "id": 893,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "639:2:27",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_32_by_1",
+                        "typeString": "int_const 32"
+                      },
+                      "value": "32"
+                    },
+                    "src": "571:70:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "id": 895,
+                  "nodeType": "ExpressionStatement",
+                  "src": "571:70:27"
+                }
+              ]
+            },
+            "documentation": "Init function called by the base Dispatcher class that allows you to define the\nreturn value byte sizes for functions with return values in the TimelineLib.",
+            "id": 897,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "init",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 884,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "550:2:27"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 885,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "561:0:27"
+            },
+            "scope": 898,
+            "src": "537:111:27",
+            "stateMutability": "nonpayable",
+            "superFunction": 515,
+            "visibility": "private"
+          }
+        ],
+        "scope": 899,
+        "src": "218:432:27"
+      }
+    ],
+    "src": "0:650:27"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/cmurdock/Cog/cog-asset/contracts/timeline/ITimelineLibDispatcherStorage.sol",
+    "exportedSymbols": {
+      "ITimelineLibDispatcherStorage": [
+        898
+      ]
+    },
+    "id": 899,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 871,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".17"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:27"
+      },
+      {
+        "absolutePath": "/Users/cmurdock/Cog/cog-asset/contracts/base/dispatcher/DispatcherStorage.sol",
+        "file": "../base/dispatcher/DispatcherStorage.sol",
+        "id": 872,
+        "nodeType": "ImportDirective",
+        "scope": 899,
+        "sourceUnit": 517,
+        "src": "26:50:27",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 873,
+              "name": "DispatcherStorage",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 516,
+              "src": "260:17:27",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_DispatcherStorage_$516",
+                "typeString": "contract DispatcherStorage"
+              }
+            },
+            "id": 874,
+            "nodeType": "InheritanceSpecifier",
+            "src": "260:17:27"
+          }
+        ],
+        "contractDependencies": [
+          516,
+          578
+        ],
+        "contractKind": "contract",
+        "documentation": "Defines the storage space for the TimelineLibDispatcher which connects contracts with\nthe current version of the TimelineLib.",
+        "fullyImplemented": true,
+        "id": 898,
+        "linearizedBaseContracts": [
+          898,
+          516,
+          578
+        ],
+        "name": "ITimelineLibDispatcherStorage",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 882,
+              "nodeType": "Block",
+              "src": "342:2:27",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 883,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 879,
+                    "name": "_lib",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 876,
+                    "src": "329:4:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  }
+                ],
+                "id": 880,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 878,
+                  "name": "DispatcherStorage",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 516,
+                  "src": "311:17:27",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_type$_t_contract$_DispatcherStorage_$516_$",
+                    "typeString": "type(contract DispatcherStorage)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "311:23:27"
+              }
+            ],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 877,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 876,
+                  "name": "_lib",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 883,
+                  "src": "297:12:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 875,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "297:7:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "296:14:27"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 881,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "342:0:27"
+            },
+            "scope": 898,
+            "src": "285:59:27",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 896,
+              "nodeType": "Block",
+              "src": "561:87:27",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 894,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 886,
+                        "name": "sizes",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 487,
+                        "src": "571:5:27",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_bytes4_$_t_uint32_$",
+                          "typeString": "mapping(bytes4 => uint32)"
+                        }
+                      },
+                      "id": 892,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "arguments": [
+                              {
+                                "argumentTypes": null,
+                                "hexValue": "63616c6c46756e6374696f6e4f6628616464726573732c75696e743235362c627974657329",
+                                "id": 889,
+                                "isConstant": false,
+                                "isLValue": false,
+                                "isPure": true,
+                                "kind": "string",
+                                "lValueRequested": false,
+                                "nodeType": "Literal",
+                                "src": "594:39:27",
+                                "subdenomination": null,
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_stringliteral_c7731028c5c2b127126578b64b29b7473ced3cae39560a0d2bf19fbfb3e041b3",
+                                  "typeString": "literal_string \"callFunctionOf(address,uint256,bytes)\""
+                                },
+                                "value": "callFunctionOf(address,uint256,bytes)"
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_stringliteral_c7731028c5c2b127126578b64b29b7473ced3cae39560a0d2bf19fbfb3e041b3",
+                                  "typeString": "literal_string \"callFunctionOf(address,uint256,bytes)\""
+                                }
+                              ],
+                              "id": 888,
+                              "name": "keccak256",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 1824,
+                              "src": "584:9:27",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_function_sha3_pure$__$returns$_t_bytes32_$",
+                                "typeString": "function () pure returns (bytes32)"
+                              }
+                            },
+                            "id": 890,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "functionCall",
+                            "lValueRequested": false,
+                            "names": [],
+                            "nodeType": "FunctionCall",
+                            "src": "584:50:27",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_bytes32",
+                              "typeString": "bytes32"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_bytes32",
+                              "typeString": "bytes32"
+                            }
+                          ],
+                          "id": 887,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "nodeType": "ElementaryTypeNameExpression",
+                          "src": "577:6:27",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_bytes4_$",
+                            "typeString": "type(bytes4)"
+                          },
+                          "typeName": "bytes4"
+                        },
+                        "id": 891,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "577:58:27",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes4",
+                          "typeString": "bytes4"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "571:65:27",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint32",
+                        "typeString": "uint32"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "3332",
+                      "id": 893,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "639:2:27",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_32_by_1",
+                        "typeString": "int_const 32"
+                      },
+                      "value": "32"
+                    },
+                    "src": "571:70:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "id": 895,
+                  "nodeType": "ExpressionStatement",
+                  "src": "571:70:27"
+                }
+              ]
+            },
+            "documentation": "Init function called by the base Dispatcher class that allows you to define the\nreturn value byte sizes for functions with return values in the TimelineLib.",
+            "id": 897,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "init",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 884,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "550:2:27"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 885,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "561:0:27"
+            },
+            "scope": 898,
+            "src": "537:111:27",
+            "stateMutability": "nonpayable",
+            "superFunction": 515,
+            "visibility": "private"
+          }
+        ],
+        "scope": 899,
+        "src": "218:432:27"
+      }
+    ],
+    "src": "0:650:27"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.23+commit.124ca40d.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.0",
+  "updatedAt": "2018-05-21T16:36:25.363Z"
+}

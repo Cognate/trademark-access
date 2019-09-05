@@ -1,0 +1,1240 @@
+{
+  "contractName": "CertifiableTimeline",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "to",
+          "type": "address"
+        }
+      ],
+      "name": "upgrade",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "tail",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "document",
+          "type": "address"
+        }
+      ],
+      "name": "remove",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "next",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_owner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnershipTo",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "version",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint16"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "previous",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "document",
+          "type": "address"
+        }
+      ],
+      "name": "append",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "upgraded",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "target",
+          "type": "address"
+        },
+        {
+          "name": "value",
+          "type": "uint256"
+        },
+        {
+          "name": "funcData",
+          "type": "bytes"
+        }
+      ],
+      "name": "callFunctionOf",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "documentCode",
+          "type": "bytes"
+        }
+      ],
+      "name": "appendBytes",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "claim",
+          "type": "bytes"
+        }
+      ],
+      "name": "appendWithCertification",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "completeCertification",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "document",
+          "type": "address"
+        }
+      ],
+      "name": "getCertified",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity ^0.4.17;\n\nimport \"./Timeline.sol\";\nimport \"./timelineDocuments/CertifiableTimelineDocument.sol\";\nimport \"../protocol/Certifiable.sol\";\n\n/**\n * Initial document representing a Common Law Trademark\n *\n * Copyright (c) 2017 Cognate, Inc.\n */\ncontract CertifiableTimeline is Timeline, Certifiable {\n\n    /**\n     * Takes a Claim that needs to be certified, creates a certifier and begins\n     * the certification protocol.\n     */\n    function appendWithCertification(bytes claim) onlyOwner {}\n\n    /**\n     * Called by Certifier upon Certification protocol completion\n     */\n    function completeCertification() onlyCertifier {}\n\n    /**\n     * Start certification for an existing uncertified CertifiableTimelineDocument\n     */\n     function getCertified(CertifiableTimelineDocument document) onlyOwner {\n        require(document.certifier() == address(0));\n     }\n}",
+  "sourcePath": "/Users/cmurdock/Cog/cog-asset/contracts/timeline/CertifiableTimeline.sol",
+  "ast": {
+    "absolutePath": "/Users/cmurdock/Cog/cog-asset/contracts/timeline/CertifiableTimeline.sol",
+    "exportedSymbols": {
+      "CertifiableTimeline": [
+        805
+      ]
+    },
+    "id": 806,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 765,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".17"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:25"
+      },
+      {
+        "absolutePath": "/Users/cmurdock/Cog/cog-asset/contracts/timeline/Timeline.sol",
+        "file": "./Timeline.sol",
+        "id": 766,
+        "nodeType": "ImportDirective",
+        "scope": 806,
+        "sourceUnit": 1051,
+        "src": "26:24:25",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/cmurdock/Cog/cog-asset/contracts/timeline/timelineDocuments/CertifiableTimelineDocument.sol",
+        "file": "./timelineDocuments/CertifiableTimelineDocument.sol",
+        "id": 767,
+        "nodeType": "ImportDirective",
+        "scope": 806,
+        "sourceUnit": 1439,
+        "src": "51:61:25",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/cmurdock/Cog/cog-asset/contracts/protocol/Certifiable.sol",
+        "file": "../protocol/Certifiable.sol",
+        "id": 768,
+        "nodeType": "ImportDirective",
+        "scope": 806,
+        "sourceUnit": 613,
+        "src": "113:37:25",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 769,
+              "name": "Timeline",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1050,
+              "src": "287:8:25",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Timeline_$1050",
+                "typeString": "contract Timeline"
+              }
+            },
+            "id": 770,
+            "nodeType": "InheritanceSpecifier",
+            "src": "287:8:25"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 771,
+              "name": "Certifiable",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 612,
+              "src": "297:11:25",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Certifiable_$612",
+                "typeString": "contract Certifiable"
+              }
+            },
+            "id": 772,
+            "nodeType": "InheritanceSpecifier",
+            "src": "297:11:25"
+          }
+        ],
+        "contractDependencies": [
+          578,
+          612,
+          1050
+        ],
+        "contractKind": "contract",
+        "documentation": "Initial document representing a Common Law Trademark\n * Copyright (c) 2017 Cognate, Inc.",
+        "fullyImplemented": false,
+        "id": 805,
+        "linearizedBaseContracts": [
+          805,
+          612,
+          1050,
+          578
+        ],
+        "name": "CertifiableTimeline",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 779,
+              "nodeType": "Block",
+              "src": "503:2:25",
+              "statements": []
+            },
+            "documentation": "Takes a Claim that needs to be certified, creates a certifier and begins\nthe certification protocol.",
+            "id": 780,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 777,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 776,
+                  "name": "onlyOwner",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 557,
+                  "src": "493:9:25",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "493:9:25"
+              }
+            ],
+            "name": "appendWithCertification",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 775,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 774,
+                  "name": "claim",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 780,
+                  "src": "480:11:25",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 773,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "480:5:25",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "479:13:25"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 778,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "503:0:25"
+            },
+            "scope": 805,
+            "src": "447:58:25",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 785,
+              "nodeType": "Block",
+              "src": "640:2:25",
+              "statements": []
+            },
+            "documentation": "Called by Certifier upon Certification protocol completion",
+            "id": 786,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 783,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 782,
+                  "name": "onlyCertifier",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 611,
+                  "src": "626:13:25",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "626:13:25"
+              }
+            ],
+            "name": "completeCertification",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 781,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "623:2:25"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 784,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "640:0:25"
+            },
+            "scope": 805,
+            "src": "593:49:25",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 803,
+              "nodeType": "Block",
+              "src": "818:61:25",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        "id": 800,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "arguments": [],
+                          "expression": {
+                            "argumentTypes": [],
+                            "expression": {
+                              "argumentTypes": null,
+                              "id": 794,
+                              "name": "document",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 788,
+                              "src": "836:8:25",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_contract$_CertifiableTimelineDocument_$1438",
+                                "typeString": "contract CertifiableTimelineDocument"
+                              }
+                            },
+                            "id": 795,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "certifier",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 1428,
+                            "src": "836:18:25",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_external_view$__$returns$_t_address_$",
+                              "typeString": "function () view external returns (address)"
+                            }
+                          },
+                          "id": 796,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "836:20:25",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "hexValue": "30",
+                              "id": 798,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "868:1:25",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              },
+                              "value": "0"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              }
+                            ],
+                            "id": 797,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "nodeType": "ElementaryTypeNameExpression",
+                            "src": "860:7:25",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_address_$",
+                              "typeString": "type(address)"
+                            },
+                            "typeName": "address"
+                          },
+                          "id": 799,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "typeConversion",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "860:10:25",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "src": "836:34:25",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 793,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        1833,
+                        1834
+                      ],
+                      "referencedDeclaration": 1833,
+                      "src": "828:7:25",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 801,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "828:43:25",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 802,
+                  "nodeType": "ExpressionStatement",
+                  "src": "828:43:25"
+                }
+              ]
+            },
+            "documentation": "Start certification for an existing uncertified CertifiableTimelineDocument",
+            "id": 804,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 791,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 790,
+                  "name": "onlyOwner",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 557,
+                  "src": "808:9:25",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "808:9:25"
+              }
+            ],
+            "name": "getCertified",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 789,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 788,
+                  "name": "document",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 804,
+                  "src": "770:36:25",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_CertifiableTimelineDocument_$1438",
+                    "typeString": "contract CertifiableTimelineDocument"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 787,
+                    "name": "CertifiableTimelineDocument",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 1438,
+                    "src": "770:27:25",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_CertifiableTimelineDocument_$1438",
+                      "typeString": "contract CertifiableTimelineDocument"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "769:38:25"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 792,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "818:0:25"
+            },
+            "scope": 805,
+            "src": "748:131:25",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 806,
+        "src": "255:626:25"
+      }
+    ],
+    "src": "0:881:25"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/cmurdock/Cog/cog-asset/contracts/timeline/CertifiableTimeline.sol",
+    "exportedSymbols": {
+      "CertifiableTimeline": [
+        805
+      ]
+    },
+    "id": 806,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 765,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".17"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:25"
+      },
+      {
+        "absolutePath": "/Users/cmurdock/Cog/cog-asset/contracts/timeline/Timeline.sol",
+        "file": "./Timeline.sol",
+        "id": 766,
+        "nodeType": "ImportDirective",
+        "scope": 806,
+        "sourceUnit": 1051,
+        "src": "26:24:25",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/cmurdock/Cog/cog-asset/contracts/timeline/timelineDocuments/CertifiableTimelineDocument.sol",
+        "file": "./timelineDocuments/CertifiableTimelineDocument.sol",
+        "id": 767,
+        "nodeType": "ImportDirective",
+        "scope": 806,
+        "sourceUnit": 1439,
+        "src": "51:61:25",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/cmurdock/Cog/cog-asset/contracts/protocol/Certifiable.sol",
+        "file": "../protocol/Certifiable.sol",
+        "id": 768,
+        "nodeType": "ImportDirective",
+        "scope": 806,
+        "sourceUnit": 613,
+        "src": "113:37:25",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 769,
+              "name": "Timeline",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1050,
+              "src": "287:8:25",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Timeline_$1050",
+                "typeString": "contract Timeline"
+              }
+            },
+            "id": 770,
+            "nodeType": "InheritanceSpecifier",
+            "src": "287:8:25"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 771,
+              "name": "Certifiable",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 612,
+              "src": "297:11:25",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Certifiable_$612",
+                "typeString": "contract Certifiable"
+              }
+            },
+            "id": 772,
+            "nodeType": "InheritanceSpecifier",
+            "src": "297:11:25"
+          }
+        ],
+        "contractDependencies": [
+          578,
+          612,
+          1050
+        ],
+        "contractKind": "contract",
+        "documentation": "Initial document representing a Common Law Trademark\n * Copyright (c) 2017 Cognate, Inc.",
+        "fullyImplemented": false,
+        "id": 805,
+        "linearizedBaseContracts": [
+          805,
+          612,
+          1050,
+          578
+        ],
+        "name": "CertifiableTimeline",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 779,
+              "nodeType": "Block",
+              "src": "503:2:25",
+              "statements": []
+            },
+            "documentation": "Takes a Claim that needs to be certified, creates a certifier and begins\nthe certification protocol.",
+            "id": 780,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 777,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 776,
+                  "name": "onlyOwner",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 557,
+                  "src": "493:9:25",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "493:9:25"
+              }
+            ],
+            "name": "appendWithCertification",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 775,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 774,
+                  "name": "claim",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 780,
+                  "src": "480:11:25",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 773,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "480:5:25",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "479:13:25"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 778,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "503:0:25"
+            },
+            "scope": 805,
+            "src": "447:58:25",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 785,
+              "nodeType": "Block",
+              "src": "640:2:25",
+              "statements": []
+            },
+            "documentation": "Called by Certifier upon Certification protocol completion",
+            "id": 786,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 783,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 782,
+                  "name": "onlyCertifier",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 611,
+                  "src": "626:13:25",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "626:13:25"
+              }
+            ],
+            "name": "completeCertification",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 781,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "623:2:25"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 784,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "640:0:25"
+            },
+            "scope": 805,
+            "src": "593:49:25",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 803,
+              "nodeType": "Block",
+              "src": "818:61:25",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        "id": 800,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "arguments": [],
+                          "expression": {
+                            "argumentTypes": [],
+                            "expression": {
+                              "argumentTypes": null,
+                              "id": 794,
+                              "name": "document",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 788,
+                              "src": "836:8:25",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_contract$_CertifiableTimelineDocument_$1438",
+                                "typeString": "contract CertifiableTimelineDocument"
+                              }
+                            },
+                            "id": 795,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "certifier",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 1428,
+                            "src": "836:18:25",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_external_view$__$returns$_t_address_$",
+                              "typeString": "function () view external returns (address)"
+                            }
+                          },
+                          "id": 796,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "836:20:25",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "hexValue": "30",
+                              "id": 798,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "868:1:25",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              },
+                              "value": "0"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              }
+                            ],
+                            "id": 797,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "nodeType": "ElementaryTypeNameExpression",
+                            "src": "860:7:25",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_address_$",
+                              "typeString": "type(address)"
+                            },
+                            "typeName": "address"
+                          },
+                          "id": 799,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "typeConversion",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "860:10:25",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "src": "836:34:25",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 793,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        1833,
+                        1834
+                      ],
+                      "referencedDeclaration": 1833,
+                      "src": "828:7:25",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 801,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "828:43:25",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 802,
+                  "nodeType": "ExpressionStatement",
+                  "src": "828:43:25"
+                }
+              ]
+            },
+            "documentation": "Start certification for an existing uncertified CertifiableTimelineDocument",
+            "id": 804,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 791,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 790,
+                  "name": "onlyOwner",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 557,
+                  "src": "808:9:25",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "808:9:25"
+              }
+            ],
+            "name": "getCertified",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 789,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 788,
+                  "name": "document",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 804,
+                  "src": "770:36:25",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_CertifiableTimelineDocument_$1438",
+                    "typeString": "contract CertifiableTimelineDocument"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 787,
+                    "name": "CertifiableTimelineDocument",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 1438,
+                    "src": "770:27:25",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_CertifiableTimelineDocument_$1438",
+                      "typeString": "contract CertifiableTimelineDocument"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "769:38:25"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 792,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "818:0:25"
+            },
+            "scope": 805,
+            "src": "748:131:25",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 806,
+        "src": "255:626:25"
+      }
+    ],
+    "src": "0:881:25"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.23+commit.124ca40d.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.0",
+  "updatedAt": "2018-05-21T16:36:25.362Z"
+}

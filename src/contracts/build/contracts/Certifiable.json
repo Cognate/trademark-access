@@ -1,0 +1,519 @@
+{
+  "contractName": "Certifiable",
+  "abi": [],
+  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3006080604052600080fd00a165627a7a72305820353ec2da6b48cca5f7d1d35c2504086ca1fc6533f62d9bb499ccf3bfd4e905f50029",
+  "deployedBytecode": "0x6080604052600080fd00a165627a7a72305820353ec2da6b48cca5f7d1d35c2504086ca1fc6533f62d9bb499ccf3bfd4e905f50029",
+  "sourceMap": "112:229:19:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;112:229:19;;;;;;;",
+  "deployedSourceMap": "112:229:19:-;;;;;",
+  "source": "pragma solidity ^0.4.8;\n\nimport \"./CertifiableLib.sol\";\n\n/**\n * TODO\n *\n * Copyright (c) 2017 Cognate, Inc.\n */\ncontract Certifiable {\n    using CertifiableLib for CertifiableLib.Certifiable;\n\n    CertifiableLib.Certifiable certifiable;\n\n    modifier onlyCertifier() {\n        require(certifiable.isCertifier[msg.sender]);\n        _;\n    }\n}",
+  "sourcePath": "/Users/cmurdock/Cog/cog-asset/contracts/protocol/Certifiable.sol",
+  "ast": {
+    "absolutePath": "/Users/cmurdock/Cog/cog-asset/contracts/protocol/Certifiable.sol",
+    "exportedSymbols": {
+      "Certifiable": [
+        612
+      ]
+    },
+    "id": 613,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 593,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".8"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:19"
+      },
+      {
+        "absolutePath": "/Users/cmurdock/Cog/cog-asset/contracts/protocol/CertifiableLib.sol",
+        "file": "./CertifiableLib.sol",
+        "id": 594,
+        "nodeType": "ImportDirective",
+        "scope": 613,
+        "sourceUnit": 625,
+        "src": "25:30:19",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "TODO\n * Copyright (c) 2017 Cognate, Inc.",
+        "fullyImplemented": true,
+        "id": 612,
+        "linearizedBaseContracts": [
+          612
+        ],
+        "name": "Certifiable",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "id": 597,
+            "libraryName": {
+              "contractScope": null,
+              "id": 595,
+              "name": "CertifiableLib",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 624,
+              "src": "145:14:19",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_CertifiableLib_$624",
+                "typeString": "library CertifiableLib"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "139:52:19",
+            "typeName": {
+              "contractScope": null,
+              "id": 596,
+              "name": "CertifiableLib.Certifiable",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 623,
+              "src": "164:26:19",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_Certifiable_$623_storage_ptr",
+                "typeString": "struct CertifiableLib.Certifiable"
+              }
+            }
+          },
+          {
+            "constant": false,
+            "id": 599,
+            "name": "certifiable",
+            "nodeType": "VariableDeclaration",
+            "scope": 612,
+            "src": "197:38:19",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_struct$_Certifiable_$623_storage",
+              "typeString": "struct CertifiableLib.Certifiable"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 598,
+              "name": "CertifiableLib.Certifiable",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 623,
+              "src": "197:26:19",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_Certifiable_$623_storage_ptr",
+                "typeString": "struct CertifiableLib.Certifiable"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 610,
+              "nodeType": "Block",
+              "src": "267:72:19",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 602,
+                            "name": "certifiable",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 599,
+                            "src": "285:11:19",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_struct$_Certifiable_$623_storage",
+                              "typeString": "struct CertifiableLib.Certifiable storage ref"
+                            }
+                          },
+                          "id": 603,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "isCertifier",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 619,
+                          "src": "285:23:19",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                            "typeString": "mapping(address => bool)"
+                          }
+                        },
+                        "id": 606,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 604,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 1830,
+                            "src": "309:3:19",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 605,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "sender",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "309:10:19",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "285:35:19",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 601,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        1833,
+                        1834
+                      ],
+                      "referencedDeclaration": 1833,
+                      "src": "277:7:19",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 607,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "277:44:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 608,
+                  "nodeType": "ExpressionStatement",
+                  "src": "277:44:19"
+                },
+                {
+                  "id": 609,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "331:1:19"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 611,
+            "name": "onlyCertifier",
+            "nodeType": "ModifierDefinition",
+            "parameters": {
+              "id": 600,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "264:2:19"
+            },
+            "src": "242:97:19",
+            "visibility": "internal"
+          }
+        ],
+        "scope": 613,
+        "src": "112:229:19"
+      }
+    ],
+    "src": "0:341:19"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/cmurdock/Cog/cog-asset/contracts/protocol/Certifiable.sol",
+    "exportedSymbols": {
+      "Certifiable": [
+        612
+      ]
+    },
+    "id": 613,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 593,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".8"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:19"
+      },
+      {
+        "absolutePath": "/Users/cmurdock/Cog/cog-asset/contracts/protocol/CertifiableLib.sol",
+        "file": "./CertifiableLib.sol",
+        "id": 594,
+        "nodeType": "ImportDirective",
+        "scope": 613,
+        "sourceUnit": 625,
+        "src": "25:30:19",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "TODO\n * Copyright (c) 2017 Cognate, Inc.",
+        "fullyImplemented": true,
+        "id": 612,
+        "linearizedBaseContracts": [
+          612
+        ],
+        "name": "Certifiable",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "id": 597,
+            "libraryName": {
+              "contractScope": null,
+              "id": 595,
+              "name": "CertifiableLib",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 624,
+              "src": "145:14:19",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_CertifiableLib_$624",
+                "typeString": "library CertifiableLib"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "139:52:19",
+            "typeName": {
+              "contractScope": null,
+              "id": 596,
+              "name": "CertifiableLib.Certifiable",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 623,
+              "src": "164:26:19",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_Certifiable_$623_storage_ptr",
+                "typeString": "struct CertifiableLib.Certifiable"
+              }
+            }
+          },
+          {
+            "constant": false,
+            "id": 599,
+            "name": "certifiable",
+            "nodeType": "VariableDeclaration",
+            "scope": 612,
+            "src": "197:38:19",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_struct$_Certifiable_$623_storage",
+              "typeString": "struct CertifiableLib.Certifiable"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 598,
+              "name": "CertifiableLib.Certifiable",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 623,
+              "src": "197:26:19",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_Certifiable_$623_storage_ptr",
+                "typeString": "struct CertifiableLib.Certifiable"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 610,
+              "nodeType": "Block",
+              "src": "267:72:19",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 602,
+                            "name": "certifiable",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 599,
+                            "src": "285:11:19",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_struct$_Certifiable_$623_storage",
+                              "typeString": "struct CertifiableLib.Certifiable storage ref"
+                            }
+                          },
+                          "id": 603,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "isCertifier",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 619,
+                          "src": "285:23:19",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                            "typeString": "mapping(address => bool)"
+                          }
+                        },
+                        "id": 606,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 604,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 1830,
+                            "src": "309:3:19",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 605,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "sender",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "309:10:19",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "285:35:19",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 601,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        1833,
+                        1834
+                      ],
+                      "referencedDeclaration": 1833,
+                      "src": "277:7:19",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 607,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "277:44:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 608,
+                  "nodeType": "ExpressionStatement",
+                  "src": "277:44:19"
+                },
+                {
+                  "id": 609,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "331:1:19"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 611,
+            "name": "onlyCertifier",
+            "nodeType": "ModifierDefinition",
+            "parameters": {
+              "id": 600,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "264:2:19"
+            },
+            "src": "242:97:19",
+            "visibility": "internal"
+          }
+        ],
+        "scope": 613,
+        "src": "112:229:19"
+      }
+    ],
+    "src": "0:341:19"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.23+commit.124ca40d.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.0",
+  "updatedAt": "2018-05-21T16:36:25.362Z"
+}

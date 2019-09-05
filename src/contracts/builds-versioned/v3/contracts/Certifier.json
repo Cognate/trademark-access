@@ -1,0 +1,140 @@
+{
+  "contractName": "Certifier",
+  "abi": [],
+  "bytecode": "0x60606040523415600e57600080fd5b603580601b6000396000f3006060604052600080fd00a165627a7a723058206e2ebf095ed1504b2d478f8f7d5a95962e16905cd554c17b4bfa97805731e6d70029",
+  "deployedBytecode": "0x6060604052600080fd00a165627a7a723058206e2ebf095ed1504b2d478f8f7d5a95962e16905cd554c17b4bfa97805731e6d70029",
+  "sourceMap": "110:754:21:-;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "110:754:21:-;;;;;",
+  "source": "pragma solidity ^0.4.8;\n\nimport \"./CertifierLib.sol\";\n\n/**\n * TODO\n *\n * Copyright (c) 2017 Cognate, Inc.\n */\ncontract Certifier {\n    using CertifierLib for CertifierLib.Certifier;\n\n    CertifierLib.Certifier certifier;\n\n    // I think Certifier requires a state machine that helps to limit what it can do in each state\n    \n    // state 1: payable to add stake to contract\n    // state 2: selecting certifiers\n    // state 3: certification protocol\n    // state 4: certified\n\n    // final state should call a completion function on whatever it was certifying\n\n    /*function Certifier(TimelineDocument claim) {\n        certifier.claim = claim;\n    }*/\n\n    // NOTE: A Certifier will need to be able to verify what it certified, I think this will be\n    // an inherent feature since it will have pointers to the various components needed for\n    // verification\n}",
+  "sourcePath": "/Users/MasterChief/Cog/cog-contract/contracts/protocol/Certifier.sol",
+  "ast": {
+    "attributes": {
+      "absolutePath": "/Users/MasterChief/Cog/cog-contract/contracts/protocol/Certifier.sol",
+      "exportedSymbols": {
+        "Certifier": [
+          839
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.4",
+            ".8"
+          ]
+        },
+        "id": 832,
+        "name": "PragmaDirective",
+        "src": "0:23:21"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 900,
+          "absolutePath": "/Users/MasterChief/Cog/cog-contract/contracts/protocol/CertifierLib.sol",
+          "file": "./CertifierLib.sol",
+          "scope": 840,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 833,
+        "name": "ImportDirective",
+        "src": "25:28:21"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": "TODO\n * Copyright (c) 2017 Cognate, Inc.",
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            839
+          ],
+          "name": "Certifier",
+          "scope": 840
+        },
+        "children": [
+          {
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "CertifierLib",
+                  "referencedDeclaration": 899,
+                  "type": "library CertifierLib"
+                },
+                "id": 834,
+                "name": "UserDefinedTypeName",
+                "src": "141:12:21"
+              },
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "CertifierLib.Certifier",
+                  "referencedDeclaration": 859,
+                  "type": "struct CertifierLib.Certifier storage pointer"
+                },
+                "id": 835,
+                "name": "UserDefinedTypeName",
+                "src": "158:22:21"
+              }
+            ],
+            "id": 836,
+            "name": "UsingForDirective",
+            "src": "135:46:21"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "certifier",
+              "scope": 839,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "struct CertifierLib.Certifier storage ref",
+              "value": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "CertifierLib.Certifier",
+                  "referencedDeclaration": 859,
+                  "type": "struct CertifierLib.Certifier storage pointer"
+                },
+                "id": 837,
+                "name": "UserDefinedTypeName",
+                "src": "187:22:21"
+              }
+            ],
+            "id": 838,
+            "name": "VariableDeclaration",
+            "src": "187:32:21"
+          }
+        ],
+        "id": 839,
+        "name": "ContractDefinition",
+        "src": "110:754:21"
+      }
+    ],
+    "id": 840,
+    "name": "SourceUnit",
+    "src": "0:864:21"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.18+commit.9cf6e910.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "1.0.1",
+  "updatedAt": "2018-01-15T19:32:46.196Z"
+}

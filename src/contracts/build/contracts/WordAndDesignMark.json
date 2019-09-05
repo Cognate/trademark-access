@@ -1,0 +1,870 @@
+{
+  "contractName": "WordAndDesignMark",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "timeline",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "word",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "kill",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_owner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnershipTo",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "design",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "designLocation",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "timestamp",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_timeline",
+          "type": "bytes"
+        }
+      ],
+      "name": "upgradeTimeline",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "_word",
+          "type": "string"
+        },
+        {
+          "name": "_design",
+          "type": "bytes32"
+        },
+        {
+          "name": "_designLocation",
+          "type": "string"
+        },
+        {
+          "name": "_timeline",
+          "type": "bytes"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    }
+  ],
+  "bytecode": "0x608060405234801561001057600080fd5b506040516108573803806108578339810160409081528151602083015191830151606084015142600090815560018054600160a060020a03191633600160a060020a0316179055908501805193860195929092019284918491849182911115610187576040517f5281042700000000000000000000000000000000000000000000000000000000815260206004820181815283516024840152835173__IbaseLib______________________________9363528104279386939283926044019185019080838360005b838110156100f15781810151838201526020016100d9565b50505050905090810190601f16801561011e5780820380516001836020036101000a031916815260200191505b509250505060206040518083038186803b15801561013b57600080fd5b505af415801561014f573d6000803e3d6000fd5b505050506040513d602081101561016557600080fd5b505160028054600160a060020a031916600160a060020a039092169190911790555b50600383905581516101a09060049060208501906101c1565b505085516101b792506005915060208701906101c1565b505050505061025c565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061020257805160ff191683800117855561022f565b8280016001018555821561022f579182015b8281111561022f578251825591602001919060010190610214565b5061023b92915061023f565b5090565b61025991905b8082111561023b5760008155600101610245565b90565b6105ec8061026b6000396000f3006080604052600436106100985763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166317a5410b811461009d5780632f64d386146100ce57806341c0e1b51461015857806352effe111461016f5780638da5cb5b1461019057806393f50206146101a5578063a7ed582a146101cc578063b80777ea146101e1578063f6345414146101f6575b600080fd5b3480156100a957600080fd5b506100b261024f565b60408051600160a060020a039092168252519081900360200190f35b3480156100da57600080fd5b506100e361025e565b6040805160208082528351818301528351919283929083019185019080838360005b8381101561011d578181015183820152602001610105565b50505050905090810190601f16801561014a5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b34801561016457600080fd5b5061016d6102ec565b005b34801561017b57600080fd5b5061016d600160a060020a0360043516610315565b34801561019c57600080fd5b506100b2610374565b3480156101b157600080fd5b506101ba610383565b60408051918252519081900360200190f35b3480156101d857600080fd5b506100e3610389565b3480156101ed57600080fd5b506101ba6103e4565b34801561020257600080fd5b506040805160206004803580820135601f810184900484028501840190955284845261016d9436949293602493928401919081908401838280828437509497506103ea9650505050505050565b600254600160a060020a031681565b6005805460408051602060026001851615610100026000190190941693909304601f810184900484028201840190925281815292918301828280156102e45780601f106102b9576101008083540402835291602001916102e4565b820191906000526020600020905b8154815290600101906020018083116102c757829003601f168201915b505050505081565b60015433600160a060020a0390811691161461030757600080fd5b600154600160a060020a0316ff5b60015433600160a060020a0390811691161461033057600080fd5b600160a060020a038116151561034557600080fd5b6001805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0392909216919091179055565b600154600160a060020a031681565b60035481565b6004805460408051602060026001851615610100026000190190941693909304601f810184900484028201840190925281815292918301828280156102e45780601f106102b9576101008083540402835291602001916102e4565b60005481565b60015460009033600160a060020a0390811691161461040857600080fd5b506002546040517f52810427000000000000000000000000000000000000000000000000000000008152602060048201818152845160248401528451600160a060020a039094169373__IbaseLib______________________________9363528104279387939283926044019185019080838360005b8381101561049657818101518382015260200161047e565b50505050905090810190601f1680156104c35780820380516001836020036101000a031916815260200191505b509250505060206040518083038186803b1580156104e057600080fd5b505af41580156104f4573d6000803e3d6000fd5b505050506040513d602081101561050a57600080fd5b50516002805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a039283161790558116156105bc57600254604080517f0900f010000000000000000000000000000000000000000000000000000000008152600160a060020a039283166004820152905191831691630900f0109160248082019260009290919082900301818387803b1580156105a357600080fd5b505af11580156105b7573d6000803e3d6000fd5b505050505b50505600a165627a7a7230582088291f8087d2dd44753a121901107fe75a240c3013feb245f6527bb7f3417cce0029",
+  "deployedBytecode": "0x6080604052600436106100985763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166317a5410b811461009d5780632f64d386146100ce57806341c0e1b51461015857806352effe111461016f5780638da5cb5b1461019057806393f50206146101a5578063a7ed582a146101cc578063b80777ea146101e1578063f6345414146101f6575b600080fd5b3480156100a957600080fd5b506100b261024f565b60408051600160a060020a039092168252519081900360200190f35b3480156100da57600080fd5b506100e361025e565b6040805160208082528351818301528351919283929083019185019080838360005b8381101561011d578181015183820152602001610105565b50505050905090810190601f16801561014a5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b34801561016457600080fd5b5061016d6102ec565b005b34801561017b57600080fd5b5061016d600160a060020a0360043516610315565b34801561019c57600080fd5b506100b2610374565b3480156101b157600080fd5b506101ba610383565b60408051918252519081900360200190f35b3480156101d857600080fd5b506100e3610389565b3480156101ed57600080fd5b506101ba6103e4565b34801561020257600080fd5b506040805160206004803580820135601f810184900484028501840190955284845261016d9436949293602493928401919081908401838280828437509497506103ea9650505050505050565b600254600160a060020a031681565b6005805460408051602060026001851615610100026000190190941693909304601f810184900484028201840190925281815292918301828280156102e45780601f106102b9576101008083540402835291602001916102e4565b820191906000526020600020905b8154815290600101906020018083116102c757829003601f168201915b505050505081565b60015433600160a060020a0390811691161461030757600080fd5b600154600160a060020a0316ff5b60015433600160a060020a0390811691161461033057600080fd5b600160a060020a038116151561034557600080fd5b6001805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0392909216919091179055565b600154600160a060020a031681565b60035481565b6004805460408051602060026001851615610100026000190190941693909304601f810184900484028201840190925281815292918301828280156102e45780601f106102b9576101008083540402835291602001916102e4565b60005481565b60015460009033600160a060020a0390811691161461040857600080fd5b506002546040517f52810427000000000000000000000000000000000000000000000000000000008152602060048201818152845160248401528451600160a060020a039094169373__IbaseLib______________________________9363528104279387939283926044019185019080838360005b8381101561049657818101518382015260200161047e565b50505050905090810190601f1680156104c35780820380516001836020036101000a031916815260200191505b509250505060206040518083038186803b1580156104e057600080fd5b505af41580156104f4573d6000803e3d6000fd5b505050506040513d602081101561050a57600080fd5b50516002805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a039283161790558116156105bc57600254604080517f0900f010000000000000000000000000000000000000000000000000000000008152600160a060020a039283166004820152905191831691630900f0109160248082019260009290919082900301818387803b1580156105a357600080fd5b505af11580156105b7573d6000803e3d6000fd5b505050505b50505600a165627a7a7230582088291f8087d2dd44753a121901107fe75a240c3013feb245f6527bb7f3417cce0029",
+  "sourceMap": "168:242:6:-;;;240:168;8:9:-1;5:2;;;30:1;27;20:12;5:2;240:168:6;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;467:3:18;455:9;:15;;;324:5:17;:14;;-1:-1:-1;;;;;;324:14:17;332:10:0;-1:-1:-1;;;;;324:14:17;;;;240:168:6;;;439:16:0;;240:168:6;;;;;;;;;;;;;;;;;439:20:0;435:115;;;495:43;;;;;;;;;;;;;;;;;;;;:8;;:32;;528:9;;495:43;;;;;;;;;;;;;8:100:-1;33:3;30:1;27:10;8:100;;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;;12:14;495:43:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;495:43:0;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;495:43:0;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;495:43:0;475:8;:64;;-1:-1:-1;;;;;;475:64:0;-1:-1:-1;;;;;475:64:0;;;;;;;;;435:115;-1:-1:-1;357:6:3;:16;;;383:32;;;;:14;;:32;;;;;:::i;:::-;-1:-1:-1;;389:12:6;;;;-1:-1:-1;389:4:6;;-1:-1:-1;389:12:6;;;;;:::i;:::-;;240:168;;;;168:242;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;168:242:6;;;-1:-1:-1;168:242:6;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;",
+  "deployedSourceMap": "168:242:6:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;358:24:0;;8:9:-1;5:2;;;30:1;27;20:12;5:2;358:24:0;;;;;;;;-1:-1:-1;;;;;358:24:0;;;;;;;;;;;;;;215:18:6;;8:9:-1;5:2;;;30:1;27;20:12;5:2;215:18:6;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:100:-1;33:3;30:1;27:10;8:100;;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;;12:14;215:18:6;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;232:69:16;;8:9:-1;5:2;;;30:1;27;20:12;5:2;232:69:16;;;;;;674:132:17;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;674:132:17;-1:-1:-1;;;;;674:132:17;;;;;252:20;;8:9:-1;5:2;;;30:1;27;20:12;5:2;252:20:17;;;;191:21:3;;8:9:-1;5:2;;;30:1;27;20:12;5:2;191:21:3;;;;;;;;;;;;;;;;;;;;218:28;;8:9:-1;5:2;;;30:1;27;20:12;5:2;218:28:3;;;;357:21:18;;8:9:-1;5:2;;;30:1;27;20:12;5:2;357:21:18;;;;649:266:0;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;649:266:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;649:266:0;;-1:-1:-1;649:266:0;;-1:-1:-1;;;;;;;649:266:0;358:24;;;-1:-1:-1;;;;;358:24:0;;:::o;215:18:6:-;;;;;;;;;;;;;;;-1:-1:-1;;215:18:6;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;232:69:16:-;543:5:17;;529:10;-1:-1:-1;;;;;529:19:17;;;543:5;;529:19;521:28;;;;;;288:5:16;;-1:-1:-1;;;;;288:5:16;275:19;674:132:17;543:5;;529:10;-1:-1:-1;;;;;529:19:17;;;543:5;;529:19;521:28;;;;;;-1:-1:-1;;;;;754:20:17;;;;746:29;;;;;;785:5;:14;;-1:-1:-1;;785:14:17;-1:-1:-1;;;;;785:14:17;;;;;;;;;;674:132::o;252:20::-;;;-1:-1:-1;;;;;252:20:17;;:::o;191:21:3:-;;;;:::o;218:28::-;;;;;;;;;;;;;;;-1:-1:-1;;218:28:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;357:21:18;;;;:::o;649:266:0:-;543:5:17;;718:17:0;;529:10:17;-1:-1:-1;;;;;529:19:17;;;543:5;;529:19;521:28;;;;;;-1:-1:-1;738:8:0;;776:43;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;738:8:0;;;;776;;:32;;809:9;;776:43;;;;;;;;;;;;738:8;8:100:-1;33:3;30:1;27:10;8:100;;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;;12:14;776:43:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;776:43:0;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;776:43:0;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;776:43:0;756:8;:64;;-1:-1:-1;;756:64:0;-1:-1:-1;;;;;756:64:0;;;;;;834:22;;;831:78;;889:8;;872:26;;;;;;-1:-1:-1;;;;;889:8:0;;;872:26;;;;;;:16;;;;;;:26;;;;;889:8;;872:26;;;;;;;;889:8;872:16;:26;;;5:2:-1;;;;30:1;27;20:12;5:2;872:26:0;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;872:26:0;;;;831:78;649:266;;:::o",
+  "source": "pragma solidity ^0.4.17;\n\nimport \"./DesignMark.sol\";\n\n/**\n * Base contract for representing a WordAndDesignMark chain asset.\n *\n * Copyright (c) 2018 Cognate, Inc.\n */\ncontract WordAndDesignMark is DesignMark {\n    string public word;\n\n    constructor(string _word, bytes32 _design, string _designLocation, bytes _timeline) DesignMark(_design, _designLocation, _timeline) public {\n        word = _word;\n    }\n}",
+  "sourcePath": "/Users/cmurdock/Cog/cog-asset/contracts/asset/Trademarks/WordAndDesignMark.sol",
+  "ast": {
+    "absolutePath": "/Users/cmurdock/Cog/cog-asset/contracts/asset/Trademarks/WordAndDesignMark.sol",
+    "exportedSymbols": {
+      "WordAndDesignMark": [
+        241
+      ]
+    },
+    "id": 242,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 214,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".17"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:6"
+      },
+      {
+        "absolutePath": "/Users/cmurdock/Cog/cog-asset/contracts/asset/Trademarks/DesignMark.sol",
+        "file": "./DesignMark.sol",
+        "id": 215,
+        "nodeType": "ImportDirective",
+        "scope": 242,
+        "sourceUnit": 158,
+        "src": "26:26:6",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 216,
+              "name": "DesignMark",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 157,
+              "src": "198:10:6",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_DesignMark_$157",
+                "typeString": "contract DesignMark"
+              }
+            },
+            "id": 217,
+            "nodeType": "InheritanceSpecifier",
+            "src": "198:10:6"
+          }
+        ],
+        "contractDependencies": [
+          72,
+          157,
+          532,
+          578,
+          591
+        ],
+        "contractKind": "contract",
+        "documentation": "Base contract for representing a WordAndDesignMark chain asset.\n * Copyright (c) 2018 Cognate, Inc.",
+        "fullyImplemented": true,
+        "id": 241,
+        "linearizedBaseContracts": [
+          241,
+          157,
+          72,
+          532,
+          578,
+          591
+        ],
+        "name": "WordAndDesignMark",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 219,
+            "name": "word",
+            "nodeType": "VariableDeclaration",
+            "scope": 241,
+            "src": "215:18:6",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_storage",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 218,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "215:6:6",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 239,
+              "nodeType": "Block",
+              "src": "379:29:6",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 237,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 235,
+                      "name": "word",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 219,
+                      "src": "389:4:6",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_storage",
+                        "typeString": "string storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 236,
+                      "name": "_word",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 221,
+                      "src": "396:5:6",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_memory_ptr",
+                        "typeString": "string memory"
+                      }
+                    },
+                    "src": "389:12:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage",
+                      "typeString": "string storage ref"
+                    }
+                  },
+                  "id": 238,
+                  "nodeType": "ExpressionStatement",
+                  "src": "389:12:6"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 240,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 230,
+                    "name": "_design",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 223,
+                    "src": "335:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  {
+                    "argumentTypes": null,
+                    "id": 231,
+                    "name": "_designLocation",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 225,
+                    "src": "344:15:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_memory_ptr",
+                      "typeString": "string memory"
+                    }
+                  },
+                  {
+                    "argumentTypes": null,
+                    "id": 232,
+                    "name": "_timeline",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 227,
+                    "src": "361:9:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_memory_ptr",
+                      "typeString": "bytes memory"
+                    }
+                  }
+                ],
+                "id": 233,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 229,
+                  "name": "DesignMark",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 157,
+                  "src": "324:10:6",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_type$_t_contract$_DesignMark_$157_$",
+                    "typeString": "type(contract DesignMark)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "324:47:6"
+              }
+            ],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 228,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 221,
+                  "name": "_word",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 240,
+                  "src": "252:12:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 220,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "252:6:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 223,
+                  "name": "_design",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 240,
+                  "src": "266:15:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 222,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "266:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 225,
+                  "name": "_designLocation",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 240,
+                  "src": "283:22:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 224,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "283:6:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 227,
+                  "name": "_timeline",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 240,
+                  "src": "307:15:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 226,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "307:5:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "251:72:6"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 234,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "379:0:6"
+            },
+            "scope": 241,
+            "src": "240:168:6",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 242,
+        "src": "168:242:6"
+      }
+    ],
+    "src": "0:410:6"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/cmurdock/Cog/cog-asset/contracts/asset/Trademarks/WordAndDesignMark.sol",
+    "exportedSymbols": {
+      "WordAndDesignMark": [
+        241
+      ]
+    },
+    "id": 242,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 214,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".17"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:6"
+      },
+      {
+        "absolutePath": "/Users/cmurdock/Cog/cog-asset/contracts/asset/Trademarks/DesignMark.sol",
+        "file": "./DesignMark.sol",
+        "id": 215,
+        "nodeType": "ImportDirective",
+        "scope": 242,
+        "sourceUnit": 158,
+        "src": "26:26:6",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 216,
+              "name": "DesignMark",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 157,
+              "src": "198:10:6",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_DesignMark_$157",
+                "typeString": "contract DesignMark"
+              }
+            },
+            "id": 217,
+            "nodeType": "InheritanceSpecifier",
+            "src": "198:10:6"
+          }
+        ],
+        "contractDependencies": [
+          72,
+          157,
+          532,
+          578,
+          591
+        ],
+        "contractKind": "contract",
+        "documentation": "Base contract for representing a WordAndDesignMark chain asset.\n * Copyright (c) 2018 Cognate, Inc.",
+        "fullyImplemented": true,
+        "id": 241,
+        "linearizedBaseContracts": [
+          241,
+          157,
+          72,
+          532,
+          578,
+          591
+        ],
+        "name": "WordAndDesignMark",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 219,
+            "name": "word",
+            "nodeType": "VariableDeclaration",
+            "scope": 241,
+            "src": "215:18:6",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_storage",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 218,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "215:6:6",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 239,
+              "nodeType": "Block",
+              "src": "379:29:6",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 237,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 235,
+                      "name": "word",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 219,
+                      "src": "389:4:6",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_storage",
+                        "typeString": "string storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 236,
+                      "name": "_word",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 221,
+                      "src": "396:5:6",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_memory_ptr",
+                        "typeString": "string memory"
+                      }
+                    },
+                    "src": "389:12:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage",
+                      "typeString": "string storage ref"
+                    }
+                  },
+                  "id": 238,
+                  "nodeType": "ExpressionStatement",
+                  "src": "389:12:6"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 240,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 230,
+                    "name": "_design",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 223,
+                    "src": "335:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  {
+                    "argumentTypes": null,
+                    "id": 231,
+                    "name": "_designLocation",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 225,
+                    "src": "344:15:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_memory_ptr",
+                      "typeString": "string memory"
+                    }
+                  },
+                  {
+                    "argumentTypes": null,
+                    "id": 232,
+                    "name": "_timeline",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 227,
+                    "src": "361:9:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_memory_ptr",
+                      "typeString": "bytes memory"
+                    }
+                  }
+                ],
+                "id": 233,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 229,
+                  "name": "DesignMark",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 157,
+                  "src": "324:10:6",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_type$_t_contract$_DesignMark_$157_$",
+                    "typeString": "type(contract DesignMark)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "324:47:6"
+              }
+            ],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 228,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 221,
+                  "name": "_word",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 240,
+                  "src": "252:12:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 220,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "252:6:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 223,
+                  "name": "_design",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 240,
+                  "src": "266:15:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 222,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "266:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 225,
+                  "name": "_designLocation",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 240,
+                  "src": "283:22:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 224,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "283:6:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 227,
+                  "name": "_timeline",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 240,
+                  "src": "307:15:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 226,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "307:5:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "251:72:6"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 234,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "379:0:6"
+            },
+            "scope": 241,
+            "src": "240:168:6",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 242,
+        "src": "168:242:6"
+      }
+    ],
+    "src": "0:410:6"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.23+commit.124ca40d.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.0",
+  "updatedAt": "2018-05-21T16:36:25.360Z"
+}

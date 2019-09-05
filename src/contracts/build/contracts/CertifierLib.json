@@ -1,0 +1,1516 @@
+{
+  "contractName": "CertifierLib",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "self",
+          "type": "CertifierLib.Certifier storage"
+        },
+        {
+          "name": "proof",
+          "type": "bytes"
+        }
+      ],
+      "name": "createProof",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "self",
+          "type": "CertifierLib.Certifier storage"
+        },
+        {
+          "name": "proof",
+          "type": "TimelineDocument"
+        }
+      ],
+      "name": "addProof",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "self",
+          "type": "CertifierLib.Certifier storage"
+        }
+      ],
+      "name": "selectCertifiers",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x6102a1610030600b82828239805160001a6073146000811461002057610022565bfe5b5030600052607381538281f300730000000000000000000000000000000000000000301460806040526004361061006d5763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416635bb06c9d8114610072578063a3b3c0621461008c578063cfe438bd146100ea575b600080fd5b81801561007e57600080fd5b5061008a60043561011b565b005b81801561009857600080fd5b5060408051602060046024803582810135601f810185900485028601850190965285855261008a95833595369560449491939091019190819084018382808284375094975061011e9650505050505050565b8180156100f657600080fd5b5061008a60043573ffffffffffffffffffffffffffffffffffffffff60243516610223565b50565b6040517f5281042700000000000000000000000000000000000000000000000000000000815260206004820181815283516024840152835161021f93869373__IbaseLib______________________________93635281042793889391928392604401919085019080838360005b838110156101a457818101518382015260200161018c565b50505050905090810190601f1680156101d15780820380516001836020036101000a031916815260200191505b509250505060206040518083038186803b1580156101ee57600080fd5b505af4158015610202573d6000803e3d6000fd5b505050506040513d602081101561021857600080fd5b5051610223565b5050565b60029190910180546001810182556000918252602090912001805473ffffffffffffffffffffffffffffffffffffffff191673ffffffffffffffffffffffffffffffffffffffff9092169190911790555600a165627a7a7230582026cbadc7785f8256d1a47dc951ad777a8d15cb16d305f6f3a337017a47ad9da90029",
+  "deployedBytecode": "0x730000000000000000000000000000000000000000301460806040526004361061006d5763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416635bb06c9d8114610072578063a3b3c0621461008c578063cfe438bd146100ea575b600080fd5b81801561007e57600080fd5b5061008a60043561011b565b005b81801561009857600080fd5b5060408051602060046024803582810135601f810185900485028601850190965285855261008a95833595369560449491939091019190819084018382808284375094975061011e9650505050505050565b8180156100f657600080fd5b5061008a60043573ffffffffffffffffffffffffffffffffffffffff60243516610223565b50565b6040517f5281042700000000000000000000000000000000000000000000000000000000815260206004820181815283516024840152835161021f93869373__IbaseLib______________________________93635281042793889391928392604401919085019080838360005b838110156101a457818101518382015260200161018c565b50505050905090810190601f1680156101d15780820380516001836020036101000a031916815260200191505b509250505060206040518083038186803b1580156101ee57600080fd5b505af4158015610202573d6000803e3d6000fd5b505050506040513d602081101561021857600080fd5b5051610223565b5050565b60029190910180546001810182556000918252602090912001805473ffffffffffffffffffffffffffffffffffffffff191673ffffffffffffffffffffffffffffffffffffffff9092169190911790555600a165627a7a7230582026cbadc7785f8256d1a47dc951ad777a8d15cb16d305f6f3a337017a47ad9da90029",
+  "sourceMap": "246:636:22:-;;132:2:-1;166:7;155:9;146:7;137:37;252:7;246:14;243:1;238:23;232:4;229:33;270:1;265:20;;;;222:63;;265:20;274:9;222:63;;298:9;295:1;288:20;328:4;319:7;311:22;352:7;343;336:24",
+  "deployedSourceMap": "246:636:22:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;828:52;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;828:52:22;;;;;;;462:140;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;462:140:22;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;462:140:22;;-1:-1:-1;462:140:22;;-1:-1:-1;;;;;;;462:140:22;608:106;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;608:106:22;;;;;;;;;828:52;;:::o;462:140::-;562:31;;;;;;;;;;;;;;;;;;;;530:65;;539:4;;562:29;;;;:5;;:31;;;;;;;;;;;;;;;8:100:-1;33:3;30:1;27:10;8:100;;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;;12:14;562:31:22;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;562:31:22;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;562:31:22;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;562:31:22;530:8;:65::i;:::-;462:140;;:::o;608:106::-;684:11;;;;;27:10:-1;;39:1;23:18;;45:23;;-1:-1;684:23:22;;;;;;;;;;-1:-1:-1;;684:23:22;;;;;;;;;;;608:106::o",
+  "source": "pragma solidity ^0.4.8;\n\nimport \"../base/IbaseLib.sol\";\nimport \"../timeline/TimelineLib.sol\";\nimport \"../timeline/Timeline.sol\";\nimport \"../timeline/timelineDocuments/TimelineDocument.sol\";\n\n/**\n * TODO\n *\n * Copyright (c) 2017 Cognate, Inc.\n */\nlibrary CertifierLib {\n    using IbaseLib for bytes;\n    \n    struct Certifier {\n        Timeline timeline;\n        TimelineDocument claim;\n        TimelineDocument[] proofs;\n        address[] certifiers;\n    }\n\n    function createProof(Certifier storage self, bytes proof) {\n        addProof(self, TimelineDocument(proof.createContractFromBytes()));\n    }\n\n    function addProof(Certifier storage self, TimelineDocument proof) {\n        self.proofs.push(proof);\n    }\n\n    /**\n     * Selects the certifiers to participate in this instance of the certification protocol\n     */\n    function selectCertifiers(Certifier storage self) {}\n}",
+  "sourcePath": "/Users/cmurdock/Cog/cog-asset/contracts/protocol/CertifierLib.sol",
+  "ast": {
+    "absolutePath": "/Users/cmurdock/Cog/cog-asset/contracts/protocol/CertifierLib.sol",
+    "exportedSymbols": {
+      "CertifierLib": [
+        693
+      ]
+    },
+    "id": 694,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 635,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".8"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:22"
+      },
+      {
+        "absolutePath": "/Users/cmurdock/Cog/cog-asset/contracts/base/IbaseLib.sol",
+        "file": "../base/IbaseLib.sol",
+        "id": 636,
+        "nodeType": "ImportDirective",
+        "scope": 694,
+        "sourceUnit": 339,
+        "src": "25:30:22",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/cmurdock/Cog/cog-asset/contracts/timeline/TimelineLib.sol",
+        "file": "../timeline/TimelineLib.sol",
+        "id": 637,
+        "nodeType": "ImportDirective",
+        "scope": 694,
+        "sourceUnit": 1362,
+        "src": "56:37:22",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/cmurdock/Cog/cog-asset/contracts/timeline/Timeline.sol",
+        "file": "../timeline/Timeline.sol",
+        "id": 638,
+        "nodeType": "ImportDirective",
+        "scope": 694,
+        "sourceUnit": 1051,
+        "src": "94:34:22",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/cmurdock/Cog/cog-asset/contracts/timeline/timelineDocuments/TimelineDocument.sol",
+        "file": "../timeline/timelineDocuments/TimelineDocument.sol",
+        "id": 639,
+        "nodeType": "ImportDirective",
+        "scope": 694,
+        "sourceUnit": 1705,
+        "src": "129:60:22",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "library",
+        "documentation": "TODO\n * Copyright (c) 2017 Cognate, Inc.",
+        "fullyImplemented": true,
+        "id": 693,
+        "linearizedBaseContracts": [
+          693
+        ],
+        "name": "CertifierLib",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "id": 642,
+            "libraryName": {
+              "contractScope": null,
+              "id": 640,
+              "name": "IbaseLib",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 338,
+              "src": "279:8:22",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IbaseLib_$338",
+                "typeString": "library IbaseLib"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "273:25:22",
+            "typeName": {
+              "id": 641,
+              "name": "bytes",
+              "nodeType": "ElementaryTypeName",
+              "src": "292:5:22",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes_storage_ptr",
+                "typeString": "bytes"
+              }
+            }
+          },
+          {
+            "canonicalName": "CertifierLib.Certifier",
+            "id": 653,
+            "members": [
+              {
+                "constant": false,
+                "id": 644,
+                "name": "timeline",
+                "nodeType": "VariableDeclaration",
+                "scope": 653,
+                "src": "335:17:22",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_contract$_Timeline_$1050",
+                  "typeString": "contract Timeline"
+                },
+                "typeName": {
+                  "contractScope": null,
+                  "id": 643,
+                  "name": "Timeline",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 1050,
+                  "src": "335:8:22",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_Timeline_$1050",
+                    "typeString": "contract Timeline"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 646,
+                "name": "claim",
+                "nodeType": "VariableDeclaration",
+                "scope": 653,
+                "src": "362:22:22",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_contract$_TimelineDocument_$1704",
+                  "typeString": "contract TimelineDocument"
+                },
+                "typeName": {
+                  "contractScope": null,
+                  "id": 645,
+                  "name": "TimelineDocument",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 1704,
+                  "src": "362:16:22",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_TimelineDocument_$1704",
+                    "typeString": "contract TimelineDocument"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 649,
+                "name": "proofs",
+                "nodeType": "VariableDeclaration",
+                "scope": 653,
+                "src": "394:25:22",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_contract$_TimelineDocument_$1704_$dyn_storage_ptr",
+                  "typeString": "contract TimelineDocument[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "contractScope": null,
+                    "id": 647,
+                    "name": "TimelineDocument",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 1704,
+                    "src": "394:16:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_TimelineDocument_$1704",
+                      "typeString": "contract TimelineDocument"
+                    }
+                  },
+                  "id": 648,
+                  "length": null,
+                  "nodeType": "ArrayTypeName",
+                  "src": "394:18:22",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_contract$_TimelineDocument_$1704_$dyn_storage_ptr",
+                    "typeString": "contract TimelineDocument[]"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 652,
+                "name": "certifiers",
+                "nodeType": "VariableDeclaration",
+                "scope": 653,
+                "src": "429:20:22",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                  "typeString": "address[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "id": 650,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "429:7:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 651,
+                  "length": null,
+                  "nodeType": "ArrayTypeName",
+                  "src": "429:9:22",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                    "typeString": "address[]"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Certifier",
+            "nodeType": "StructDefinition",
+            "scope": 693,
+            "src": "308:148:22",
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 669,
+              "nodeType": "Block",
+              "src": "520:82:22",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 661,
+                        "name": "self",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 655,
+                        "src": "539:4:22",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Certifier_$653_storage_ptr",
+                          "typeString": "struct CertifierLib.Certifier storage pointer"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "arguments": [],
+                            "expression": {
+                              "argumentTypes": [],
+                              "expression": {
+                                "argumentTypes": null,
+                                "id": 663,
+                                "name": "proof",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 657,
+                                "src": "562:5:22",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_bytes_memory_ptr",
+                                  "typeString": "bytes memory"
+                                }
+                              },
+                              "id": 664,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "memberName": "createContractFromBytes",
+                              "nodeType": "MemberAccess",
+                              "referencedDeclaration": 337,
+                              "src": "562:29:22",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_function_delegatecall_nonpayable$_t_bytes_memory_ptr_$returns$_t_address_$bound_to$_t_bytes_memory_ptr_$",
+                                "typeString": "function (bytes memory) returns (address)"
+                              }
+                            },
+                            "id": 665,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "kind": "functionCall",
+                            "lValueRequested": false,
+                            "names": [],
+                            "nodeType": "FunctionCall",
+                            "src": "562:31:22",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          ],
+                          "id": 662,
+                          "name": "TimelineDocument",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1704,
+                          "src": "545:16:22",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_contract$_TimelineDocument_$1704_$",
+                            "typeString": "type(contract TimelineDocument)"
+                          }
+                        },
+                        "id": 666,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "545:49:22",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_TimelineDocument_$1704",
+                          "typeString": "contract TimelineDocument"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_struct$_Certifier_$653_storage_ptr",
+                          "typeString": "struct CertifierLib.Certifier storage pointer"
+                        },
+                        {
+                          "typeIdentifier": "t_contract$_TimelineDocument_$1704",
+                          "typeString": "contract TimelineDocument"
+                        }
+                      ],
+                      "id": 660,
+                      "name": "addProof",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 686,
+                      "src": "530:8:22",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_Certifier_$653_storage_ptr_$_t_contract$_TimelineDocument_$1704_$returns$__$",
+                        "typeString": "function (struct CertifierLib.Certifier storage pointer,contract TimelineDocument)"
+                      }
+                    },
+                    "id": 667,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "530:65:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 668,
+                  "nodeType": "ExpressionStatement",
+                  "src": "530:65:22"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 670,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "createProof",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 658,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 655,
+                  "name": "self",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 670,
+                  "src": "483:22:22",
+                  "stateVariable": false,
+                  "storageLocation": "storage",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Certifier_$653_storage_ptr",
+                    "typeString": "struct CertifierLib.Certifier"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 654,
+                    "name": "Certifier",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 653,
+                    "src": "483:9:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Certifier_$653_storage_ptr",
+                      "typeString": "struct CertifierLib.Certifier"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 657,
+                  "name": "proof",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 670,
+                  "src": "507:11:22",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 656,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "507:5:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "482:37:22"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 659,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "520:0:22"
+            },
+            "scope": 693,
+            "src": "462:140:22",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 685,
+              "nodeType": "Block",
+              "src": "674:40:22",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 682,
+                        "name": "proof",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 674,
+                        "src": "701:5:22",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_TimelineDocument_$1704",
+                          "typeString": "contract TimelineDocument"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_contract$_TimelineDocument_$1704",
+                          "typeString": "contract TimelineDocument"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 677,
+                          "name": "self",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 672,
+                          "src": "684:4:22",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Certifier_$653_storage_ptr",
+                            "typeString": "struct CertifierLib.Certifier storage pointer"
+                          }
+                        },
+                        "id": 680,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "proofs",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 649,
+                        "src": "684:11:22",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_contract$_TimelineDocument_$1704_$dyn_storage",
+                          "typeString": "contract TimelineDocument[] storage ref"
+                        }
+                      },
+                      "id": 681,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "684:16:22",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_contract$_TimelineDocument_$1704_$returns$_t_uint256_$",
+                        "typeString": "function (contract TimelineDocument) returns (uint256)"
+                      }
+                    },
+                    "id": 683,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "684:23:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 684,
+                  "nodeType": "ExpressionStatement",
+                  "src": "684:23:22"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 686,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "addProof",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 675,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 672,
+                  "name": "self",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 686,
+                  "src": "626:22:22",
+                  "stateVariable": false,
+                  "storageLocation": "storage",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Certifier_$653_storage_ptr",
+                    "typeString": "struct CertifierLib.Certifier"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 671,
+                    "name": "Certifier",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 653,
+                    "src": "626:9:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Certifier_$653_storage_ptr",
+                      "typeString": "struct CertifierLib.Certifier"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 674,
+                  "name": "proof",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 686,
+                  "src": "650:22:22",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_TimelineDocument_$1704",
+                    "typeString": "contract TimelineDocument"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 673,
+                    "name": "TimelineDocument",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 1704,
+                    "src": "650:16:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_TimelineDocument_$1704",
+                      "typeString": "contract TimelineDocument"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "625:48:22"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 676,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "674:0:22"
+            },
+            "scope": 693,
+            "src": "608:106:22",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 691,
+              "nodeType": "Block",
+              "src": "878:2:22",
+              "statements": []
+            },
+            "documentation": "Selects the certifiers to participate in this instance of the certification protocol",
+            "id": 692,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "selectCertifiers",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 689,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 688,
+                  "name": "self",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 692,
+                  "src": "854:22:22",
+                  "stateVariable": false,
+                  "storageLocation": "storage",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Certifier_$653_storage_ptr",
+                    "typeString": "struct CertifierLib.Certifier"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 687,
+                    "name": "Certifier",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 653,
+                    "src": "854:9:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Certifier_$653_storage_ptr",
+                      "typeString": "struct CertifierLib.Certifier"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "853:24:22"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 690,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "878:0:22"
+            },
+            "scope": 693,
+            "src": "828:52:22",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 694,
+        "src": "246:636:22"
+      }
+    ],
+    "src": "0:882:22"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/cmurdock/Cog/cog-asset/contracts/protocol/CertifierLib.sol",
+    "exportedSymbols": {
+      "CertifierLib": [
+        693
+      ]
+    },
+    "id": 694,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 635,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".8"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:22"
+      },
+      {
+        "absolutePath": "/Users/cmurdock/Cog/cog-asset/contracts/base/IbaseLib.sol",
+        "file": "../base/IbaseLib.sol",
+        "id": 636,
+        "nodeType": "ImportDirective",
+        "scope": 694,
+        "sourceUnit": 339,
+        "src": "25:30:22",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/cmurdock/Cog/cog-asset/contracts/timeline/TimelineLib.sol",
+        "file": "../timeline/TimelineLib.sol",
+        "id": 637,
+        "nodeType": "ImportDirective",
+        "scope": 694,
+        "sourceUnit": 1362,
+        "src": "56:37:22",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/cmurdock/Cog/cog-asset/contracts/timeline/Timeline.sol",
+        "file": "../timeline/Timeline.sol",
+        "id": 638,
+        "nodeType": "ImportDirective",
+        "scope": 694,
+        "sourceUnit": 1051,
+        "src": "94:34:22",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/cmurdock/Cog/cog-asset/contracts/timeline/timelineDocuments/TimelineDocument.sol",
+        "file": "../timeline/timelineDocuments/TimelineDocument.sol",
+        "id": 639,
+        "nodeType": "ImportDirective",
+        "scope": 694,
+        "sourceUnit": 1705,
+        "src": "129:60:22",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "library",
+        "documentation": "TODO\n * Copyright (c) 2017 Cognate, Inc.",
+        "fullyImplemented": true,
+        "id": 693,
+        "linearizedBaseContracts": [
+          693
+        ],
+        "name": "CertifierLib",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "id": 642,
+            "libraryName": {
+              "contractScope": null,
+              "id": 640,
+              "name": "IbaseLib",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 338,
+              "src": "279:8:22",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IbaseLib_$338",
+                "typeString": "library IbaseLib"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "273:25:22",
+            "typeName": {
+              "id": 641,
+              "name": "bytes",
+              "nodeType": "ElementaryTypeName",
+              "src": "292:5:22",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes_storage_ptr",
+                "typeString": "bytes"
+              }
+            }
+          },
+          {
+            "canonicalName": "CertifierLib.Certifier",
+            "id": 653,
+            "members": [
+              {
+                "constant": false,
+                "id": 644,
+                "name": "timeline",
+                "nodeType": "VariableDeclaration",
+                "scope": 653,
+                "src": "335:17:22",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_contract$_Timeline_$1050",
+                  "typeString": "contract Timeline"
+                },
+                "typeName": {
+                  "contractScope": null,
+                  "id": 643,
+                  "name": "Timeline",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 1050,
+                  "src": "335:8:22",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_Timeline_$1050",
+                    "typeString": "contract Timeline"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 646,
+                "name": "claim",
+                "nodeType": "VariableDeclaration",
+                "scope": 653,
+                "src": "362:22:22",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_contract$_TimelineDocument_$1704",
+                  "typeString": "contract TimelineDocument"
+                },
+                "typeName": {
+                  "contractScope": null,
+                  "id": 645,
+                  "name": "TimelineDocument",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 1704,
+                  "src": "362:16:22",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_TimelineDocument_$1704",
+                    "typeString": "contract TimelineDocument"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 649,
+                "name": "proofs",
+                "nodeType": "VariableDeclaration",
+                "scope": 653,
+                "src": "394:25:22",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_contract$_TimelineDocument_$1704_$dyn_storage_ptr",
+                  "typeString": "contract TimelineDocument[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "contractScope": null,
+                    "id": 647,
+                    "name": "TimelineDocument",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 1704,
+                    "src": "394:16:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_TimelineDocument_$1704",
+                      "typeString": "contract TimelineDocument"
+                    }
+                  },
+                  "id": 648,
+                  "length": null,
+                  "nodeType": "ArrayTypeName",
+                  "src": "394:18:22",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_contract$_TimelineDocument_$1704_$dyn_storage_ptr",
+                    "typeString": "contract TimelineDocument[]"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 652,
+                "name": "certifiers",
+                "nodeType": "VariableDeclaration",
+                "scope": 653,
+                "src": "429:20:22",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                  "typeString": "address[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "id": 650,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "429:7:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 651,
+                  "length": null,
+                  "nodeType": "ArrayTypeName",
+                  "src": "429:9:22",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                    "typeString": "address[]"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Certifier",
+            "nodeType": "StructDefinition",
+            "scope": 693,
+            "src": "308:148:22",
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 669,
+              "nodeType": "Block",
+              "src": "520:82:22",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 661,
+                        "name": "self",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 655,
+                        "src": "539:4:22",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Certifier_$653_storage_ptr",
+                          "typeString": "struct CertifierLib.Certifier storage pointer"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "arguments": [],
+                            "expression": {
+                              "argumentTypes": [],
+                              "expression": {
+                                "argumentTypes": null,
+                                "id": 663,
+                                "name": "proof",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 657,
+                                "src": "562:5:22",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_bytes_memory_ptr",
+                                  "typeString": "bytes memory"
+                                }
+                              },
+                              "id": 664,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "memberName": "createContractFromBytes",
+                              "nodeType": "MemberAccess",
+                              "referencedDeclaration": 337,
+                              "src": "562:29:22",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_function_delegatecall_nonpayable$_t_bytes_memory_ptr_$returns$_t_address_$bound_to$_t_bytes_memory_ptr_$",
+                                "typeString": "function (bytes memory) returns (address)"
+                              }
+                            },
+                            "id": 665,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "kind": "functionCall",
+                            "lValueRequested": false,
+                            "names": [],
+                            "nodeType": "FunctionCall",
+                            "src": "562:31:22",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          ],
+                          "id": 662,
+                          "name": "TimelineDocument",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1704,
+                          "src": "545:16:22",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_contract$_TimelineDocument_$1704_$",
+                            "typeString": "type(contract TimelineDocument)"
+                          }
+                        },
+                        "id": 666,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "545:49:22",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_TimelineDocument_$1704",
+                          "typeString": "contract TimelineDocument"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_struct$_Certifier_$653_storage_ptr",
+                          "typeString": "struct CertifierLib.Certifier storage pointer"
+                        },
+                        {
+                          "typeIdentifier": "t_contract$_TimelineDocument_$1704",
+                          "typeString": "contract TimelineDocument"
+                        }
+                      ],
+                      "id": 660,
+                      "name": "addProof",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 686,
+                      "src": "530:8:22",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_Certifier_$653_storage_ptr_$_t_contract$_TimelineDocument_$1704_$returns$__$",
+                        "typeString": "function (struct CertifierLib.Certifier storage pointer,contract TimelineDocument)"
+                      }
+                    },
+                    "id": 667,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "530:65:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 668,
+                  "nodeType": "ExpressionStatement",
+                  "src": "530:65:22"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 670,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "createProof",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 658,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 655,
+                  "name": "self",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 670,
+                  "src": "483:22:22",
+                  "stateVariable": false,
+                  "storageLocation": "storage",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Certifier_$653_storage_ptr",
+                    "typeString": "struct CertifierLib.Certifier"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 654,
+                    "name": "Certifier",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 653,
+                    "src": "483:9:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Certifier_$653_storage_ptr",
+                      "typeString": "struct CertifierLib.Certifier"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 657,
+                  "name": "proof",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 670,
+                  "src": "507:11:22",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 656,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "507:5:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "482:37:22"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 659,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "520:0:22"
+            },
+            "scope": 693,
+            "src": "462:140:22",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 685,
+              "nodeType": "Block",
+              "src": "674:40:22",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 682,
+                        "name": "proof",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 674,
+                        "src": "701:5:22",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_TimelineDocument_$1704",
+                          "typeString": "contract TimelineDocument"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_contract$_TimelineDocument_$1704",
+                          "typeString": "contract TimelineDocument"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 677,
+                          "name": "self",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 672,
+                          "src": "684:4:22",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Certifier_$653_storage_ptr",
+                            "typeString": "struct CertifierLib.Certifier storage pointer"
+                          }
+                        },
+                        "id": 680,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "proofs",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 649,
+                        "src": "684:11:22",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_contract$_TimelineDocument_$1704_$dyn_storage",
+                          "typeString": "contract TimelineDocument[] storage ref"
+                        }
+                      },
+                      "id": 681,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "684:16:22",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_contract$_TimelineDocument_$1704_$returns$_t_uint256_$",
+                        "typeString": "function (contract TimelineDocument) returns (uint256)"
+                      }
+                    },
+                    "id": 683,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "684:23:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 684,
+                  "nodeType": "ExpressionStatement",
+                  "src": "684:23:22"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 686,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "addProof",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 675,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 672,
+                  "name": "self",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 686,
+                  "src": "626:22:22",
+                  "stateVariable": false,
+                  "storageLocation": "storage",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Certifier_$653_storage_ptr",
+                    "typeString": "struct CertifierLib.Certifier"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 671,
+                    "name": "Certifier",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 653,
+                    "src": "626:9:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Certifier_$653_storage_ptr",
+                      "typeString": "struct CertifierLib.Certifier"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 674,
+                  "name": "proof",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 686,
+                  "src": "650:22:22",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_TimelineDocument_$1704",
+                    "typeString": "contract TimelineDocument"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 673,
+                    "name": "TimelineDocument",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 1704,
+                    "src": "650:16:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_TimelineDocument_$1704",
+                      "typeString": "contract TimelineDocument"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "625:48:22"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 676,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "674:0:22"
+            },
+            "scope": 693,
+            "src": "608:106:22",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 691,
+              "nodeType": "Block",
+              "src": "878:2:22",
+              "statements": []
+            },
+            "documentation": "Selects the certifiers to participate in this instance of the certification protocol",
+            "id": 692,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "selectCertifiers",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 689,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 688,
+                  "name": "self",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 692,
+                  "src": "854:22:22",
+                  "stateVariable": false,
+                  "storageLocation": "storage",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Certifier_$653_storage_ptr",
+                    "typeString": "struct CertifierLib.Certifier"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 687,
+                    "name": "Certifier",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 653,
+                    "src": "854:9:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Certifier_$653_storage_ptr",
+                      "typeString": "struct CertifierLib.Certifier"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "853:24:22"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 690,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "878:0:22"
+            },
+            "scope": 693,
+            "src": "828:52:22",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 694,
+        "src": "246:636:22"
+      }
+    ],
+    "src": "0:882:22"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.23+commit.124ca40d.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.0",
+  "updatedAt": "2018-05-21T16:36:25.362Z"
+}

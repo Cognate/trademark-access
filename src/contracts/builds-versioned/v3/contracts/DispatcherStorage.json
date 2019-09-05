@@ -1,0 +1,656 @@
+{
+  "contractName": "DispatcherStorage",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "bytes4"
+        }
+      ],
+      "name": "sizes",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_owner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnershipTo",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "lib",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_lib",
+          "type": "address"
+        }
+      ],
+      "name": "replace",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "_lib",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity ^0.4.8;\n\nimport \"../owned.sol\";\n\n/**\n * The store for the Dispatcher contract. This is needed because in order\n * to use the delegatecall assembly function, the contract making the call\n * must have the same storage footprint as the contract it is calling. Since\n * solidity Libraries have no storage footprint, we require this separate\n * contract to store the current library version as well as a sizes mapping\n * that documents the return type sizes of the library (also required by \n * delegatecall).\n */\ncontract DispatcherStorage is owned(msg.sender) {\n    address public lib;\n    mapping(bytes4 => uint32) public sizes;\n\n    function DispatcherStorage(address _lib) {\n        init();\n        replace(_lib);\n    }\n\n    /**\n     * Replace the library being dispatched too. \n     */\n    function replace(address _lib) onlyOwner {\n        lib = _lib;\n    }\n\n    /**\n     * Initializes the return types mapping for a particular library\n     *\n     * sizes[bytes4(sha3(\"getUint(LibInterface.S storage)\"))] = 32; // example\n     */\n    function init() private;\n}",
+  "sourcePath": "/Users/MasterChief/Cog/cog-contract/contracts/base/dispatcher/DispatcherStorage.sol",
+  "ast": {
+    "attributes": {
+      "absolutePath": "/Users/MasterChief/Cog/cog-contract/contracts/base/dispatcher/DispatcherStorage.sol",
+      "exportedSymbols": {
+        "DispatcherStorage": [
+          714
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.4",
+            ".8"
+          ]
+        },
+        "id": 674,
+        "name": "PragmaDirective",
+        "src": "0:23:15"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 777,
+          "absolutePath": "/Users/MasterChief/Cog/cog-contract/contracts/base/owned.sol",
+          "file": "../owned.sol",
+          "scope": 715,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 675,
+        "name": "ImportDirective",
+        "src": "25:22:15"
+      },
+      {
+        "attributes": {
+          "contractDependencies": [
+            776
+          ],
+          "contractKind": "contract",
+          "documentation": "The store for the Dispatcher contract. This is needed because in order\nto use the delegatecall assembly function, the contract making the call\nmust have the same storage footprint as the contract it is calling. Since\nsolidity Libraries have no storage footprint, we require this separate\ncontract to store the current library version as well as a sizes mapping\nthat documents the return type sizes of the library (also required by \ndelegatecall).",
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            714,
+            776
+          ],
+          "name": "DispatcherStorage",
+          "scope": 715
+        },
+        "children": [
+          {
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "owned",
+                  "referencedDeclaration": 776,
+                  "type": "contract owned"
+                },
+                "id": 676,
+                "name": "UserDefinedTypeName",
+                "src": "555:5:15"
+              },
+              {
+                "attributes": {
+                  "argumentTypes": null,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": false,
+                  "lValueRequested": false,
+                  "member_name": "sender",
+                  "referencedDeclaration": null,
+                  "type": "address"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 1944,
+                      "type": "msg",
+                      "value": "msg"
+                    },
+                    "id": 677,
+                    "name": "Identifier",
+                    "src": "561:3:15"
+                  }
+                ],
+                "id": 678,
+                "name": "MemberAccess",
+                "src": "561:10:15"
+              }
+            ],
+            "id": 679,
+            "name": "InheritanceSpecifier",
+            "src": "555:17:15"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "lib",
+              "scope": 714,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "address",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "address",
+                  "type": "address"
+                },
+                "id": 680,
+                "name": "ElementaryTypeName",
+                "src": "579:7:15"
+              }
+            ],
+            "id": 681,
+            "name": "VariableDeclaration",
+            "src": "579:18:15"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "sizes",
+              "scope": 714,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "mapping(bytes4 => uint32)",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "type": "mapping(bytes4 => uint32)"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "bytes4",
+                      "type": "bytes4"
+                    },
+                    "id": 682,
+                    "name": "ElementaryTypeName",
+                    "src": "611:6:15"
+                  },
+                  {
+                    "attributes": {
+                      "name": "uint32",
+                      "type": "uint32"
+                    },
+                    "id": 683,
+                    "name": "ElementaryTypeName",
+                    "src": "621:6:15"
+                  }
+                ],
+                "id": 684,
+                "name": "Mapping",
+                "src": "603:25:15"
+              }
+            ],
+            "id": 685,
+            "name": "VariableDeclaration",
+            "src": "603:38:15"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "implemented": true,
+              "isConstructor": true,
+              "modifiers": [
+                null
+              ],
+              "name": "DispatcherStorage",
+              "payable": false,
+              "scope": 714,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_lib",
+                      "scope": 698,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 686,
+                        "name": "ElementaryTypeName",
+                        "src": "675:7:15"
+                      }
+                    ],
+                    "id": 687,
+                    "name": "VariableDeclaration",
+                    "src": "675:12:15"
+                  }
+                ],
+                "id": 688,
+                "name": "ParameterList",
+                "src": "674:14:15"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 689,
+                "name": "ParameterList",
+                "src": "689:0:15"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            null
+                          ],
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                null
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 713,
+                              "type": "function ()",
+                              "value": "init"
+                            },
+                            "id": 690,
+                            "name": "Identifier",
+                            "src": "699:4:15"
+                          }
+                        ],
+                        "id": 691,
+                        "name": "FunctionCall",
+                        "src": "699:6:15"
+                      }
+                    ],
+                    "id": 692,
+                    "name": "ExpressionStatement",
+                    "src": "699:6:15"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_address",
+                                  "typeString": "address"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 710,
+                              "type": "function (address)",
+                              "value": "replace"
+                            },
+                            "id": 693,
+                            "name": "Identifier",
+                            "src": "715:7:15"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 687,
+                              "type": "address",
+                              "value": "_lib"
+                            },
+                            "id": 694,
+                            "name": "Identifier",
+                            "src": "723:4:15"
+                          }
+                        ],
+                        "id": 695,
+                        "name": "FunctionCall",
+                        "src": "715:13:15"
+                      }
+                    ],
+                    "id": 696,
+                    "name": "ExpressionStatement",
+                    "src": "715:13:15"
+                  }
+                ],
+                "id": 697,
+                "name": "Block",
+                "src": "689:46:15"
+              }
+            ],
+            "id": 698,
+            "name": "FunctionDefinition",
+            "src": "648:87:15"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "implemented": true,
+              "isConstructor": false,
+              "name": "replace",
+              "payable": false,
+              "scope": 714,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_lib",
+                      "scope": 710,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 699,
+                        "name": "ElementaryTypeName",
+                        "src": "824:7:15"
+                      }
+                    ],
+                    "id": 700,
+                    "name": "VariableDeclaration",
+                    "src": "824:12:15"
+                  }
+                ],
+                "id": 701,
+                "name": "ParameterList",
+                "src": "823:14:15"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 704,
+                "name": "ParameterList",
+                "src": "848:0:15"
+              },
+              {
+                "attributes": {
+                  "arguments": [
+                    null
+                  ]
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 755,
+                      "type": "modifier ()",
+                      "value": "onlyOwner"
+                    },
+                    "id": 702,
+                    "name": "Identifier",
+                    "src": "838:9:15"
+                  }
+                ],
+                "id": 703,
+                "name": "ModifierInvocation",
+                "src": "838:9:15"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "address"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 681,
+                              "type": "address",
+                              "value": "lib"
+                            },
+                            "id": 705,
+                            "name": "Identifier",
+                            "src": "858:3:15"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 700,
+                              "type": "address",
+                              "value": "_lib"
+                            },
+                            "id": 706,
+                            "name": "Identifier",
+                            "src": "864:4:15"
+                          }
+                        ],
+                        "id": 707,
+                        "name": "Assignment",
+                        "src": "858:10:15"
+                      }
+                    ],
+                    "id": 708,
+                    "name": "ExpressionStatement",
+                    "src": "858:10:15"
+                  }
+                ],
+                "id": 709,
+                "name": "Block",
+                "src": "848:27:15"
+              }
+            ],
+            "id": 710,
+            "name": "FunctionDefinition",
+            "src": "807:68:15"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "constant": false,
+              "implemented": false,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "init",
+              "payable": false,
+              "scope": 714,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "private"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 711,
+                "name": "ParameterList",
+                "src": "1065:2:15"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 712,
+                "name": "ParameterList",
+                "src": "1075:0:15"
+              }
+            ],
+            "id": 713,
+            "name": "FunctionDefinition",
+            "src": "1052:24:15"
+          }
+        ],
+        "id": 714,
+        "name": "ContractDefinition",
+        "src": "525:553:15"
+      }
+    ],
+    "id": 715,
+    "name": "SourceUnit",
+    "src": "0:1078:15"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.18+commit.9cf6e910.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "1.0.1",
+  "updatedAt": "2018-01-15T19:32:46.194Z"
+}

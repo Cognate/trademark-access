@@ -1,0 +1,514 @@
+{
+  "contractName": "ITimelineDocumentLibDispatcherStorage",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "bytes4"
+        }
+      ],
+      "name": "sizes",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_owner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnershipTo",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "lib",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_lib",
+          "type": "address"
+        }
+      ],
+      "name": "replace",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "_lib",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    }
+  ],
+  "bytecode": "0x608060405234801561001057600080fd5b5060405160208061030f833981016040525160008054600160a060020a03191633600160a060020a03161790558061004f640100000000610068810204565b6100618164010000000061006a810204565b50506100a7565b565b60005433600160a060020a0390811691161461008557600080fd5b60018054600160a060020a031916600160a060020a0392909216919091179055565b610259806100b66000396000f30060806040526004361061006c5763ffffffff7c0100000000000000000000000000000000000000000000000000000000600035041663206bd362811461007157806352effe11146100c45780638da5cb5b146100e75780639280123014610118578063cabfb9341461012d575b600080fd5b34801561007d57600080fd5b506100ab7fffffffff000000000000000000000000000000000000000000000000000000006004351661014e565b6040805163ffffffff9092168252519081900360200190f35b3480156100d057600080fd5b506100e5600160a060020a0360043516610166565b005b3480156100f357600080fd5b506100fc6101c5565b60408051600160a060020a039092168252519081900360200190f35b34801561012457600080fd5b506100fc6101d4565b34801561013957600080fd5b506100e5600160a060020a03600435166101e3565b60026020526000908152604090205463ffffffff1681565b60005433600160a060020a0390811691161461018157600080fd5b600160a060020a038116151561019657600080fd5b6000805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0392909216919091179055565b600054600160a060020a031681565b600154600160a060020a031681565b60005433600160a060020a039081169116146101fe57600080fd5b6001805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a03929092169190911790555600a165627a7a723058204aafb1078bde92d812e471a92e0cf3fffdac6b062dd11435169733c0fba9b7760029",
+  "deployedBytecode": "0x60806040526004361061006c5763ffffffff7c0100000000000000000000000000000000000000000000000000000000600035041663206bd362811461007157806352effe11146100c45780638da5cb5b146100e75780639280123014610118578063cabfb9341461012d575b600080fd5b34801561007d57600080fd5b506100ab7fffffffff000000000000000000000000000000000000000000000000000000006004351661014e565b6040805163ffffffff9092168252519081900360200190f35b3480156100d057600080fd5b506100e5600160a060020a0360043516610166565b005b3480156100f357600080fd5b506100fc6101c5565b60408051600160a060020a039092168252519081900360200190f35b34801561012457600080fd5b506100fc6101d4565b34801561013957600080fd5b506100e5600160a060020a03600435166101e3565b60026020526000908152604090205463ffffffff1681565b60005433600160a060020a0390811691161461018157600080fd5b600160a060020a038116151561019657600080fd5b6000805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0392909216919091179055565b600054600160a060020a031681565b600154600160a060020a031681565b60005433600160a060020a039081169116146101fe57600080fd5b6001805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a03929092169190911790555600a165627a7a723058204aafb1078bde92d812e471a92e0cf3fffdac6b062dd11435169733c0fba9b7760029",
+  "sourceMap": "221:355:36:-;;;296:59;8:9:-1;5:2;;;30:1;27;20:12;5:2;296:59:36;;;;;;;;;;;;;324:5:17;:14;;-1:-1:-1;;;;;;324:14:17;561:10:15;-1:-1:-1;;;;;324:14:17;;;;296:59:36;691:6:15;:4;;;;:6;:::i;:::-;707:13;715:4;707:7;;;;:13;:::i;:::-;648:79;296:59:36;221:355;;548:26;:::o;798:75:15:-;543:5:17;;529:10;-1:-1:-1;;;;;529:19:17;;;543:5;;529:19;521:28;;;;;;856:3:15;:10;;-1:-1:-1;;;;;;856:10:15;-1:-1:-1;;;;;856:10:15;;;;;;;;;;798:75::o;221:355:36:-;;;;;;;",
+  "deployedSourceMap": "221:355:36:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;603:38:15;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;603:38:15;;;;;;;;;;;;;;;;;;;;;;;;;;674:132:17;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;674:132:17;-1:-1:-1;;;;;674:132:17;;;;;;;252:20;;8:9:-1;5:2;;;30:1;27;20:12;5:2;252:20:17;;;;;;;;-1:-1:-1;;;;;252:20:17;;;;;;;;;;;;;;579:18:15;;8:9:-1;5:2;;;30:1;27;20:12;5:2;579:18:15;;;;798:75;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;798:75:15;-1:-1:-1;;;;;798:75:15;;;;;603:38;;;;;;;;;;;;;;;:::o;674:132:17:-;543:5;;529:10;-1:-1:-1;;;;;529:19:17;;;543:5;;529:19;521:28;;;;;;-1:-1:-1;;;;;754:20:17;;;;746:29;;;;;;785:5;:14;;-1:-1:-1;;785:14:17;-1:-1:-1;;;;;785:14:17;;;;;;;;;;674:132::o;252:20::-;;;-1:-1:-1;;;;;252:20:17;;:::o;579:18:15:-;;;-1:-1:-1;;;;;579:18:15;;:::o;798:75::-;543:5:17;;529:10;-1:-1:-1;;;;;529:19:17;;;543:5;;529:19;521:28;;;;;;856:3:15;:10;;-1:-1:-1;;856:10:15;-1:-1:-1;;;;;856:10:15;;;;;;;;;;798:75::o",
+  "source": "pragma solidity ^0.4.17;\n\nimport \"../../base/dispatcher/DispatcherStorage.sol\";\n\n/**\n * Defines the storage space for the TimelineLibDispatcher which connects contracts with\n * the current version of the TimelineLib.\n */\ncontract ITimelineDocumentLibDispatcherStorage is DispatcherStorage {\n\n    constructor(address _lib) DispatcherStorage(_lib) public {}\n\n    /**\n     * Init function called by the base Dispatcher class that allows you to define the\n     * return value byte sizes for functions with return values in the TimelineLib.\n     */\n    function init() private {}\n}",
+  "sourcePath": "/Users/cmurdock/Cog/cog-asset/contracts/timeline/timelineDocuments/ITimelineDocumentLibDispatcherStorage.sol",
+  "ast": {
+    "absolutePath": "/Users/cmurdock/Cog/cog-asset/contracts/timeline/timelineDocuments/ITimelineDocumentLibDispatcherStorage.sol",
+    "exportedSymbols": {
+      "ITimelineDocumentLibDispatcherStorage": [
+        1564
+      ]
+    },
+    "id": 1565,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1547,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".17"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:36"
+      },
+      {
+        "absolutePath": "/Users/cmurdock/Cog/cog-asset/contracts/base/dispatcher/DispatcherStorage.sol",
+        "file": "../../base/dispatcher/DispatcherStorage.sol",
+        "id": 1548,
+        "nodeType": "ImportDirective",
+        "scope": 1565,
+        "sourceUnit": 517,
+        "src": "26:53:36",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 1549,
+              "name": "DispatcherStorage",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 516,
+              "src": "271:17:36",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_DispatcherStorage_$516",
+                "typeString": "contract DispatcherStorage"
+              }
+            },
+            "id": 1550,
+            "nodeType": "InheritanceSpecifier",
+            "src": "271:17:36"
+          }
+        ],
+        "contractDependencies": [
+          516,
+          578
+        ],
+        "contractKind": "contract",
+        "documentation": "Defines the storage space for the TimelineLibDispatcher which connects contracts with\nthe current version of the TimelineLib.",
+        "fullyImplemented": true,
+        "id": 1564,
+        "linearizedBaseContracts": [
+          1564,
+          516,
+          578
+        ],
+        "name": "ITimelineDocumentLibDispatcherStorage",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 1558,
+              "nodeType": "Block",
+              "src": "353:2:36",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 1559,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 1555,
+                    "name": "_lib",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 1552,
+                    "src": "340:4:36",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  }
+                ],
+                "id": 1556,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 1554,
+                  "name": "DispatcherStorage",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 516,
+                  "src": "322:17:36",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_type$_t_contract$_DispatcherStorage_$516_$",
+                    "typeString": "type(contract DispatcherStorage)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "322:23:36"
+              }
+            ],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1553,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1552,
+                  "name": "_lib",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1559,
+                  "src": "308:12:36",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1551,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "308:7:36",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "307:14:36"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1557,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "353:0:36"
+            },
+            "scope": 1564,
+            "src": "296:59:36",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1562,
+              "nodeType": "Block",
+              "src": "572:2:36",
+              "statements": []
+            },
+            "documentation": "Init function called by the base Dispatcher class that allows you to define the\nreturn value byte sizes for functions with return values in the TimelineLib.",
+            "id": 1563,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "init",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1560,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "561:2:36"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1561,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "572:0:36"
+            },
+            "scope": 1564,
+            "src": "548:26:36",
+            "stateMutability": "nonpayable",
+            "superFunction": 515,
+            "visibility": "private"
+          }
+        ],
+        "scope": 1565,
+        "src": "221:355:36"
+      }
+    ],
+    "src": "0:576:36"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/cmurdock/Cog/cog-asset/contracts/timeline/timelineDocuments/ITimelineDocumentLibDispatcherStorage.sol",
+    "exportedSymbols": {
+      "ITimelineDocumentLibDispatcherStorage": [
+        1564
+      ]
+    },
+    "id": 1565,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1547,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".17"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:36"
+      },
+      {
+        "absolutePath": "/Users/cmurdock/Cog/cog-asset/contracts/base/dispatcher/DispatcherStorage.sol",
+        "file": "../../base/dispatcher/DispatcherStorage.sol",
+        "id": 1548,
+        "nodeType": "ImportDirective",
+        "scope": 1565,
+        "sourceUnit": 517,
+        "src": "26:53:36",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 1549,
+              "name": "DispatcherStorage",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 516,
+              "src": "271:17:36",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_DispatcherStorage_$516",
+                "typeString": "contract DispatcherStorage"
+              }
+            },
+            "id": 1550,
+            "nodeType": "InheritanceSpecifier",
+            "src": "271:17:36"
+          }
+        ],
+        "contractDependencies": [
+          516,
+          578
+        ],
+        "contractKind": "contract",
+        "documentation": "Defines the storage space for the TimelineLibDispatcher which connects contracts with\nthe current version of the TimelineLib.",
+        "fullyImplemented": true,
+        "id": 1564,
+        "linearizedBaseContracts": [
+          1564,
+          516,
+          578
+        ],
+        "name": "ITimelineDocumentLibDispatcherStorage",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 1558,
+              "nodeType": "Block",
+              "src": "353:2:36",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 1559,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 1555,
+                    "name": "_lib",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 1552,
+                    "src": "340:4:36",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  }
+                ],
+                "id": 1556,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 1554,
+                  "name": "DispatcherStorage",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 516,
+                  "src": "322:17:36",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_type$_t_contract$_DispatcherStorage_$516_$",
+                    "typeString": "type(contract DispatcherStorage)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "322:23:36"
+              }
+            ],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1553,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1552,
+                  "name": "_lib",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1559,
+                  "src": "308:12:36",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1551,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "308:7:36",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "307:14:36"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1557,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "353:0:36"
+            },
+            "scope": 1564,
+            "src": "296:59:36",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1562,
+              "nodeType": "Block",
+              "src": "572:2:36",
+              "statements": []
+            },
+            "documentation": "Init function called by the base Dispatcher class that allows you to define the\nreturn value byte sizes for functions with return values in the TimelineLib.",
+            "id": 1563,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "init",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1560,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "561:2:36"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1561,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "572:0:36"
+            },
+            "scope": 1564,
+            "src": "548:26:36",
+            "stateMutability": "nonpayable",
+            "superFunction": 515,
+            "visibility": "private"
+          }
+        ],
+        "scope": 1565,
+        "src": "221:355:36"
+      }
+    ],
+    "src": "0:576:36"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.23+commit.124ca40d.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.0",
+  "updatedAt": "2018-05-21T16:36:25.366Z"
+}

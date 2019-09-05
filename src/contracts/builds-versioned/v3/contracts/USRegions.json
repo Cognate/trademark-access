@@ -1,0 +1,541 @@
+{
+  "contractName": "USRegions",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "regions",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "index",
+          "type": "uint256"
+        }
+      ],
+      "name": "getRegion",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_owner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnershipTo",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "region",
+          "type": "string"
+        }
+      ],
+      "name": "addRegion",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity ^0.4.8;\n\nimport \"../base/owned.sol\";\n\n/**\n * TODO\n *\n * Copyright (c) 2017 Cognate, Inc.\n */\ncontract USRegions is owned {\n    \n    string[] public regions;\n\n    /**\n     * Add the address of a proof document that proves this TimelineDocument\n     */\n    function addRegion(string region) public onlyOwner {\n        regions.push(region);\n    }\n\n    function getRegion(uint index) public constant returns (string) {\n        return regions[index];\n    }\n\n}",
+  "sourcePath": "/Users/MasterChief/Cog/cog-contract/contracts/reference/USRegions.sol",
+  "ast": {
+    "attributes": {
+      "absolutePath": "/Users/MasterChief/Cog/cog-contract/contracts/reference/USRegions.sol",
+      "exportedSymbols": {
+        "USRegions": [
+          969
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.4",
+            ".8"
+          ]
+        },
+        "id": 936,
+        "name": "PragmaDirective",
+        "src": "0:23:24"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 777,
+          "absolutePath": "/Users/MasterChief/Cog/cog-contract/contracts/base/owned.sol",
+          "file": "../base/owned.sol",
+          "scope": 970,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 937,
+        "name": "ImportDirective",
+        "src": "25:27:24"
+      },
+      {
+        "attributes": {
+          "contractDependencies": [
+            776
+          ],
+          "contractKind": "contract",
+          "documentation": "TODO\n * Copyright (c) 2017 Cognate, Inc.",
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            969,
+            776
+          ],
+          "name": "USRegions",
+          "scope": 970
+        },
+        "children": [
+          {
+            "attributes": {
+              "arguments": [
+                null
+              ]
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "owned",
+                  "referencedDeclaration": 776,
+                  "type": "contract owned"
+                },
+                "id": 938,
+                "name": "UserDefinedTypeName",
+                "src": "131:5:24"
+              }
+            ],
+            "id": 939,
+            "name": "InheritanceSpecifier",
+            "src": "131:5:24"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "regions",
+              "scope": 969,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "string storage ref[] storage ref",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "length": null,
+                  "type": "string storage ref[] storage pointer"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string storage pointer"
+                    },
+                    "id": 940,
+                    "name": "ElementaryTypeName",
+                    "src": "148:6:24"
+                  }
+                ],
+                "id": 941,
+                "name": "ArrayTypeName",
+                "src": "148:8:24"
+              }
+            ],
+            "id": 942,
+            "name": "VariableDeclaration",
+            "src": "148:23:24"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "implemented": true,
+              "isConstructor": false,
+              "name": "addRegion",
+              "payable": false,
+              "scope": 969,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "region",
+                      "scope": 956,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string memory",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string storage pointer"
+                        },
+                        "id": 943,
+                        "name": "ElementaryTypeName",
+                        "src": "290:6:24"
+                      }
+                    ],
+                    "id": 944,
+                    "name": "VariableDeclaration",
+                    "src": "290:13:24"
+                  }
+                ],
+                "id": 945,
+                "name": "ParameterList",
+                "src": "289:15:24"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 948,
+                "name": "ParameterList",
+                "src": "322:0:24"
+              },
+              {
+                "attributes": {
+                  "arguments": [
+                    null
+                  ]
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 755,
+                      "type": "modifier ()",
+                      "value": "onlyOwner"
+                    },
+                    "id": 946,
+                    "name": "Identifier",
+                    "src": "312:9:24"
+                  }
+                ],
+                "id": 947,
+                "name": "ModifierInvocation",
+                "src": "312:9:24"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "uint256",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_string_memory_ptr",
+                                  "typeString": "string memory"
+                                }
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "push",
+                              "referencedDeclaration": null,
+                              "type": "function (string storage ref) returns (uint256)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 942,
+                                  "type": "string storage ref[] storage ref",
+                                  "value": "regions"
+                                },
+                                "id": 949,
+                                "name": "Identifier",
+                                "src": "332:7:24"
+                              }
+                            ],
+                            "id": 951,
+                            "name": "MemberAccess",
+                            "src": "332:12:24"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 944,
+                              "type": "string memory",
+                              "value": "region"
+                            },
+                            "id": 952,
+                            "name": "Identifier",
+                            "src": "345:6:24"
+                          }
+                        ],
+                        "id": 953,
+                        "name": "FunctionCall",
+                        "src": "332:20:24"
+                      }
+                    ],
+                    "id": 954,
+                    "name": "ExpressionStatement",
+                    "src": "332:20:24"
+                  }
+                ],
+                "id": 955,
+                "name": "Block",
+                "src": "322:37:24"
+              }
+            ],
+            "id": 956,
+            "name": "FunctionDefinition",
+            "src": "271:88:24"
+          },
+          {
+            "attributes": {
+              "constant": true,
+              "implemented": true,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "getRegion",
+              "payable": false,
+              "scope": 969,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "index",
+                      "scope": 968,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 957,
+                        "name": "ElementaryTypeName",
+                        "src": "384:4:24"
+                      }
+                    ],
+                    "id": 958,
+                    "name": "VariableDeclaration",
+                    "src": "384:10:24"
+                  }
+                ],
+                "id": 959,
+                "name": "ParameterList",
+                "src": "383:12:24"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 968,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string memory",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string storage pointer"
+                        },
+                        "id": 960,
+                        "name": "ElementaryTypeName",
+                        "src": "421:6:24"
+                      }
+                    ],
+                    "id": 961,
+                    "name": "VariableDeclaration",
+                    "src": "421:6:24"
+                  }
+                ],
+                "id": 962,
+                "name": "ParameterList",
+                "src": "420:8:24"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 962
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "type": "string storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 942,
+                              "type": "string storage ref[] storage ref",
+                              "value": "regions"
+                            },
+                            "id": 963,
+                            "name": "Identifier",
+                            "src": "446:7:24"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 958,
+                              "type": "uint256",
+                              "value": "index"
+                            },
+                            "id": 964,
+                            "name": "Identifier",
+                            "src": "454:5:24"
+                          }
+                        ],
+                        "id": 965,
+                        "name": "IndexAccess",
+                        "src": "446:14:24"
+                      }
+                    ],
+                    "id": 966,
+                    "name": "Return",
+                    "src": "439:21:24"
+                  }
+                ],
+                "id": 967,
+                "name": "Block",
+                "src": "429:38:24"
+              }
+            ],
+            "id": 968,
+            "name": "FunctionDefinition",
+            "src": "365:102:24"
+          }
+        ],
+        "id": 969,
+        "name": "ContractDefinition",
+        "src": "109:361:24"
+      }
+    ],
+    "id": 970,
+    "name": "SourceUnit",
+    "src": "0:470:24"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.18+commit.9cf6e910.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "1.0.1",
+  "updatedAt": "2018-01-15T19:32:46.196Z"
+}

@@ -1,0 +1,176 @@
+{
+  "contractName": "IbaseLib",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_code",
+          "type": "bytes"
+        }
+      ],
+      "name": "createContractFromBytes",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity ^0.4.8;\n\n/**\n * Defines the interface for a library supporting base funcionality contracts.\n *\n * Copyright (c) 2017 Cognate, Inc.\n */\nlibrary IbaseLib {\n\n    /**\n     * Creates a contract from bytecode.\n     *\n     * @return - the created contracts address\n     */\n    function createContractFromBytes(bytes _code) returns (address);\n}",
+  "sourcePath": "/Users/MasterChief/Cog/cog-contract/contracts/base/IbaseLib.sol",
+  "ast": {
+    "attributes": {
+      "absolutePath": "/Users/MasterChief/Cog/cog-contract/contracts/base/IbaseLib.sol",
+      "exportedSymbols": {
+        "IbaseLib": [
+          536
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.4",
+            ".8"
+          ]
+        },
+        "id": 528,
+        "name": "PragmaDirective",
+        "src": "0:23:10"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "library",
+          "documentation": "Defines the interface for a library supporting base funcionality contracts.\n * Copyright (c) 2017 Cognate, Inc.",
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            536
+          ],
+          "name": "IbaseLib",
+          "scope": 537
+        },
+        "children": [
+          {
+            "attributes": {
+              "body": null,
+              "constant": false,
+              "implemented": false,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "createContractFromBytes",
+              "payable": false,
+              "scope": 536,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_code",
+                      "scope": 535,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bytes memory",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes",
+                          "type": "bytes storage pointer"
+                        },
+                        "id": 529,
+                        "name": "ElementaryTypeName",
+                        "src": "319:5:10"
+                      }
+                    ],
+                    "id": 530,
+                    "name": "VariableDeclaration",
+                    "src": "319:11:10"
+                  }
+                ],
+                "id": 531,
+                "name": "ParameterList",
+                "src": "318:13:10"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 535,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 532,
+                        "name": "ElementaryTypeName",
+                        "src": "341:7:10"
+                      }
+                    ],
+                    "id": 533,
+                    "name": "VariableDeclaration",
+                    "src": "341:7:10"
+                  }
+                ],
+                "id": 534,
+                "name": "ParameterList",
+                "src": "340:9:10"
+              }
+            ],
+            "id": 535,
+            "name": "FunctionDefinition",
+            "src": "286:64:10"
+          }
+        ],
+        "id": 536,
+        "name": "ContractDefinition",
+        "src": "151:201:10"
+      }
+    ],
+    "id": 537,
+    "name": "SourceUnit",
+    "src": "0:352:10"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.18+commit.9cf6e910.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "1.0.1",
+  "updatedAt": "2018-01-15T19:32:46.194Z"
+}

@@ -40,7 +40,7 @@ log(INFO, 'completed loading contracts');
 
 function loadContracts(version, web3) {
   const results = {};
-  const path = version === 'v4' ? 'cog-asset/build/contracts' : `cog-asset/builds-versioned/${version}/contracts`;
+  const path = version === 'v4' ? 'contracts/build/contracts' : `contracts/builds-versioned/${version}/contracts`;
   const files = fs.readdirSync(`node_modules/${path}`);
   for (const file of files) {
     const name = file.split('.')[0];

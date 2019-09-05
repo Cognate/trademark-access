@@ -1,0 +1,114 @@
+{
+  "contractName": "v2",
+  "abi": [],
+  "bytecode": "0x60606040523415600e57600080fd5b603580601b6000396000f3006060604052600080fd00a165627a7a723058202389dd85e87214ce49b9b82c223d3b4d306ebe0cda65695ab540542d16802c8c0029",
+  "deployedBytecode": "0x6060604052600080fd00a165627a7a723058202389dd85e87214ce49b9b82c223d3b4d306ebe0cda65695ab540542d16802c8c0029",
+  "sourceMap": "489:14:41:-;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "489:14:41:-;;;;;",
+  "source": "pragma solidity ^0.4.8;\n\nimport \"../contracts-versioned/2.0/Trademark_v2.sol\";\nimport \"../contracts-versioned/2.0/Assignment_v2.sol\";\nimport \"../contracts-versioned/2.0/UsageDocument.sol\";\n\n/**\n * This is an upgrade contract for an existing timeline version 2 to version 3. While there\n * may be new parts of the interface, the existing interface should remain the same with the\n * exception of storying string values as bytes32[] going forward.\n *\n * Copyright (c) 2017 Cognate, Inc.\n */\ncontract v2 {}",
+  "sourcePath": "/Users/MasterChief/Cog/cog-contract/contracts/v2.sol",
+  "ast": {
+    "attributes": {
+      "absolutePath": "/Users/MasterChief/Cog/cog-contract/contracts/v2.sol",
+      "exportedSymbols": {
+        "v2": [
+          1932
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.4",
+            ".8"
+          ]
+        },
+        "id": 1928,
+        "name": "PragmaDirective",
+        "src": "0:23:41"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 183,
+          "absolutePath": "/Users/MasterChief/Cog/cog-contract/contracts-versioned/2.0/Trademark_v2.sol",
+          "file": "../contracts-versioned/2.0/Trademark_v2.sol",
+          "scope": 1933,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 1929,
+        "name": "ImportDirective",
+        "src": "25:53:41"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 39,
+          "absolutePath": "/Users/MasterChief/Cog/cog-contract/contracts-versioned/2.0/Assignment_v2.sol",
+          "file": "../contracts-versioned/2.0/Assignment_v2.sol",
+          "scope": 1933,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 1930,
+        "name": "ImportDirective",
+        "src": "79:54:41"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 238,
+          "absolutePath": "/Users/MasterChief/Cog/cog-contract/contracts-versioned/2.0/UsageDocument.sol",
+          "file": "../contracts-versioned/2.0/UsageDocument.sol",
+          "scope": 1933,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 1931,
+        "name": "ImportDirective",
+        "src": "134:54:41"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": "This is an upgrade contract for an existing timeline version 2 to version 3. While there\nmay be new parts of the interface, the existing interface should remain the same with the\nexception of storying string values as bytes32[] going forward.\n * Copyright (c) 2017 Cognate, Inc.",
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            1932
+          ],
+          "name": "v2",
+          "nodes": [
+            null
+          ],
+          "scope": 1933
+        },
+        "id": 1932,
+        "name": "ContractDefinition",
+        "src": "489:14:41"
+      }
+    ],
+    "id": 1933,
+    "name": "SourceUnit",
+    "src": "0:503:41"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.18+commit.9cf6e910.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "1.0.1",
+  "updatedAt": "2018-01-15T19:32:46.203Z"
+}
