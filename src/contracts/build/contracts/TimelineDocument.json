@@ -1,0 +1,1894 @@
+{
+  "contractName": "TimelineDocument",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_owner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnershipTo",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "timestamp",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "next",
+          "type": "address"
+        }
+      ],
+      "name": "setNext",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "prev",
+          "type": "address"
+        }
+      ],
+      "name": "setPrev",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "interfaceID",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "next",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "prev",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x608060405234801561001057600080fd5b5060008054600160a060020a033316600160a060020a0319909116179055426001557f79056e9bb24f897d7f885dacdb2d506599944c0cdfd6b7495eb7f3ea624ac5af600255610361806100656000396000f30060806040526004361061008d5763ffffffff7c0100000000000000000000000000000000000000000000000000000000600035041663479c925481146100925780634c8fe526146100c357806352effe11146100d85780638c1bb2a4146100fb5780638da5cb5b1461011c578063b2b2b44d14610131578063b80777ea14610152578063ba19322d14610179575b600080fd5b34801561009e57600080fd5b506100a761018e565b60408051600160a060020a039092168252519081900360200190f35b3480156100cf57600080fd5b506100a761019d565b3480156100e457600080fd5b506100f9600160a060020a03600435166101ac565b005b34801561010757600080fd5b506100f9600160a060020a036004351661020b565b34801561012857600080fd5b506100a76102a0565b34801561013d57600080fd5b506100f9600160a060020a03600435166102af565b34801561015e57600080fd5b50610167610329565b60408051918252519081900360200190f35b34801561018557600080fd5b5061016761032f565b600454600160a060020a031690565b600354600160a060020a031690565b60005433600160a060020a039081169116146101c757600080fd5b600160a060020a03811615156101dc57600080fd5b6000805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0392909216919091179055565b604080517f4df23ab100000000000000000000000000000000000000000000000000000000815260026004820152600160a060020a0383166024820152905173__ITimelineDocumentLib__________________91634df23ab1916044808301926000929190829003018186803b15801561028557600080fd5b505af4158015610299573d6000803e3d6000fd5b5050505050565b600054600160a060020a031681565b604080517f2d637bc600000000000000000000000000000000000000000000000000000000815260026004820152600160a060020a0383166024820152905173__ITimelineDocumentLib__________________91632d637bc6916044808301926000929190829003018186803b15801561028557600080fd5b60015481565b600254905600a165627a7a72305820f8a723d172536a1514e31d4f4082deb7854e55f7ea002d9c0b02acf99a9a4bd10029",
+  "deployedBytecode": "0x60806040526004361061008d5763ffffffff7c0100000000000000000000000000000000000000000000000000000000600035041663479c925481146100925780634c8fe526146100c357806352effe11146100d85780638c1bb2a4146100fb5780638da5cb5b1461011c578063b2b2b44d14610131578063b80777ea14610152578063ba19322d14610179575b600080fd5b34801561009e57600080fd5b506100a761018e565b60408051600160a060020a039092168252519081900360200190f35b3480156100cf57600080fd5b506100a761019d565b3480156100e457600080fd5b506100f9600160a060020a03600435166101ac565b005b34801561010757600080fd5b506100f9600160a060020a036004351661020b565b34801561012857600080fd5b506100a76102a0565b34801561013d57600080fd5b506100f9600160a060020a03600435166102af565b34801561015e57600080fd5b50610167610329565b60408051918252519081900360200190f35b34801561018557600080fd5b5061016761032f565b600454600160a060020a031690565b600354600160a060020a031690565b60005433600160a060020a039081169116146101c757600080fd5b600160a060020a03811615156101dc57600080fd5b6000805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0392909216919091179055565b604080517f4df23ab100000000000000000000000000000000000000000000000000000000815260026004820152600160a060020a0383166024820152905173__ITimelineDocumentLib__________________91634df23ab1916044808301926000929190829003018186803b15801561028557600080fd5b505af4158015610299573d6000803e3d6000fd5b5050505050565b600054600160a060020a031681565b604080517f2d637bc600000000000000000000000000000000000000000000000000000000815260026004820152600160a060020a0383166024820152905173__ITimelineDocumentLib__________________91632d637bc6916044808301926000929190829003018186803b15801561028557600080fd5b60015481565b600254905600a165627a7a72305820f8a723d172536a1514e31d4f4082deb7854e55f7ea002d9c0b02acf99a9a4bd10029",
+  "sourceMap": "365:1001:38:-;;;581:136;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;324:5:17;:14;;-1:-1:-1;;;;;400:10:38;324:14:17;-1:-1:-1;;;;;;324:14:17;;;;;;467:3:18;324:14:17;455:15:18;644:66:38;612:16;:98;365:1001;;;;;;",
+  "deployedSourceMap": "365:1001:38:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1263:101;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1263:101:38;;;;;;;;-1:-1:-1;;;;;1263:101:38;;;;;;;;;;;;;;1156;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1156:101:38;;;;674:132:17;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;674:132:17;-1:-1:-1;;;;;674:132:17;;;;;;;912:94:38;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;912:94:38;-1:-1:-1;;;;;912:94:38;;;;;252:20:17;;8:9:-1;5:2;;;30:1;27;20:12;5:2;252:20:17;;;;768:94:38;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;768:94:38;-1:-1:-1;;;;;768:94:38;;;;;357:21:18;;8:9:-1;5:2;;;30:1;27;20:12;5:2;357:21:18;;;;;;;;;;;;;;;;;;;;1044:106:38;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1044:106:38;;;;1263:101;1335:22;;-1:-1:-1;;;;;1335:22:38;1263:101;:::o;1156:::-;1228:22;;-1:-1:-1;;;;;1228:22:38;1156:101;:::o;674:132:17:-;543:5;;529:10;-1:-1:-1;;;;;529:19:17;;;543:5;;529:19;521:28;;;;;;-1:-1:-1;;;;;754:20:17;;;;746:29;;;;;;785:5;:14;;-1:-1:-1;;785:14:17;-1:-1:-1;;;;;785:14:17;;;;;;;;;;674:132::o;912:94:38:-;969:30;;;;;;:16;:30;;;;-1:-1:-1;;;;;969:30:38;;;;;;;;:24;;;;:30;;;;;-1:-1:-1;;969:30:38;;;;;;;:24;:30;;;5:2:-1;;;;30:1;27;20:12;5:2;969:30:38;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;969:30:38;;;;912:94;:::o;252:20:17:-;;;-1:-1:-1;;;;;252:20:17;;:::o;768:94:38:-;825:30;;;;;;:16;:30;;;;-1:-1:-1;;;;;825:30:38;;;;;;;;:24;;;;:30;;;;;-1:-1:-1;;825:30:38;;;;;;;:24;:30;;;5:2:-1;;;;30:1;27;20:12;357:21:18;;;;:::o;1044:106:38:-;1114:16;:29;1044:106;:::o",
+  "source": "pragma solidity ^0.4.17;\n\nimport \"../../base/owned.sol\";\nimport \"../../base/timestamped.sol\";\nimport \"../Timeline.sol\";\nimport \"./ITimelineDocumentLib.sol\";\n\n/**\n * Base Contract for TimeLineDocuments which contain specific information contributing\n * chronological data and events to building a comprehensive smart asset\n *\n * Copyright (c) 2017 Cognate, Inc.\n */\ncontract TimelineDocument is owned(msg.sender), timestamped {\n    using ITimelineDocumentLib for ITimelineDocumentLib.TimelineDocumentStorage;\n\n    ITimelineDocumentLib.TimelineDocumentStorage timelineDocument;\n\n    constructor() public {\n        timelineDocument._interfaceID = 0x79056e9bb24f897d7f885dacdb2d506599944c0cdfd6b7495eb7f3ea624ac5af;\n    }\n\n\n    // calls ITimelineDocumentLib.setNext()\n    function setNext(TimelineDocument next) public {\n        timelineDocument.setNext(next);\n    }\n\n    // calls ITimelineDocumentLib.setPrev()\n    function setPrev(TimelineDocument prev) public {\n        timelineDocument.setPrev(prev);\n    }\n\n\n    // Getters\n    //--------\n\n    function interfaceID() public view returns (bytes32) {\n        return timelineDocument._interfaceID;\n    }\n\n    function next() public view returns (TimelineDocument) {\n        return timelineDocument._next;\n    }\n\n    function prev() public view returns (TimelineDocument) {\n        return timelineDocument._prev;\n    }\n}",
+  "sourcePath": "/Users/cmurdock/Cog/cog-asset/contracts/timeline/timelineDocuments/TimelineDocument.sol",
+  "ast": {
+    "absolutePath": "/Users/cmurdock/Cog/cog-asset/contracts/timeline/timelineDocuments/TimelineDocument.sol",
+    "exportedSymbols": {
+      "TimelineDocument": [
+        1704
+      ]
+    },
+    "id": 1705,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1627,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".17"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:38"
+      },
+      {
+        "absolutePath": "/Users/cmurdock/Cog/cog-asset/contracts/base/owned.sol",
+        "file": "../../base/owned.sol",
+        "id": 1628,
+        "nodeType": "ImportDirective",
+        "scope": 1705,
+        "sourceUnit": 579,
+        "src": "26:30:38",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/cmurdock/Cog/cog-asset/contracts/base/timestamped.sol",
+        "file": "../../base/timestamped.sol",
+        "id": 1629,
+        "nodeType": "ImportDirective",
+        "scope": 1705,
+        "sourceUnit": 592,
+        "src": "57:36:38",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/cmurdock/Cog/cog-asset/contracts/timeline/Timeline.sol",
+        "file": "../Timeline.sol",
+        "id": 1630,
+        "nodeType": "ImportDirective",
+        "scope": 1705,
+        "sourceUnit": 1051,
+        "src": "94:25:38",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/cmurdock/Cog/cog-asset/contracts/timeline/timelineDocuments/ITimelineDocumentLib.sol",
+        "file": "./ITimelineDocumentLib.sol",
+        "id": 1631,
+        "nodeType": "ImportDirective",
+        "scope": 1705,
+        "sourceUnit": 1546,
+        "src": "120:36:38",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": [
+              {
+                "argumentTypes": null,
+                "expression": {
+                  "argumentTypes": null,
+                  "id": 1633,
+                  "name": "msg",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 1830,
+                  "src": "400:3:38",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_magic_message",
+                    "typeString": "msg"
+                  }
+                },
+                "id": 1634,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": false,
+                "lValueRequested": false,
+                "memberName": "sender",
+                "nodeType": "MemberAccess",
+                "referencedDeclaration": null,
+                "src": "400:10:38",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              }
+            ],
+            "baseName": {
+              "contractScope": null,
+              "id": 1632,
+              "name": "owned",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 578,
+              "src": "394:5:38",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_owned_$578",
+                "typeString": "contract owned"
+              }
+            },
+            "id": 1635,
+            "nodeType": "InheritanceSpecifier",
+            "src": "394:17:38"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 1636,
+              "name": "timestamped",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 591,
+              "src": "413:11:38",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_timestamped_$591",
+                "typeString": "contract timestamped"
+              }
+            },
+            "id": 1637,
+            "nodeType": "InheritanceSpecifier",
+            "src": "413:11:38"
+          }
+        ],
+        "contractDependencies": [
+          578,
+          591
+        ],
+        "contractKind": "contract",
+        "documentation": "Base Contract for TimeLineDocuments which contain specific information contributing\nchronological data and events to building a comprehensive smart asset\n * Copyright (c) 2017 Cognate, Inc.",
+        "fullyImplemented": true,
+        "id": 1704,
+        "linearizedBaseContracts": [
+          1704,
+          591,
+          578
+        ],
+        "name": "TimelineDocument",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "id": 1640,
+            "libraryName": {
+              "contractScope": null,
+              "id": 1638,
+              "name": "ITimelineDocumentLib",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1545,
+              "src": "437:20:38",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ITimelineDocumentLib_$1545",
+                "typeString": "library ITimelineDocumentLib"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "431:76:38",
+            "typeName": {
+              "contractScope": null,
+              "id": 1639,
+              "name": "ITimelineDocumentLib.TimelineDocumentStorage",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1507,
+              "src": "462:44:38",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_TimelineDocumentStorage_$1507_storage_ptr",
+                "typeString": "struct ITimelineDocumentLib.TimelineDocumentStorage"
+              }
+            }
+          },
+          {
+            "constant": false,
+            "id": 1642,
+            "name": "timelineDocument",
+            "nodeType": "VariableDeclaration",
+            "scope": 1704,
+            "src": "513:61:38",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_struct$_TimelineDocumentStorage_$1507_storage",
+              "typeString": "struct ITimelineDocumentLib.TimelineDocumentStorage"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 1641,
+              "name": "ITimelineDocumentLib.TimelineDocumentStorage",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1507,
+              "src": "513:44:38",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_TimelineDocumentStorage_$1507_storage_ptr",
+                "typeString": "struct ITimelineDocumentLib.TimelineDocumentStorage"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 1651,
+              "nodeType": "Block",
+              "src": "602:115:38",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1649,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 1645,
+                        "name": "timelineDocument",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1642,
+                        "src": "612:16:38",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_TimelineDocumentStorage_$1507_storage",
+                          "typeString": "struct ITimelineDocumentLib.TimelineDocumentStorage storage ref"
+                        }
+                      },
+                      "id": 1647,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "_interfaceID",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 1502,
+                      "src": "612:29:38",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "307837393035366539626232346638393764376638383564616364623264353036353939393434633063646664366237343935656237663365613632346163356166",
+                      "id": 1648,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "644:66:38",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_54739452303567312855473071522810750723455051763038195172641029594437162550703_by_1",
+                        "typeString": "int_const 5473...(69 digits omitted)...0703"
+                      },
+                      "value": "0x79056e9bb24f897d7f885dacdb2d506599944c0cdfd6b7495eb7f3ea624ac5af"
+                    },
+                    "src": "612:98:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "id": 1650,
+                  "nodeType": "ExpressionStatement",
+                  "src": "612:98:38"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1652,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1643,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "592:2:38"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1644,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "602:0:38"
+            },
+            "scope": 1704,
+            "src": "581:136:38",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1663,
+              "nodeType": "Block",
+              "src": "815:47:38",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 1660,
+                        "name": "next",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1654,
+                        "src": "850:4:38",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_TimelineDocument_$1704",
+                          "typeString": "contract TimelineDocument"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_contract$_TimelineDocument_$1704",
+                          "typeString": "contract TimelineDocument"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 1657,
+                        "name": "timelineDocument",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1642,
+                        "src": "825:16:38",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_TimelineDocumentStorage_$1507_storage",
+                          "typeString": "struct ITimelineDocumentLib.TimelineDocumentStorage storage ref"
+                        }
+                      },
+                      "id": 1659,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "setNext",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 1523,
+                      "src": "825:24:38",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_delegatecall_nonpayable$_t_struct$_TimelineDocumentStorage_$1507_storage_ptr_$_t_contract$_TimelineDocument_$1704_$returns$__$bound_to$_t_struct$_TimelineDocumentStorage_$1507_storage_ptr_$",
+                        "typeString": "function (struct ITimelineDocumentLib.TimelineDocumentStorage storage pointer,contract TimelineDocument)"
+                      }
+                    },
+                    "id": 1661,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "825:30:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1662,
+                  "nodeType": "ExpressionStatement",
+                  "src": "825:30:38"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1664,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "setNext",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1655,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1654,
+                  "name": "next",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1664,
+                  "src": "785:21:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_TimelineDocument_$1704",
+                    "typeString": "contract TimelineDocument"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 1653,
+                    "name": "TimelineDocument",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 1704,
+                    "src": "785:16:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_TimelineDocument_$1704",
+                      "typeString": "contract TimelineDocument"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "784:23:38"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1656,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "815:0:38"
+            },
+            "scope": 1704,
+            "src": "768:94:38",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1675,
+              "nodeType": "Block",
+              "src": "959:47:38",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 1672,
+                        "name": "prev",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1666,
+                        "src": "994:4:38",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_TimelineDocument_$1704",
+                          "typeString": "contract TimelineDocument"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_contract$_TimelineDocument_$1704",
+                          "typeString": "contract TimelineDocument"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 1669,
+                        "name": "timelineDocument",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1642,
+                        "src": "969:16:38",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_TimelineDocumentStorage_$1507_storage",
+                          "typeString": "struct ITimelineDocumentLib.TimelineDocumentStorage storage ref"
+                        }
+                      },
+                      "id": 1671,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "setPrev",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 1530,
+                      "src": "969:24:38",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_delegatecall_nonpayable$_t_struct$_TimelineDocumentStorage_$1507_storage_ptr_$_t_contract$_TimelineDocument_$1704_$returns$__$bound_to$_t_struct$_TimelineDocumentStorage_$1507_storage_ptr_$",
+                        "typeString": "function (struct ITimelineDocumentLib.TimelineDocumentStorage storage pointer,contract TimelineDocument)"
+                      }
+                    },
+                    "id": 1673,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "969:30:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1674,
+                  "nodeType": "ExpressionStatement",
+                  "src": "969:30:38"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1676,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "setPrev",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1667,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1666,
+                  "name": "prev",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1676,
+                  "src": "929:21:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_TimelineDocument_$1704",
+                    "typeString": "contract TimelineDocument"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 1665,
+                    "name": "TimelineDocument",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 1704,
+                    "src": "929:16:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_TimelineDocument_$1704",
+                      "typeString": "contract TimelineDocument"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "928:23:38"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1668,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "959:0:38"
+            },
+            "scope": 1704,
+            "src": "912:94:38",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1684,
+              "nodeType": "Block",
+              "src": "1097:53:38",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 1681,
+                      "name": "timelineDocument",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1642,
+                      "src": "1114:16:38",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_TimelineDocumentStorage_$1507_storage",
+                        "typeString": "struct ITimelineDocumentLib.TimelineDocumentStorage storage ref"
+                      }
+                    },
+                    "id": 1682,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "_interfaceID",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 1502,
+                    "src": "1114:29:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "functionReturnParameters": 1680,
+                  "id": 1683,
+                  "nodeType": "Return",
+                  "src": "1107:36:38"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1685,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "interfaceID",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1677,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1064:2:38"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1680,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1679,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1685,
+                  "src": "1088:7:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1678,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1088:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1087:9:38"
+            },
+            "scope": 1704,
+            "src": "1044:106:38",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1693,
+              "nodeType": "Block",
+              "src": "1211:46:38",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 1690,
+                      "name": "timelineDocument",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1642,
+                      "src": "1228:16:38",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_TimelineDocumentStorage_$1507_storage",
+                        "typeString": "struct ITimelineDocumentLib.TimelineDocumentStorage storage ref"
+                      }
+                    },
+                    "id": 1691,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "_next",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 1504,
+                    "src": "1228:22:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_TimelineDocument_$1704",
+                      "typeString": "contract TimelineDocument"
+                    }
+                  },
+                  "functionReturnParameters": 1689,
+                  "id": 1692,
+                  "nodeType": "Return",
+                  "src": "1221:29:38"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1694,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "next",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1686,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1169:2:38"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1689,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1688,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1694,
+                  "src": "1193:16:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_TimelineDocument_$1704",
+                    "typeString": "contract TimelineDocument"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 1687,
+                    "name": "TimelineDocument",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 1704,
+                    "src": "1193:16:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_TimelineDocument_$1704",
+                      "typeString": "contract TimelineDocument"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1192:18:38"
+            },
+            "scope": 1704,
+            "src": "1156:101:38",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1702,
+              "nodeType": "Block",
+              "src": "1318:46:38",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 1699,
+                      "name": "timelineDocument",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1642,
+                      "src": "1335:16:38",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_TimelineDocumentStorage_$1507_storage",
+                        "typeString": "struct ITimelineDocumentLib.TimelineDocumentStorage storage ref"
+                      }
+                    },
+                    "id": 1700,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "_prev",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 1506,
+                    "src": "1335:22:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_TimelineDocument_$1704",
+                      "typeString": "contract TimelineDocument"
+                    }
+                  },
+                  "functionReturnParameters": 1698,
+                  "id": 1701,
+                  "nodeType": "Return",
+                  "src": "1328:29:38"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1703,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "prev",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1695,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1276:2:38"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1698,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1697,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1703,
+                  "src": "1300:16:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_TimelineDocument_$1704",
+                    "typeString": "contract TimelineDocument"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 1696,
+                    "name": "TimelineDocument",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 1704,
+                    "src": "1300:16:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_TimelineDocument_$1704",
+                      "typeString": "contract TimelineDocument"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1299:18:38"
+            },
+            "scope": 1704,
+            "src": "1263:101:38",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 1705,
+        "src": "365:1001:38"
+      }
+    ],
+    "src": "0:1366:38"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/cmurdock/Cog/cog-asset/contracts/timeline/timelineDocuments/TimelineDocument.sol",
+    "exportedSymbols": {
+      "TimelineDocument": [
+        1704
+      ]
+    },
+    "id": 1705,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1627,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".17"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:38"
+      },
+      {
+        "absolutePath": "/Users/cmurdock/Cog/cog-asset/contracts/base/owned.sol",
+        "file": "../../base/owned.sol",
+        "id": 1628,
+        "nodeType": "ImportDirective",
+        "scope": 1705,
+        "sourceUnit": 579,
+        "src": "26:30:38",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/cmurdock/Cog/cog-asset/contracts/base/timestamped.sol",
+        "file": "../../base/timestamped.sol",
+        "id": 1629,
+        "nodeType": "ImportDirective",
+        "scope": 1705,
+        "sourceUnit": 592,
+        "src": "57:36:38",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/cmurdock/Cog/cog-asset/contracts/timeline/Timeline.sol",
+        "file": "../Timeline.sol",
+        "id": 1630,
+        "nodeType": "ImportDirective",
+        "scope": 1705,
+        "sourceUnit": 1051,
+        "src": "94:25:38",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/cmurdock/Cog/cog-asset/contracts/timeline/timelineDocuments/ITimelineDocumentLib.sol",
+        "file": "./ITimelineDocumentLib.sol",
+        "id": 1631,
+        "nodeType": "ImportDirective",
+        "scope": 1705,
+        "sourceUnit": 1546,
+        "src": "120:36:38",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": [
+              {
+                "argumentTypes": null,
+                "expression": {
+                  "argumentTypes": null,
+                  "id": 1633,
+                  "name": "msg",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 1830,
+                  "src": "400:3:38",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_magic_message",
+                    "typeString": "msg"
+                  }
+                },
+                "id": 1634,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": false,
+                "lValueRequested": false,
+                "memberName": "sender",
+                "nodeType": "MemberAccess",
+                "referencedDeclaration": null,
+                "src": "400:10:38",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              }
+            ],
+            "baseName": {
+              "contractScope": null,
+              "id": 1632,
+              "name": "owned",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 578,
+              "src": "394:5:38",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_owned_$578",
+                "typeString": "contract owned"
+              }
+            },
+            "id": 1635,
+            "nodeType": "InheritanceSpecifier",
+            "src": "394:17:38"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 1636,
+              "name": "timestamped",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 591,
+              "src": "413:11:38",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_timestamped_$591",
+                "typeString": "contract timestamped"
+              }
+            },
+            "id": 1637,
+            "nodeType": "InheritanceSpecifier",
+            "src": "413:11:38"
+          }
+        ],
+        "contractDependencies": [
+          578,
+          591
+        ],
+        "contractKind": "contract",
+        "documentation": "Base Contract for TimeLineDocuments which contain specific information contributing\nchronological data and events to building a comprehensive smart asset\n * Copyright (c) 2017 Cognate, Inc.",
+        "fullyImplemented": true,
+        "id": 1704,
+        "linearizedBaseContracts": [
+          1704,
+          591,
+          578
+        ],
+        "name": "TimelineDocument",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "id": 1640,
+            "libraryName": {
+              "contractScope": null,
+              "id": 1638,
+              "name": "ITimelineDocumentLib",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1545,
+              "src": "437:20:38",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ITimelineDocumentLib_$1545",
+                "typeString": "library ITimelineDocumentLib"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "431:76:38",
+            "typeName": {
+              "contractScope": null,
+              "id": 1639,
+              "name": "ITimelineDocumentLib.TimelineDocumentStorage",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1507,
+              "src": "462:44:38",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_TimelineDocumentStorage_$1507_storage_ptr",
+                "typeString": "struct ITimelineDocumentLib.TimelineDocumentStorage"
+              }
+            }
+          },
+          {
+            "constant": false,
+            "id": 1642,
+            "name": "timelineDocument",
+            "nodeType": "VariableDeclaration",
+            "scope": 1704,
+            "src": "513:61:38",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_struct$_TimelineDocumentStorage_$1507_storage",
+              "typeString": "struct ITimelineDocumentLib.TimelineDocumentStorage"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 1641,
+              "name": "ITimelineDocumentLib.TimelineDocumentStorage",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1507,
+              "src": "513:44:38",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_TimelineDocumentStorage_$1507_storage_ptr",
+                "typeString": "struct ITimelineDocumentLib.TimelineDocumentStorage"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 1651,
+              "nodeType": "Block",
+              "src": "602:115:38",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1649,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 1645,
+                        "name": "timelineDocument",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1642,
+                        "src": "612:16:38",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_TimelineDocumentStorage_$1507_storage",
+                          "typeString": "struct ITimelineDocumentLib.TimelineDocumentStorage storage ref"
+                        }
+                      },
+                      "id": 1647,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "_interfaceID",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 1502,
+                      "src": "612:29:38",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "307837393035366539626232346638393764376638383564616364623264353036353939393434633063646664366237343935656237663365613632346163356166",
+                      "id": 1648,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "644:66:38",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_54739452303567312855473071522810750723455051763038195172641029594437162550703_by_1",
+                        "typeString": "int_const 5473...(69 digits omitted)...0703"
+                      },
+                      "value": "0x79056e9bb24f897d7f885dacdb2d506599944c0cdfd6b7495eb7f3ea624ac5af"
+                    },
+                    "src": "612:98:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "id": 1650,
+                  "nodeType": "ExpressionStatement",
+                  "src": "612:98:38"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1652,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1643,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "592:2:38"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1644,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "602:0:38"
+            },
+            "scope": 1704,
+            "src": "581:136:38",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1663,
+              "nodeType": "Block",
+              "src": "815:47:38",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 1660,
+                        "name": "next",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1654,
+                        "src": "850:4:38",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_TimelineDocument_$1704",
+                          "typeString": "contract TimelineDocument"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_contract$_TimelineDocument_$1704",
+                          "typeString": "contract TimelineDocument"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 1657,
+                        "name": "timelineDocument",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1642,
+                        "src": "825:16:38",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_TimelineDocumentStorage_$1507_storage",
+                          "typeString": "struct ITimelineDocumentLib.TimelineDocumentStorage storage ref"
+                        }
+                      },
+                      "id": 1659,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "setNext",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 1523,
+                      "src": "825:24:38",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_delegatecall_nonpayable$_t_struct$_TimelineDocumentStorage_$1507_storage_ptr_$_t_contract$_TimelineDocument_$1704_$returns$__$bound_to$_t_struct$_TimelineDocumentStorage_$1507_storage_ptr_$",
+                        "typeString": "function (struct ITimelineDocumentLib.TimelineDocumentStorage storage pointer,contract TimelineDocument)"
+                      }
+                    },
+                    "id": 1661,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "825:30:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1662,
+                  "nodeType": "ExpressionStatement",
+                  "src": "825:30:38"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1664,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "setNext",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1655,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1654,
+                  "name": "next",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1664,
+                  "src": "785:21:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_TimelineDocument_$1704",
+                    "typeString": "contract TimelineDocument"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 1653,
+                    "name": "TimelineDocument",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 1704,
+                    "src": "785:16:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_TimelineDocument_$1704",
+                      "typeString": "contract TimelineDocument"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "784:23:38"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1656,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "815:0:38"
+            },
+            "scope": 1704,
+            "src": "768:94:38",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1675,
+              "nodeType": "Block",
+              "src": "959:47:38",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 1672,
+                        "name": "prev",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1666,
+                        "src": "994:4:38",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_TimelineDocument_$1704",
+                          "typeString": "contract TimelineDocument"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_contract$_TimelineDocument_$1704",
+                          "typeString": "contract TimelineDocument"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 1669,
+                        "name": "timelineDocument",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1642,
+                        "src": "969:16:38",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_TimelineDocumentStorage_$1507_storage",
+                          "typeString": "struct ITimelineDocumentLib.TimelineDocumentStorage storage ref"
+                        }
+                      },
+                      "id": 1671,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "setPrev",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 1530,
+                      "src": "969:24:38",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_delegatecall_nonpayable$_t_struct$_TimelineDocumentStorage_$1507_storage_ptr_$_t_contract$_TimelineDocument_$1704_$returns$__$bound_to$_t_struct$_TimelineDocumentStorage_$1507_storage_ptr_$",
+                        "typeString": "function (struct ITimelineDocumentLib.TimelineDocumentStorage storage pointer,contract TimelineDocument)"
+                      }
+                    },
+                    "id": 1673,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "969:30:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1674,
+                  "nodeType": "ExpressionStatement",
+                  "src": "969:30:38"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1676,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "setPrev",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1667,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1666,
+                  "name": "prev",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1676,
+                  "src": "929:21:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_TimelineDocument_$1704",
+                    "typeString": "contract TimelineDocument"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 1665,
+                    "name": "TimelineDocument",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 1704,
+                    "src": "929:16:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_TimelineDocument_$1704",
+                      "typeString": "contract TimelineDocument"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "928:23:38"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1668,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "959:0:38"
+            },
+            "scope": 1704,
+            "src": "912:94:38",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1684,
+              "nodeType": "Block",
+              "src": "1097:53:38",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 1681,
+                      "name": "timelineDocument",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1642,
+                      "src": "1114:16:38",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_TimelineDocumentStorage_$1507_storage",
+                        "typeString": "struct ITimelineDocumentLib.TimelineDocumentStorage storage ref"
+                      }
+                    },
+                    "id": 1682,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "_interfaceID",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 1502,
+                    "src": "1114:29:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "functionReturnParameters": 1680,
+                  "id": 1683,
+                  "nodeType": "Return",
+                  "src": "1107:36:38"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1685,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "interfaceID",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1677,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1064:2:38"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1680,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1679,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1685,
+                  "src": "1088:7:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1678,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1088:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1087:9:38"
+            },
+            "scope": 1704,
+            "src": "1044:106:38",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1693,
+              "nodeType": "Block",
+              "src": "1211:46:38",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 1690,
+                      "name": "timelineDocument",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1642,
+                      "src": "1228:16:38",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_TimelineDocumentStorage_$1507_storage",
+                        "typeString": "struct ITimelineDocumentLib.TimelineDocumentStorage storage ref"
+                      }
+                    },
+                    "id": 1691,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "_next",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 1504,
+                    "src": "1228:22:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_TimelineDocument_$1704",
+                      "typeString": "contract TimelineDocument"
+                    }
+                  },
+                  "functionReturnParameters": 1689,
+                  "id": 1692,
+                  "nodeType": "Return",
+                  "src": "1221:29:38"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1694,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "next",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1686,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1169:2:38"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1689,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1688,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1694,
+                  "src": "1193:16:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_TimelineDocument_$1704",
+                    "typeString": "contract TimelineDocument"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 1687,
+                    "name": "TimelineDocument",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 1704,
+                    "src": "1193:16:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_TimelineDocument_$1704",
+                      "typeString": "contract TimelineDocument"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1192:18:38"
+            },
+            "scope": 1704,
+            "src": "1156:101:38",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1702,
+              "nodeType": "Block",
+              "src": "1318:46:38",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 1699,
+                      "name": "timelineDocument",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1642,
+                      "src": "1335:16:38",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_TimelineDocumentStorage_$1507_storage",
+                        "typeString": "struct ITimelineDocumentLib.TimelineDocumentStorage storage ref"
+                      }
+                    },
+                    "id": 1700,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "_prev",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 1506,
+                    "src": "1335:22:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_TimelineDocument_$1704",
+                      "typeString": "contract TimelineDocument"
+                    }
+                  },
+                  "functionReturnParameters": 1698,
+                  "id": 1701,
+                  "nodeType": "Return",
+                  "src": "1328:29:38"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1703,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "prev",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1695,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1276:2:38"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1698,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1697,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1703,
+                  "src": "1300:16:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_TimelineDocument_$1704",
+                    "typeString": "contract TimelineDocument"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 1696,
+                    "name": "TimelineDocument",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 1704,
+                    "src": "1300:16:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_TimelineDocument_$1704",
+                      "typeString": "contract TimelineDocument"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1299:18:38"
+            },
+            "scope": 1704,
+            "src": "1263:101:38",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 1705,
+        "src": "365:1001:38"
+      }
+    ],
+    "src": "0:1366:38"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.23+commit.124ca40d.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.0",
+  "updatedAt": "2018-05-21T16:36:25.366Z"
+}

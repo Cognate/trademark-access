@@ -1,0 +1,1454 @@
+{
+  "contractName": "TimelineDocumentLib",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "self",
+          "type": "ITimelineDocumentLib.TimelineDocumentStorage storage"
+        },
+        {
+          "name": "next",
+          "type": "TimelineDocument"
+        }
+      ],
+      "name": "setNext",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "self",
+          "type": "ITimelineDocumentLib.ClaimStorage storage"
+        },
+        {
+          "name": "proof",
+          "type": "address"
+        }
+      ],
+      "name": "addProof",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "self",
+          "type": "ITimelineDocumentLib.ProofDocumentStorage storage"
+        },
+        {
+          "name": "location",
+          "type": "string"
+        }
+      ],
+      "name": "setLocation",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x6060604052341561000f57600080fd5b610c348061001e6000396000f300606060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680632d637bc61461005c578063427221c11461009357806364e4f1f7146100ca575b600080fd5b610091600480803590602001909190803573ffffffffffffffffffffffffffffffffffffffff16906020019091905050610125565b005b6100c8600480803590602001909190803573ffffffffffffffffffffffffffffffffffffffff16906020019091905050610483565b005b610123600480803590602001909190803590602001908201803590602001908080601f01602080910402602001604051908101604052809392919081815260200183838082843782019150505050505091905050610803565b005b3073ffffffffffffffffffffffffffffffffffffffff16638da5cb5b6000604051602001526040518163ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401602060405180830381600087803b151561019157600080fd5b6102c65a03f115156101a257600080fd5b5050506040518051905073ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16148061043157503073ffffffffffffffffffffffffffffffffffffffff16638da5cb5b6000604051602001526040518163ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401602060405180830381600087803b151561024c57600080fd5b6102c65a03f1151561025d57600080fd5b5050506040518051905073ffffffffffffffffffffffffffffffffffffffff1663c28de2cd6000604051602001526040518163ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401602060405180830381600087803b15156102d257600080fd5b6102c65a03f115156102e357600080fd5b50505060405180519050801561043057503073ffffffffffffffffffffffffffffffffffffffff16638da5cb5b6000604051602001526040518163ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401602060405180830381600087803b151561036057600080fd5b6102c65a03f1151561037157600080fd5b5050506040518051905073ffffffffffffffffffffffffffffffffffffffff16638da5cb5b6000604051602001526040518163ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401602060405180830381600087803b15156103e657600080fd5b6102c65a03f115156103f757600080fd5b5050506040518051905073ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16145b5b151561043c57600080fd5b808260010160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505050565b3073ffffffffffffffffffffffffffffffffffffffff16638da5cb5b6000604051602001526040518163ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401602060405180830381600087803b15156104ef57600080fd5b6102c65a03f1151561050057600080fd5b5050506040518051905073ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16148061078f57503073ffffffffffffffffffffffffffffffffffffffff16638da5cb5b6000604051602001526040518163ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401602060405180830381600087803b15156105aa57600080fd5b6102c65a03f115156105bb57600080fd5b5050506040518051905073ffffffffffffffffffffffffffffffffffffffff1663c28de2cd6000604051602001526040518163ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401602060405180830381600087803b151561063057600080fd5b6102c65a03f1151561064157600080fd5b50505060405180519050801561078e57503073ffffffffffffffffffffffffffffffffffffffff16638da5cb5b6000604051602001526040518163ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401602060405180830381600087803b15156106be57600080fd5b6102c65a03f115156106cf57600080fd5b5050506040518051905073ffffffffffffffffffffffffffffffffffffffff16638da5cb5b6000604051602001526040518163ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401602060405180830381600087803b151561074457600080fd5b6102c65a03f1151561075557600080fd5b5050506040518051905073ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16145b5b151561079a57600080fd5b8160000180548060010182816107b09190610b37565b9160005260206000209001600083909190916101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550505050565b3073ffffffffffffffffffffffffffffffffffffffff16638da5cb5b6000604051602001526040518163ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401602060405180830381600087803b151561086f57600080fd5b6102c65a03f1151561088057600080fd5b5050506040518051905073ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161480610b0f57503073ffffffffffffffffffffffffffffffffffffffff16638da5cb5b6000604051602001526040518163ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401602060405180830381600087803b151561092a57600080fd5b6102c65a03f1151561093b57600080fd5b5050506040518051905073ffffffffffffffffffffffffffffffffffffffff1663c28de2cd6000604051602001526040518163ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401602060405180830381600087803b15156109b057600080fd5b6102c65a03f115156109c157600080fd5b505050604051805190508015610b0e57503073ffffffffffffffffffffffffffffffffffffffff16638da5cb5b6000604051602001526040518163ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401602060405180830381600087803b1515610a3e57600080fd5b6102c65a03f11515610a4f57600080fd5b5050506040518051905073ffffffffffffffffffffffffffffffffffffffff16638da5cb5b6000604051602001526040518163ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401602060405180830381600087803b1515610ac457600080fd5b6102c65a03f11515610ad557600080fd5b5050506040518051905073ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16145b5b1515610b1a57600080fd5b80826000019080519060200190610b32929190610b63565b505050565b815481835581811511610b5e57818360005260206000209182019101610b5d9190610be3565b5b505050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f10610ba457805160ff1916838001178555610bd2565b82800160010185558215610bd2579182015b82811115610bd1578251825591602001919060010190610bb6565b5b509050610bdf9190610be3565b5090565b610c0591905b80821115610c01576000816000905550600101610be9565b5090565b905600a165627a7a723058206a9f852e9fab2cbbb0341783e4f535298d476d6ce5ebe3410416bc62944376b60029",
+  "deployedBytecode": "0x606060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680632d637bc61461005c578063427221c11461009357806364e4f1f7146100ca575b600080fd5b610091600480803590602001909190803573ffffffffffffffffffffffffffffffffffffffff16906020019091905050610125565b005b6100c8600480803590602001909190803573ffffffffffffffffffffffffffffffffffffffff16906020019091905050610483565b005b610123600480803590602001909190803590602001908201803590602001908080601f01602080910402602001604051908101604052809392919081815260200183838082843782019150505050505091905050610803565b005b3073ffffffffffffffffffffffffffffffffffffffff16638da5cb5b6000604051602001526040518163ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401602060405180830381600087803b151561019157600080fd5b6102c65a03f115156101a257600080fd5b5050506040518051905073ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16148061043157503073ffffffffffffffffffffffffffffffffffffffff16638da5cb5b6000604051602001526040518163ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401602060405180830381600087803b151561024c57600080fd5b6102c65a03f1151561025d57600080fd5b5050506040518051905073ffffffffffffffffffffffffffffffffffffffff1663c28de2cd6000604051602001526040518163ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401602060405180830381600087803b15156102d257600080fd5b6102c65a03f115156102e357600080fd5b50505060405180519050801561043057503073ffffffffffffffffffffffffffffffffffffffff16638da5cb5b6000604051602001526040518163ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401602060405180830381600087803b151561036057600080fd5b6102c65a03f1151561037157600080fd5b5050506040518051905073ffffffffffffffffffffffffffffffffffffffff16638da5cb5b6000604051602001526040518163ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401602060405180830381600087803b15156103e657600080fd5b6102c65a03f115156103f757600080fd5b5050506040518051905073ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16145b5b151561043c57600080fd5b808260010160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505050565b3073ffffffffffffffffffffffffffffffffffffffff16638da5cb5b6000604051602001526040518163ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401602060405180830381600087803b15156104ef57600080fd5b6102c65a03f1151561050057600080fd5b5050506040518051905073ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16148061078f57503073ffffffffffffffffffffffffffffffffffffffff16638da5cb5b6000604051602001526040518163ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401602060405180830381600087803b15156105aa57600080fd5b6102c65a03f115156105bb57600080fd5b5050506040518051905073ffffffffffffffffffffffffffffffffffffffff1663c28de2cd6000604051602001526040518163ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401602060405180830381600087803b151561063057600080fd5b6102c65a03f1151561064157600080fd5b50505060405180519050801561078e57503073ffffffffffffffffffffffffffffffffffffffff16638da5cb5b6000604051602001526040518163ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401602060405180830381600087803b15156106be57600080fd5b6102c65a03f115156106cf57600080fd5b5050506040518051905073ffffffffffffffffffffffffffffffffffffffff16638da5cb5b6000604051602001526040518163ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401602060405180830381600087803b151561074457600080fd5b6102c65a03f1151561075557600080fd5b5050506040518051905073ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16145b5b151561079a57600080fd5b8160000180548060010182816107b09190610b37565b9160005260206000209001600083909190916101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550505050565b3073ffffffffffffffffffffffffffffffffffffffff16638da5cb5b6000604051602001526040518163ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401602060405180830381600087803b151561086f57600080fd5b6102c65a03f1151561088057600080fd5b5050506040518051905073ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161480610b0f57503073ffffffffffffffffffffffffffffffffffffffff16638da5cb5b6000604051602001526040518163ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401602060405180830381600087803b151561092a57600080fd5b6102c65a03f1151561093b57600080fd5b5050506040518051905073ffffffffffffffffffffffffffffffffffffffff1663c28de2cd6000604051602001526040518163ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401602060405180830381600087803b15156109b057600080fd5b6102c65a03f115156109c157600080fd5b505050604051805190508015610b0e57503073ffffffffffffffffffffffffffffffffffffffff16638da5cb5b6000604051602001526040518163ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401602060405180830381600087803b1515610a3e57600080fd5b6102c65a03f11515610a4f57600080fd5b5050506040518051905073ffffffffffffffffffffffffffffffffffffffff16638da5cb5b6000604051602001526040518163ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401602060405180830381600087803b1515610ac457600080fd5b6102c65a03f11515610ad557600080fd5b5050506040518051905073ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16145b5b1515610b1a57600080fd5b80826000019080519060200190610b32929190610b63565b505050565b815481835581811511610b5e57818360005260206000209182019101610b5d9190610be3565b5b505050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f10610ba457805160ff1916838001178555610bd2565b82800160010185558215610bd2579182015b82811115610bd1578251825591602001919060010190610bb6565b5b509050610bdf9190610be3565b5090565b610c0591905b80821115610c01576000816000905550600101610be9565b5090565b905600a165627a7a723058206a9f852e9fab2cbbb0341783e4f535298d476d6ce5ebe3410416bc62944376b60029",
+  "sourceMap": "213:1049:40:-;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "213:1049:40:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;618:157;;;;;;;;;;;;;;;;;;;;;;;;;;;;948:146;;;;;;;;;;;;;;;;;;;;;;;;;;;;1100:160;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;618:157;479:4;473:17;;;:19;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;459:33;;:10;:33;;;:134;;;;512:4;506:17;;;:19;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;497:38;;;:40;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:95;;;;;570:4;564:17;;;:19;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;555:35;;;:37;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;541:51;;:10;:51;;;497:95;459:134;451:143;;;;;;;;764:4;751;:10;;;:17;;;;;;;;;;;;;;;;;;618:157;;:::o;948:146::-;479:4;473:17;;;:19;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;459:33;;:10;:33;;;:134;;;;512:4;506:17;;;:19;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;497:38;;;:40;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:95;;;;;570:4;564:17;;;:19;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;555:35;;;:37;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;541:51;;:10;:51;;;497:95;459:134;451:143;;;;;;;;1063:4;:12;;:24;;;;;;;;;;;:::i;:::-;;;;;;;;;;1081:5;1063:24;;;;;;;;;;;;;;;;;;;;;;;948:146;;:::o;1100:160::-;479:4;473:17;;;:19;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;459:33;;:10;:33;;;:134;;;;512:4;506:17;;;:19;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;497:38;;;:40;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:95;;;;;570:4;564:17;;;:19;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;555:35;;;:37;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;541:51;;:10;:51;;;497:95;459:134;451:143;;;;;;;;1245:8;1228:4;:14;;:25;;;;;;;;;;;;:::i;:::-;;1100:160;;:::o;213:1049::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity ^0.4.8;\n\nimport \"./ITimelineDocumentLib.sol\";\nimport \"../Timeline.sol\";\nimport \"./TimelineDocument.sol\";\n\n/**\n * ITimelineDocumentLib implementation v1.0\n *\n * Copyright (c) 2017 Cognate, Inc.\n */\nlibrary TimelineDocumentLib {\n\n    /**\n     * Restriction modifier, restricts access of methods to the latest top level timeline in\n     * the upgrade schema of the owning timeline\n     */\n    modifier onlyControllingTimeline() {\n        require(msg.sender == owned(this).owner() || (Timeline(owned(this).owner()).upgraded() && msg.sender == Timeline(owned(this).owner()).owner()));\n        _;\n    }\n\n    function setNext(ITimelineDocumentLib.TimelineDocumentStorage storage self, TimelineDocument next) onlyControllingTimeline {\n        self._next = next;\n    }\n\n    /*function setPrev(ITimelineDocumentLib.TimelineDocumentStorage storage self, TimelineDocument prev) onlyControllingTimeline {\n        self._prev = prev;\n    }*/\n\n    function addProof(ITimelineDocumentLib.ClaimStorage storage self, address proof) onlyControllingTimeline {\n        self._proofs.push(proof);\n    }\n\n    function setLocation(ITimelineDocumentLib.ProofDocumentStorage storage self, string location) onlyControllingTimeline {\n        self._location = location;\n    }\n}",
+  "sourcePath": "/Users/MasterChief/Cog/cog-contract/contracts/timeline/timelineDocuments/TimelineDocumentLib.sol",
+  "ast": {
+    "attributes": {
+      "absolutePath": "/Users/MasterChief/Cog/cog-contract/contracts/timeline/timelineDocuments/TimelineDocumentLib.sol",
+      "exportedSymbols": {
+        "TimelineDocumentLib": [
+          1926
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.4",
+            ".8"
+          ]
+        },
+        "id": 1833,
+        "name": "PragmaDirective",
+        "src": "0:23:40"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 1694,
+          "absolutePath": "/Users/MasterChief/Cog/cog-contract/contracts/timeline/timelineDocuments/ITimelineDocumentLib.sol",
+          "file": "./ITimelineDocumentLib.sol",
+          "scope": 1927,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 1834,
+        "name": "ImportDirective",
+        "src": "25:36:40"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 1237,
+          "absolutePath": "/Users/MasterChief/Cog/cog-contract/contracts/timeline/Timeline.sol",
+          "file": "../Timeline.sol",
+          "scope": 1927,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 1835,
+        "name": "ImportDirective",
+        "src": "62:25:40"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 1832,
+          "absolutePath": "/Users/MasterChief/Cog/cog-contract/contracts/timeline/timelineDocuments/TimelineDocument.sol",
+          "file": "./TimelineDocument.sol",
+          "scope": 1927,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 1836,
+        "name": "ImportDirective",
+        "src": "88:32:40"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "library",
+          "documentation": "ITimelineDocumentLib implementation v1.0\n * Copyright (c) 2017 Cognate, Inc.",
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            1926
+          ],
+          "name": "TimelineDocumentLib",
+          "scope": 1927
+        },
+        "children": [
+          {
+            "attributes": {
+              "name": "onlyControllingTimeline",
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1837,
+                "name": "ParameterList",
+                "src": "438:2:40"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_bool",
+                                  "typeString": "bool"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 1947,
+                              "type": "function (bool) pure",
+                              "value": "require"
+                            },
+                            "id": 1838,
+                            "name": "Identifier",
+                            "src": "451:7:40"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "commonType": {
+                                "typeIdentifier": "t_bool",
+                                "typeString": "bool"
+                              },
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "operator": "||",
+                              "type": "bool"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "commonType": {
+                                    "typeIdentifier": "t_address",
+                                    "typeString": "address"
+                                  },
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "operator": "==",
+                                  "type": "bool"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "member_name": "sender",
+                                      "referencedDeclaration": null,
+                                      "type": "address"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 1944,
+                                          "type": "msg",
+                                          "value": "msg"
+                                        },
+                                        "id": 1839,
+                                        "name": "Identifier",
+                                        "src": "459:3:40"
+                                      }
+                                    ],
+                                    "id": 1840,
+                                    "name": "MemberAccess",
+                                    "src": "459:10:40"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "arguments": [
+                                        null
+                                      ],
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": false,
+                                      "isStructConstructorCall": false,
+                                      "lValueRequested": false,
+                                      "names": [
+                                        null
+                                      ],
+                                      "type": "address",
+                                      "type_conversion": false
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": [
+                                            null
+                                          ],
+                                          "isConstant": false,
+                                          "isLValue": false,
+                                          "isPure": false,
+                                          "lValueRequested": false,
+                                          "member_name": "owner",
+                                          "referencedDeclaration": 734,
+                                          "type": "function () view external returns (address)"
+                                        },
+                                        "children": [
+                                          {
+                                            "attributes": {
+                                              "argumentTypes": null,
+                                              "isConstant": false,
+                                              "isLValue": false,
+                                              "isPure": false,
+                                              "isStructConstructorCall": false,
+                                              "lValueRequested": false,
+                                              "names": [
+                                                null
+                                              ],
+                                              "type": "contract owned",
+                                              "type_conversion": true
+                                            },
+                                            "children": [
+                                              {
+                                                "attributes": {
+                                                  "argumentTypes": [
+                                                    {
+                                                      "typeIdentifier": "t_contract$_TimelineDocumentLib_$1926",
+                                                      "typeString": "library TimelineDocumentLib"
+                                                    }
+                                                  ],
+                                                  "overloadedDeclarations": [
+                                                    null
+                                                  ],
+                                                  "referencedDeclaration": 776,
+                                                  "type": "type(contract owned)",
+                                                  "value": "owned"
+                                                },
+                                                "id": 1841,
+                                                "name": "Identifier",
+                                                "src": "473:5:40"
+                                              },
+                                              {
+                                                "attributes": {
+                                                  "argumentTypes": null,
+                                                  "overloadedDeclarations": [
+                                                    null
+                                                  ],
+                                                  "referencedDeclaration": 2035,
+                                                  "type": "library TimelineDocumentLib",
+                                                  "value": "this"
+                                                },
+                                                "id": 1842,
+                                                "name": "Identifier",
+                                                "src": "479:4:40"
+                                              }
+                                            ],
+                                            "id": 1843,
+                                            "name": "FunctionCall",
+                                            "src": "473:11:40"
+                                          }
+                                        ],
+                                        "id": 1844,
+                                        "name": "MemberAccess",
+                                        "src": "473:17:40"
+                                      }
+                                    ],
+                                    "id": 1845,
+                                    "name": "FunctionCall",
+                                    "src": "473:19:40"
+                                  }
+                                ],
+                                "id": 1846,
+                                "name": "BinaryOperation",
+                                "src": "459:33:40"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isInlineArray": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "bool"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "commonType": {
+                                        "typeIdentifier": "t_bool",
+                                        "typeString": "bool"
+                                      },
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "operator": "&&",
+                                      "type": "bool"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "arguments": [
+                                            null
+                                          ],
+                                          "isConstant": false,
+                                          "isLValue": false,
+                                          "isPure": false,
+                                          "isStructConstructorCall": false,
+                                          "lValueRequested": false,
+                                          "names": [
+                                            null
+                                          ],
+                                          "type": "bool",
+                                          "type_conversion": false
+                                        },
+                                        "children": [
+                                          {
+                                            "attributes": {
+                                              "argumentTypes": [
+                                                null
+                                              ],
+                                              "isConstant": false,
+                                              "isLValue": false,
+                                              "isPure": false,
+                                              "lValueRequested": false,
+                                              "member_name": "upgraded",
+                                              "referencedDeclaration": 1208,
+                                              "type": "function () view external returns (bool)"
+                                            },
+                                            "children": [
+                                              {
+                                                "attributes": {
+                                                  "argumentTypes": null,
+                                                  "isConstant": false,
+                                                  "isLValue": false,
+                                                  "isPure": false,
+                                                  "isStructConstructorCall": false,
+                                                  "lValueRequested": false,
+                                                  "names": [
+                                                    null
+                                                  ],
+                                                  "type": "contract Timeline",
+                                                  "type_conversion": true
+                                                },
+                                                "children": [
+                                                  {
+                                                    "attributes": {
+                                                      "argumentTypes": [
+                                                        {
+                                                          "typeIdentifier": "t_address",
+                                                          "typeString": "address"
+                                                        }
+                                                      ],
+                                                      "overloadedDeclarations": [
+                                                        null
+                                                      ],
+                                                      "referencedDeclaration": 1236,
+                                                      "type": "type(contract Timeline)",
+                                                      "value": "Timeline"
+                                                    },
+                                                    "id": 1847,
+                                                    "name": "Identifier",
+                                                    "src": "497:8:40"
+                                                  },
+                                                  {
+                                                    "attributes": {
+                                                      "argumentTypes": null,
+                                                      "arguments": [
+                                                        null
+                                                      ],
+                                                      "isConstant": false,
+                                                      "isLValue": false,
+                                                      "isPure": false,
+                                                      "isStructConstructorCall": false,
+                                                      "lValueRequested": false,
+                                                      "names": [
+                                                        null
+                                                      ],
+                                                      "type": "address",
+                                                      "type_conversion": false
+                                                    },
+                                                    "children": [
+                                                      {
+                                                        "attributes": {
+                                                          "argumentTypes": [
+                                                            null
+                                                          ],
+                                                          "isConstant": false,
+                                                          "isLValue": false,
+                                                          "isPure": false,
+                                                          "lValueRequested": false,
+                                                          "member_name": "owner",
+                                                          "referencedDeclaration": 734,
+                                                          "type": "function () view external returns (address)"
+                                                        },
+                                                        "children": [
+                                                          {
+                                                            "attributes": {
+                                                              "argumentTypes": null,
+                                                              "isConstant": false,
+                                                              "isLValue": false,
+                                                              "isPure": false,
+                                                              "isStructConstructorCall": false,
+                                                              "lValueRequested": false,
+                                                              "names": [
+                                                                null
+                                                              ],
+                                                              "type": "contract owned",
+                                                              "type_conversion": true
+                                                            },
+                                                            "children": [
+                                                              {
+                                                                "attributes": {
+                                                                  "argumentTypes": [
+                                                                    {
+                                                                      "typeIdentifier": "t_contract$_TimelineDocumentLib_$1926",
+                                                                      "typeString": "library TimelineDocumentLib"
+                                                                    }
+                                                                  ],
+                                                                  "overloadedDeclarations": [
+                                                                    null
+                                                                  ],
+                                                                  "referencedDeclaration": 776,
+                                                                  "type": "type(contract owned)",
+                                                                  "value": "owned"
+                                                                },
+                                                                "id": 1848,
+                                                                "name": "Identifier",
+                                                                "src": "506:5:40"
+                                                              },
+                                                              {
+                                                                "attributes": {
+                                                                  "argumentTypes": null,
+                                                                  "overloadedDeclarations": [
+                                                                    null
+                                                                  ],
+                                                                  "referencedDeclaration": 2035,
+                                                                  "type": "library TimelineDocumentLib",
+                                                                  "value": "this"
+                                                                },
+                                                                "id": 1849,
+                                                                "name": "Identifier",
+                                                                "src": "512:4:40"
+                                                              }
+                                                            ],
+                                                            "id": 1850,
+                                                            "name": "FunctionCall",
+                                                            "src": "506:11:40"
+                                                          }
+                                                        ],
+                                                        "id": 1851,
+                                                        "name": "MemberAccess",
+                                                        "src": "506:17:40"
+                                                      }
+                                                    ],
+                                                    "id": 1852,
+                                                    "name": "FunctionCall",
+                                                    "src": "506:19:40"
+                                                  }
+                                                ],
+                                                "id": 1853,
+                                                "name": "FunctionCall",
+                                                "src": "497:29:40"
+                                              }
+                                            ],
+                                            "id": 1854,
+                                            "name": "MemberAccess",
+                                            "src": "497:38:40"
+                                          }
+                                        ],
+                                        "id": 1855,
+                                        "name": "FunctionCall",
+                                        "src": "497:40:40"
+                                      },
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "commonType": {
+                                            "typeIdentifier": "t_address",
+                                            "typeString": "address"
+                                          },
+                                          "isConstant": false,
+                                          "isLValue": false,
+                                          "isPure": false,
+                                          "lValueRequested": false,
+                                          "operator": "==",
+                                          "type": "bool"
+                                        },
+                                        "children": [
+                                          {
+                                            "attributes": {
+                                              "argumentTypes": null,
+                                              "isConstant": false,
+                                              "isLValue": false,
+                                              "isPure": false,
+                                              "lValueRequested": false,
+                                              "member_name": "sender",
+                                              "referencedDeclaration": null,
+                                              "type": "address"
+                                            },
+                                            "children": [
+                                              {
+                                                "attributes": {
+                                                  "argumentTypes": null,
+                                                  "overloadedDeclarations": [
+                                                    null
+                                                  ],
+                                                  "referencedDeclaration": 1944,
+                                                  "type": "msg",
+                                                  "value": "msg"
+                                                },
+                                                "id": 1856,
+                                                "name": "Identifier",
+                                                "src": "541:3:40"
+                                              }
+                                            ],
+                                            "id": 1857,
+                                            "name": "MemberAccess",
+                                            "src": "541:10:40"
+                                          },
+                                          {
+                                            "attributes": {
+                                              "argumentTypes": null,
+                                              "arguments": [
+                                                null
+                                              ],
+                                              "isConstant": false,
+                                              "isLValue": false,
+                                              "isPure": false,
+                                              "isStructConstructorCall": false,
+                                              "lValueRequested": false,
+                                              "names": [
+                                                null
+                                              ],
+                                              "type": "address",
+                                              "type_conversion": false
+                                            },
+                                            "children": [
+                                              {
+                                                "attributes": {
+                                                  "argumentTypes": [
+                                                    null
+                                                  ],
+                                                  "isConstant": false,
+                                                  "isLValue": false,
+                                                  "isPure": false,
+                                                  "lValueRequested": false,
+                                                  "member_name": "owner",
+                                                  "referencedDeclaration": 734,
+                                                  "type": "function () view external returns (address)"
+                                                },
+                                                "children": [
+                                                  {
+                                                    "attributes": {
+                                                      "argumentTypes": null,
+                                                      "isConstant": false,
+                                                      "isLValue": false,
+                                                      "isPure": false,
+                                                      "isStructConstructorCall": false,
+                                                      "lValueRequested": false,
+                                                      "names": [
+                                                        null
+                                                      ],
+                                                      "type": "contract Timeline",
+                                                      "type_conversion": true
+                                                    },
+                                                    "children": [
+                                                      {
+                                                        "attributes": {
+                                                          "argumentTypes": [
+                                                            {
+                                                              "typeIdentifier": "t_address",
+                                                              "typeString": "address"
+                                                            }
+                                                          ],
+                                                          "overloadedDeclarations": [
+                                                            null
+                                                          ],
+                                                          "referencedDeclaration": 1236,
+                                                          "type": "type(contract Timeline)",
+                                                          "value": "Timeline"
+                                                        },
+                                                        "id": 1858,
+                                                        "name": "Identifier",
+                                                        "src": "555:8:40"
+                                                      },
+                                                      {
+                                                        "attributes": {
+                                                          "argumentTypes": null,
+                                                          "arguments": [
+                                                            null
+                                                          ],
+                                                          "isConstant": false,
+                                                          "isLValue": false,
+                                                          "isPure": false,
+                                                          "isStructConstructorCall": false,
+                                                          "lValueRequested": false,
+                                                          "names": [
+                                                            null
+                                                          ],
+                                                          "type": "address",
+                                                          "type_conversion": false
+                                                        },
+                                                        "children": [
+                                                          {
+                                                            "attributes": {
+                                                              "argumentTypes": [
+                                                                null
+                                                              ],
+                                                              "isConstant": false,
+                                                              "isLValue": false,
+                                                              "isPure": false,
+                                                              "lValueRequested": false,
+                                                              "member_name": "owner",
+                                                              "referencedDeclaration": 734,
+                                                              "type": "function () view external returns (address)"
+                                                            },
+                                                            "children": [
+                                                              {
+                                                                "attributes": {
+                                                                  "argumentTypes": null,
+                                                                  "isConstant": false,
+                                                                  "isLValue": false,
+                                                                  "isPure": false,
+                                                                  "isStructConstructorCall": false,
+                                                                  "lValueRequested": false,
+                                                                  "names": [
+                                                                    null
+                                                                  ],
+                                                                  "type": "contract owned",
+                                                                  "type_conversion": true
+                                                                },
+                                                                "children": [
+                                                                  {
+                                                                    "attributes": {
+                                                                      "argumentTypes": [
+                                                                        {
+                                                                          "typeIdentifier": "t_contract$_TimelineDocumentLib_$1926",
+                                                                          "typeString": "library TimelineDocumentLib"
+                                                                        }
+                                                                      ],
+                                                                      "overloadedDeclarations": [
+                                                                        null
+                                                                      ],
+                                                                      "referencedDeclaration": 776,
+                                                                      "type": "type(contract owned)",
+                                                                      "value": "owned"
+                                                                    },
+                                                                    "id": 1859,
+                                                                    "name": "Identifier",
+                                                                    "src": "564:5:40"
+                                                                  },
+                                                                  {
+                                                                    "attributes": {
+                                                                      "argumentTypes": null,
+                                                                      "overloadedDeclarations": [
+                                                                        null
+                                                                      ],
+                                                                      "referencedDeclaration": 2035,
+                                                                      "type": "library TimelineDocumentLib",
+                                                                      "value": "this"
+                                                                    },
+                                                                    "id": 1860,
+                                                                    "name": "Identifier",
+                                                                    "src": "570:4:40"
+                                                                  }
+                                                                ],
+                                                                "id": 1861,
+                                                                "name": "FunctionCall",
+                                                                "src": "564:11:40"
+                                                              }
+                                                            ],
+                                                            "id": 1862,
+                                                            "name": "MemberAccess",
+                                                            "src": "564:17:40"
+                                                          }
+                                                        ],
+                                                        "id": 1863,
+                                                        "name": "FunctionCall",
+                                                        "src": "564:19:40"
+                                                      }
+                                                    ],
+                                                    "id": 1864,
+                                                    "name": "FunctionCall",
+                                                    "src": "555:29:40"
+                                                  }
+                                                ],
+                                                "id": 1865,
+                                                "name": "MemberAccess",
+                                                "src": "555:35:40"
+                                              }
+                                            ],
+                                            "id": 1866,
+                                            "name": "FunctionCall",
+                                            "src": "555:37:40"
+                                          }
+                                        ],
+                                        "id": 1867,
+                                        "name": "BinaryOperation",
+                                        "src": "541:51:40"
+                                      }
+                                    ],
+                                    "id": 1868,
+                                    "name": "BinaryOperation",
+                                    "src": "497:95:40"
+                                  }
+                                ],
+                                "id": 1869,
+                                "name": "TupleExpression",
+                                "src": "496:97:40"
+                              }
+                            ],
+                            "id": 1870,
+                            "name": "BinaryOperation",
+                            "src": "459:134:40"
+                          }
+                        ],
+                        "id": 1871,
+                        "name": "FunctionCall",
+                        "src": "451:143:40"
+                      }
+                    ],
+                    "id": 1872,
+                    "name": "ExpressionStatement",
+                    "src": "451:143:40"
+                  },
+                  {
+                    "id": 1873,
+                    "name": "PlaceholderStatement",
+                    "src": "604:1:40"
+                  }
+                ],
+                "id": 1874,
+                "name": "Block",
+                "src": "441:171:40"
+              }
+            ],
+            "id": 1875,
+            "name": "ModifierDefinition",
+            "src": "406:206:40"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "implemented": true,
+              "isConstructor": false,
+              "name": "setNext",
+              "payable": false,
+              "scope": 1926,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "self",
+                      "scope": 1891,
+                      "stateVariable": false,
+                      "storageLocation": "storage",
+                      "type": "struct ITimelineDocumentLib.TimelineDocumentStorage storage pointer",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "contractScope": null,
+                          "name": "ITimelineDocumentLib.TimelineDocumentStorage",
+                          "referencedDeclaration": 1662,
+                          "type": "struct ITimelineDocumentLib.TimelineDocumentStorage storage pointer"
+                        },
+                        "id": 1876,
+                        "name": "UserDefinedTypeName",
+                        "src": "635:44:40"
+                      }
+                    ],
+                    "id": 1877,
+                    "name": "VariableDeclaration",
+                    "src": "635:57:40"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "next",
+                      "scope": 1891,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "contract TimelineDocument",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "contractScope": null,
+                          "name": "TimelineDocument",
+                          "referencedDeclaration": 1831,
+                          "type": "contract TimelineDocument"
+                        },
+                        "id": 1878,
+                        "name": "UserDefinedTypeName",
+                        "src": "694:16:40"
+                      }
+                    ],
+                    "id": 1879,
+                    "name": "VariableDeclaration",
+                    "src": "694:21:40"
+                  }
+                ],
+                "id": 1880,
+                "name": "ParameterList",
+                "src": "634:82:40"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1883,
+                "name": "ParameterList",
+                "src": "741:0:40"
+              },
+              {
+                "attributes": {
+                  "arguments": [
+                    null
+                  ]
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 1875,
+                      "type": "modifier ()",
+                      "value": "onlyControllingTimeline"
+                    },
+                    "id": 1881,
+                    "name": "Identifier",
+                    "src": "717:23:40"
+                  }
+                ],
+                "id": 1882,
+                "name": "ModifierInvocation",
+                "src": "717:23:40"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "contract TimelineDocument"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "_next",
+                              "referencedDeclaration": 1661,
+                              "type": "contract TimelineDocument"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 1877,
+                                  "type": "struct ITimelineDocumentLib.TimelineDocumentStorage storage pointer",
+                                  "value": "self"
+                                },
+                                "id": 1884,
+                                "name": "Identifier",
+                                "src": "751:4:40"
+                              }
+                            ],
+                            "id": 1886,
+                            "name": "MemberAccess",
+                            "src": "751:10:40"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 1879,
+                              "type": "contract TimelineDocument",
+                              "value": "next"
+                            },
+                            "id": 1887,
+                            "name": "Identifier",
+                            "src": "764:4:40"
+                          }
+                        ],
+                        "id": 1888,
+                        "name": "Assignment",
+                        "src": "751:17:40"
+                      }
+                    ],
+                    "id": 1889,
+                    "name": "ExpressionStatement",
+                    "src": "751:17:40"
+                  }
+                ],
+                "id": 1890,
+                "name": "Block",
+                "src": "741:34:40"
+              }
+            ],
+            "id": 1891,
+            "name": "FunctionDefinition",
+            "src": "618:157:40"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "implemented": true,
+              "isConstructor": false,
+              "name": "addProof",
+              "payable": false,
+              "scope": 1926,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "self",
+                      "scope": 1909,
+                      "stateVariable": false,
+                      "storageLocation": "storage",
+                      "type": "struct ITimelineDocumentLib.ClaimStorage storage pointer",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "contractScope": null,
+                          "name": "ITimelineDocumentLib.ClaimStorage",
+                          "referencedDeclaration": 1666,
+                          "type": "struct ITimelineDocumentLib.ClaimStorage storage pointer"
+                        },
+                        "id": 1892,
+                        "name": "UserDefinedTypeName",
+                        "src": "966:33:40"
+                      }
+                    ],
+                    "id": 1893,
+                    "name": "VariableDeclaration",
+                    "src": "966:46:40"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "proof",
+                      "scope": 1909,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 1894,
+                        "name": "ElementaryTypeName",
+                        "src": "1014:7:40"
+                      }
+                    ],
+                    "id": 1895,
+                    "name": "VariableDeclaration",
+                    "src": "1014:13:40"
+                  }
+                ],
+                "id": 1896,
+                "name": "ParameterList",
+                "src": "965:63:40"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1899,
+                "name": "ParameterList",
+                "src": "1053:0:40"
+              },
+              {
+                "attributes": {
+                  "arguments": [
+                    null
+                  ]
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 1875,
+                      "type": "modifier ()",
+                      "value": "onlyControllingTimeline"
+                    },
+                    "id": 1897,
+                    "name": "Identifier",
+                    "src": "1029:23:40"
+                  }
+                ],
+                "id": 1898,
+                "name": "ModifierInvocation",
+                "src": "1029:23:40"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "uint256",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_address",
+                                  "typeString": "address"
+                                }
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "push",
+                              "referencedDeclaration": null,
+                              "type": "function (address) returns (uint256)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "member_name": "_proofs",
+                                  "referencedDeclaration": 1665,
+                                  "type": "address[] storage ref"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 1893,
+                                      "type": "struct ITimelineDocumentLib.ClaimStorage storage pointer",
+                                      "value": "self"
+                                    },
+                                    "id": 1900,
+                                    "name": "Identifier",
+                                    "src": "1063:4:40"
+                                  }
+                                ],
+                                "id": 1903,
+                                "name": "MemberAccess",
+                                "src": "1063:12:40"
+                              }
+                            ],
+                            "id": 1904,
+                            "name": "MemberAccess",
+                            "src": "1063:17:40"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 1895,
+                              "type": "address",
+                              "value": "proof"
+                            },
+                            "id": 1905,
+                            "name": "Identifier",
+                            "src": "1081:5:40"
+                          }
+                        ],
+                        "id": 1906,
+                        "name": "FunctionCall",
+                        "src": "1063:24:40"
+                      }
+                    ],
+                    "id": 1907,
+                    "name": "ExpressionStatement",
+                    "src": "1063:24:40"
+                  }
+                ],
+                "id": 1908,
+                "name": "Block",
+                "src": "1053:41:40"
+              }
+            ],
+            "id": 1909,
+            "name": "FunctionDefinition",
+            "src": "948:146:40"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "implemented": true,
+              "isConstructor": false,
+              "name": "setLocation",
+              "payable": false,
+              "scope": 1926,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "self",
+                      "scope": 1925,
+                      "stateVariable": false,
+                      "storageLocation": "storage",
+                      "type": "struct ITimelineDocumentLib.ProofDocumentStorage storage pointer",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "contractScope": null,
+                          "name": "ITimelineDocumentLib.ProofDocumentStorage",
+                          "referencedDeclaration": 1671,
+                          "type": "struct ITimelineDocumentLib.ProofDocumentStorage storage pointer"
+                        },
+                        "id": 1910,
+                        "name": "UserDefinedTypeName",
+                        "src": "1121:41:40"
+                      }
+                    ],
+                    "id": 1911,
+                    "name": "VariableDeclaration",
+                    "src": "1121:54:40"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "location",
+                      "scope": 1925,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string memory",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string storage pointer"
+                        },
+                        "id": 1912,
+                        "name": "ElementaryTypeName",
+                        "src": "1177:6:40"
+                      }
+                    ],
+                    "id": 1913,
+                    "name": "VariableDeclaration",
+                    "src": "1177:15:40"
+                  }
+                ],
+                "id": 1914,
+                "name": "ParameterList",
+                "src": "1120:73:40"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1917,
+                "name": "ParameterList",
+                "src": "1218:0:40"
+              },
+              {
+                "attributes": {
+                  "arguments": [
+                    null
+                  ]
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 1875,
+                      "type": "modifier ()",
+                      "value": "onlyControllingTimeline"
+                    },
+                    "id": 1915,
+                    "name": "Identifier",
+                    "src": "1194:23:40"
+                  }
+                ],
+                "id": 1916,
+                "name": "ModifierInvocation",
+                "src": "1194:23:40"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "string storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "_location",
+                              "referencedDeclaration": 1668,
+                              "type": "string storage ref"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 1911,
+                                  "type": "struct ITimelineDocumentLib.ProofDocumentStorage storage pointer",
+                                  "value": "self"
+                                },
+                                "id": 1918,
+                                "name": "Identifier",
+                                "src": "1228:4:40"
+                              }
+                            ],
+                            "id": 1920,
+                            "name": "MemberAccess",
+                            "src": "1228:14:40"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 1913,
+                              "type": "string memory",
+                              "value": "location"
+                            },
+                            "id": 1921,
+                            "name": "Identifier",
+                            "src": "1245:8:40"
+                          }
+                        ],
+                        "id": 1922,
+                        "name": "Assignment",
+                        "src": "1228:25:40"
+                      }
+                    ],
+                    "id": 1923,
+                    "name": "ExpressionStatement",
+                    "src": "1228:25:40"
+                  }
+                ],
+                "id": 1924,
+                "name": "Block",
+                "src": "1218:42:40"
+              }
+            ],
+            "id": 1925,
+            "name": "FunctionDefinition",
+            "src": "1100:160:40"
+          }
+        ],
+        "id": 1926,
+        "name": "ContractDefinition",
+        "src": "213:1049:40"
+      }
+    ],
+    "id": 1927,
+    "name": "SourceUnit",
+    "src": "0:1262:40"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.18+commit.9cf6e910.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "1.0.1",
+  "updatedAt": "2018-01-15T19:32:46.202Z"
+}

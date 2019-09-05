@@ -1,0 +1,380 @@
+{
+  "contractName": "baseLib",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "code",
+          "type": "bytes"
+        }
+      ],
+      "name": "createContractFromBytes",
+      "outputs": [
+        {
+          "name": "newContract",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x6060604052341561000f57600080fd5b6101548061001e6000396000f300606060405260043610610041576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680635281042714610046575b600080fd5b610096600480803590602001908201803590602001908080601f016020809104026020016040519081016040528093929190818152602001838380828437820191505050505050919050506100d8565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b600081518201602083016000f09050600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff161415151561012357600080fd5b9190505600a165627a7a723058200b3481946c0efc3b029b5721308324c0e3581bf4b70cbc7b7956cd38ec5ea8040029",
+  "deployedBytecode": "0x606060405260043610610041576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680635281042714610046575b600080fd5b610096600480803590602001908201803590602001908080601f016020809104026020016040519081016040528093929190818152602001838380828437820191505050505050919050506100d8565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b600081518201602083016000f09050600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff161415151561012357600080fd5b9190505600a165627a7a723058200b3481946c0efc3b029b5721308324c0e3581bf4b70cbc7b7956cd38ec5ea8040029",
+  "sourceMap": "130:268:13:-;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "130:268:13:-;;;;;;;;;;;;;;;;;;;;;;;;153:243;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;214:19;329:4;323:5;317:4;313:3;308:2;302:4;298:3;295:1;288:6;273:63;;386:1;363:25;;:11;:25;;;;355:34;;;;;;;;153:243;;;:::o",
+  "source": "pragma solidity ^0.4.8;\n\nimport \"./IbaseLib.sol\";\n\n/**\n * IbaseLib implementation v1.0\n *\n * Copyright (c) 2017 Cognate, Inc.\n */\nlibrary baseLib {\n\n    function createContractFromBytes(bytes memory code) returns (address newContract) {     \n        assembly {\n            newContract := create(0, add(code, 32), add(code, mload(code)))\n        }\n        require(newContract != address(0));\n    }\n}",
+  "sourcePath": "/Users/MasterChief/Cog/cog-contract/contracts/base/baseLib.sol",
+  "ast": {
+    "attributes": {
+      "absolutePath": "/Users/MasterChief/Cog/cog-contract/contracts/base/baseLib.sol",
+      "exportedSymbols": {
+        "baseLib": [
+          643
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.4",
+            ".8"
+          ]
+        },
+        "id": 624,
+        "name": "PragmaDirective",
+        "src": "0:23:13"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 537,
+          "absolutePath": "/Users/MasterChief/Cog/cog-contract/contracts/base/IbaseLib.sol",
+          "file": "./IbaseLib.sol",
+          "scope": 644,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 625,
+        "name": "ImportDirective",
+        "src": "25:24:13"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "library",
+          "documentation": "IbaseLib implementation v1.0\n * Copyright (c) 2017 Cognate, Inc.",
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            643
+          ],
+          "name": "baseLib",
+          "scope": 644
+        },
+        "children": [
+          {
+            "attributes": {
+              "constant": false,
+              "implemented": true,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "createContractFromBytes",
+              "payable": false,
+              "scope": 643,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "code",
+                      "scope": 642,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "bytes memory",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes",
+                          "type": "bytes storage pointer"
+                        },
+                        "id": 626,
+                        "name": "ElementaryTypeName",
+                        "src": "186:5:13"
+                      }
+                    ],
+                    "id": 627,
+                    "name": "VariableDeclaration",
+                    "src": "186:17:13"
+                  }
+                ],
+                "id": 628,
+                "name": "ParameterList",
+                "src": "185:19:13"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "newContract",
+                      "scope": 642,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 629,
+                        "name": "ElementaryTypeName",
+                        "src": "214:7:13"
+                      }
+                    ],
+                    "id": 630,
+                    "name": "VariableDeclaration",
+                    "src": "214:19:13"
+                  }
+                ],
+                "id": 631,
+                "name": "ParameterList",
+                "src": "213:21:13"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "externalReferences": [
+                        {
+                          "newContract": {
+                            "declaration": 630,
+                            "isOffset": false,
+                            "isSlot": false,
+                            "src": "273:11:13",
+                            "valueSize": 1
+                          }
+                        },
+                        {
+                          "code": {
+                            "declaration": 627,
+                            "isOffset": false,
+                            "isSlot": false,
+                            "src": "302:4:13",
+                            "valueSize": 1
+                          }
+                        },
+                        {
+                          "code": {
+                            "declaration": 627,
+                            "isOffset": false,
+                            "isSlot": false,
+                            "src": "329:4:13",
+                            "valueSize": 1
+                          }
+                        },
+                        {
+                          "code": {
+                            "declaration": 627,
+                            "isOffset": false,
+                            "isSlot": false,
+                            "src": "317:4:13",
+                            "valueSize": 1
+                          }
+                        }
+                      ],
+                      "operations": "{\n    newContract := create(0, add(code, 32), add(code, mload(code)))\n}"
+                    },
+                    "children": [],
+                    "id": 632,
+                    "name": "InlineAssembly",
+                    "src": "250:112:13"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_bool",
+                                  "typeString": "bool"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 1947,
+                              "type": "function (bool) pure",
+                              "value": "require"
+                            },
+                            "id": 633,
+                            "name": "Identifier",
+                            "src": "355:7:13"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "commonType": {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              },
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "operator": "!=",
+                              "type": "bool"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 630,
+                                  "type": "address",
+                                  "value": "newContract"
+                                },
+                                "id": 634,
+                                "name": "Identifier",
+                                "src": "363:11:13"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "isStructConstructorCall": false,
+                                  "lValueRequested": false,
+                                  "names": [
+                                    null
+                                  ],
+                                  "type": "address",
+                                  "type_conversion": true
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": [
+                                        {
+                                          "typeIdentifier": "t_rational_0_by_1",
+                                          "typeString": "int_const 0"
+                                        }
+                                      ],
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": true,
+                                      "lValueRequested": false,
+                                      "type": "type(address)",
+                                      "value": "address"
+                                    },
+                                    "id": 635,
+                                    "name": "ElementaryTypeNameExpression",
+                                    "src": "378:7:13"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "hexvalue": "30",
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": true,
+                                      "lValueRequested": false,
+                                      "subdenomination": null,
+                                      "token": "number",
+                                      "type": "int_const 0",
+                                      "value": "0"
+                                    },
+                                    "id": 636,
+                                    "name": "Literal",
+                                    "src": "386:1:13"
+                                  }
+                                ],
+                                "id": 637,
+                                "name": "FunctionCall",
+                                "src": "378:10:13"
+                              }
+                            ],
+                            "id": 638,
+                            "name": "BinaryOperation",
+                            "src": "363:25:13"
+                          }
+                        ],
+                        "id": 639,
+                        "name": "FunctionCall",
+                        "src": "355:34:13"
+                      }
+                    ],
+                    "id": 640,
+                    "name": "ExpressionStatement",
+                    "src": "355:34:13"
+                  }
+                ],
+                "id": 641,
+                "name": "Block",
+                "src": "235:161:13"
+              }
+            ],
+            "id": 642,
+            "name": "FunctionDefinition",
+            "src": "153:243:13"
+          }
+        ],
+        "id": 643,
+        "name": "ContractDefinition",
+        "src": "130:268:13"
+      }
+    ],
+    "id": 644,
+    "name": "SourceUnit",
+    "src": "0:398:13"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.18+commit.9cf6e910.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "1.0.1",
+  "updatedAt": "2018-01-15T19:32:46.194Z"
+}

@@ -1,0 +1,614 @@
+{
+  "contractName": "timeStamped",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "owned_v1",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "timeStamped_v1",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getCreatedAt",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x608060405234801561001057600080fd5b5061018c806100206000396000f300608060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806351c9eefd1461005c5780637e05f5a8146100735780638bb718b51461009e575b600080fd5b34801561006857600080fd5b506100716100b5565b005b34801561007f57600080fd5b506100886100f7565b6040518082815260200191505060405180910390f35b3480156100aa57600080fd5b506100b3610157565b005b326000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163273ffffffffffffffffffffffffffffffffffffffff1614156101545760015490505b90565b426001819055505600a165627a7a723058202ff1dfa8baecd086d50046c733afe4b2708d0910cb07cea75ce4516ec1ff2d9a0029",
+  "deployedBytecode": "0x608060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806351c9eefd1461005c5780637e05f5a8146100735780638bb718b51461009e575b600080fd5b34801561006857600080fd5b506100716100b5565b005b34801561007f57600080fd5b506100886100f7565b6040518082815260200191505060405180910390f35b3480156100aa57600080fd5b506100b3610157565b005b326000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163273ffffffffffffffffffffffffffffffffffffffff1614156101545760015490505b90565b426001819055505600a165627a7a723058202ff1dfa8baecd086d50046c733afe4b2708d0910cb07cea75ce4516ec1ff2d9a0029",
+  "sourceMap": "313:285:8:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;313:285:8;;;;;;;",
+  "deployedSourceMap": "313:285:8:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;241:54:7;;8:9:-1;5:2;;;30:1;27;20:12;5:2;241:54:7;;;;;;495:101:8;;8:9:-1;5:2;;;30:1;27;20:12;5:2;495:101:8;;;;;;;;;;;;;;;;;;;;;;;378:58;;8:9:-1;5:2;;;30:1;27;20:12;5:2;378:58:8;;;;;;241:54:7;279:9;271:5;;:17;;;;;;;;;;;;;;;;;;241:54::o;495:101:8:-;557:4;500:5:7;;;;;;;;;;;487:18;;:9;:18;;;483:25;;;580:9:8;;573:16;;483:25:7;495:101:8;:::o;378:58::-;426:3;414:9;:15;;;;378:58::o",
+  "source": "pragma solidity ^0.4.0;\n\nimport \"./owned.sol\";\n\n/**\n * Adds a createdAt timestamp to inheriting class. This isn't technically needed\n * since the block timestamp should always be accessible, however this provides a\n * more straightforward way to discover the timestamp of creation of a particular\n * contract\n */\ncontract timeStamped is owned {\n    uint private createdAt;\n\n    function timeStamped_v1() {\n        createdAt = now;\n    }\n\n    // Restricted getters\n    //-------------------\n\n    function getCreatedAt() external constant restricted returns (uint) {\n        return createdAt;\n    }\n}",
+  "sourcePath": "/Users/cmurdock/Cog/cog-contract/contracts/timeStamped.sol",
+  "ast": {
+    "absolutePath": "/Users/cmurdock/Cog/cog-contract/contracts/timeStamped.sol",
+    "exportedSymbols": {
+      "timeStamped": [
+        664
+      ]
+    },
+    "id": 665,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 640,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:8"
+      },
+      {
+        "absolutePath": "/Users/cmurdock/Cog/cog-contract/contracts/owned.sol",
+        "file": "./owned.sol",
+        "id": 641,
+        "nodeType": "ImportDirective",
+        "scope": 665,
+        "sourceUnit": 639,
+        "src": "25:21:8",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 642,
+              "name": "owned",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 638,
+              "src": "337:5:8",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_owned_$638",
+                "typeString": "contract owned"
+              }
+            },
+            "id": 643,
+            "nodeType": "InheritanceSpecifier",
+            "src": "337:5:8"
+          }
+        ],
+        "contractDependencies": [
+          638
+        ],
+        "contractKind": "contract",
+        "documentation": "Adds a createdAt timestamp to inheriting class. This isn't technically needed\nsince the block timestamp should always be accessible, however this provides a\nmore straightforward way to discover the timestamp of creation of a particular\ncontract",
+        "fullyImplemented": true,
+        "id": 664,
+        "linearizedBaseContracts": [
+          664,
+          638
+        ],
+        "name": "timeStamped",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 645,
+            "name": "createdAt",
+            "nodeType": "VariableDeclaration",
+            "scope": 664,
+            "src": "349:22:8",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 644,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "349:4:8",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "private"
+          },
+          {
+            "body": {
+              "id": 652,
+              "nodeType": "Block",
+              "src": "404:32:8",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 650,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 648,
+                      "name": "createdAt",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 645,
+                      "src": "414:9:8",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 649,
+                      "name": "now",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 681,
+                      "src": "426:3:8",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "414:15:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 651,
+                  "nodeType": "ExpressionStatement",
+                  "src": "414:15:8"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 653,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "timeStamped_v1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 646,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "401:2:8"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 647,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "404:0:8"
+            },
+            "scope": 664,
+            "src": "378:58:8",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 662,
+              "nodeType": "Block",
+              "src": "563:33:8",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 660,
+                    "name": "createdAt",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 645,
+                    "src": "580:9:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 659,
+                  "id": 661,
+                  "nodeType": "Return",
+                  "src": "573:16:8"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 663,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 656,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 655,
+                  "name": "restricted",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 637,
+                  "src": "537:10:8",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "537:10:8"
+              }
+            ],
+            "name": "getCreatedAt",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 654,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "516:2:8"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 659,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 658,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 663,
+                  "src": "557:4:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 657,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "557:4:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "556:6:8"
+            },
+            "scope": 664,
+            "src": "495:101:8",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 665,
+        "src": "313:285:8"
+      }
+    ],
+    "src": "0:598:8"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/cmurdock/Cog/cog-contract/contracts/timeStamped.sol",
+    "exportedSymbols": {
+      "timeStamped": [
+        664
+      ]
+    },
+    "id": 665,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 640,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:8"
+      },
+      {
+        "absolutePath": "/Users/cmurdock/Cog/cog-contract/contracts/owned.sol",
+        "file": "./owned.sol",
+        "id": 641,
+        "nodeType": "ImportDirective",
+        "scope": 665,
+        "sourceUnit": 639,
+        "src": "25:21:8",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 642,
+              "name": "owned",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 638,
+              "src": "337:5:8",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_owned_$638",
+                "typeString": "contract owned"
+              }
+            },
+            "id": 643,
+            "nodeType": "InheritanceSpecifier",
+            "src": "337:5:8"
+          }
+        ],
+        "contractDependencies": [
+          638
+        ],
+        "contractKind": "contract",
+        "documentation": "Adds a createdAt timestamp to inheriting class. This isn't technically needed\nsince the block timestamp should always be accessible, however this provides a\nmore straightforward way to discover the timestamp of creation of a particular\ncontract",
+        "fullyImplemented": true,
+        "id": 664,
+        "linearizedBaseContracts": [
+          664,
+          638
+        ],
+        "name": "timeStamped",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 645,
+            "name": "createdAt",
+            "nodeType": "VariableDeclaration",
+            "scope": 664,
+            "src": "349:22:8",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 644,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "349:4:8",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "private"
+          },
+          {
+            "body": {
+              "id": 652,
+              "nodeType": "Block",
+              "src": "404:32:8",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 650,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 648,
+                      "name": "createdAt",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 645,
+                      "src": "414:9:8",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 649,
+                      "name": "now",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 681,
+                      "src": "426:3:8",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "414:15:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 651,
+                  "nodeType": "ExpressionStatement",
+                  "src": "414:15:8"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 653,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "timeStamped_v1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 646,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "401:2:8"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 647,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "404:0:8"
+            },
+            "scope": 664,
+            "src": "378:58:8",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 662,
+              "nodeType": "Block",
+              "src": "563:33:8",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 660,
+                    "name": "createdAt",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 645,
+                    "src": "580:9:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 659,
+                  "id": 661,
+                  "nodeType": "Return",
+                  "src": "573:16:8"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 663,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 656,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 655,
+                  "name": "restricted",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 637,
+                  "src": "537:10:8",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "537:10:8"
+              }
+            ],
+            "name": "getCreatedAt",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 654,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "516:2:8"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 659,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 658,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 663,
+                  "src": "557:4:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 657,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "557:4:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "556:6:8"
+            },
+            "scope": 664,
+            "src": "495:101:8",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 665,
+        "src": "313:285:8"
+      }
+    ],
+    "src": "0:598:8"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.23+commit.124ca40d.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.0",
+  "updatedAt": "2018-09-18T20:15:13.216Z"
+}

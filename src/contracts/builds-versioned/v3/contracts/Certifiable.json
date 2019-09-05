@@ -1,0 +1,297 @@
+{
+  "contractName": "Certifiable",
+  "abi": [],
+  "bytecode": "0x60606040523415600e57600080fd5b603580601b6000396000f3006060604052600080fd00a165627a7a72305820e236821545cc92b1a9baef791ab35d13156a76639e2bc2e84c4f1561de760cf40029",
+  "deployedBytecode": "0x6060604052600080fd00a165627a7a72305820e236821545cc92b1a9baef791ab35d13156a76639e2bc2e84c4f1561de760cf40029",
+  "sourceMap": "112:229:19:-;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "112:229:19:-;;;;;",
+  "source": "pragma solidity ^0.4.8;\n\nimport \"./CertifiableLib.sol\";\n\n/**\n * TODO\n *\n * Copyright (c) 2017 Cognate, Inc.\n */\ncontract Certifiable {\n    using CertifiableLib for CertifiableLib.Certifiable;\n\n    CertifiableLib.Certifiable certifiable;\n\n    modifier onlyCertifier() {\n        require(certifiable.isCertifier[msg.sender]);\n        _;\n    }\n}",
+  "sourcePath": "/Users/MasterChief/Cog/cog-contract/contracts/protocol/Certifiable.sol",
+  "ast": {
+    "attributes": {
+      "absolutePath": "/Users/MasterChief/Cog/cog-contract/contracts/protocol/Certifiable.sol",
+      "exportedSymbols": {
+        "Certifiable": [
+          818
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.4",
+            ".8"
+          ]
+        },
+        "id": 799,
+        "name": "PragmaDirective",
+        "src": "0:23:19"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 831,
+          "absolutePath": "/Users/MasterChief/Cog/cog-contract/contracts/protocol/CertifiableLib.sol",
+          "file": "./CertifiableLib.sol",
+          "scope": 819,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 800,
+        "name": "ImportDirective",
+        "src": "25:30:19"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": "TODO\n * Copyright (c) 2017 Cognate, Inc.",
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            818
+          ],
+          "name": "Certifiable",
+          "scope": 819
+        },
+        "children": [
+          {
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "CertifiableLib",
+                  "referencedDeclaration": 830,
+                  "type": "library CertifiableLib"
+                },
+                "id": 801,
+                "name": "UserDefinedTypeName",
+                "src": "145:14:19"
+              },
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "CertifiableLib.Certifiable",
+                  "referencedDeclaration": 829,
+                  "type": "struct CertifiableLib.Certifiable storage pointer"
+                },
+                "id": 802,
+                "name": "UserDefinedTypeName",
+                "src": "164:26:19"
+              }
+            ],
+            "id": 803,
+            "name": "UsingForDirective",
+            "src": "139:52:19"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "certifiable",
+              "scope": 818,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "struct CertifiableLib.Certifiable storage ref",
+              "value": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "CertifiableLib.Certifiable",
+                  "referencedDeclaration": 829,
+                  "type": "struct CertifiableLib.Certifiable storage pointer"
+                },
+                "id": 804,
+                "name": "UserDefinedTypeName",
+                "src": "197:26:19"
+              }
+            ],
+            "id": 805,
+            "name": "VariableDeclaration",
+            "src": "197:38:19"
+          },
+          {
+            "attributes": {
+              "name": "onlyCertifier",
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 806,
+                "name": "ParameterList",
+                "src": "264:2:19"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_bool",
+                                  "typeString": "bool"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 1947,
+                              "type": "function (bool) pure",
+                              "value": "require"
+                            },
+                            "id": 807,
+                            "name": "Identifier",
+                            "src": "277:7:19"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "type": "bool"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "member_name": "isCertifier",
+                                  "referencedDeclaration": 825,
+                                  "type": "mapping(address => bool)"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 805,
+                                      "type": "struct CertifiableLib.Certifiable storage ref",
+                                      "value": "certifiable"
+                                    },
+                                    "id": 808,
+                                    "name": "Identifier",
+                                    "src": "285:11:19"
+                                  }
+                                ],
+                                "id": 809,
+                                "name": "MemberAccess",
+                                "src": "285:23:19"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "member_name": "sender",
+                                  "referencedDeclaration": null,
+                                  "type": "address"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 1944,
+                                      "type": "msg",
+                                      "value": "msg"
+                                    },
+                                    "id": 810,
+                                    "name": "Identifier",
+                                    "src": "309:3:19"
+                                  }
+                                ],
+                                "id": 811,
+                                "name": "MemberAccess",
+                                "src": "309:10:19"
+                              }
+                            ],
+                            "id": 812,
+                            "name": "IndexAccess",
+                            "src": "285:35:19"
+                          }
+                        ],
+                        "id": 813,
+                        "name": "FunctionCall",
+                        "src": "277:44:19"
+                      }
+                    ],
+                    "id": 814,
+                    "name": "ExpressionStatement",
+                    "src": "277:44:19"
+                  },
+                  {
+                    "id": 815,
+                    "name": "PlaceholderStatement",
+                    "src": "331:1:19"
+                  }
+                ],
+                "id": 816,
+                "name": "Block",
+                "src": "267:72:19"
+              }
+            ],
+            "id": 817,
+            "name": "ModifierDefinition",
+            "src": "242:97:19"
+          }
+        ],
+        "id": 818,
+        "name": "ContractDefinition",
+        "src": "112:229:19"
+      }
+    ],
+    "id": 819,
+    "name": "SourceUnit",
+    "src": "0:341:19"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.18+commit.9cf6e910.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "1.0.1",
+  "updatedAt": "2018-01-15T19:32:46.195Z"
+}

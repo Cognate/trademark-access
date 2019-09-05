@@ -1,0 +1,180 @@
+{
+  "contractName": "CertifiableLib",
+  "abi": [],
+  "bytecode": "0x60606040523415600e57600080fd5b603580601b6000396000f3006060604052600080fd00a165627a7a723058206782e1cc965c6fe335d4272b4a1099755ea96ee674543f224147c8faefbb45470029",
+  "deployedBytecode": "0x6060604052600080fd00a165627a7a723058206782e1cc965c6fe335d4272b4a1099755ea96ee674543f224147c8faefbb45470029",
+  "sourceMap": "107:542:20:-;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "107:542:20:-;;;;;",
+  "source": "pragma solidity ^0.4.8;\n\nimport \"./Certifier.sol\";\n\n/**\n * TODO\n *\n * Copyright (c) 2017 Cognate, Inc.\n */\nlibrary CertifiableLib {\n\n    struct Certifiable {\n        mapping (address => bool) isCertifier;\n        Certifier[] certifiers;\n    }\n\n    /*function appendWithCertification(Trademark storage self, bytes _claim) returns (Certifier certifier) {\n        TimelineDocument claim = TimelineLib.createTimelineDocumentFromBytes(_claim);\n        \n        require(document.interfaceID() == self._interfaceID);\n\n        certifier = new Certifier(claim);\n        claim.transferOwnershipTo(certifier);\n        self.certifiers.push(certifier);\n    }*/\n}",
+  "sourcePath": "/Users/MasterChief/Cog/cog-contract/contracts/protocol/CertifiableLib.sol",
+  "ast": {
+    "attributes": {
+      "absolutePath": "/Users/MasterChief/Cog/cog-contract/contracts/protocol/CertifiableLib.sol",
+      "exportedSymbols": {
+        "CertifiableLib": [
+          830
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.4",
+            ".8"
+          ]
+        },
+        "id": 820,
+        "name": "PragmaDirective",
+        "src": "0:23:20"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 840,
+          "absolutePath": "/Users/MasterChief/Cog/cog-contract/contracts/protocol/Certifier.sol",
+          "file": "./Certifier.sol",
+          "scope": 831,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 821,
+        "name": "ImportDirective",
+        "src": "25:25:20"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "library",
+          "documentation": "TODO\n * Copyright (c) 2017 Cognate, Inc.",
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            830
+          ],
+          "name": "CertifiableLib",
+          "scope": 831
+        },
+        "children": [
+          {
+            "attributes": {
+              "canonicalName": "CertifiableLib.Certifiable",
+              "name": "Certifiable",
+              "scope": 830,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "isCertifier",
+                  "scope": 829,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "mapping(address => bool)",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "type": "mapping(address => bool)"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 822,
+                        "name": "ElementaryTypeName",
+                        "src": "175:7:20"
+                      },
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 823,
+                        "name": "ElementaryTypeName",
+                        "src": "186:4:20"
+                      }
+                    ],
+                    "id": 824,
+                    "name": "Mapping",
+                    "src": "166:25:20"
+                  }
+                ],
+                "id": 825,
+                "name": "VariableDeclaration",
+                "src": "166:37:20"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "certifiers",
+                  "scope": 829,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "contract Certifier[] storage pointer",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "length": null,
+                      "type": "contract Certifier[] storage pointer"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "contractScope": null,
+                          "name": "Certifier",
+                          "referencedDeclaration": 839,
+                          "type": "contract Certifier"
+                        },
+                        "id": 826,
+                        "name": "UserDefinedTypeName",
+                        "src": "213:9:20"
+                      }
+                    ],
+                    "id": 827,
+                    "name": "ArrayTypeName",
+                    "src": "213:11:20"
+                  }
+                ],
+                "id": 828,
+                "name": "VariableDeclaration",
+                "src": "213:22:20"
+              }
+            ],
+            "id": 829,
+            "name": "StructDefinition",
+            "src": "137:105:20"
+          }
+        ],
+        "id": 830,
+        "name": "ContractDefinition",
+        "src": "107:542:20"
+      }
+    ],
+    "id": 831,
+    "name": "SourceUnit",
+    "src": "0:649:20"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.18+commit.9cf6e910.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "1.0.1",
+  "updatedAt": "2018-01-15T19:32:46.196Z"
+}

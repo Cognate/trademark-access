@@ -1,0 +1,499 @@
+{
+  "contractName": "Trademark_v2",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "word",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "kill",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "next",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnershipTo",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "design",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_next",
+          "type": "address"
+        }
+      ],
+      "name": "append",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "timestamp",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "interfaceID",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "createdAt",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "_word",
+          "type": "string"
+        },
+        {
+          "name": "_design",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    }
+  ],
+  "bytecode": "0x60606040527f79056e9bb24f897d7f885dacdb2d506599944c0cdfd6b7495eb7f3ea624ac5af600102600290600019169055341561003c57600080fd5b604051610aaa380380610aaa83398101604052808051820191906020018051906020019091905050334260008190555080600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505081600490805190602001906100c49291906100d7565b508060058160001916905550505061017c565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061011857805160ff1916838001178555610146565b82800160010185558215610146579182015b8281111561014557825182559160200191906001019061012a565b5b5090506101539190610157565b5090565b61017991905b8082111561017557600081600090555060010161015d565b5090565b90565b61091f8061018b6000396000f300606060405260043610610099576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680632f64d3861461009e57806341c0e1b51461012c5780634c8fe5261461014157806352effe111461019657806393f50206146101cf578063ac04f5a714610200578063b80777ea14610239578063ba19322d14610262578063cf09e0d014610293575b600080fd5b34156100a957600080fd5b6100b16102bc565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156100f15780820151818401526020810190506100d6565b50505050905090810190601f16801561011e5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b341561013757600080fd5b61013f61035a565b005b341561014c57600080fd5b6101546103f1565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34156101a157600080fd5b6101cd600480803573ffffffffffffffffffffffffffffffffffffffff16906020019091905050610417565b005b34156101da57600080fd5b6101e26104b7565b60405180826000191660001916815260200191505060405180910390f35b341561020b57600080fd5b610237600480803573ffffffffffffffffffffffffffffffffffffffff169060200190919050506104bd565b005b341561024457600080fd5b61024c61087e565b6040518082815260200191505060405180910390f35b341561026d57600080fd5b610275610884565b60405180826000191660001916815260200191505060405180910390f35b341561029e57600080fd5b6102a66108ea565b6040518082815260200191505060405180910390f35b60048054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156103525780601f1061032757610100808354040283529160200191610352565b820191906000526020600020905b81548152906001019060200180831161033557829003601f168201915b505050505081565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161415156103b657600080fd5b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16ff5b600360009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561047357600080fd5b80600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555050565b60055481565b6000600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561051b57600080fd5b610523610884565b600019168273ffffffffffffffffffffffffffffffffffffffff1663ba19322d6000604051602001526040518163ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401602060405180830381600087803b151561059357600080fd5b6102c65a03f115156105a457600080fd5b50505060405180519050600019161415156105be57600080fd5b600073ffffffffffffffffffffffffffffffffffffffff16600360009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16141561065b5781600360006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555061087a565b600360009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1690505b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff16634c8fe5266000604051602001526040518163ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401602060405180830381600087803b151561070557600080fd5b6102c65a03f1151561071657600080fd5b5050506040518051905073ffffffffffffffffffffffffffffffffffffffff161415156107cb578073ffffffffffffffffffffffffffffffffffffffff16634c8fe5266000604051602001526040518163ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401602060405180830381600087803b15156107a957600080fd5b6102c65a03f115156107ba57600080fd5b505050604051805190509050610681565b8073ffffffffffffffffffffffffffffffffffffffff1663ac04f5a7836040518263ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001915050600060405180830381600087803b151561086557600080fd5b6102c65a03f1151561087657600080fd5b5050505b5050565b60005481565b6000600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161415156108e257600080fd5b600254905090565b600080549050905600a165627a7a72305820ea8112d9e7d1992852fa8493f8cbdeeff1521103add59d5bcb69aa7ee26d235e0029",
+  "deployedBytecode": "0x606060405260043610610099576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680632f64d3861461009e57806341c0e1b51461012c5780634c8fe5261461014157806352effe111461019657806393f50206146101cf578063ac04f5a714610200578063b80777ea14610239578063ba19322d14610262578063cf09e0d014610293575b600080fd5b34156100a957600080fd5b6100b16102bc565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156100f15780820151818401526020810190506100d6565b50505050905090810190601f16801561011e5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b341561013757600080fd5b61013f61035a565b005b341561014c57600080fd5b6101546103f1565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34156101a157600080fd5b6101cd600480803573ffffffffffffffffffffffffffffffffffffffff16906020019091905050610417565b005b34156101da57600080fd5b6101e26104b7565b60405180826000191660001916815260200191505060405180910390f35b341561020b57600080fd5b610237600480803573ffffffffffffffffffffffffffffffffffffffff169060200190919050506104bd565b005b341561024457600080fd5b61024c61087e565b6040518082815260200191505060405180910390f35b341561026d57600080fd5b610275610884565b60405180826000191660001916815260200191505060405180910390f35b341561029e57600080fd5b6102a66108ea565b6040518082815260200191505060405180910390f35b60048054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156103525780601f1061032757610100808354040283529160200191610352565b820191906000526020600020905b81548152906001019060200180831161033557829003601f168201915b505050505081565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161415156103b657600080fd5b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16ff5b600360009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561047357600080fd5b80600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555050565b60055481565b6000600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561051b57600080fd5b610523610884565b600019168273ffffffffffffffffffffffffffffffffffffffff1663ba19322d6000604051602001526040518163ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401602060405180830381600087803b151561059357600080fd5b6102c65a03f115156105a457600080fd5b50505060405180519050600019161415156105be57600080fd5b600073ffffffffffffffffffffffffffffffffffffffff16600360009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16141561065b5781600360006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555061087a565b600360009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1690505b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff16634c8fe5266000604051602001526040518163ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401602060405180830381600087803b151561070557600080fd5b6102c65a03f1151561071657600080fd5b5050506040518051905073ffffffffffffffffffffffffffffffffffffffff161415156107cb578073ffffffffffffffffffffffffffffffffffffffff16634c8fe5266000604051602001526040518163ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401602060405180830381600087803b15156107a957600080fd5b6102c65a03f115156107ba57600080fd5b505050604051805190509050610681565b8073ffffffffffffffffffffffffffffffffffffffff1663ac04f5a7836040518263ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001915050600060405180830381600087803b151561086557600080fd5b6102c65a03f1151561087657600080fd5b5050505b5050565b60005481565b6000600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161415156108e257600080fd5b600254905090565b600080549050905600a165627a7a72305820ea8112d9e7d1992852fa8493f8cbdeeff1521103add59d5bcb69aa7ee26d235e0029",
+  "sourceMap": "157:206:3:-;;;591:66:2;560:97;;;;;;;;;253:108:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;530:10:2;429:3:18;417:9;:15;;;;335:6:6;327:5;;:14;;;;;;;;;;;;;;;;;;283:65;323:5:3;316:4;:12;;;;;;;;;;;;:::i;:::-;;347:7;338:6;:16;;;;;;;253:108;;157:206;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;",
+  "deployedSourceMap": "157:206:3:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;201:18;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:2;8:100;;;99:1;94:3;90;84:5;80:1;75:3;71;64:6;52:2;49:1;45:3;40:15;;8:100;;;12:14;3:109;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;252:69:5;;;;;;;;;;;;;;668:31:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;686:97:6;;;;;;;;;;;;;;;;;;;;;;;;;;;;225:21:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;706:395:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;356:21:18;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1107:103:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;445:85:18;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;201:18:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;252:69:5:-;546:5:6;;;;;;;;;;;532:19;;:10;:19;;;524:28;;;;;;;;308:5:5;;;;;;;;;;;295:19;;;668:31:2;;;;;;;;;;;;;:::o;686:97:6:-;546:5;;;;;;;;;;;532:19;;:10;:19;;;524:28;;;;;;;;768:8;760:5;;:16;;;;;;;;;;;;;;;;;;686:97;:::o;225:21:3:-;;;;:::o;706:395:2:-;923:24;546:5:6;;;;;;;;;;;532:19;;:10;:19;;;524:28;;;;;;;;804:13:2;:11;:13::i;:::-;781:36;;;:5;:17;;;:19;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:36;;;;;778:46;;;819:5;;;778:46;862:1;846:18;;:4;;;;;;;;;;;:18;;;843:252;;;887:5;880:4;;:12;;;;;;;;;;;;;;;;;;843:252;;;950:4;;;;;;;;;;;923:31;;968:84;997:1;974:25;;:4;:9;;;:11;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:25;;;;968:84;;;1026:4;:9;;;:11;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1019:18;;968:84;;;1066:4;:11;;;1078:5;1066:18;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;843:252;706:395;;:::o;356:21:18:-;;;;:::o;1107:103:2:-;1165:7;546:5:6;;;;;;;;;;;532:19;;:10;:19;;;524:28;;;;;;;;1191:12:2;;1184:19;;1107:103;:::o;445:85:18:-;491:4;514:9;;507:16;;445:85;:::o",
+  "source": "pragma solidity ^0.4.8;\n\nimport \"./TimeLine_v2.sol\";\n\n/**\n * Initial document representing a Common Law Trademark\n *\n * Copyright (c) 2017 Cognate, Inc.\n */\ncontract Trademark_v2 is TimeLine_v2 {\n\n    string public word;\n    bytes32 public design;\n\n    function Trademark_v2(string _word, bytes32 _design) {\n        word = _word;\n        design = _design;\n    }\n}",
+  "sourcePath": "/Users/MasterChief/Cog/cog-contract/contracts-versioned/2.0/Trademark_v2.sol",
+  "ast": {
+    "attributes": {
+      "absolutePath": "/Users/MasterChief/Cog/cog-contract/contracts-versioned/2.0/Trademark_v2.sol",
+      "exportedSymbols": {
+        "Trademark_v2": [
+          182
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.4",
+            ".8"
+          ]
+        },
+        "id": 158,
+        "name": "PragmaDirective",
+        "src": "0:23:3"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 157,
+          "absolutePath": "/Users/MasterChief/Cog/cog-contract/contracts-versioned/2.0/TimeLine_v2.sol",
+          "file": "./TimeLine_v2.sol",
+          "scope": 183,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 159,
+        "name": "ImportDirective",
+        "src": "25:27:3"
+      },
+      {
+        "attributes": {
+          "contractDependencies": [
+            156,
+            255,
+            293,
+            797
+          ],
+          "contractKind": "contract",
+          "documentation": "Initial document representing a Common Law Trademark\n * Copyright (c) 2017 Cognate, Inc.",
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            182,
+            156,
+            255,
+            293,
+            797
+          ],
+          "name": "Trademark_v2",
+          "scope": 183
+        },
+        "children": [
+          {
+            "attributes": {
+              "arguments": [
+                null
+              ]
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "TimeLine_v2",
+                  "referencedDeclaration": 156,
+                  "type": "contract TimeLine_v2"
+                },
+                "id": 160,
+                "name": "UserDefinedTypeName",
+                "src": "182:11:3"
+              }
+            ],
+            "id": 161,
+            "name": "InheritanceSpecifier",
+            "src": "182:11:3"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "word",
+              "scope": 182,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "string storage ref",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "string",
+                  "type": "string storage pointer"
+                },
+                "id": 162,
+                "name": "ElementaryTypeName",
+                "src": "201:6:3"
+              }
+            ],
+            "id": 163,
+            "name": "VariableDeclaration",
+            "src": "201:18:3"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "design",
+              "scope": 182,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "bytes32",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "bytes32",
+                  "type": "bytes32"
+                },
+                "id": 164,
+                "name": "ElementaryTypeName",
+                "src": "225:7:3"
+              }
+            ],
+            "id": 165,
+            "name": "VariableDeclaration",
+            "src": "225:21:3"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "implemented": true,
+              "isConstructor": true,
+              "modifiers": [
+                null
+              ],
+              "name": "Trademark_v2",
+              "payable": false,
+              "scope": 182,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_word",
+                      "scope": 181,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string memory",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string storage pointer"
+                        },
+                        "id": 166,
+                        "name": "ElementaryTypeName",
+                        "src": "275:6:3"
+                      }
+                    ],
+                    "id": 167,
+                    "name": "VariableDeclaration",
+                    "src": "275:12:3"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_design",
+                      "scope": 181,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bytes32",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes32",
+                          "type": "bytes32"
+                        },
+                        "id": 168,
+                        "name": "ElementaryTypeName",
+                        "src": "289:7:3"
+                      }
+                    ],
+                    "id": 169,
+                    "name": "VariableDeclaration",
+                    "src": "289:15:3"
+                  }
+                ],
+                "id": 170,
+                "name": "ParameterList",
+                "src": "274:31:3"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 171,
+                "name": "ParameterList",
+                "src": "306:0:3"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "string storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 163,
+                              "type": "string storage ref",
+                              "value": "word"
+                            },
+                            "id": 172,
+                            "name": "Identifier",
+                            "src": "316:4:3"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 167,
+                              "type": "string memory",
+                              "value": "_word"
+                            },
+                            "id": 173,
+                            "name": "Identifier",
+                            "src": "323:5:3"
+                          }
+                        ],
+                        "id": 174,
+                        "name": "Assignment",
+                        "src": "316:12:3"
+                      }
+                    ],
+                    "id": 175,
+                    "name": "ExpressionStatement",
+                    "src": "316:12:3"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "bytes32"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 165,
+                              "type": "bytes32",
+                              "value": "design"
+                            },
+                            "id": 176,
+                            "name": "Identifier",
+                            "src": "338:6:3"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 169,
+                              "type": "bytes32",
+                              "value": "_design"
+                            },
+                            "id": 177,
+                            "name": "Identifier",
+                            "src": "347:7:3"
+                          }
+                        ],
+                        "id": 178,
+                        "name": "Assignment",
+                        "src": "338:16:3"
+                      }
+                    ],
+                    "id": 179,
+                    "name": "ExpressionStatement",
+                    "src": "338:16:3"
+                  }
+                ],
+                "id": 180,
+                "name": "Block",
+                "src": "306:55:3"
+              }
+            ],
+            "id": 181,
+            "name": "FunctionDefinition",
+            "src": "253:108:3"
+          }
+        ],
+        "id": 182,
+        "name": "ContractDefinition",
+        "src": "157:206:3"
+      }
+    ],
+    "id": 183,
+    "name": "SourceUnit",
+    "src": "0:363:3"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.18+commit.9cf6e910.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "1.0.1",
+  "updatedAt": "2018-01-15T19:32:46.191Z"
+}

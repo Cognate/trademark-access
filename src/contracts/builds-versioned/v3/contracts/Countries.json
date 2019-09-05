@@ -1,0 +1,541 @@
+{
+  "contractName": "Countries",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "countries",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_owner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnershipTo",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "index",
+          "type": "uint256"
+        }
+      ],
+      "name": "getCountry",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "country",
+          "type": "string"
+        }
+      ],
+      "name": "addCountry",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity ^0.4.8;\n\nimport \"../base/owned.sol\";\n\n/**\n * TODO\n *\n * Copyright (c) 2017 Cognate, Inc.\n */\ncontract Countries is owned {\n    \n    string[] public countries;\n\n    /**\n     * Add the address of a proof document that proves this TimelineDocument\n     */\n    function addCountry(string country) public onlyOwner {\n        countries.push(country);\n    }\n\n    function getCountry(uint index) public constant returns (string) {\n        return countries[index];\n    }\n\n}",
+  "sourcePath": "/Users/MasterChief/Cog/cog-contract/contracts/reference/Countries.sol",
+  "ast": {
+    "attributes": {
+      "absolutePath": "/Users/MasterChief/Cog/cog-contract/contracts/reference/Countries.sol",
+      "exportedSymbols": {
+        "Countries": [
+          934
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.4",
+            ".8"
+          ]
+        },
+        "id": 901,
+        "name": "PragmaDirective",
+        "src": "0:23:23"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 777,
+          "absolutePath": "/Users/MasterChief/Cog/cog-contract/contracts/base/owned.sol",
+          "file": "../base/owned.sol",
+          "scope": 935,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 902,
+        "name": "ImportDirective",
+        "src": "25:27:23"
+      },
+      {
+        "attributes": {
+          "contractDependencies": [
+            776
+          ],
+          "contractKind": "contract",
+          "documentation": "TODO\n * Copyright (c) 2017 Cognate, Inc.",
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            934,
+            776
+          ],
+          "name": "Countries",
+          "scope": 935
+        },
+        "children": [
+          {
+            "attributes": {
+              "arguments": [
+                null
+              ]
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "owned",
+                  "referencedDeclaration": 776,
+                  "type": "contract owned"
+                },
+                "id": 903,
+                "name": "UserDefinedTypeName",
+                "src": "131:5:23"
+              }
+            ],
+            "id": 904,
+            "name": "InheritanceSpecifier",
+            "src": "131:5:23"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "countries",
+              "scope": 934,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "string storage ref[] storage ref",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "length": null,
+                  "type": "string storage ref[] storage pointer"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string storage pointer"
+                    },
+                    "id": 905,
+                    "name": "ElementaryTypeName",
+                    "src": "148:6:23"
+                  }
+                ],
+                "id": 906,
+                "name": "ArrayTypeName",
+                "src": "148:8:23"
+              }
+            ],
+            "id": 907,
+            "name": "VariableDeclaration",
+            "src": "148:25:23"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "implemented": true,
+              "isConstructor": false,
+              "name": "addCountry",
+              "payable": false,
+              "scope": 934,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "country",
+                      "scope": 921,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string memory",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string storage pointer"
+                        },
+                        "id": 908,
+                        "name": "ElementaryTypeName",
+                        "src": "293:6:23"
+                      }
+                    ],
+                    "id": 909,
+                    "name": "VariableDeclaration",
+                    "src": "293:14:23"
+                  }
+                ],
+                "id": 910,
+                "name": "ParameterList",
+                "src": "292:16:23"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 913,
+                "name": "ParameterList",
+                "src": "326:0:23"
+              },
+              {
+                "attributes": {
+                  "arguments": [
+                    null
+                  ]
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 755,
+                      "type": "modifier ()",
+                      "value": "onlyOwner"
+                    },
+                    "id": 911,
+                    "name": "Identifier",
+                    "src": "316:9:23"
+                  }
+                ],
+                "id": 912,
+                "name": "ModifierInvocation",
+                "src": "316:9:23"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "uint256",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_string_memory_ptr",
+                                  "typeString": "string memory"
+                                }
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "push",
+                              "referencedDeclaration": null,
+                              "type": "function (string storage ref) returns (uint256)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 907,
+                                  "type": "string storage ref[] storage ref",
+                                  "value": "countries"
+                                },
+                                "id": 914,
+                                "name": "Identifier",
+                                "src": "336:9:23"
+                              }
+                            ],
+                            "id": 916,
+                            "name": "MemberAccess",
+                            "src": "336:14:23"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 909,
+                              "type": "string memory",
+                              "value": "country"
+                            },
+                            "id": 917,
+                            "name": "Identifier",
+                            "src": "351:7:23"
+                          }
+                        ],
+                        "id": 918,
+                        "name": "FunctionCall",
+                        "src": "336:23:23"
+                      }
+                    ],
+                    "id": 919,
+                    "name": "ExpressionStatement",
+                    "src": "336:23:23"
+                  }
+                ],
+                "id": 920,
+                "name": "Block",
+                "src": "326:40:23"
+              }
+            ],
+            "id": 921,
+            "name": "FunctionDefinition",
+            "src": "273:93:23"
+          },
+          {
+            "attributes": {
+              "constant": true,
+              "implemented": true,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "getCountry",
+              "payable": false,
+              "scope": 934,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "index",
+                      "scope": 933,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 922,
+                        "name": "ElementaryTypeName",
+                        "src": "392:4:23"
+                      }
+                    ],
+                    "id": 923,
+                    "name": "VariableDeclaration",
+                    "src": "392:10:23"
+                  }
+                ],
+                "id": 924,
+                "name": "ParameterList",
+                "src": "391:12:23"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 933,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string memory",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string storage pointer"
+                        },
+                        "id": 925,
+                        "name": "ElementaryTypeName",
+                        "src": "429:6:23"
+                      }
+                    ],
+                    "id": 926,
+                    "name": "VariableDeclaration",
+                    "src": "429:6:23"
+                  }
+                ],
+                "id": 927,
+                "name": "ParameterList",
+                "src": "428:8:23"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 927
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "type": "string storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 907,
+                              "type": "string storage ref[] storage ref",
+                              "value": "countries"
+                            },
+                            "id": 928,
+                            "name": "Identifier",
+                            "src": "454:9:23"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 923,
+                              "type": "uint256",
+                              "value": "index"
+                            },
+                            "id": 929,
+                            "name": "Identifier",
+                            "src": "464:5:23"
+                          }
+                        ],
+                        "id": 930,
+                        "name": "IndexAccess",
+                        "src": "454:16:23"
+                      }
+                    ],
+                    "id": 931,
+                    "name": "Return",
+                    "src": "447:23:23"
+                  }
+                ],
+                "id": 932,
+                "name": "Block",
+                "src": "437:40:23"
+              }
+            ],
+            "id": 933,
+            "name": "FunctionDefinition",
+            "src": "372:105:23"
+          }
+        ],
+        "id": 934,
+        "name": "ContractDefinition",
+        "src": "109:371:23"
+      }
+    ],
+    "id": 935,
+    "name": "SourceUnit",
+    "src": "0:480:23"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.18+commit.9cf6e910.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "1.0.1",
+  "updatedAt": "2018-01-15T19:32:46.196Z"
+}

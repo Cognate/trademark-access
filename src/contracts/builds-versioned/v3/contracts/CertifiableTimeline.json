@@ -1,0 +1,817 @@
+{
+  "contractName": "CertifiableTimeline",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "to",
+          "type": "address"
+        }
+      ],
+      "name": "upgrade",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "tail",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "completeCertification",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "next",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_owner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnershipTo",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "version",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint16"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "previous",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "claim",
+          "type": "bytes"
+        }
+      ],
+      "name": "appendWithCertification",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "document",
+          "type": "address"
+        }
+      ],
+      "name": "append",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "upgraded",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "document",
+          "type": "address"
+        }
+      ],
+      "name": "getCertified",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "target",
+          "type": "address"
+        },
+        {
+          "name": "value",
+          "type": "uint256"
+        },
+        {
+          "name": "funcData",
+          "type": "bytes"
+        }
+      ],
+      "name": "callFunctionOf",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "documentCode",
+          "type": "bytes"
+        }
+      ],
+      "name": "appendBytes",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity ^0.4.8;\n\nimport \"./Timeline.sol\";\nimport \"./timelineDocuments/CertifiableTimelineDocument.sol\";\nimport \"../protocol/Certifiable.sol\";\n\n/**\n * Initial document representing a Common Law Trademark\n *\n * Copyright (c) 2017 Cognate, Inc.\n */\ncontract CertifiableTimeline is Timeline, Certifiable {\n\n    /**\n     * Takes a Claim that needs to be certified, creates a certifier and begins\n     * the certification protocol.\n     */\n    function appendWithCertification(bytes claim) onlyOwner {}\n\n    /**\n     * Called by Certifier upon Certification protocol completion \n     */\n    function completeCertification() onlyCertifier {}\n\n    /**\n     * Start certification for an existing uncertified CertifiableTimelineDocument\n     */\n     function getCertified(CertifiableTimelineDocument document) onlyOwner {\n        require(document.certifier() == address(0));\n     }\n}",
+  "sourcePath": "/Users/MasterChief/Cog/cog-contract/contracts/timeline/CertifiableTimeline.sol",
+  "ast": {
+    "attributes": {
+      "absolutePath": "/Users/MasterChief/Cog/cog-contract/contracts/timeline/CertifiableTimeline.sol",
+      "exportedSymbols": {
+        "CertifiableTimeline": [
+          1011
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.4",
+            ".8"
+          ]
+        },
+        "id": 971,
+        "name": "PragmaDirective",
+        "src": "0:23:25"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 1237,
+          "absolutePath": "/Users/MasterChief/Cog/cog-contract/contracts/timeline/Timeline.sol",
+          "file": "./Timeline.sol",
+          "scope": 1012,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 972,
+        "name": "ImportDirective",
+        "src": "25:24:25"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 1596,
+          "absolutePath": "/Users/MasterChief/Cog/cog-contract/contracts/timeline/timelineDocuments/CertifiableTimelineDocument.sol",
+          "file": "./timelineDocuments/CertifiableTimelineDocument.sol",
+          "scope": 1012,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 973,
+        "name": "ImportDirective",
+        "src": "50:61:25"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 819,
+          "absolutePath": "/Users/MasterChief/Cog/cog-contract/contracts/protocol/Certifiable.sol",
+          "file": "../protocol/Certifiable.sol",
+          "scope": 1012,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 974,
+        "name": "ImportDirective",
+        "src": "112:37:25"
+      },
+      {
+        "attributes": {
+          "contractDependencies": [
+            776,
+            818,
+            1236
+          ],
+          "contractKind": "contract",
+          "documentation": "Initial document representing a Common Law Trademark\n * Copyright (c) 2017 Cognate, Inc.",
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            1011,
+            818,
+            1236,
+            776
+          ],
+          "name": "CertifiableTimeline",
+          "scope": 1012
+        },
+        "children": [
+          {
+            "attributes": {
+              "arguments": [
+                null
+              ]
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "Timeline",
+                  "referencedDeclaration": 1236,
+                  "type": "contract Timeline"
+                },
+                "id": 975,
+                "name": "UserDefinedTypeName",
+                "src": "286:8:25"
+              }
+            ],
+            "id": 976,
+            "name": "InheritanceSpecifier",
+            "src": "286:8:25"
+          },
+          {
+            "attributes": {
+              "arguments": [
+                null
+              ]
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "Certifiable",
+                  "referencedDeclaration": 818,
+                  "type": "contract Certifiable"
+                },
+                "id": 977,
+                "name": "UserDefinedTypeName",
+                "src": "296:11:25"
+              }
+            ],
+            "id": 978,
+            "name": "InheritanceSpecifier",
+            "src": "296:11:25"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "implemented": true,
+              "isConstructor": false,
+              "name": "appendWithCertification",
+              "payable": false,
+              "scope": 1011,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "claim",
+                      "scope": 986,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bytes memory",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes",
+                          "type": "bytes storage pointer"
+                        },
+                        "id": 979,
+                        "name": "ElementaryTypeName",
+                        "src": "479:5:25"
+                      }
+                    ],
+                    "id": 980,
+                    "name": "VariableDeclaration",
+                    "src": "479:11:25"
+                  }
+                ],
+                "id": 981,
+                "name": "ParameterList",
+                "src": "478:13:25"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 984,
+                "name": "ParameterList",
+                "src": "502:0:25"
+              },
+              {
+                "attributes": {
+                  "arguments": [
+                    null
+                  ]
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 755,
+                      "type": "modifier ()",
+                      "value": "onlyOwner"
+                    },
+                    "id": 982,
+                    "name": "Identifier",
+                    "src": "492:9:25"
+                  }
+                ],
+                "id": 983,
+                "name": "ModifierInvocation",
+                "src": "492:9:25"
+              },
+              {
+                "attributes": {
+                  "statements": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 985,
+                "name": "Block",
+                "src": "502:2:25"
+              }
+            ],
+            "id": 986,
+            "name": "FunctionDefinition",
+            "src": "446:58:25"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "implemented": true,
+              "isConstructor": false,
+              "name": "completeCertification",
+              "payable": false,
+              "scope": 1011,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 987,
+                "name": "ParameterList",
+                "src": "623:2:25"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 990,
+                "name": "ParameterList",
+                "src": "640:0:25"
+              },
+              {
+                "attributes": {
+                  "arguments": [
+                    null
+                  ]
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 817,
+                      "type": "modifier ()",
+                      "value": "onlyCertifier"
+                    },
+                    "id": 988,
+                    "name": "Identifier",
+                    "src": "626:13:25"
+                  }
+                ],
+                "id": 989,
+                "name": "ModifierInvocation",
+                "src": "626:13:25"
+              },
+              {
+                "attributes": {
+                  "statements": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 991,
+                "name": "Block",
+                "src": "640:2:25"
+              }
+            ],
+            "id": 992,
+            "name": "FunctionDefinition",
+            "src": "593:49:25"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "implemented": true,
+              "isConstructor": false,
+              "name": "getCertified",
+              "payable": false,
+              "scope": 1011,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "document",
+                      "scope": 1010,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "contract CertifiableTimelineDocument",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "contractScope": null,
+                          "name": "CertifiableTimelineDocument",
+                          "referencedDeclaration": 1595,
+                          "type": "contract CertifiableTimelineDocument"
+                        },
+                        "id": 993,
+                        "name": "UserDefinedTypeName",
+                        "src": "770:27:25"
+                      }
+                    ],
+                    "id": 994,
+                    "name": "VariableDeclaration",
+                    "src": "770:36:25"
+                  }
+                ],
+                "id": 995,
+                "name": "ParameterList",
+                "src": "769:38:25"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 998,
+                "name": "ParameterList",
+                "src": "818:0:25"
+              },
+              {
+                "attributes": {
+                  "arguments": [
+                    null
+                  ]
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 755,
+                      "type": "modifier ()",
+                      "value": "onlyOwner"
+                    },
+                    "id": 996,
+                    "name": "Identifier",
+                    "src": "808:9:25"
+                  }
+                ],
+                "id": 997,
+                "name": "ModifierInvocation",
+                "src": "808:9:25"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_bool",
+                                  "typeString": "bool"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 1947,
+                              "type": "function (bool) pure",
+                              "value": "require"
+                            },
+                            "id": 999,
+                            "name": "Identifier",
+                            "src": "828:7:25"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "commonType": {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              },
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "operator": "==",
+                              "type": "bool"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "arguments": [
+                                    null
+                                  ],
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "isStructConstructorCall": false,
+                                  "lValueRequested": false,
+                                  "names": [
+                                    null
+                                  ],
+                                  "type": "address",
+                                  "type_conversion": false
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": [
+                                        null
+                                      ],
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "member_name": "certifier",
+                                      "referencedDeclaration": 1585,
+                                      "type": "function () view external returns (address)"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 994,
+                                          "type": "contract CertifiableTimelineDocument",
+                                          "value": "document"
+                                        },
+                                        "id": 1000,
+                                        "name": "Identifier",
+                                        "src": "836:8:25"
+                                      }
+                                    ],
+                                    "id": 1001,
+                                    "name": "MemberAccess",
+                                    "src": "836:18:25"
+                                  }
+                                ],
+                                "id": 1002,
+                                "name": "FunctionCall",
+                                "src": "836:20:25"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "isStructConstructorCall": false,
+                                  "lValueRequested": false,
+                                  "names": [
+                                    null
+                                  ],
+                                  "type": "address",
+                                  "type_conversion": true
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": [
+                                        {
+                                          "typeIdentifier": "t_rational_0_by_1",
+                                          "typeString": "int_const 0"
+                                        }
+                                      ],
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": true,
+                                      "lValueRequested": false,
+                                      "type": "type(address)",
+                                      "value": "address"
+                                    },
+                                    "id": 1003,
+                                    "name": "ElementaryTypeNameExpression",
+                                    "src": "860:7:25"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "hexvalue": "30",
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": true,
+                                      "lValueRequested": false,
+                                      "subdenomination": null,
+                                      "token": "number",
+                                      "type": "int_const 0",
+                                      "value": "0"
+                                    },
+                                    "id": 1004,
+                                    "name": "Literal",
+                                    "src": "868:1:25"
+                                  }
+                                ],
+                                "id": 1005,
+                                "name": "FunctionCall",
+                                "src": "860:10:25"
+                              }
+                            ],
+                            "id": 1006,
+                            "name": "BinaryOperation",
+                            "src": "836:34:25"
+                          }
+                        ],
+                        "id": 1007,
+                        "name": "FunctionCall",
+                        "src": "828:43:25"
+                      }
+                    ],
+                    "id": 1008,
+                    "name": "ExpressionStatement",
+                    "src": "828:43:25"
+                  }
+                ],
+                "id": 1009,
+                "name": "Block",
+                "src": "818:61:25"
+              }
+            ],
+            "id": 1010,
+            "name": "FunctionDefinition",
+            "src": "748:131:25"
+          }
+        ],
+        "id": 1011,
+        "name": "ContractDefinition",
+        "src": "254:627:25"
+      }
+    ],
+    "id": 1012,
+    "name": "SourceUnit",
+    "src": "0:881:25"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.18+commit.9cf6e910.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "1.0.1",
+  "updatedAt": "2018-01-15T19:32:46.197Z"
+}

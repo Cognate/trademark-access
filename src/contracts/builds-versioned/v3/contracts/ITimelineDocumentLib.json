@@ -1,0 +1,604 @@
+{
+  "contractName": "ITimelineDocumentLib",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "self",
+          "type": "ITimelineDocumentLib.TimelineDocumentStorage storage"
+        },
+        {
+          "name": "next",
+          "type": "TimelineDocument"
+        }
+      ],
+      "name": "setNext",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "self",
+          "type": "ITimelineDocumentLib.ClaimStorage storage"
+        },
+        {
+          "name": "proof",
+          "type": "address"
+        }
+      ],
+      "name": "addProof",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "self",
+          "type": "ITimelineDocumentLib.ProofDocumentStorage storage"
+        },
+        {
+          "name": "_location",
+          "type": "string"
+        }
+      ],
+      "name": "setLocation",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity ^0.4.8;\n\nimport \"./TimelineDocument.sol\";\n\n/**\n * A library of functions supporting TimelineDocument and it's inheriting contracts.\n *\n * Copyright (c) 2017 Cognate, Inc.\n */\nlibrary ITimelineDocumentLib {\n\n    struct TimelineDocumentStorage {\n        bytes32 _interfaceID; // adds some basic protection against corrupting a timeline \n        TimelineDocument _next; // the next TimelineDocument in the timeline after this one\n        //TimelineDocument _prev; // the previous TimelineDocument in the timeline before this one\n    }\n\n    struct ClaimStorage {\n        address[] _proofs; // array of proof addresses\n    }\n\n    struct ProofDocumentStorage {\n        string _location; // URL address of the full image/document\n        bytes32 _hash; // SHA-256 proof of existence hash of the image/document\n    }\n\n    /**\n     * Set the next pointer of this TimelineDocument.\n     */\n    function setNext(TimelineDocumentStorage storage self, TimelineDocument next);\n\n    /**\n     * Set the prev pointer of this TimelineDocument.\n     */\n    //function setPrev(TimelineDocumentStorage storage self, TimelineDocument prev);\n\n    /**\n     * Associate the address of another TLD proving this this Claim.\n     */\n    function addProof(ClaimStorage storage self, address proof);\n\n    /**\n     * Set the location (URL address location of the proof image/document) string of this \n     * ProofDocument. Used to update an address location if storage strategies change.\n     */\n    function setLocation(ProofDocumentStorage storage self, string _location);\n}",
+  "sourcePath": "/Users/MasterChief/Cog/cog-contract/contracts/timeline/timelineDocuments/ITimelineDocumentLib.sol",
+  "ast": {
+    "attributes": {
+      "absolutePath": "/Users/MasterChief/Cog/cog-contract/contracts/timeline/timelineDocuments/ITimelineDocumentLib.sol",
+      "exportedSymbols": {
+        "ITimelineDocumentLib": [
+          1693
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.4",
+            ".8"
+          ]
+        },
+        "id": 1656,
+        "name": "PragmaDirective",
+        "src": "0:23:36"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 1832,
+          "absolutePath": "/Users/MasterChief/Cog/cog-contract/contracts/timeline/timelineDocuments/TimelineDocument.sol",
+          "file": "./TimelineDocument.sol",
+          "scope": 1694,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 1657,
+        "name": "ImportDirective",
+        "src": "25:32:36"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "library",
+          "documentation": "A library of functions supporting TimelineDocument and it's inheriting contracts.\n * Copyright (c) 2017 Cognate, Inc.",
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            1693
+          ],
+          "name": "ITimelineDocumentLib",
+          "scope": 1694
+        },
+        "children": [
+          {
+            "attributes": {
+              "canonicalName": "ITimelineDocumentLib.TimelineDocumentStorage",
+              "name": "TimelineDocumentStorage",
+              "scope": 1693,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "_interfaceID",
+                  "scope": 1662,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "bytes32",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "bytes32",
+                      "type": "bytes32"
+                    },
+                    "id": 1658,
+                    "name": "ElementaryTypeName",
+                    "src": "268:7:36"
+                  }
+                ],
+                "id": 1659,
+                "name": "VariableDeclaration",
+                "src": "268:20:36"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "_next",
+                  "scope": 1662,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "contract TimelineDocument",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "contractScope": null,
+                      "name": "TimelineDocument",
+                      "referencedDeclaration": 1831,
+                      "type": "contract TimelineDocument"
+                    },
+                    "id": 1660,
+                    "name": "UserDefinedTypeName",
+                    "src": "359:16:36"
+                  }
+                ],
+                "id": 1661,
+                "name": "VariableDeclaration",
+                "src": "359:22:36"
+              }
+            ],
+            "id": 1662,
+            "name": "StructDefinition",
+            "src": "227:320:36"
+          },
+          {
+            "attributes": {
+              "canonicalName": "ITimelineDocumentLib.ClaimStorage",
+              "name": "ClaimStorage",
+              "scope": 1693,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "_proofs",
+                  "scope": 1666,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "address[] storage pointer",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "length": null,
+                      "type": "address[] storage pointer"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 1663,
+                        "name": "ElementaryTypeName",
+                        "src": "583:7:36"
+                      }
+                    ],
+                    "id": 1664,
+                    "name": "ArrayTypeName",
+                    "src": "583:9:36"
+                  }
+                ],
+                "id": 1665,
+                "name": "VariableDeclaration",
+                "src": "583:17:36"
+              }
+            ],
+            "id": 1666,
+            "name": "StructDefinition",
+            "src": "553:82:36"
+          },
+          {
+            "attributes": {
+              "canonicalName": "ITimelineDocumentLib.ProofDocumentStorage",
+              "name": "ProofDocumentStorage",
+              "scope": 1693,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "_location",
+                  "scope": 1671,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string storage pointer",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string storage pointer"
+                    },
+                    "id": 1667,
+                    "name": "ElementaryTypeName",
+                    "src": "679:6:36"
+                  }
+                ],
+                "id": 1668,
+                "name": "VariableDeclaration",
+                "src": "679:16:36"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "_hash",
+                  "scope": 1671,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "bytes32",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "bytes32",
+                      "type": "bytes32"
+                    },
+                    "id": 1669,
+                    "name": "ElementaryTypeName",
+                    "src": "747:7:36"
+                  }
+                ],
+                "id": 1670,
+                "name": "VariableDeclaration",
+                "src": "747:13:36"
+              }
+            ],
+            "id": 1671,
+            "name": "StructDefinition",
+            "src": "641:183:36"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "constant": false,
+              "implemented": false,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "setNext",
+              "payable": false,
+              "scope": 1693,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "self",
+                      "scope": 1678,
+                      "stateVariable": false,
+                      "storageLocation": "storage",
+                      "type": "struct ITimelineDocumentLib.TimelineDocumentStorage storage pointer",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "contractScope": null,
+                          "name": "TimelineDocumentStorage",
+                          "referencedDeclaration": 1662,
+                          "type": "struct ITimelineDocumentLib.TimelineDocumentStorage storage pointer"
+                        },
+                        "id": 1672,
+                        "name": "UserDefinedTypeName",
+                        "src": "917:23:36"
+                      }
+                    ],
+                    "id": 1673,
+                    "name": "VariableDeclaration",
+                    "src": "917:36:36"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "next",
+                      "scope": 1678,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "contract TimelineDocument",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "contractScope": null,
+                          "name": "TimelineDocument",
+                          "referencedDeclaration": 1831,
+                          "type": "contract TimelineDocument"
+                        },
+                        "id": 1674,
+                        "name": "UserDefinedTypeName",
+                        "src": "955:16:36"
+                      }
+                    ],
+                    "id": 1675,
+                    "name": "VariableDeclaration",
+                    "src": "955:21:36"
+                  }
+                ],
+                "id": 1676,
+                "name": "ParameterList",
+                "src": "916:61:36"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1677,
+                "name": "ParameterList",
+                "src": "977:0:36"
+              }
+            ],
+            "id": 1678,
+            "name": "FunctionDefinition",
+            "src": "900:78:36"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "constant": false,
+              "implemented": false,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "addProof",
+              "payable": false,
+              "scope": 1693,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "self",
+                      "scope": 1685,
+                      "stateVariable": false,
+                      "storageLocation": "storage",
+                      "type": "struct ITimelineDocumentLib.ClaimStorage storage pointer",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "contractScope": null,
+                          "name": "ClaimStorage",
+                          "referencedDeclaration": 1666,
+                          "type": "struct ITimelineDocumentLib.ClaimStorage storage pointer"
+                        },
+                        "id": 1679,
+                        "name": "UserDefinedTypeName",
+                        "src": "1243:12:36"
+                      }
+                    ],
+                    "id": 1680,
+                    "name": "VariableDeclaration",
+                    "src": "1243:25:36"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "proof",
+                      "scope": 1685,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 1681,
+                        "name": "ElementaryTypeName",
+                        "src": "1270:7:36"
+                      }
+                    ],
+                    "id": 1682,
+                    "name": "VariableDeclaration",
+                    "src": "1270:13:36"
+                  }
+                ],
+                "id": 1683,
+                "name": "ParameterList",
+                "src": "1242:42:36"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1684,
+                "name": "ParameterList",
+                "src": "1284:0:36"
+              }
+            ],
+            "id": 1685,
+            "name": "FunctionDefinition",
+            "src": "1225:60:36"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "constant": false,
+              "implemented": false,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "setLocation",
+              "payable": false,
+              "scope": 1693,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "self",
+                      "scope": 1692,
+                      "stateVariable": false,
+                      "storageLocation": "storage",
+                      "type": "struct ITimelineDocumentLib.ProofDocumentStorage storage pointer",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "contractScope": null,
+                          "name": "ProofDocumentStorage",
+                          "referencedDeclaration": 1671,
+                          "type": "struct ITimelineDocumentLib.ProofDocumentStorage storage pointer"
+                        },
+                        "id": 1686,
+                        "name": "UserDefinedTypeName",
+                        "src": "1506:20:36"
+                      }
+                    ],
+                    "id": 1687,
+                    "name": "VariableDeclaration",
+                    "src": "1506:33:36"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_location",
+                      "scope": 1692,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string memory",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string storage pointer"
+                        },
+                        "id": 1688,
+                        "name": "ElementaryTypeName",
+                        "src": "1541:6:36"
+                      }
+                    ],
+                    "id": 1689,
+                    "name": "VariableDeclaration",
+                    "src": "1541:16:36"
+                  }
+                ],
+                "id": 1690,
+                "name": "ParameterList",
+                "src": "1505:53:36"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1691,
+                "name": "ParameterList",
+                "src": "1558:0:36"
+              }
+            ],
+            "id": 1692,
+            "name": "FunctionDefinition",
+            "src": "1485:74:36"
+          }
+        ],
+        "id": 1693,
+        "name": "ContractDefinition",
+        "src": "191:1370:36"
+      }
+    ],
+    "id": 1694,
+    "name": "SourceUnit",
+    "src": "0:1561:36"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.18+commit.9cf6e910.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "1.0.1",
+  "updatedAt": "2018-01-15T19:32:46.201Z"
+}

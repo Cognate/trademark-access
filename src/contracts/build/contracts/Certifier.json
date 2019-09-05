@@ -1,0 +1,235 @@
+{
+  "contractName": "Certifier",
+  "abi": [],
+  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3006080604052600080fd00a165627a7a72305820ec09331ee8d402e705b61577bb490c7f167631eb8a60380e8c506c0f8eb413190029",
+  "deployedBytecode": "0x6080604052600080fd00a165627a7a72305820ec09331ee8d402e705b61577bb490c7f167631eb8a60380e8c506c0f8eb413190029",
+  "sourceMap": "110:754:21:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;110:754:21;;;;;;;",
+  "deployedSourceMap": "110:754:21:-;;;;;",
+  "source": "pragma solidity ^0.4.8;\n\nimport \"./CertifierLib.sol\";\n\n/**\n * TODO\n *\n * Copyright (c) 2017 Cognate, Inc.\n */\ncontract Certifier {\n    using CertifierLib for CertifierLib.Certifier;\n\n    CertifierLib.Certifier certifier;\n\n    // I think Certifier requires a state machine that helps to limit what it can do in each state\n    \n    // state 1: payable to add stake to contract\n    // state 2: selecting certifiers\n    // state 3: certification protocol\n    // state 4: certified\n\n    // final state should call a completion function on whatever it was certifying\n\n    /*function Certifier(TimelineDocument claim) {\n        certifier.claim = claim;\n    }*/\n\n    // NOTE: A Certifier will need to be able to verify what it certified, I think this will be\n    // an inherent feature since it will have pointers to the various components needed for\n    // verification\n}",
+  "sourcePath": "/Users/cmurdock/Cog/cog-asset/contracts/protocol/Certifier.sol",
+  "ast": {
+    "absolutePath": "/Users/cmurdock/Cog/cog-asset/contracts/protocol/Certifier.sol",
+    "exportedSymbols": {
+      "Certifier": [
+        633
+      ]
+    },
+    "id": 634,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 626,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".8"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:21"
+      },
+      {
+        "absolutePath": "/Users/cmurdock/Cog/cog-asset/contracts/protocol/CertifierLib.sol",
+        "file": "./CertifierLib.sol",
+        "id": 627,
+        "nodeType": "ImportDirective",
+        "scope": 634,
+        "sourceUnit": 694,
+        "src": "25:28:21",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "TODO\n * Copyright (c) 2017 Cognate, Inc.",
+        "fullyImplemented": true,
+        "id": 633,
+        "linearizedBaseContracts": [
+          633
+        ],
+        "name": "Certifier",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "id": 630,
+            "libraryName": {
+              "contractScope": null,
+              "id": 628,
+              "name": "CertifierLib",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 693,
+              "src": "141:12:21",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_CertifierLib_$693",
+                "typeString": "library CertifierLib"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "135:46:21",
+            "typeName": {
+              "contractScope": null,
+              "id": 629,
+              "name": "CertifierLib.Certifier",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 653,
+              "src": "158:22:21",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_Certifier_$653_storage_ptr",
+                "typeString": "struct CertifierLib.Certifier"
+              }
+            }
+          },
+          {
+            "constant": false,
+            "id": 632,
+            "name": "certifier",
+            "nodeType": "VariableDeclaration",
+            "scope": 633,
+            "src": "187:32:21",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_struct$_Certifier_$653_storage",
+              "typeString": "struct CertifierLib.Certifier"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 631,
+              "name": "CertifierLib.Certifier",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 653,
+              "src": "187:22:21",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_Certifier_$653_storage_ptr",
+                "typeString": "struct CertifierLib.Certifier"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 634,
+        "src": "110:754:21"
+      }
+    ],
+    "src": "0:864:21"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/cmurdock/Cog/cog-asset/contracts/protocol/Certifier.sol",
+    "exportedSymbols": {
+      "Certifier": [
+        633
+      ]
+    },
+    "id": 634,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 626,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".8"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:21"
+      },
+      {
+        "absolutePath": "/Users/cmurdock/Cog/cog-asset/contracts/protocol/CertifierLib.sol",
+        "file": "./CertifierLib.sol",
+        "id": 627,
+        "nodeType": "ImportDirective",
+        "scope": 634,
+        "sourceUnit": 694,
+        "src": "25:28:21",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "TODO\n * Copyright (c) 2017 Cognate, Inc.",
+        "fullyImplemented": true,
+        "id": 633,
+        "linearizedBaseContracts": [
+          633
+        ],
+        "name": "Certifier",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "id": 630,
+            "libraryName": {
+              "contractScope": null,
+              "id": 628,
+              "name": "CertifierLib",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 693,
+              "src": "141:12:21",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_CertifierLib_$693",
+                "typeString": "library CertifierLib"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "135:46:21",
+            "typeName": {
+              "contractScope": null,
+              "id": 629,
+              "name": "CertifierLib.Certifier",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 653,
+              "src": "158:22:21",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_Certifier_$653_storage_ptr",
+                "typeString": "struct CertifierLib.Certifier"
+              }
+            }
+          },
+          {
+            "constant": false,
+            "id": 632,
+            "name": "certifier",
+            "nodeType": "VariableDeclaration",
+            "scope": 633,
+            "src": "187:32:21",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_struct$_Certifier_$653_storage",
+              "typeString": "struct CertifierLib.Certifier"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 631,
+              "name": "CertifierLib.Certifier",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 653,
+              "src": "187:22:21",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_Certifier_$653_storage_ptr",
+                "typeString": "struct CertifierLib.Certifier"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 634,
+        "src": "110:754:21"
+      }
+    ],
+    "src": "0:864:21"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.23+commit.124ca40d.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.0",
+  "updatedAt": "2018-05-21T16:36:25.362Z"
+}

@@ -1,0 +1,1851 @@
+{
+  "contractName": "Amendable",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "kill",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "owned_v1",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getCreatedAt",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "timeStamped_v1",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_amendment",
+          "type": "address"
+        }
+      ],
+      "name": "append",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getAmendment",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "cleanup",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x608060405234801561001057600080fd5b506107b6806100206000396000f300608060405260043610610083576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680633cecd7191461008857806341c0e1b51461009f57806351c9eefd146100b65780637e05f5a8146100cd5780638bb718b5146100f8578063ac04f5a71461010f578063c47049cd14610192575b600080fd5b34801561009457600080fd5b5061009d6101e9565b005b3480156100ab57600080fd5b506100b46103b4565b005b3480156100c257600080fd5b506100cb610445565b005b3480156100d957600080fd5b506100e2610487565b6040518082815260200191505060405180910390f35b34801561010457600080fd5b5061010d6104e7565b005b34801561011b57600080fd5b50610150600480360381019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506104f0565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561019e57600080fd5b506101a761070a565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163273ffffffffffffffffffffffffffffffffffffffff1614156103b257600073ffffffffffffffffffffffffffffffffffffffff16600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1614151561033557600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16633cecd7196040518163ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401600060405180830381600087803b15801561031c57600080fd5b505af1158015610330573d6000803e3d6000fd5b505050505b3073ffffffffffffffffffffffffffffffffffffffff166341c0e1b56040518163ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401600060405180830381600087803b15801561039957600080fd5b505af11580156103ad573d6000803e3d6000fd5b505050505b565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163273ffffffffffffffffffffffffffffffffffffffff161415610443576000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16ff5b565b326000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163273ffffffffffffffffffffffffffffffffffffffff1614156104e45760015490505b90565b42600181905550565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163273ffffffffffffffffffffffffffffffffffffffff16141561070557600073ffffffffffffffffffffffffffffffffffffffff16600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1614156106095781600260006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff169050610704565b600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663ac04f5a7836040518263ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001915050602060405180830381600087803b1580156106c657600080fd5b505af11580156106da573d6000803e3d6000fd5b505050506040513d60208110156106f057600080fd5b810190808051906020019092919050505090505b5b919050565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163273ffffffffffffffffffffffffffffffffffffffff16141561078757600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1690505b905600a165627a7a72305820e0b92489221201bbe29634c98c8379dc448c552c7bc30d263875dd0ebb0fc99b0029",
+  "deployedBytecode": "0x608060405260043610610083576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680633cecd7191461008857806341c0e1b51461009f57806351c9eefd146100b65780637e05f5a8146100cd5780638bb718b5146100f8578063ac04f5a71461010f578063c47049cd14610192575b600080fd5b34801561009457600080fd5b5061009d6101e9565b005b3480156100ab57600080fd5b506100b46103b4565b005b3480156100c257600080fd5b506100cb610445565b005b3480156100d957600080fd5b506100e2610487565b6040518082815260200191505060405180910390f35b34801561010457600080fd5b5061010d6104e7565b005b34801561011b57600080fd5b50610150600480360381019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506104f0565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561019e57600080fd5b506101a761070a565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163273ffffffffffffffffffffffffffffffffffffffff1614156103b257600073ffffffffffffffffffffffffffffffffffffffff16600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1614151561033557600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16633cecd7196040518163ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401600060405180830381600087803b15801561031c57600080fd5b505af1158015610330573d6000803e3d6000fd5b505050505b3073ffffffffffffffffffffffffffffffffffffffff166341c0e1b56040518163ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401600060405180830381600087803b15801561039957600080fd5b505af11580156103ad573d6000803e3d6000fd5b505050505b565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163273ffffffffffffffffffffffffffffffffffffffff161415610443576000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16ff5b565b326000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163273ffffffffffffffffffffffffffffffffffffffff1614156104e45760015490505b90565b42600181905550565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163273ffffffffffffffffffffffffffffffffffffffff16141561070557600073ffffffffffffffffffffffffffffffffffffffff16600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1614156106095781600260006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff169050610704565b600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663ac04f5a7836040518263ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001915050602060405180830381600087803b1580156106c657600080fd5b505af11580156106da573d6000803e3d6000fd5b505050506040513d60208110156106f057600080fd5b810190808051906020019092919050505090505b5b919050565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163273ffffffffffffffffffffffffffffffffffffffff16141561078757600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1690505b905600a165627a7a72305820e0b92489221201bbe29634c98c8379dc448c552c7bc30d263875dd0ebb0fc99b0029",
+  "sourceMap": "349:805:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;349:805:0;;;;;;;",
+  "deployedSourceMap": "349:805:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1003:149;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1003:149:0;;;;;;192:72:6;;8:9:-1;5:2;;;30:1;27;20:12;5:2;192:72:6;;;;;;241:54:7;;8:9:-1;5:2;;;30:1;27;20:12;5:2;241:54:7;;;;;;495:101:8;;8:9:-1;5:2;;;30:1;27;20:12;5:2;495:101:8;;;;;;;;;;;;;;;;;;;;;;;378:58;;8:9:-1;5:2;;;30:1;27;20:12;5:2;378:58:8;;;;;;559:243:0;;8:9:-1;5:2;;;30:1;27;20:12;5:2;559:243:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;861:106;;8:9:-1;5:2;;;30:1;27;20:12;5:2;861:106:0;;;;;;;;;;;;;;;;;;;;;;;;;;;1003:149;500:5:7;;;;;;;;;;;487:18;;:9;:18;;;483:25;;;1076:1:0;1055:23;;:9;;;;;;;;;;;:23;;;;1052:72;;;1094:9;;;;;;;;;;;:17;;;:19;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1094:19:0;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;1094:19:0;;;;1052:72;1134:4;:9;;;:11;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1134:11:0;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;1134:11:0;;;;483:25:7;1003:149:0:o;192:72:6:-;500:5:7;;;;;;;;;;;487:18;;:9;:18;;;483:25;;;251:5:6;;;;;;;;;;;238:19;;;483:25:7;192:72:6:o;241:54:7:-;279:9;271:5;;:17;;;;;;;;;;;;;;;;;;241:54::o;495:101:8:-;557:4;500:5:7;;;;;;;;;;;487:18;;:9;:18;;;483:25;;;580:9:8;;573:16;;483:25:7;495:101:8;:::o;378:58::-;426:3;414:9;:15;;;;378:58::o;559:243:0:-;624:9;500:5:7;;;;;;;;;;;487:18;;:9;:18;;;483:25;;;669:1:0;648:23;;:9;;;;;;;;;;;:23;;;645:105;;;699:10;687:9;;:22;;;;;;;;;;;;;;;;;;730:9;;;;;;;;;;;723:16;;;;645:105;767:9;;;;;;;;;;;:16;;;784:10;767:28;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;767:28:0;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;767:28:0;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;767:28:0;;;;;;;;;;;;;;;;760:35;;507:1:7;483:25;559:243:0;;;:::o;861:106::-;923:9;500:5:7;;;;;;;;;;;487:18;;:9;:18;;;483:25;;;951:9:0;;;;;;;;;;;944:16;;483:25:7;861:106:0;:::o",
+  "source": "pragma solidity ^0.4.0;\n\nimport \"./owned.sol\";\nimport \"./mortal.sol\";\nimport \"./timeStamped.sol\";\n/**\n * Base contract for Listings and their Amendments. Defines the shared methods and fields\n * that allow us to append changes to a listing/amendment rather than overwriting data\n * in order to build a timeline of ownership and listing details.\n */\ncontract Amendable is owned, timeStamped, mortal {\n\n    Amendable private amendment;\n\n    /*\n     * Append the provided amendment to furthest Amendable in this Amendables chain\n     * of Amendables\n     */\n    function append(Amendable _amendment) public restricted returns (Amendable) {\n        if(amendment == address(0)) {\n            amendment = _amendment;\n            return amendment;\n        }\n\n        return amendment.append(_amendment);\n    }\n\n    // Restricted getters\n    //-------------------\n\n    function getAmendment() external constant restricted returns (Amendable) {\n        return amendment;\n    }\n\n    // Removal\n    //--------\n    function cleanup() external restricted {\n        if(amendment != address(0)) {\n            amendment.cleanup();\n        }\n\n        this.kill();\n    }\n}",
+  "sourcePath": "/Users/cmurdock/Cog/cog-contract/contracts/Amendable.sol",
+  "ast": {
+    "absolutePath": "/Users/cmurdock/Cog/cog-contract/contracts/Amendable.sol",
+    "exportedSymbols": {
+      "Amendable": [
+        74
+      ]
+    },
+    "id": 75,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:0"
+      },
+      {
+        "absolutePath": "/Users/cmurdock/Cog/cog-contract/contracts/owned.sol",
+        "file": "./owned.sol",
+        "id": 2,
+        "nodeType": "ImportDirective",
+        "scope": 75,
+        "sourceUnit": 639,
+        "src": "25:21:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/cmurdock/Cog/cog-contract/contracts/mortal.sol",
+        "file": "./mortal.sol",
+        "id": 3,
+        "nodeType": "ImportDirective",
+        "scope": 75,
+        "sourceUnit": 616,
+        "src": "47:22:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/cmurdock/Cog/cog-contract/contracts/timeStamped.sol",
+        "file": "./timeStamped.sol",
+        "id": 4,
+        "nodeType": "ImportDirective",
+        "scope": 75,
+        "sourceUnit": 665,
+        "src": "70:27:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 5,
+              "name": "owned",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 638,
+              "src": "371:5:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_owned_$638",
+                "typeString": "contract owned"
+              }
+            },
+            "id": 6,
+            "nodeType": "InheritanceSpecifier",
+            "src": "371:5:0"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 7,
+              "name": "timeStamped",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 664,
+              "src": "378:11:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_timeStamped_$664",
+                "typeString": "contract timeStamped"
+              }
+            },
+            "id": 8,
+            "nodeType": "InheritanceSpecifier",
+            "src": "378:11:0"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 9,
+              "name": "mortal",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 615,
+              "src": "391:6:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_mortal_$615",
+                "typeString": "contract mortal"
+              }
+            },
+            "id": 10,
+            "nodeType": "InheritanceSpecifier",
+            "src": "391:6:0"
+          }
+        ],
+        "contractDependencies": [
+          615,
+          638,
+          664
+        ],
+        "contractKind": "contract",
+        "documentation": "Base contract for Listings and their Amendments. Defines the shared methods and fields\nthat allow us to append changes to a listing/amendment rather than overwriting data\nin order to build a timeline of ownership and listing details.",
+        "fullyImplemented": true,
+        "id": 74,
+        "linearizedBaseContracts": [
+          74,
+          615,
+          664,
+          638
+        ],
+        "name": "Amendable",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 12,
+            "name": "amendment",
+            "nodeType": "VariableDeclaration",
+            "scope": 74,
+            "src": "405:27:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_Amendable_$74",
+              "typeString": "contract Amendable"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 11,
+              "name": "Amendable",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 74,
+              "src": "405:9:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Amendable_$74",
+                "typeString": "contract Amendable"
+              }
+            },
+            "value": null,
+            "visibility": "private"
+          },
+          {
+            "body": {
+              "id": 39,
+              "nodeType": "Block",
+              "src": "635:167:0",
+              "statements": [
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    },
+                    "id": 25,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 21,
+                      "name": "amendment",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 12,
+                      "src": "648:9:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_Amendable_$74",
+                        "typeString": "contract Amendable"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "hexValue": "30",
+                          "id": 23,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "669:1:0",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_0_by_1",
+                            "typeString": "int_const 0"
+                          },
+                          "value": "0"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_rational_0_by_1",
+                            "typeString": "int_const 0"
+                          }
+                        ],
+                        "id": 22,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "nodeType": "ElementaryTypeNameExpression",
+                        "src": "661:7:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_address_$",
+                          "typeString": "type(address)"
+                        },
+                        "typeName": "address"
+                      },
+                      "id": 24,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "661:10:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "648:23:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": null,
+                  "id": 33,
+                  "nodeType": "IfStatement",
+                  "src": "645:105:0",
+                  "trueBody": {
+                    "id": 32,
+                    "nodeType": "Block",
+                    "src": "673:77:0",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 28,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftHandSide": {
+                            "argumentTypes": null,
+                            "id": 26,
+                            "name": "amendment",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 12,
+                            "src": "687:9:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_Amendable_$74",
+                              "typeString": "contract Amendable"
+                            }
+                          },
+                          "nodeType": "Assignment",
+                          "operator": "=",
+                          "rightHandSide": {
+                            "argumentTypes": null,
+                            "id": 27,
+                            "name": "_amendment",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 14,
+                            "src": "699:10:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_Amendable_$74",
+                              "typeString": "contract Amendable"
+                            }
+                          },
+                          "src": "687:22:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_contract$_Amendable_$74",
+                            "typeString": "contract Amendable"
+                          }
+                        },
+                        "id": 29,
+                        "nodeType": "ExpressionStatement",
+                        "src": "687:22:0"
+                      },
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 30,
+                          "name": "amendment",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 12,
+                          "src": "730:9:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_contract$_Amendable_$74",
+                            "typeString": "contract Amendable"
+                          }
+                        },
+                        "functionReturnParameters": 20,
+                        "id": 31,
+                        "nodeType": "Return",
+                        "src": "723:16:0"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 36,
+                        "name": "_amendment",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 14,
+                        "src": "784:10:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_Amendable_$74",
+                          "typeString": "contract Amendable"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_contract$_Amendable_$74",
+                          "typeString": "contract Amendable"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 34,
+                        "name": "amendment",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 12,
+                        "src": "767:9:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_Amendable_$74",
+                          "typeString": "contract Amendable"
+                        }
+                      },
+                      "id": 35,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "append",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 40,
+                      "src": "767:16:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$_t_contract$_Amendable_$74_$returns$_t_contract$_Amendable_$74_$",
+                        "typeString": "function (contract Amendable) external returns (contract Amendable)"
+                      }
+                    },
+                    "id": 37,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "767:28:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Amendable_$74",
+                      "typeString": "contract Amendable"
+                    }
+                  },
+                  "functionReturnParameters": 20,
+                  "id": 38,
+                  "nodeType": "Return",
+                  "src": "760:35:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 40,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 17,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 16,
+                  "name": "restricted",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 637,
+                  "src": "604:10:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "604:10:0"
+              }
+            ],
+            "name": "append",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 15,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14,
+                  "name": "_amendment",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 40,
+                  "src": "575:20:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_Amendable_$74",
+                    "typeString": "contract Amendable"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 13,
+                    "name": "Amendable",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 74,
+                    "src": "575:9:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Amendable_$74",
+                      "typeString": "contract Amendable"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "574:22:0"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 20,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 19,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 40,
+                  "src": "624:9:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_Amendable_$74",
+                    "typeString": "contract Amendable"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 18,
+                    "name": "Amendable",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 74,
+                    "src": "624:9:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Amendable_$74",
+                      "typeString": "contract Amendable"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "623:11:0"
+            },
+            "scope": 74,
+            "src": "559:243:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 49,
+              "nodeType": "Block",
+              "src": "934:33:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 47,
+                    "name": "amendment",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 12,
+                    "src": "951:9:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Amendable_$74",
+                      "typeString": "contract Amendable"
+                    }
+                  },
+                  "functionReturnParameters": 46,
+                  "id": 48,
+                  "nodeType": "Return",
+                  "src": "944:16:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 50,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 43,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 42,
+                  "name": "restricted",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 637,
+                  "src": "903:10:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "903:10:0"
+              }
+            ],
+            "name": "getAmendment",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 41,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "882:2:0"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 46,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 45,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50,
+                  "src": "923:9:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_Amendable_$74",
+                    "typeString": "contract Amendable"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 44,
+                    "name": "Amendable",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 74,
+                    "src": "923:9:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Amendable_$74",
+                      "typeString": "contract Amendable"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "922:11:0"
+            },
+            "scope": 74,
+            "src": "861:106:0",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 72,
+              "nodeType": "Block",
+              "src": "1042:110:0",
+              "statements": [
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    },
+                    "id": 59,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 55,
+                      "name": "amendment",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 12,
+                      "src": "1055:9:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_Amendable_$74",
+                        "typeString": "contract Amendable"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "!=",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "hexValue": "30",
+                          "id": 57,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "1076:1:0",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_0_by_1",
+                            "typeString": "int_const 0"
+                          },
+                          "value": "0"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_rational_0_by_1",
+                            "typeString": "int_const 0"
+                          }
+                        ],
+                        "id": 56,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "nodeType": "ElementaryTypeNameExpression",
+                        "src": "1068:7:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_address_$",
+                          "typeString": "type(address)"
+                        },
+                        "typeName": "address"
+                      },
+                      "id": 58,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1068:10:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "1055:23:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": null,
+                  "id": 66,
+                  "nodeType": "IfStatement",
+                  "src": "1052:72:0",
+                  "trueBody": {
+                    "id": 65,
+                    "nodeType": "Block",
+                    "src": "1080:44:0",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "arguments": [],
+                          "expression": {
+                            "argumentTypes": [],
+                            "expression": {
+                              "argumentTypes": null,
+                              "id": 60,
+                              "name": "amendment",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 12,
+                              "src": "1094:9:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_contract$_Amendable_$74",
+                                "typeString": "contract Amendable"
+                              }
+                            },
+                            "id": 62,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "cleanup",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 73,
+                            "src": "1094:17:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_external_nonpayable$__$returns$__$",
+                              "typeString": "function () external"
+                            }
+                          },
+                          "id": 63,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1094:19:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_tuple$__$",
+                            "typeString": "tuple()"
+                          }
+                        },
+                        "id": 64,
+                        "nodeType": "ExpressionStatement",
+                        "src": "1094:19:0"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 67,
+                        "name": "this",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 698,
+                        "src": "1134:4:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_Amendable_$74",
+                          "typeString": "contract Amendable"
+                        }
+                      },
+                      "id": 69,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "kill",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 614,
+                      "src": "1134:9:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$__$returns$__$",
+                        "typeString": "function () external"
+                      }
+                    },
+                    "id": 70,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1134:11:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 71,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1134:11:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 73,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 53,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 52,
+                  "name": "restricted",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 637,
+                  "src": "1031:10:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1031:10:0"
+              }
+            ],
+            "name": "cleanup",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 51,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1019:2:0"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 54,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1042:0:0"
+            },
+            "scope": 74,
+            "src": "1003:149:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 75,
+        "src": "349:805:0"
+      }
+    ],
+    "src": "0:1154:0"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/cmurdock/Cog/cog-contract/contracts/Amendable.sol",
+    "exportedSymbols": {
+      "Amendable": [
+        74
+      ]
+    },
+    "id": 75,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:0"
+      },
+      {
+        "absolutePath": "/Users/cmurdock/Cog/cog-contract/contracts/owned.sol",
+        "file": "./owned.sol",
+        "id": 2,
+        "nodeType": "ImportDirective",
+        "scope": 75,
+        "sourceUnit": 639,
+        "src": "25:21:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/cmurdock/Cog/cog-contract/contracts/mortal.sol",
+        "file": "./mortal.sol",
+        "id": 3,
+        "nodeType": "ImportDirective",
+        "scope": 75,
+        "sourceUnit": 616,
+        "src": "47:22:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/cmurdock/Cog/cog-contract/contracts/timeStamped.sol",
+        "file": "./timeStamped.sol",
+        "id": 4,
+        "nodeType": "ImportDirective",
+        "scope": 75,
+        "sourceUnit": 665,
+        "src": "70:27:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 5,
+              "name": "owned",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 638,
+              "src": "371:5:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_owned_$638",
+                "typeString": "contract owned"
+              }
+            },
+            "id": 6,
+            "nodeType": "InheritanceSpecifier",
+            "src": "371:5:0"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 7,
+              "name": "timeStamped",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 664,
+              "src": "378:11:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_timeStamped_$664",
+                "typeString": "contract timeStamped"
+              }
+            },
+            "id": 8,
+            "nodeType": "InheritanceSpecifier",
+            "src": "378:11:0"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 9,
+              "name": "mortal",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 615,
+              "src": "391:6:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_mortal_$615",
+                "typeString": "contract mortal"
+              }
+            },
+            "id": 10,
+            "nodeType": "InheritanceSpecifier",
+            "src": "391:6:0"
+          }
+        ],
+        "contractDependencies": [
+          615,
+          638,
+          664
+        ],
+        "contractKind": "contract",
+        "documentation": "Base contract for Listings and their Amendments. Defines the shared methods and fields\nthat allow us to append changes to a listing/amendment rather than overwriting data\nin order to build a timeline of ownership and listing details.",
+        "fullyImplemented": true,
+        "id": 74,
+        "linearizedBaseContracts": [
+          74,
+          615,
+          664,
+          638
+        ],
+        "name": "Amendable",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 12,
+            "name": "amendment",
+            "nodeType": "VariableDeclaration",
+            "scope": 74,
+            "src": "405:27:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_Amendable_$74",
+              "typeString": "contract Amendable"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 11,
+              "name": "Amendable",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 74,
+              "src": "405:9:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Amendable_$74",
+                "typeString": "contract Amendable"
+              }
+            },
+            "value": null,
+            "visibility": "private"
+          },
+          {
+            "body": {
+              "id": 39,
+              "nodeType": "Block",
+              "src": "635:167:0",
+              "statements": [
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    },
+                    "id": 25,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 21,
+                      "name": "amendment",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 12,
+                      "src": "648:9:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_Amendable_$74",
+                        "typeString": "contract Amendable"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "hexValue": "30",
+                          "id": 23,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "669:1:0",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_0_by_1",
+                            "typeString": "int_const 0"
+                          },
+                          "value": "0"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_rational_0_by_1",
+                            "typeString": "int_const 0"
+                          }
+                        ],
+                        "id": 22,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "nodeType": "ElementaryTypeNameExpression",
+                        "src": "661:7:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_address_$",
+                          "typeString": "type(address)"
+                        },
+                        "typeName": "address"
+                      },
+                      "id": 24,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "661:10:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "648:23:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": null,
+                  "id": 33,
+                  "nodeType": "IfStatement",
+                  "src": "645:105:0",
+                  "trueBody": {
+                    "id": 32,
+                    "nodeType": "Block",
+                    "src": "673:77:0",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 28,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftHandSide": {
+                            "argumentTypes": null,
+                            "id": 26,
+                            "name": "amendment",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 12,
+                            "src": "687:9:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_Amendable_$74",
+                              "typeString": "contract Amendable"
+                            }
+                          },
+                          "nodeType": "Assignment",
+                          "operator": "=",
+                          "rightHandSide": {
+                            "argumentTypes": null,
+                            "id": 27,
+                            "name": "_amendment",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 14,
+                            "src": "699:10:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_Amendable_$74",
+                              "typeString": "contract Amendable"
+                            }
+                          },
+                          "src": "687:22:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_contract$_Amendable_$74",
+                            "typeString": "contract Amendable"
+                          }
+                        },
+                        "id": 29,
+                        "nodeType": "ExpressionStatement",
+                        "src": "687:22:0"
+                      },
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 30,
+                          "name": "amendment",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 12,
+                          "src": "730:9:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_contract$_Amendable_$74",
+                            "typeString": "contract Amendable"
+                          }
+                        },
+                        "functionReturnParameters": 20,
+                        "id": 31,
+                        "nodeType": "Return",
+                        "src": "723:16:0"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 36,
+                        "name": "_amendment",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 14,
+                        "src": "784:10:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_Amendable_$74",
+                          "typeString": "contract Amendable"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_contract$_Amendable_$74",
+                          "typeString": "contract Amendable"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 34,
+                        "name": "amendment",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 12,
+                        "src": "767:9:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_Amendable_$74",
+                          "typeString": "contract Amendable"
+                        }
+                      },
+                      "id": 35,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "append",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 40,
+                      "src": "767:16:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$_t_contract$_Amendable_$74_$returns$_t_contract$_Amendable_$74_$",
+                        "typeString": "function (contract Amendable) external returns (contract Amendable)"
+                      }
+                    },
+                    "id": 37,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "767:28:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Amendable_$74",
+                      "typeString": "contract Amendable"
+                    }
+                  },
+                  "functionReturnParameters": 20,
+                  "id": 38,
+                  "nodeType": "Return",
+                  "src": "760:35:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 40,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 17,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 16,
+                  "name": "restricted",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 637,
+                  "src": "604:10:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "604:10:0"
+              }
+            ],
+            "name": "append",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 15,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14,
+                  "name": "_amendment",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 40,
+                  "src": "575:20:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_Amendable_$74",
+                    "typeString": "contract Amendable"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 13,
+                    "name": "Amendable",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 74,
+                    "src": "575:9:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Amendable_$74",
+                      "typeString": "contract Amendable"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "574:22:0"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 20,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 19,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 40,
+                  "src": "624:9:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_Amendable_$74",
+                    "typeString": "contract Amendable"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 18,
+                    "name": "Amendable",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 74,
+                    "src": "624:9:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Amendable_$74",
+                      "typeString": "contract Amendable"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "623:11:0"
+            },
+            "scope": 74,
+            "src": "559:243:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 49,
+              "nodeType": "Block",
+              "src": "934:33:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 47,
+                    "name": "amendment",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 12,
+                    "src": "951:9:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Amendable_$74",
+                      "typeString": "contract Amendable"
+                    }
+                  },
+                  "functionReturnParameters": 46,
+                  "id": 48,
+                  "nodeType": "Return",
+                  "src": "944:16:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 50,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 43,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 42,
+                  "name": "restricted",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 637,
+                  "src": "903:10:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "903:10:0"
+              }
+            ],
+            "name": "getAmendment",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 41,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "882:2:0"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 46,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 45,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50,
+                  "src": "923:9:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_Amendable_$74",
+                    "typeString": "contract Amendable"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 44,
+                    "name": "Amendable",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 74,
+                    "src": "923:9:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Amendable_$74",
+                      "typeString": "contract Amendable"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "922:11:0"
+            },
+            "scope": 74,
+            "src": "861:106:0",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 72,
+              "nodeType": "Block",
+              "src": "1042:110:0",
+              "statements": [
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    },
+                    "id": 59,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 55,
+                      "name": "amendment",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 12,
+                      "src": "1055:9:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_Amendable_$74",
+                        "typeString": "contract Amendable"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "!=",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "hexValue": "30",
+                          "id": 57,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "1076:1:0",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_0_by_1",
+                            "typeString": "int_const 0"
+                          },
+                          "value": "0"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_rational_0_by_1",
+                            "typeString": "int_const 0"
+                          }
+                        ],
+                        "id": 56,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "nodeType": "ElementaryTypeNameExpression",
+                        "src": "1068:7:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_address_$",
+                          "typeString": "type(address)"
+                        },
+                        "typeName": "address"
+                      },
+                      "id": 58,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1068:10:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "1055:23:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": null,
+                  "id": 66,
+                  "nodeType": "IfStatement",
+                  "src": "1052:72:0",
+                  "trueBody": {
+                    "id": 65,
+                    "nodeType": "Block",
+                    "src": "1080:44:0",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "arguments": [],
+                          "expression": {
+                            "argumentTypes": [],
+                            "expression": {
+                              "argumentTypes": null,
+                              "id": 60,
+                              "name": "amendment",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 12,
+                              "src": "1094:9:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_contract$_Amendable_$74",
+                                "typeString": "contract Amendable"
+                              }
+                            },
+                            "id": 62,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "cleanup",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 73,
+                            "src": "1094:17:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_external_nonpayable$__$returns$__$",
+                              "typeString": "function () external"
+                            }
+                          },
+                          "id": 63,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1094:19:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_tuple$__$",
+                            "typeString": "tuple()"
+                          }
+                        },
+                        "id": 64,
+                        "nodeType": "ExpressionStatement",
+                        "src": "1094:19:0"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 67,
+                        "name": "this",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 698,
+                        "src": "1134:4:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_Amendable_$74",
+                          "typeString": "contract Amendable"
+                        }
+                      },
+                      "id": 69,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "kill",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 614,
+                      "src": "1134:9:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$__$returns$__$",
+                        "typeString": "function () external"
+                      }
+                    },
+                    "id": 70,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1134:11:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 71,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1134:11:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 73,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 53,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 52,
+                  "name": "restricted",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 637,
+                  "src": "1031:10:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1031:10:0"
+              }
+            ],
+            "name": "cleanup",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 51,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1019:2:0"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 54,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1042:0:0"
+            },
+            "scope": 74,
+            "src": "1003:149:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 75,
+        "src": "349:805:0"
+      }
+    ],
+    "src": "0:1154:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.23+commit.124ca40d.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.0",
+  "updatedAt": "2018-09-18T20:15:13.212Z"
+}

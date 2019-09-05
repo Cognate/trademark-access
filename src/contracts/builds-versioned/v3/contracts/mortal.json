@@ -1,0 +1,275 @@
+{
+  "contractName": "mortal",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "kill",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_owner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnershipTo",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity ^0.4.8;\n\nimport \"./owned.sol\";\n\n/**\n * Provides the inheriting contract with a kill switch for cleaning it up when\n * it is no longer useful\n *\n * Copyright (c) 2017 Cognate, Inc.\n */\ncontract mortal is owned {\n    function kill() public onlyOwner {\n        selfdestruct(owner);\n    }\n}",
+  "sourcePath": "/Users/MasterChief/Cog/cog-contract/contracts/base/mortal.sol",
+  "ast": {
+    "attributes": {
+      "absolutePath": "/Users/MasterChief/Cog/cog-contract/contracts/base/mortal.sol",
+      "exportedSymbols": {
+        "mortal": [
+          730
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.4",
+            ".8"
+          ]
+        },
+        "id": 716,
+        "name": "PragmaDirective",
+        "src": "0:23:16"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 777,
+          "absolutePath": "/Users/MasterChief/Cog/cog-contract/contracts/base/owned.sol",
+          "file": "./owned.sol",
+          "scope": 731,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 717,
+        "name": "ImportDirective",
+        "src": "25:21:16"
+      },
+      {
+        "attributes": {
+          "contractDependencies": [
+            776
+          ],
+          "contractKind": "contract",
+          "documentation": "Provides the inheriting contract with a kill switch for cleaning it up when\nit is no longer useful\n * Copyright (c) 2017 Cognate, Inc.",
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            730,
+            776
+          ],
+          "name": "mortal",
+          "scope": 731
+        },
+        "children": [
+          {
+            "attributes": {
+              "arguments": [
+                null
+              ]
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "owned",
+                  "referencedDeclaration": 776,
+                  "type": "contract owned"
+                },
+                "id": 718,
+                "name": "UserDefinedTypeName",
+                "src": "219:5:16"
+              }
+            ],
+            "id": 719,
+            "name": "InheritanceSpecifier",
+            "src": "219:5:16"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "implemented": true,
+              "isConstructor": false,
+              "name": "kill",
+              "payable": false,
+              "scope": 730,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 720,
+                "name": "ParameterList",
+                "src": "244:2:16"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 723,
+                "name": "ParameterList",
+                "src": "264:0:16"
+              },
+              {
+                "attributes": {
+                  "arguments": [
+                    null
+                  ]
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 755,
+                      "type": "modifier ()",
+                      "value": "onlyOwner"
+                    },
+                    "id": 721,
+                    "name": "Identifier",
+                    "src": "254:9:16"
+                  }
+                ],
+                "id": 722,
+                "name": "ModifierInvocation",
+                "src": "254:9:16"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_address",
+                                  "typeString": "address"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 1950,
+                              "type": "function (address)",
+                              "value": "selfdestruct"
+                            },
+                            "id": 724,
+                            "name": "Identifier",
+                            "src": "274:12:16"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 734,
+                              "type": "address",
+                              "value": "owner"
+                            },
+                            "id": 725,
+                            "name": "Identifier",
+                            "src": "287:5:16"
+                          }
+                        ],
+                        "id": 726,
+                        "name": "FunctionCall",
+                        "src": "274:19:16"
+                      }
+                    ],
+                    "id": 727,
+                    "name": "ExpressionStatement",
+                    "src": "274:19:16"
+                  }
+                ],
+                "id": 728,
+                "name": "Block",
+                "src": "264:36:16"
+              }
+            ],
+            "id": 729,
+            "name": "FunctionDefinition",
+            "src": "231:69:16"
+          }
+        ],
+        "id": 730,
+        "name": "ContractDefinition",
+        "src": "200:102:16"
+      }
+    ],
+    "id": 731,
+    "name": "SourceUnit",
+    "src": "0:302:16"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.18+commit.9cf6e910.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "1.0.1",
+  "updatedAt": "2018-01-15T19:32:46.195Z"
+}

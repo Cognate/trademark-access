@@ -1,0 +1,906 @@
+{
+  "contractName": "Claim",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "prev",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "next",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_owner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnershipTo",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "prev",
+          "type": "address"
+        }
+      ],
+      "name": "setPrev",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "next",
+          "type": "address"
+        }
+      ],
+      "name": "setNext",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "timestamp",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "interfaceID",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "proof",
+          "type": "address"
+        }
+      ],
+      "name": "addProof",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "proofs",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address[]"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x608060405260008054600160a060020a033316600160a060020a0319909116179055426001557f79056e9bb24f897d7f885dacdb2d506599944c0cdfd6b7495eb7f3ea624ac5af6002556104dc806100586000396000f3006080604052600436106100a35763ffffffff7c0100000000000000000000000000000000000000000000000000000000600035041663435d53f281146100a8578063479c92541461010d5780634c8fe5261461013e57806352effe11146101535780638c1bb2a4146101765780638da5cb5b14610197578063b2b2b44d146101ac578063b80777ea146101cd578063ba19322d146101f4578063ec3d670c14610209575b600080fd5b3480156100b457600080fd5b506100bd61022a565b60408051602080825283518183015283519192839290830191858101910280838360005b838110156100f95781810151838201526020016100e1565b505050509050019250505060405180910390f35b34801561011957600080fd5b5061012261028f565b60408051600160a060020a039092168252519081900360200190f35b34801561014a57600080fd5b5061012261029e565b34801561015f57600080fd5b50610174600160a060020a03600435166102ad565b005b34801561018257600080fd5b50610174600160a060020a036004351661030c565b3480156101a357600080fd5b506101226103a1565b3480156101b857600080fd5b50610174600160a060020a03600435166103b0565b3480156101d957600080fd5b506101e261042a565b60408051918252519081900360200190f35b34801561020057600080fd5b506101e2610430565b34801561021557600080fd5b50610174600160a060020a0360043516610436565b6060600560000180548060200260200160405190810160405280929190818152602001828054801561028557602002820191906000526020600020905b8154600160a060020a03168152600190910190602001808311610267575b5050505050905090565b600454600160a060020a031690565b600354600160a060020a031690565b60005433600160a060020a039081169116146102c857600080fd5b600160a060020a03811615156102dd57600080fd5b6000805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0392909216919091179055565b604080517f4df23ab100000000000000000000000000000000000000000000000000000000815260026004820152600160a060020a0383166024820152905173__ITimelineDocumentLib__________________91634df23ab1916044808301926000929190829003018186803b15801561038657600080fd5b505af415801561039a573d6000803e3d6000fd5b5050505050565b600054600160a060020a031681565b604080517f2d637bc600000000000000000000000000000000000000000000000000000000815260026004820152600160a060020a0383166024820152905173__ITimelineDocumentLib__________________91632d637bc6916044808301926000929190829003018186803b15801561038657600080fd5b60015481565b60025490565b604080517f427221c100000000000000000000000000000000000000000000000000000000815260056004820152600160a060020a0383166024820152905173__ITimelineDocumentLib__________________9163427221c1916044808301926000929190829003018186803b15801561038657600080fd00a165627a7a723058208e56ac21f0bbed546c11da4f8df1864acde17a9ca469798760a2ce32d57175300029",
+  "deployedBytecode": "0x6080604052600436106100a35763ffffffff7c0100000000000000000000000000000000000000000000000000000000600035041663435d53f281146100a8578063479c92541461010d5780634c8fe5261461013e57806352effe11146101535780638c1bb2a4146101765780638da5cb5b14610197578063b2b2b44d146101ac578063b80777ea146101cd578063ba19322d146101f4578063ec3d670c14610209575b600080fd5b3480156100b457600080fd5b506100bd61022a565b60408051602080825283518183015283519192839290830191858101910280838360005b838110156100f95781810151838201526020016100e1565b505050509050019250505060405180910390f35b34801561011957600080fd5b5061012261028f565b60408051600160a060020a039092168252519081900360200190f35b34801561014a57600080fd5b5061012261029e565b34801561015f57600080fd5b50610174600160a060020a03600435166102ad565b005b34801561018257600080fd5b50610174600160a060020a036004351661030c565b3480156101a357600080fd5b506101226103a1565b3480156101b857600080fd5b50610174600160a060020a03600435166103b0565b3480156101d957600080fd5b506101e261042a565b60408051918252519081900360200190f35b34801561020057600080fd5b506101e2610430565b34801561021557600080fd5b50610174600160a060020a0360043516610436565b6060600560000180548060200260200160405190810160405280929190818152602001828054801561028557602002820191906000526020600020905b8154600160a060020a03168152600190910190602001808311610267575b5050505050905090565b600454600160a060020a031690565b600354600160a060020a031690565b60005433600160a060020a039081169116146102c857600080fd5b600160a060020a03811615156102dd57600080fd5b6000805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0392909216919091179055565b604080517f4df23ab100000000000000000000000000000000000000000000000000000000815260026004820152600160a060020a0383166024820152905173__ITimelineDocumentLib__________________91634df23ab1916044808301926000929190829003018186803b15801561038657600080fd5b505af415801561039a573d6000803e3d6000fd5b5050505050565b600054600160a060020a031681565b604080517f2d637bc600000000000000000000000000000000000000000000000000000000815260026004820152600160a060020a0383166024820152905173__ITimelineDocumentLib__________________91632d637bc6916044808301926000929190829003018186803b15801561038657600080fd5b60015481565b60025490565b604080517f427221c100000000000000000000000000000000000000000000000000000000815260056004820152600160a060020a0383166024820152905173__ITimelineDocumentLib__________________9163427221c1916044808301926000929190829003018186803b15801561038657600080fd00a165627a7a723058208e56ac21f0bbed546c11da4f8df1864acde17a9ca469798760a2ce32d57175300029",
+  "sourceMap": "312:408:33:-;;;324:5:17;:14;;-1:-1:-1;;;;;400:10:38;324:14:17;-1:-1:-1;;;;;;324:14:17;;;;;;467:3:18;324:14:17;455:15:18;644:66:38;612:16;:98;312:408:33;;;;;;",
+  "deployedSourceMap": "312:408:33:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;631:87;;8:9:-1;5:2;;;30:1;27;20:12;5:2;631:87:33;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:100:-1;33:3;30:1;27:10;8:100;;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;;12:14;631:87:33;;;;;;;;;;;;;;;;;1263:101:38;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1263:101:38;;;;;;;;-1:-1:-1;;;;;1263:101:38;;;;;;;;;;;;;;1156;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1156:101:38;;;;674:132:17;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;674:132:17;-1:-1:-1;;;;;674:132:17;;;;;;;912:94:38;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;912:94:38;-1:-1:-1;;;;;912:94:38;;;;;252:20:17;;8:9:-1;5:2;;;30:1;27;20:12;5:2;252:20:17;;;;768:94:38;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;768:94:38;-1:-1:-1;;;;;768:94:38;;;;;357:21:18;;8:9:-1;5:2;;;30:1;27;20:12;5:2;357:21:18;;;;;;;;;;;;;;;;;;;;1044:106:38;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1044:106:38;;;;515:78:33;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;515:78:33;-1:-1:-1;;;;;515:78:33;;;;;631:87;670:9;698:5;:13;;691:20;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;691:20:33;;;;;;;;;;;;;;;;;;;;;;;631:87;:::o;1263:101:38:-;1335:22;;-1:-1:-1;;;;;1335:22:38;1263:101;:::o;1156:::-;1228:22;;-1:-1:-1;;;;;1228:22:38;1156:101;:::o;674:132:17:-;543:5;;529:10;-1:-1:-1;;;;;529:19:17;;;543:5;;529:19;521:28;;;;;;-1:-1:-1;;;;;754:20:17;;;;746:29;;;;;;785:5;:14;;-1:-1:-1;;785:14:17;-1:-1:-1;;;;;785:14:17;;;;;;;;;;674:132::o;912:94:38:-;969:30;;;;;;:16;:30;;;;-1:-1:-1;;;;;969:30:38;;;;;;;;:24;;;;:30;;;;;-1:-1:-1;;969:30:38;;;;;;;:24;:30;;;5:2:-1;;;;30:1;27;20:12;5:2;969:30:38;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;969:30:38;;;;912:94;:::o;252:20:17:-;;;-1:-1:-1;;;;;252:20:17;;:::o;768:94:38:-;825:30;;;;;;:16;:30;;;;-1:-1:-1;;;;;825:30:38;;;;;;;;:24;;;;:30;;;;;-1:-1:-1;;825:30:38;;;;;;;:24;:30;;;5:2:-1;;;;30:1;27;20:12;357:21:18;;;;:::o;1044:106:38:-;1114:16;:29;1044:106;:::o;515:78:33:-;565:21;;;;;;:5;:21;;;;-1:-1:-1;;;;;565:21:33;;;;;;;;:14;;;;:21;;;;;-1:-1:-1;;565:21:33;;;;;;;:14;:21;;;5:2:-1;;;;30:1;27;20:12",
+  "source": "pragma solidity ^0.4.17;\n\nimport \"./TimelineDocument.sol\";\n\n/**\n * A TimelineDocument that requires proof to backup the claim\n * of the data and intention of that document. Proof is represented\n * by the addresses of other contracts that store the proof documentation.\n *\n * Copyright (c) 2017 Cognate, Inc.\n */\ncontract Claim is TimelineDocument {\n    using ITimelineDocumentLib for ITimelineDocumentLib.ClaimStorage;\n\n    ITimelineDocumentLib.ClaimStorage claim;\n\n    // calls ITimelineDocumentLib.addProof()\n    function addProof(address proof) public {\n        claim.addProof(proof);\n    }\n\n\n    // Getters\n    //--------\n\n    function proofs() public view returns (address[]) {\n        return claim._proofs;\n    }\n}",
+  "sourcePath": "/Users/cmurdock/Cog/cog-asset/contracts/timeline/timelineDocuments/Claim.sol",
+  "ast": {
+    "absolutePath": "/Users/cmurdock/Cog/cog-asset/contracts/timeline/timelineDocuments/Claim.sol",
+    "exportedSymbols": {
+      "Claim": [
+        1471
+      ]
+    },
+    "id": 1472,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1440,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".17"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:33"
+      },
+      {
+        "absolutePath": "/Users/cmurdock/Cog/cog-asset/contracts/timeline/timelineDocuments/TimelineDocument.sol",
+        "file": "./TimelineDocument.sol",
+        "id": 1441,
+        "nodeType": "ImportDirective",
+        "scope": 1472,
+        "sourceUnit": 1705,
+        "src": "26:32:33",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 1442,
+              "name": "TimelineDocument",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1704,
+              "src": "330:16:33",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_TimelineDocument_$1704",
+                "typeString": "contract TimelineDocument"
+              }
+            },
+            "id": 1443,
+            "nodeType": "InheritanceSpecifier",
+            "src": "330:16:33"
+          }
+        ],
+        "contractDependencies": [
+          578,
+          591,
+          1704
+        ],
+        "contractKind": "contract",
+        "documentation": "A TimelineDocument that requires proof to backup the claim\nof the data and intention of that document. Proof is represented\nby the addresses of other contracts that store the proof documentation.\n * Copyright (c) 2017 Cognate, Inc.",
+        "fullyImplemented": true,
+        "id": 1471,
+        "linearizedBaseContracts": [
+          1471,
+          1704,
+          591,
+          578
+        ],
+        "name": "Claim",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "id": 1446,
+            "libraryName": {
+              "contractScope": null,
+              "id": 1444,
+              "name": "ITimelineDocumentLib",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1545,
+              "src": "359:20:33",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ITimelineDocumentLib_$1545",
+                "typeString": "library ITimelineDocumentLib"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "353:65:33",
+            "typeName": {
+              "contractScope": null,
+              "id": 1445,
+              "name": "ITimelineDocumentLib.ClaimStorage",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1511,
+              "src": "384:33:33",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_ClaimStorage_$1511_storage_ptr",
+                "typeString": "struct ITimelineDocumentLib.ClaimStorage"
+              }
+            }
+          },
+          {
+            "constant": false,
+            "id": 1448,
+            "name": "claim",
+            "nodeType": "VariableDeclaration",
+            "scope": 1471,
+            "src": "424:39:33",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_struct$_ClaimStorage_$1511_storage",
+              "typeString": "struct ITimelineDocumentLib.ClaimStorage"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 1447,
+              "name": "ITimelineDocumentLib.ClaimStorage",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1511,
+              "src": "424:33:33",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_ClaimStorage_$1511_storage_ptr",
+                "typeString": "struct ITimelineDocumentLib.ClaimStorage"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 1459,
+              "nodeType": "Block",
+              "src": "555:38:33",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 1456,
+                        "name": "proof",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1450,
+                        "src": "580:5:33",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 1453,
+                        "name": "claim",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1448,
+                        "src": "565:5:33",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_ClaimStorage_$1511_storage",
+                          "typeString": "struct ITimelineDocumentLib.ClaimStorage storage ref"
+                        }
+                      },
+                      "id": 1455,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "addProof",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 1537,
+                      "src": "565:14:33",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_delegatecall_nonpayable$_t_struct$_ClaimStorage_$1511_storage_ptr_$_t_address_$returns$__$bound_to$_t_struct$_ClaimStorage_$1511_storage_ptr_$",
+                        "typeString": "function (struct ITimelineDocumentLib.ClaimStorage storage pointer,address)"
+                      }
+                    },
+                    "id": 1457,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "565:21:33",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1458,
+                  "nodeType": "ExpressionStatement",
+                  "src": "565:21:33"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1460,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "addProof",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1451,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1450,
+                  "name": "proof",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1460,
+                  "src": "533:13:33",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1449,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "533:7:33",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "532:15:33"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1452,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "555:0:33"
+            },
+            "scope": 1471,
+            "src": "515:78:33",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1469,
+              "nodeType": "Block",
+              "src": "681:37:33",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 1466,
+                      "name": "claim",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1448,
+                      "src": "698:5:33",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_ClaimStorage_$1511_storage",
+                        "typeString": "struct ITimelineDocumentLib.ClaimStorage storage ref"
+                      }
+                    },
+                    "id": 1467,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "_proofs",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 1510,
+                    "src": "698:13:33",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage",
+                      "typeString": "address[] storage ref"
+                    }
+                  },
+                  "functionReturnParameters": 1465,
+                  "id": 1468,
+                  "nodeType": "Return",
+                  "src": "691:20:33"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1470,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "proofs",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1461,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "646:2:33"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1465,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1464,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1470,
+                  "src": "670:9:33",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 1462,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "670:7:33",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 1463,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "670:9:33",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "669:11:33"
+            },
+            "scope": 1471,
+            "src": "631:87:33",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 1472,
+        "src": "312:408:33"
+      }
+    ],
+    "src": "0:720:33"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/cmurdock/Cog/cog-asset/contracts/timeline/timelineDocuments/Claim.sol",
+    "exportedSymbols": {
+      "Claim": [
+        1471
+      ]
+    },
+    "id": 1472,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1440,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".17"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:33"
+      },
+      {
+        "absolutePath": "/Users/cmurdock/Cog/cog-asset/contracts/timeline/timelineDocuments/TimelineDocument.sol",
+        "file": "./TimelineDocument.sol",
+        "id": 1441,
+        "nodeType": "ImportDirective",
+        "scope": 1472,
+        "sourceUnit": 1705,
+        "src": "26:32:33",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 1442,
+              "name": "TimelineDocument",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1704,
+              "src": "330:16:33",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_TimelineDocument_$1704",
+                "typeString": "contract TimelineDocument"
+              }
+            },
+            "id": 1443,
+            "nodeType": "InheritanceSpecifier",
+            "src": "330:16:33"
+          }
+        ],
+        "contractDependencies": [
+          578,
+          591,
+          1704
+        ],
+        "contractKind": "contract",
+        "documentation": "A TimelineDocument that requires proof to backup the claim\nof the data and intention of that document. Proof is represented\nby the addresses of other contracts that store the proof documentation.\n * Copyright (c) 2017 Cognate, Inc.",
+        "fullyImplemented": true,
+        "id": 1471,
+        "linearizedBaseContracts": [
+          1471,
+          1704,
+          591,
+          578
+        ],
+        "name": "Claim",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "id": 1446,
+            "libraryName": {
+              "contractScope": null,
+              "id": 1444,
+              "name": "ITimelineDocumentLib",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1545,
+              "src": "359:20:33",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ITimelineDocumentLib_$1545",
+                "typeString": "library ITimelineDocumentLib"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "353:65:33",
+            "typeName": {
+              "contractScope": null,
+              "id": 1445,
+              "name": "ITimelineDocumentLib.ClaimStorage",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1511,
+              "src": "384:33:33",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_ClaimStorage_$1511_storage_ptr",
+                "typeString": "struct ITimelineDocumentLib.ClaimStorage"
+              }
+            }
+          },
+          {
+            "constant": false,
+            "id": 1448,
+            "name": "claim",
+            "nodeType": "VariableDeclaration",
+            "scope": 1471,
+            "src": "424:39:33",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_struct$_ClaimStorage_$1511_storage",
+              "typeString": "struct ITimelineDocumentLib.ClaimStorage"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 1447,
+              "name": "ITimelineDocumentLib.ClaimStorage",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1511,
+              "src": "424:33:33",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_ClaimStorage_$1511_storage_ptr",
+                "typeString": "struct ITimelineDocumentLib.ClaimStorage"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 1459,
+              "nodeType": "Block",
+              "src": "555:38:33",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 1456,
+                        "name": "proof",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1450,
+                        "src": "580:5:33",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 1453,
+                        "name": "claim",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1448,
+                        "src": "565:5:33",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_ClaimStorage_$1511_storage",
+                          "typeString": "struct ITimelineDocumentLib.ClaimStorage storage ref"
+                        }
+                      },
+                      "id": 1455,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "addProof",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 1537,
+                      "src": "565:14:33",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_delegatecall_nonpayable$_t_struct$_ClaimStorage_$1511_storage_ptr_$_t_address_$returns$__$bound_to$_t_struct$_ClaimStorage_$1511_storage_ptr_$",
+                        "typeString": "function (struct ITimelineDocumentLib.ClaimStorage storage pointer,address)"
+                      }
+                    },
+                    "id": 1457,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "565:21:33",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1458,
+                  "nodeType": "ExpressionStatement",
+                  "src": "565:21:33"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1460,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "addProof",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1451,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1450,
+                  "name": "proof",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1460,
+                  "src": "533:13:33",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1449,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "533:7:33",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "532:15:33"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1452,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "555:0:33"
+            },
+            "scope": 1471,
+            "src": "515:78:33",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1469,
+              "nodeType": "Block",
+              "src": "681:37:33",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 1466,
+                      "name": "claim",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1448,
+                      "src": "698:5:33",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_ClaimStorage_$1511_storage",
+                        "typeString": "struct ITimelineDocumentLib.ClaimStorage storage ref"
+                      }
+                    },
+                    "id": 1467,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "_proofs",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 1510,
+                    "src": "698:13:33",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage",
+                      "typeString": "address[] storage ref"
+                    }
+                  },
+                  "functionReturnParameters": 1465,
+                  "id": 1468,
+                  "nodeType": "Return",
+                  "src": "691:20:33"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1470,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "proofs",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1461,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "646:2:33"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1465,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1464,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1470,
+                  "src": "670:9:33",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 1462,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "670:7:33",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 1463,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "670:9:33",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "669:11:33"
+            },
+            "scope": 1471,
+            "src": "631:87:33",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 1472,
+        "src": "312:408:33"
+      }
+    ],
+    "src": "0:720:33"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.23+commit.124ca40d.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.0",
+  "updatedAt": "2018-05-21T16:36:25.366Z"
+}

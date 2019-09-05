@@ -1,0 +1,1048 @@
+{
+  "contractName": "WordAndDesignMarkWithInitialProof",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "timeline",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "word",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "kill",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_owner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnershipTo",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "design",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "designLocation",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "initialProofLocation",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "timestamp",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "initialProof",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_timeline",
+          "type": "bytes"
+        }
+      ],
+      "name": "upgradeTimeline",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "_word",
+          "type": "string"
+        },
+        {
+          "name": "_design",
+          "type": "bytes32"
+        },
+        {
+          "name": "_designLocation",
+          "type": "string"
+        },
+        {
+          "name": "_initialProof",
+          "type": "bytes32"
+        },
+        {
+          "name": "_initialProofLocation",
+          "type": "string"
+        },
+        {
+          "name": "_timeline",
+          "type": "bytes"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    }
+  ],
+  "bytecode": "0x608060405234801561001057600080fd5b5060405161093538038061093583398101604090815281516020830151918301516060840151608085015160a086015142600090815560018054600160a060020a03191633600160a060020a03161790559087018051958801979485019593949290920192849184918991899189918791849184918491829111156101a3576040517f5281042700000000000000000000000000000000000000000000000000000000815260206004820181815283516024840152835173__IbaseLib______________________________9363528104279386939283926044019185019080838360005b8381101561010d5781810151838201526020016100f5565b50505050905090810190601f16801561013a5780820380516001836020036101000a031916815260200191505b509250505060206040518083038186803b15801561015757600080fd5b505af415801561016b573d6000803e3d6000fd5b505050506040513d602081101561018157600080fd5b505160028054600160a060020a031916600160a060020a039092169190911790555b50600383905581516101bc9060049060208501906101fe565b505085516101d392506005915060208701906101fe565b5050506006849055505080516101f09060079060208401906101fe565b505050505050505050610299565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061023f57805160ff191683800117855561026c565b8280016001018555821561026c579182015b8281111561026c578251825591602001919060010190610251565b5061027892915061027c565b5090565b61029691905b808211156102785760008155600101610282565b90565b61068d806102a86000396000f3006080604052600436106100ae5763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166317a5410b81146100b35780632f64d386146100e457806341c0e1b51461016e57806352effe11146101855780638da5cb5b146101a657806393f50206146101bb578063a7ed582a146101e2578063a9881c37146101f7578063b80777ea1461020c578063e015237414610221578063f634541414610236575b600080fd5b3480156100bf57600080fd5b506100c861028f565b60408051600160a060020a039092168252519081900360200190f35b3480156100f057600080fd5b506100f961029e565b6040805160208082528351818301528351919283929083019185019080838360005b8381101561013357818101518382015260200161011b565b50505050905090810190601f1680156101605780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b34801561017a57600080fd5b5061018361032c565b005b34801561019157600080fd5b50610183600160a060020a0360043516610355565b3480156101b257600080fd5b506100c86103b4565b3480156101c757600080fd5b506101d06103c3565b60408051918252519081900360200190f35b3480156101ee57600080fd5b506100f96103c9565b34801561020357600080fd5b506100f9610424565b34801561021857600080fd5b506101d061047f565b34801561022d57600080fd5b506101d0610485565b34801561024257600080fd5b506040805160206004803580820135601f810184900484028501840190955284845261018394369492936024939284019190819084018382808284375094975061048b9650505050505050565b600254600160a060020a031681565b6005805460408051602060026001851615610100026000190190941693909304601f810184900484028201840190925281815292918301828280156103245780601f106102f957610100808354040283529160200191610324565b820191906000526020600020905b81548152906001019060200180831161030757829003601f168201915b505050505081565b60015433600160a060020a0390811691161461034757600080fd5b600154600160a060020a0316ff5b60015433600160a060020a0390811691161461037057600080fd5b600160a060020a038116151561038557600080fd5b6001805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0392909216919091179055565b600154600160a060020a031681565b60035481565b6004805460408051602060026001851615610100026000190190941693909304601f810184900484028201840190925281815292918301828280156103245780601f106102f957610100808354040283529160200191610324565b6007805460408051602060026001851615610100026000190190941693909304601f810184900484028201840190925281815292918301828280156103245780601f106102f957610100808354040283529160200191610324565b60005481565b60065481565b60015460009033600160a060020a039081169116146104a957600080fd5b506002546040517f52810427000000000000000000000000000000000000000000000000000000008152602060048201818152845160248401528451600160a060020a039094169373__IbaseLib______________________________9363528104279387939283926044019185019080838360005b8381101561053757818101518382015260200161051f565b50505050905090810190601f1680156105645780820380516001836020036101000a031916815260200191505b509250505060206040518083038186803b15801561058157600080fd5b505af4158015610595573d6000803e3d6000fd5b505050506040513d60208110156105ab57600080fd5b50516002805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0392831617905581161561065d57600254604080517f0900f010000000000000000000000000000000000000000000000000000000008152600160a060020a039283166004820152905191831691630900f0109160248082019260009290919082900301818387803b15801561064457600080fd5b505af1158015610658573d6000803e3d6000fd5b505050505b50505600a165627a7a723058209a70791e3534c0cf3027e2f1f29d8cf0a158daf06deeb05ff952ab578a8124cc0029",
+  "deployedBytecode": "0x6080604052600436106100ae5763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166317a5410b81146100b35780632f64d386146100e457806341c0e1b51461016e57806352effe11146101855780638da5cb5b146101a657806393f50206146101bb578063a7ed582a146101e2578063a9881c37146101f7578063b80777ea1461020c578063e015237414610221578063f634541414610236575b600080fd5b3480156100bf57600080fd5b506100c861028f565b60408051600160a060020a039092168252519081900360200190f35b3480156100f057600080fd5b506100f961029e565b6040805160208082528351818301528351919283929083019185019080838360005b8381101561013357818101518382015260200161011b565b50505050905090810190601f1680156101605780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b34801561017a57600080fd5b5061018361032c565b005b34801561019157600080fd5b50610183600160a060020a0360043516610355565b3480156101b257600080fd5b506100c86103b4565b3480156101c757600080fd5b506101d06103c3565b60408051918252519081900360200190f35b3480156101ee57600080fd5b506100f96103c9565b34801561020357600080fd5b506100f9610424565b34801561021857600080fd5b506101d061047f565b34801561022d57600080fd5b506101d0610485565b34801561024257600080fd5b506040805160206004803580820135601f810184900484028501840190955284845261018394369492936024939284019190819084018382808284375094975061048b9650505050505050565b600254600160a060020a031681565b6005805460408051602060026001851615610100026000190190941693909304601f810184900484028201840190925281815292918301828280156103245780601f106102f957610100808354040283529160200191610324565b820191906000526020600020905b81548152906001019060200180831161030757829003601f168201915b505050505081565b60015433600160a060020a0390811691161461034757600080fd5b600154600160a060020a0316ff5b60015433600160a060020a0390811691161461037057600080fd5b600160a060020a038116151561038557600080fd5b6001805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0392909216919091179055565b600154600160a060020a031681565b60035481565b6004805460408051602060026001851615610100026000190190941693909304601f810184900484028201840190925281815292918301828280156103245780601f106102f957610100808354040283529160200191610324565b6007805460408051602060026001851615610100026000190190941693909304601f810184900484028201840190925281815292918301828280156103245780601f106102f957610100808354040283529160200191610324565b60005481565b60065481565b60015460009033600160a060020a039081169116146104a957600080fd5b506002546040517f52810427000000000000000000000000000000000000000000000000000000008152602060048201818152845160248401528451600160a060020a039094169373__IbaseLib______________________________9363528104279387939283926044019185019080838360005b8381101561053757818101518382015260200161051f565b50505050905090810190601f1680156105645780820380516001836020036101000a031916815260200191505b509250505060206040518083038186803b15801561058157600080fd5b505af4158015610595573d6000803e3d6000fd5b505050506040513d60208110156105ab57600080fd5b50516002805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0392831617905581161561065d57600254604080517f0900f010000000000000000000000000000000000000000000000000000000008152600160a060020a039283166004820152905191831691630900f0109160248082019260009290919082900301818387803b15801561064457600080fd5b505af1158015610658573d6000803e3d6000fd5b505050505b50505600a165627a7a723058209a70791e3534c0cf3027e2f1f29d8cf0a158daf06deeb05ff952ab578a8124cc0029",
+  "sourceMap": "246:387:7:-;;;330:301;8:9:-1;5:2;;;30:1;27;20:12;5:2;330:301:7;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;467:3:18;455:9;:15;;;324:5:17;:14;;-1:-1:-1;;;;;;324:14:17;332:10:0;-1:-1:-1;;;;;324:14:17;;;;330:301:7;;;439:16:0;;330:301:7;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;439:20:0;435:115;;;495:43;;;;;;;;;;;;;;;;;;;;:8;;:32;;528:9;;495:43;;;;;;;;;;;;;8:100:-1;33:3;30:1;27:10;8:100;;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;;12:14;495:43:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;495:43:0;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;495:43:0;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;495:43:0;475:8;:64;;-1:-1:-1;;;;;;475:64:0;-1:-1:-1;;;;;475:64:0;;;;;;;;;435:115;-1:-1:-1;357:6:3;:16;;;383:32;;;;:14;;:32;;;;;:::i;:::-;-1:-1:-1;;389:12:6;;;;-1:-1:-1;389:4:6;;-1:-1:-1;389:12:6;;;;;:::i;:::-;-1:-1:-1;;;297:12:5;:28;;;-1:-1:-1;;335:44:5;;;;:20;;:44;;;;;:::i;:::-;;215:171;;330:301:7;;;;;;246:387;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;246:387:7;;;-1:-1:-1;246:387:7;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;",
+  "deployedSourceMap": "246:387:7:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;358:24:0;;8:9:-1;5:2;;;30:1;27;20:12;5:2;358:24:0;;;;;;;;-1:-1:-1;;;;;358:24:0;;;;;;;;;;;;;;215:18:6;;8:9:-1;5:2;;;30:1;27;20:12;5:2;215:18:6;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:100:-1;33:3;30:1;27:10;8:100;;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;;12:14;215:18:6;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;232:69:16;;8:9:-1;5:2;;;30:1;27;20:12;5:2;232:69:16;;;;;;674:132:17;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;674:132:17;-1:-1:-1;;;;;674:132:17;;;;;252:20;;8:9:-1;5:2;;;30:1;27;20:12;5:2;252:20:17;;;;191:21:3;;8:9:-1;5:2;;;30:1;27;20:12;5:2;191:21:3;;;;;;;;;;;;;;;;;;;;218:28;;8:9:-1;5:2;;;30:1;27;20:12;5:2;218:28:3;;;;174:34:5;;8:9:-1;5:2;;;30:1;27;20:12;5:2;174:34:5;;;;357:21:18;;8:9:-1;5:2;;;30:1;27;20:12;5:2;357:21:18;;;;141:27:5;;8:9:-1;5:2;;;30:1;27;20:12;5:2;141:27:5;;;;649:266:0;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;649:266:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;649:266:0;;-1:-1:-1;649:266:0;;-1:-1:-1;;;;;;;649:266:0;358:24;;;-1:-1:-1;;;;;358:24:0;;:::o;215:18:6:-;;;;;;;;;;;;;;;-1:-1:-1;;215:18:6;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;232:69:16:-;543:5:17;;529:10;-1:-1:-1;;;;;529:19:17;;;543:5;;529:19;521:28;;;;;;288:5:16;;-1:-1:-1;;;;;288:5:16;275:19;674:132:17;543:5;;529:10;-1:-1:-1;;;;;529:19:17;;;543:5;;529:19;521:28;;;;;;-1:-1:-1;;;;;754:20:17;;;;746:29;;;;;;785:5;:14;;-1:-1:-1;;785:14:17;-1:-1:-1;;;;;785:14:17;;;;;;;;;;674:132::o;252:20::-;;;-1:-1:-1;;;;;252:20:17;;:::o;191:21:3:-;;;;:::o;218:28::-;;;;;;;;;;;;;;;-1:-1:-1;;218:28:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;174:34:5;;;;;;;;;;;;;;;-1:-1:-1;;174:34:5;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;357:21:18;;;;:::o;141:27:5:-;;;;:::o;649:266:0:-;543:5:17;;718:17:0;;529:10:17;-1:-1:-1;;;;;529:19:17;;;543:5;;529:19;521:28;;;;;;-1:-1:-1;738:8:0;;776:43;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;738:8:0;;;;776;;:32;;809:9;;776:43;;;;;;;;;;;;738:8;8:100:-1;33:3;30:1;27:10;8:100;;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;;12:14;776:43:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;776:43:0;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;776:43:0;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;776:43:0;756:8;:64;;-1:-1:-1;;756:64:0;-1:-1:-1;;;;;756:64:0;;;;;;834:22;;;831:78;;889:8;;872:26;;;;;;-1:-1:-1;;;;;889:8:0;;;872:26;;;;;;:16;;;;;;:26;;;;;889:8;;872:26;;;;;;;;889:8;872:16;:26;;;5:2:-1;;;;30:1;27;20:12;5:2;872:26:0;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;872:26:0;;;;831:78;649:266;;:::o",
+  "source": "pragma solidity ^0.4.17;\n\nimport \"./WordAndDesignMark.sol\";\nimport \"./InitialProof.sol\";\n\n/**\n * Base contract for representing a WordAndDesignMark chain asset with the initial proof of use at creation.\n *\n * Copyright (c) 2018 Cognate, Inc.\n */\ncontract WordAndDesignMarkWithInitialProof is WordAndDesignMark, InitialProof {\n    constructor(\n      string _word,\n      bytes32 _design,\n      string _designLocation,\n      bytes32 _initialProof,\n      string _initialProofLocation,\n      bytes _timeline\n    ) WordAndDesignMark(_word, _design, _designLocation, _timeline) InitialProof(_initialProof, _initialProofLocation) public {}\n}",
+  "sourcePath": "/Users/cmurdock/Cog/cog-asset/contracts/asset/Trademarks/WordAndDesignMarkWithInitialProof.sol",
+  "ast": {
+    "absolutePath": "/Users/cmurdock/Cog/cog-asset/contracts/asset/Trademarks/WordAndDesignMarkWithInitialProof.sol",
+    "exportedSymbols": {
+      "WordAndDesignMarkWithInitialProof": [
+        276
+      ]
+    },
+    "id": 277,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 243,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".17"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:7"
+      },
+      {
+        "absolutePath": "/Users/cmurdock/Cog/cog-asset/contracts/asset/Trademarks/WordAndDesignMark.sol",
+        "file": "./WordAndDesignMark.sol",
+        "id": 244,
+        "nodeType": "ImportDirective",
+        "scope": 277,
+        "sourceUnit": 242,
+        "src": "26:33:7",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/cmurdock/Cog/cog-asset/contracts/asset/Trademarks/InitialProof.sol",
+        "file": "./InitialProof.sol",
+        "id": 245,
+        "nodeType": "ImportDirective",
+        "scope": 277,
+        "sourceUnit": 213,
+        "src": "60:28:7",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 246,
+              "name": "WordAndDesignMark",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 241,
+              "src": "292:17:7",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_WordAndDesignMark_$241",
+                "typeString": "contract WordAndDesignMark"
+              }
+            },
+            "id": 247,
+            "nodeType": "InheritanceSpecifier",
+            "src": "292:17:7"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 248,
+              "name": "InitialProof",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 212,
+              "src": "311:12:7",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_InitialProof_$212",
+                "typeString": "contract InitialProof"
+              }
+            },
+            "id": 249,
+            "nodeType": "InheritanceSpecifier",
+            "src": "311:12:7"
+          }
+        ],
+        "contractDependencies": [
+          72,
+          157,
+          212,
+          241,
+          532,
+          578,
+          591
+        ],
+        "contractKind": "contract",
+        "documentation": "Base contract for representing a WordAndDesignMark chain asset with the initial proof of use at creation.\n * Copyright (c) 2018 Cognate, Inc.",
+        "fullyImplemented": true,
+        "id": 276,
+        "linearizedBaseContracts": [
+          276,
+          212,
+          241,
+          157,
+          72,
+          532,
+          578,
+          591
+        ],
+        "name": "WordAndDesignMarkWithInitialProof",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 274,
+              "nodeType": "Block",
+              "src": "629:2:7",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 275,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 264,
+                    "name": "_word",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 251,
+                    "src": "527:5:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_memory_ptr",
+                      "typeString": "string memory"
+                    }
+                  },
+                  {
+                    "argumentTypes": null,
+                    "id": 265,
+                    "name": "_design",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 253,
+                    "src": "534:7:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  {
+                    "argumentTypes": null,
+                    "id": 266,
+                    "name": "_designLocation",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 255,
+                    "src": "543:15:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_memory_ptr",
+                      "typeString": "string memory"
+                    }
+                  },
+                  {
+                    "argumentTypes": null,
+                    "id": 267,
+                    "name": "_timeline",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 261,
+                    "src": "560:9:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_memory_ptr",
+                      "typeString": "bytes memory"
+                    }
+                  }
+                ],
+                "id": 268,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 263,
+                  "name": "WordAndDesignMark",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 241,
+                  "src": "509:17:7",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_type$_t_contract$_WordAndDesignMark_$241_$",
+                    "typeString": "type(contract WordAndDesignMark)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "509:61:7"
+              },
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 270,
+                    "name": "_initialProof",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 257,
+                    "src": "584:13:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  {
+                    "argumentTypes": null,
+                    "id": 271,
+                    "name": "_initialProofLocation",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 259,
+                    "src": "599:21:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_memory_ptr",
+                      "typeString": "string memory"
+                    }
+                  }
+                ],
+                "id": 272,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 269,
+                  "name": "InitialProof",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 212,
+                  "src": "571:12:7",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_type$_t_contract$_InitialProof_$212_$",
+                    "typeString": "type(contract InitialProof)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "571:50:7"
+              }
+            ],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 262,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 251,
+                  "name": "_word",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 275,
+                  "src": "349:12:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 250,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "349:6:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 253,
+                  "name": "_design",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 275,
+                  "src": "369:15:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 252,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "369:7:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 255,
+                  "name": "_designLocation",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 275,
+                  "src": "392:22:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 254,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "392:6:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 257,
+                  "name": "_initialProof",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 275,
+                  "src": "422:21:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 256,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "422:7:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 259,
+                  "name": "_initialProofLocation",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 275,
+                  "src": "451:28:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 258,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "451:6:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 261,
+                  "name": "_timeline",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 275,
+                  "src": "487:15:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 260,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "487:5:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "341:167:7"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 273,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "629:0:7"
+            },
+            "scope": 276,
+            "src": "330:301:7",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 277,
+        "src": "246:387:7"
+      }
+    ],
+    "src": "0:633:7"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/cmurdock/Cog/cog-asset/contracts/asset/Trademarks/WordAndDesignMarkWithInitialProof.sol",
+    "exportedSymbols": {
+      "WordAndDesignMarkWithInitialProof": [
+        276
+      ]
+    },
+    "id": 277,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 243,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".17"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:7"
+      },
+      {
+        "absolutePath": "/Users/cmurdock/Cog/cog-asset/contracts/asset/Trademarks/WordAndDesignMark.sol",
+        "file": "./WordAndDesignMark.sol",
+        "id": 244,
+        "nodeType": "ImportDirective",
+        "scope": 277,
+        "sourceUnit": 242,
+        "src": "26:33:7",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/cmurdock/Cog/cog-asset/contracts/asset/Trademarks/InitialProof.sol",
+        "file": "./InitialProof.sol",
+        "id": 245,
+        "nodeType": "ImportDirective",
+        "scope": 277,
+        "sourceUnit": 213,
+        "src": "60:28:7",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 246,
+              "name": "WordAndDesignMark",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 241,
+              "src": "292:17:7",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_WordAndDesignMark_$241",
+                "typeString": "contract WordAndDesignMark"
+              }
+            },
+            "id": 247,
+            "nodeType": "InheritanceSpecifier",
+            "src": "292:17:7"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 248,
+              "name": "InitialProof",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 212,
+              "src": "311:12:7",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_InitialProof_$212",
+                "typeString": "contract InitialProof"
+              }
+            },
+            "id": 249,
+            "nodeType": "InheritanceSpecifier",
+            "src": "311:12:7"
+          }
+        ],
+        "contractDependencies": [
+          72,
+          157,
+          212,
+          241,
+          532,
+          578,
+          591
+        ],
+        "contractKind": "contract",
+        "documentation": "Base contract for representing a WordAndDesignMark chain asset with the initial proof of use at creation.\n * Copyright (c) 2018 Cognate, Inc.",
+        "fullyImplemented": true,
+        "id": 276,
+        "linearizedBaseContracts": [
+          276,
+          212,
+          241,
+          157,
+          72,
+          532,
+          578,
+          591
+        ],
+        "name": "WordAndDesignMarkWithInitialProof",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 274,
+              "nodeType": "Block",
+              "src": "629:2:7",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 275,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 264,
+                    "name": "_word",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 251,
+                    "src": "527:5:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_memory_ptr",
+                      "typeString": "string memory"
+                    }
+                  },
+                  {
+                    "argumentTypes": null,
+                    "id": 265,
+                    "name": "_design",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 253,
+                    "src": "534:7:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  {
+                    "argumentTypes": null,
+                    "id": 266,
+                    "name": "_designLocation",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 255,
+                    "src": "543:15:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_memory_ptr",
+                      "typeString": "string memory"
+                    }
+                  },
+                  {
+                    "argumentTypes": null,
+                    "id": 267,
+                    "name": "_timeline",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 261,
+                    "src": "560:9:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_memory_ptr",
+                      "typeString": "bytes memory"
+                    }
+                  }
+                ],
+                "id": 268,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 263,
+                  "name": "WordAndDesignMark",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 241,
+                  "src": "509:17:7",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_type$_t_contract$_WordAndDesignMark_$241_$",
+                    "typeString": "type(contract WordAndDesignMark)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "509:61:7"
+              },
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 270,
+                    "name": "_initialProof",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 257,
+                    "src": "584:13:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  {
+                    "argumentTypes": null,
+                    "id": 271,
+                    "name": "_initialProofLocation",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 259,
+                    "src": "599:21:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_memory_ptr",
+                      "typeString": "string memory"
+                    }
+                  }
+                ],
+                "id": 272,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 269,
+                  "name": "InitialProof",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 212,
+                  "src": "571:12:7",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_type$_t_contract$_InitialProof_$212_$",
+                    "typeString": "type(contract InitialProof)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "571:50:7"
+              }
+            ],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 262,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 251,
+                  "name": "_word",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 275,
+                  "src": "349:12:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 250,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "349:6:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 253,
+                  "name": "_design",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 275,
+                  "src": "369:15:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 252,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "369:7:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 255,
+                  "name": "_designLocation",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 275,
+                  "src": "392:22:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 254,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "392:6:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 257,
+                  "name": "_initialProof",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 275,
+                  "src": "422:21:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 256,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "422:7:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 259,
+                  "name": "_initialProofLocation",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 275,
+                  "src": "451:28:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 258,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "451:6:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 261,
+                  "name": "_timeline",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 275,
+                  "src": "487:15:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 260,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "487:5:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "341:167:7"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 273,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "629:0:7"
+            },
+            "scope": 276,
+            "src": "330:301:7",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 277,
+        "src": "246:387:7"
+      }
+    ],
+    "src": "0:633:7"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.23+commit.124ca40d.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.0",
+  "updatedAt": "2018-05-21T16:36:25.360Z"
+}
