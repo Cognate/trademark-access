@@ -2,12 +2,29 @@
 
 <html>
   <head>
-    <title>Cognate TM Access</title>
+    <title>Cognate Legacy TM Record Access</title>
   </head>
   <body>
-    <h1>Testing GH Pages</h1>
-    <button id="demo-btn">Click Me</button>
+    <h1>Cognate Legacy Trademark Record Access</h1>
 
-    <script src="/trademark-access/dist/main.js"></script>
+    <div class="listing-show">
+      <div class="buttons">
+        <div class="address-input form-inline">
+          <input id="address" class="form-control" type="text" size="50" />
+          <button id="submit-address" class="btn btn-primary">Retrieve Data for Word Mark</button>
+        </div>
+        <div class="design-input form-inline">
+          <input id="design-url" class="form-control" type="text" size="100" />
+          <button id="submit-design-url" class="btn btn-primary">Retrieve Data for Design Mark</button>
+        </div>
+      </div>
+
+      <div class="timeline">
+        <div class="panel-content timeline-panel">
+          <div id="timeline-content">Results will appear here</div>
+        </div>
+      </div>
+    </div>
+    <script src="/trademark-access/dist/bundle.js"></script>
   </body>
 </html>

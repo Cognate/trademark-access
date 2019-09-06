@@ -1,0 +1,40 @@
+{
+  "address": "0x032b847a8ced9ccd63c02853ebb4ac6588156eaf",
+  "timeline": {
+    "address": "0x3304e5d6a47678b29d2ce34a863b11b4c9ce8e55",
+    "documents": [
+      {
+        "address": "0x032b847a8ced9ccd63c02853ebb4ac6588156eaf",
+        "deprecatedLocation": "https://s3.amazonaws.com/cog-usage-documents/5234/5239",
+        "hash": "0x34684ded799294c0ded938f4ab5f0dce1faa867ed827ba37832c5fc06abf4af5",
+        "timestamp": 1536602333,
+        "type": "ProofOfUse"
+      },
+      {
+        "address": "0xce75fded98ce98fed2753cf49dad80cd32cb1838",
+        "countries": ["CA"],
+        "timestamp": 1536602464,
+        "type": "AreaOfUse"
+      },
+      {
+        "address": "0xd96e607eabb0d569989e569e6d12efedf23a3b0b",
+        "classOfGoods": 35,
+        "details": [
+          "Advertising services, namely, creating corporate and brand identity for others",
+          "Business management consulting with relation to strategy, marketing, production, personnel and retail sale matters"
+        ],
+        "timestamp": 1536602559,
+        "type": "Classification"
+      },
+      {
+        "address": "0x7b0ea23bcf259c21ed2a7fc2afee50e259f9f488",
+        "deprecatedLocation": "https://s3.amazonaws.com/cog-usage-documents/L1024571/P5382",
+        "hash": "0xe75749c987abf89b77c413151d5c27416577bb882623887ee663ad152e5dcbcf",
+        "timestamp": 1536602849,
+        "type": "ProofOfUse"
+      }
+    ]
+  },
+  "timestamp": 1536602333,
+  "word": "Nextrue"
+}

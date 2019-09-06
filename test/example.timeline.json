@@ -1,0 +1,68 @@
+[
+  {
+    "certified": false,
+    "countries": [{ "code": "US", "id": 1, "name": "United States" }],
+    "created_at": "2018-09-15T20:54:38.976Z",
+    "documentStatus": { "code": "CREATED", "id": 1 },
+    "id": 5325,
+    "listing_id": 1024571,
+    "regions": [
+      {
+        "code": 2,
+        "id": 2,
+        "states": [{ "code": "NJ", "id": 29, "name": "New Jersey" }, { "code": "NY", "id": 31, "name": "New York" }]
+      }
+    ]
+  },
+  {
+    "blockchain_address": "0x7b0ea23bcf259c21ed2a7fc2afee50e259f9f488",
+    "certified": false,
+    "created_at": "2018-09-09T10:20:23.288Z",
+    "documentStatus": { "code": "CREATED", "id": 1 },
+    "id": 5377,
+    "images": [{ "id": 5382, "url": "https://s3.amazonaws.com/cog-usage-documents/L1024571/P5382" }]
+  },
+  {
+    "blockchain_address": "0x032b847a8ced9ccd63c02853ebb4ac6588156eaf",
+    "certified": false,
+    "created_at": "2018-09-04T22:34:07.244Z",
+    "documentStatus": { "code": "CREATED", "id": 1 },
+    "id": 5234,
+    "images": [{ "id": 5239, "url": "https://s3.amazonaws.com/cog-usage-documents/5234/5239" }],
+    "proofType": { "id": 1, "label": "Image" }
+  },
+  {
+    "blockchain_address": "0xce75fded98ce98fed2753cf49dad80cd32cb1838",
+    "certified": false,
+    "countries": [{ "code": "CA", "id": 102, "name": "Canada" }],
+    "created_at": "2018-09-04T22:34:06.677Z",
+    "documentStatus": { "code": "CREATED", "id": 1 },
+    "id": 5174,
+    "listing_id": 1024571
+  },
+  {
+    "blockchain_address": "0xd96e607eabb0d569989e569e6d12efedf23a3b0b",
+    "certified": false,
+    "classification": { "class_type": "Service", "id": 35, "number": "035", "title": "Advertising and Business" },
+    "created_at": "2018-09-04T22:34:06.669Z",
+    "documentStatus": { "code": "CREATED", "id": 1 },
+    "id": 8758,
+    "identifications": [
+      {
+        "id": 28909,
+        "identification": {
+          "id": 36829,
+          "label": "Advertising services, namely, creating corporate and brand identity for others"
+        }
+      },
+      {
+        "id": 28910,
+        "identification": {
+          "id": 37678,
+          "label": "Business management consulting with relation to strategy, marketing, production, personnel and retail sale matters"
+        }
+      }
+    ],
+    "listing_id": 1024571
+  }
+]
