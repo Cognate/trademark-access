@@ -61,4 +61,4 @@ This project was tested with Node 10.
 * clone this repo
 * `npm install` - installs all the dependencies
 * `npm test` - executes the tests
-* `node src/index.js` - executes the script; arguments required
+* `node src/cli.js` - executes the script; arguments required

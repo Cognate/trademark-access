@@ -25,6 +25,7 @@
   "homepage": "https://github.com/Cognate/trademark-access#readme",
   "dependencies": {
     "bluebird": "~3.5.5",
+    "crypto": "~1.0.1",
     "jquery": "^3.4.1",
     "truffle-contract": "~3.0.8",
     "web3": "~0.20.7",
