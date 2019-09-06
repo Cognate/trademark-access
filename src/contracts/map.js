@@ -87,4 +87,15 @@ module.exports = {
     'mortal.json',
     'owned.json',
   ],
+  v1: [
+    'Amendable.json',
+    'Amendment.json',
+    'Assignment.json',
+    'CognateRegistry.json',
+    'Listing.json',
+    'mortal.json',
+    'owned.json',
+    'timeStamped.json',
+    'UsageDocument.json',
+  ],
 };

@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "access Cognate trademark data on the Ethereum network",
   "scripts": {
+    "build": "npx webpack",
     "lint": "eslint --ext .js .",
     "lint:fix": "npm run lint -- --fix",
     "test": "npm run lint && LOG_LEVEL=silent nyc mocha"

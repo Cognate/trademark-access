@@ -41,13 +41,13 @@ The raw data is constructed into several objects.
 |----------|------|----------|--------|-------------|---------|
 | address | All | yes | Ethereum | The Ethereum address of this timeline document | 0x6f448da05f23ddc79f3ff1f8f5bd7fa3528ce255 |
 | classOfGoods | Classification | yes | Ethereum | The classification code claimed | `{Integer}` |
-| company | Assignment | yes | Ethereum | The company of the claiming party. | `{String}` |
+| company | Assignment | no | Ethereum | The company of the claiming party. | `{String}` |
 | countries | AreaOfUse | yes | Ethereum | A list of countries where this trademark was claimed | `Array[{String}]` |
 | deprecatedLocation | ProofOfUse | yes | Ethereum | The original location of the proof image, which may now be gone. | `{URL}` |
 | details | Classification | yes | Ethereum | The identification claimed | `{String}` |
-| firstName | Assignment | yes | Ethereum | The first name of the claiming party. | `{String}` |
+| firstName | Assignment | no | Ethereum | The first name of the claiming party. | `{String}` |
 | hash | ProofOfUse | yes | Ethereum | A SHA-256 hash representation of the image data at the time of creation. | 0x9ba2cf7c95c37e2bb2670f7f8b213775379bd089df4ba1919164b25f14a6df30 |
-| lastName | Assignment | yes | Ethereum | The last name of the claiming party. | `{String}` |
+| lastName | Assignment | no | Ethereum | The last name of the claiming party. | `{String}` |
 | regions | AreaOfUse | no | Ethereum | A list of US states where this trademark was claimed | `Array[{String}]` |
 | timestamp | All | yes | Ethereum | The unix timestamp of this trademark in Ethereum. | 1523899114 |
 | type | all | yes | Ethereum | The type of timeline document this is | `AreaOfUse`, `Assignment`, `Classification`, `ProofOfUse` |
