@@ -1,13 +1,13 @@
 const Util = require('./util');
 
-const arguments = process.argv.slice(2);
-if (arguments.length < 1) {
+const parameters = process.argv.slice(2);
+if (parameters.length < 1) {
   usage();
-} else if (arguments[0] === 'trademark') {
-  if (arguments.length !== 2 || !Util.isAddress(arguments[1])) {
+} else if (parameters[0] === 'trademark') {
+  if (parameters.length !== 2 || !Util.isAddress(parameters[1])) {
     usage();
   }
-  getTrademark(arguments[1])
+  getTrademark(parameters[1])
     .then(results => {
       console.log(JSON.stringify(results, null, 2));
       process.exit(0);
@@ -16,8 +16,8 @@ if (arguments.length < 1) {
       console.error(`Error: ${err.message}`);
       process.exit(1);
     });
-} else if (arguments[0] === 'sha') {
-  if (arguments.length !== 2) {
+} else if (parameters[0] === 'sha') {
+  if (parameters.length !== 2) {
     usage();
   }
   // TODO: get URL and generate SHA of data
