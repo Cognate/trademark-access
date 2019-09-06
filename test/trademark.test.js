@@ -324,7 +324,7 @@ describe('Pulling Trademarks from Ethereum', () => {
         deprecatedDesignLocation: 'https://s3.amazonaws.com/cog-design-marks/1023727_design',
         design: '0x0ceb54a02272b7d30f9b6d005102b7dc2dd7887f9faf273fc6cc15439d9a979b',
         migratedHash: 'TODO',
-        migratedLocation: 'https://raw.github.com/Cognate/trademark-access/master/design_marks/1023727_design',
+        migratedLocation: 'https://cognate.github.io/trademark-access/design_marks/1023727_design',
         timeline: {
           address: '0x28e89eb6400e09e979320ed712f9e08fb2207cae',
           documents: [
@@ -578,7 +578,7 @@ describe('Pulling Trademarks from Ethereum', () => {
         deprecatedDesignLocation: 'https://s3.amazonaws.com/cog-design-marks/1021806_design',
         design: '0xf54f3b87eda462770230d060fce9b9f4876cb68fe8cd38d14c00356bcff7d690',
         migratedHash: 'TODO',
-        migratedLocation: 'https://raw.github.com/Cognate/trademark-access/master/design_marks/1021806_design',
+        migratedLocation: 'https://cognate.github.io/trademark-access/design_marks/1021806_design',
         timeline: {
           address: '0xe0679701c5c4258a4f6374acc7d384fe6b0c9308',
           documents: [

@@ -11,7 +11,7 @@ const INFO = 1;
 /** base url for the deprecated S3 bucket location */
 const s3Base = 'https://s3.amazonaws.com/cog-design-marks/';
 /** base url for the github raw location */
-const githubBase = 'https://raw.github.com/Cognate/trademark-access/master/design_marks/';
+const githubBase = 'https://cognate.github.io/trademark-access/design_marks/';
 /** url to access Ethereum */
 const ethereumUrl = 'https://mainnet.infura.io/v3/6c62a9b1a3b640d587a70b105cbc3be9';
 /** level of logging */
