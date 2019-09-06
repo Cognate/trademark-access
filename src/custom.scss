@@ -1,0 +1,347 @@
+@import 'bootstrap';
+
+// fix issue with bootstrap rows
+.row {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+$accent-gray: #3b3b3b;
+$bg-fill: #f1f1f4;
+$bg-content: #fafafa;
+$text-color: #000000;
+$text-color-inv: #f1f1f3;
+
+.beta-logo {
+  position: absolute;
+  top: 58px;
+  left: 0;
+  max-height: 80px;
+  max-width: 80px;
+  @media (max-width: 768px) {
+    max-height: 50px;
+    max-width: 50px;
+  }
+}
+
+#features {
+  background-color: #ffffff;
+  padding: 50px 0;
+
+  h1 {
+    padding-top: 20px;
+    font-size: 2em;
+  }
+
+  p {
+    font-size: 1.25em;
+  }
+}
+
+#callToAction {
+  background-color: #05406b;
+  padding-top: 20px;
+  font-size: ($font-size-base * 1.2);
+  color: #eeeeee;
+
+  .call-option {
+    text-align: center;
+    margin-bottom: 30px;
+
+    .btn-block {
+      width: 80%;
+      margin: 10px auto;
+      font-size: 2em;
+
+      @media (max-width: 768px) {
+        width: 100%;
+        font-size: 1.25em;
+      }
+    }
+  }
+
+  .row {
+    padding: 40px;
+  }
+
+  h1 {
+    margin-top: 20px;
+    font-size: 2.3em;
+  }
+}
+
+.home-logo {
+  max-height: 250px;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+.img-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#content,
+#callToAction {
+  padding-bottom: 30px;
+}
+
+ol ol {
+  list-style-type: lower-alpha;
+}
+
+ol ol ol {
+  list-style-type: decimal;
+}
+
+ol li {
+  padding-bottom: 10px;
+}
+
+.name_list thead {
+  font-weight: bold;
+}
+
+.alert-notice {
+  @extend .alert-success;
+}
+
+.title-input {
+  margin-bottom: 20px;
+}
+
+/* Blog Styles */
+
+.blog_post,
+.new_blog_comment {
+  max-width: 45.5em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.8em;
+}
+
+#business-info {
+  padding-bottom: 15px;
+  .row {
+    line-height: ($line-height-base * 1.5);
+    font-size: ($font-size-base * 1.2);
+  }
+}
+
+#search_bar {
+  float: left;
+}
+
+#nameable-info {
+  padding-bottom: 30px;
+}
+
+.status-icon {
+  padding-top: 7px;
+}
+
+.menu-super sup {
+  top: -0.8em;
+  font-size: 60%;
+}
+
+/* debug section */
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}
+
+#debug {
+  padding-bottom: 40px;
+}
+
+.tooltip {
+  width: 210px;
+}
+
+.tooltip-inner {
+  text-align: left !important;
+}
+
+.bootstrap-select {
+  width: 170px !important;
+}
+
+.field-classifications {
+  width: 100% !important;
+}
+
+.field-entity_type {
+  width: 100% !important;
+}
+
+.field-state {
+  width: 65px !important;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+.btn-group.display-only label.btn {
+  pointer-events: none;
+  cursor: not-allowed;
+}
+.btn-group.display-only label.btn.active {
+  opacity: 1;
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+  webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+
+.btn-success,
+.btn-primary,
+.btn-danger,
+.btn-reject,
+.btn-delete {
+  border: none;
+  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.3);
+
+  transition: background-color 0.1s ease, color 0.1s ease;
+}
+.btn-success {
+  background-color: $nephritis;
+  color: $brand-accent;
+
+  &:active {
+    background-color: $nephritis;
+    color: $brand-accent;
+  }
+
+  &:hover:active {
+    background-color: darken($nephritis, 10%);
+    color: $brand-accent;
+  }
+
+  &:hover {
+    background-color: $brand-accent;
+    color: $nephritis;
+  }
+
+  &.inverse {
+    background-color: $brand-accent;
+    color: $nephritis;
+
+    &:active {
+      background-color: $brand-accent;
+      color: $nephritis;
+    }
+
+    &:hover:active {
+      background-color: darken($brand-accent, 15%);
+      color: $nephritis;
+    }
+
+    &:hover {
+      background-color: $nephritis;
+      color: $brand-accent;
+    }
+  }
+}
+.btn-reject,
+.btn-delete,
+.btn-danger {
+  background-color: $pomegranate;
+  color: $brand-accent;
+
+  &:active {
+    background-color: $pomegranate;
+    color: $brand-accent;
+  }
+
+  &:hover:active {
+    background-color: darken($pomegranate, 10%);
+    color: $brand-accent;
+  }
+
+  &:hover {
+    background-color: $brand-accent;
+    color: $pomegranate;
+  }
+
+  &.inverse {
+    background-color: $brand-accent;
+    color: $pomegranate;
+
+    &:active {
+      background-color: $brand-accent;
+      color: $pomegranate;
+    }
+
+    &:hover:active {
+      background-color: darken($brand-accent, 15%);
+      color: $pomegranate;
+    }
+
+    &:hover {
+      background-color: $pomegranate;
+      color: $brand-accent;
+    }
+  }
+}
+.btn-primary {
+  background-color: $bs-blue;
+  color: $brand-accent;
+
+  &:active {
+    background-color: $bs-blue;
+    color: $brand-accent;
+  }
+
+  &:hover:active {
+    background-color: darken($bs-blue, 14%);
+    color: $brand-accent;
+  }
+
+  &:hover {
+    background-color: $brand-accent;
+    color: $bs-blue;
+  }
+
+  &.inverse {
+    background-color: $brand-accent;
+    color: $bs-blue;
+
+    &:active {
+      background-color: $brand-accent;
+      color: $bs-blue;
+    }
+
+    &:hover:active {
+      background-color: darken($brand-accent, 15%);
+      color: $bs-blue;
+    }
+
+    &:hover {
+      background-color: $bs-blue;
+      color: $brand-accent;
+    }
+  }
+}
+.btn-slim {
+  padding: 3px 6px !important;
+}
+
+.danger {
+  color: #c0392b;
+}
+
+.canceltransition {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  -ms-transition: none !important;
+  transition: none !important;
+}

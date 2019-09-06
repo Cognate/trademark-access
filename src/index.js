@@ -1,11 +1,17 @@
+import "./listings.scss";
+
+// es-lint-ignore
 const $ = require('jquery');
 const Trademark = require('./trademark');
-
+const BuildTimeline = require('./BuildTimeline');
 $().ready(function() {
-  console.log('jquery ready');
-  $('#demo-btn').on('click', async function() {
-    console.log('clicked');
-    const results = await Trademark.getTrademark('0xa2a423a147ef2fe82f4613227f8c576fe635ec9b');
-    console.log(JSON.stringify(results, null, 2));
+  $('#submit-address').on('click', async function() {
+    $('#timeline-content').html('Loading...'); // TODO: make this a spinner
+    const address = $('#address').val();
+    const results = await Trademark.getTrademark(address);
+    $('#timeline-content').html(`<div>${results.word}</div>`);
+    if (results.timeline && results.timeline.documents) {
+      BuildTimeline.buildTimeline($('#timeline-content'), results.timeline.documents);
+    }
   });
 });
