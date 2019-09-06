@@ -43,6 +43,7 @@
     "mocha": "~6.2.0",
     "nyc": "~14.1.1",
     "prettier": "~1.18.2",
+    "ethereumjs-wallet": "~0.6.3",
     "webpack": "^4.39.3",
     "webpack-cli": "^3.3.7"
   }
