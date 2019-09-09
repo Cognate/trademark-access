@@ -906,7 +906,7 @@ describe('Pulling Trademarks from Ethereum', () => {
 
     it('Design');
 
-    it.only('Word and Design', async () => {
+    it('Word and Design', async () => {
       // listing id 1018479
       await assertTrademark({
         address: '0x511addf7dcdc2e27fb2b4be231b6ee06de278887',

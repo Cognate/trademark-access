@@ -16,7 +16,7 @@ const githubBase = 'https://cognate.github.io/trademark-access/design_marks/';
 /** url to access Ethereum */
 const ethereumUrl = 'https://mainnet.infura.io/v3/6c62a9b1a3b640d587a70b105cbc3be9';
 /** level of logging */
-const LEVEL = DEBUG;
+const LEVEL = INFO;
 
 function log(level, text) {
   if (level >= LEVEL) {
@@ -278,8 +278,8 @@ async function processTrademark(trademark, address, context) {
         deprecatedLocation: await trademark.initialProofLocation(),
         type: 'ProofOfUse',
       };
-      if (timestamp.greaterThan(0)) {
-        proof.timestamp = timestamp.toNumber();
+      if (result.timestamp) {
+        proof.timestamp = result.timestamp;
       }
       // push to beginning of the array
       result.timeline.documents.unshift(sort(proof));
