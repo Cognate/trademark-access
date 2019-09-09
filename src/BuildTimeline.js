@@ -2,9 +2,9 @@ const moment = require('moment');
 const templateService = require('./SimpleTemplateService');
 const $ = require('jquery');
 const Handlebars = require('handlebars');
+const cogMap = require('./cogMap');
 
 function buildTimeline(element, entries) {
-  clearEntries(element);
   entries = groupEntriesByDate(entries);
   for (var i = 0; i < entries.length; i++) {
     createEntry(element, entries[i]);
@@ -20,12 +20,16 @@ function groupEntriesByDate(entries) {
     if (dates[date] === undefined) {
       dates[date] = {
         date: date,
+        assignment: [],
         classification: [],
         area_of_use: [],
         proof_of_use: [],
       };
     }
     switch (entry.type) {
+      case 'Assignment':
+        dates[date].assignment.push(entry);
+        break;
       case 'AreaOfUse':
         dates[date].area_of_use.push(entry);
         break;
@@ -55,6 +59,9 @@ function createEntry(element, entry) {
       formattedDate: moment(entry.date).format('MM/DD/YYYY'),
     },
     function(entryDiv) {
+      for (var i = 0; i < entry.assignment.length; i++) {
+        populateEntry(entryDiv, entry.assignment[i], 'Assignment');
+      }
       for (var i = 0; i < entry.classification.length; i++) {
         populateEntry(entryDiv, entry.classification[i], 'Classification');
       }
@@ -70,37 +77,50 @@ function createEntry(element, entry) {
 
 function populateEntry(entryDiv, entryPart, contentType) {
   var entryContent = '';
-  if (contentType === 'Proof of use') {
+  if (contentType === 'Assignment') {
+    var assignmentTable = {};
+    if (entryPart.companyName) {
+      assignmentTable.CompanyName = entryPart.companyName;
+    }
+    if (entryPart.firstName) {
+      assignmentTable.FirstName = entryPart.firstName;
+    }
+    if (entryPart.lastName) {
+      assignmentTable.LastName = entryPart.lastName;
+    }
+    var table = templateService.getTemplate('timelineEntryDataTable', { tableData: assignmentTable });
+
+    appendContentToEntry(entryDiv, {
+      contentType: contentType,
+      entryContent: new Handlebars.SafeString(table),
+    });
+  } else if (contentType === 'Proof of use') {
     entryContent += `<div class="proof-hash">${entryPart.hash}</div>`;
     appendContentToEntry(entryDiv, {
       contentType: contentType,
       entryContent: new Handlebars.SafeString(entryContent),
     });
   } else if (contentType === 'Classification') {
+    var cogData = {};
+    cogData.Classification = `${entryPart.classOfGoods} | ${cogMap[entryPart.classOfGoods]}`;
     if (entryPart.details) {
-      var table = templateService.getTemplate('timelineEntryDataTable', {
-        tableData: {
-          Classification: `${entryPart.classOfGoods} | TODO title?`,
-          Identifications: new Handlebars.SafeString(entryPart.details.join('<br>')),
-        },
-      });
-
-      appendContentToEntry(entryDiv, {
-        contentType: contentType,
-        entryContent: new Handlebars.SafeString(table),
-      });
+      cogData.Identifications = new Handlebars.SafeString(entryPart.details.join('<br>'));
     }
+    var table = templateService.getTemplate('timelineEntryDataTable', { tableData: cogData });
+
+    appendContentToEntry(entryDiv, {
+      contentType: contentType,
+      entryContent: new Handlebars.SafeString(table),
+    });
   } else if (contentType === 'Area of use') {
-    var tableData = {};
+    var aouTable = {};
     if (entryPart.regions) {
-      tableData['States'] = new Handlebars.SafeString(entryPart.regions.join(', '));
+      aouTable.States = entryPart.regions.join(', ');
     }
     if (entryPart.countries) {
-      tableData['Countries'] = entryPart.countries.join(', ');
+      aouTable.Countries = entryPart.countries.join(', ');
     }
-    var table = templateService.getTemplate('timelineEntryDataTable', {
-      tableData: tableData,
-    });
+    var table = templateService.getTemplate('timelineEntryDataTable', { tableData: aouTable });
 
     appendContentToEntry(entryDiv, {
       contentType: contentType,
@@ -119,10 +139,6 @@ function appendEntry(element, entryData, callback) {
 function appendContentToEntry(entryDiv, content) {
   var template = templateService.getTemplate('timelineEntryContent', content);
   entryDiv.find('.content').append(template);
-}
-
-function clearEntries(element) {
-  // element.remove();
 }
 
 module.exports.buildTimeline = buildTimeline;

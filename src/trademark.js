@@ -387,7 +387,7 @@ async function addNext(document, result, context) {
   }
 }
 
-async function getTrademark(address) {
+async function getTrademarkForAddress(address) {
   log(DEBUG, `getting trademark at: ${address}`);
   return process(address);
 }
@@ -402,6 +402,6 @@ function sort(unordered) {
   return ordered;
 }
 
-module.exports.getTrademark = getTrademark;
+module.exports.getTrademarkForAddress = getTrademarkForAddress;
 module.exports.githubBase = githubBase;
 module.exports.s3Base = s3Base;
