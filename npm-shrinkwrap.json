@@ -337,6 +337,12 @@
       "integrity": "sha1-hLaOpEs3PE+GhgI6VR9hoht8Sk8=",
       "dev": true
     },
+    "aes-js": {
+      "version": "3.1.2",
+      "resolved": "https://artifactory.secureserver.net/artifactory/api/npm/node-virt/aes-js/-/aes-js-3.1.2.tgz",
+      "integrity": "sha1-25qr3oXVyqu/wNTypERpYPYnFGo=",
+      "dev": true
+    },
     "ajv": {
       "version": "6.10.2",
       "resolved": "https://artifactory.secureserver.net/artifactory/api/npm/node-virt/ajv/-/ajv-6.10.2.tgz",
@@ -1303,6 +1309,15 @@
         }
       }
     },
+    "base-x": {
+      "version": "3.0.7",
+      "resolved": "https://artifactory.secureserver.net/artifactory/api/npm/node-virt/base-x/-/base-x-3.0.7.tgz",
+      "integrity": "sha1-HFp/r+j2a0EUBj6NoQJ5nU58QI8=",
+      "dev": true,
+      "requires": {
+        "safe-buffer": "^5.0.1"
+      }
+    },
     "base64-js": {
       "version": "1.3.1",
       "resolved": "https://artifactory.secureserver.net/artifactory/api/npm/node-virt/base64-js/-/base64-js-1.3.1.tgz",
@@ -1485,6 +1500,26 @@
       "requires": {
         "caniuse-lite": "^1.0.30000844",
         "electron-to-chromium": "^1.3.47"
+      }
+    },
+    "bs58": {
+      "version": "4.0.1",
+      "resolved": "https://artifactory.secureserver.net/artifactory/api/npm/node-virt/bs58/-/bs58-4.0.1.tgz",
+      "integrity": "sha1-vhYedsNU9veIrkBx9j806MTwpCo=",
+      "dev": true,
+      "requires": {
+        "base-x": "^3.0.2"
+      }
+    },
+    "bs58check": {
+      "version": "2.1.2",
+      "resolved": "https://artifactory.secureserver.net/artifactory/api/npm/node-virt/bs58check/-/bs58check-2.1.2.tgz",
+      "integrity": "sha1-U7AYKRIo2CpaoI59eW/a/aVK6/w=",
+      "dev": true,
+      "requires": {
+        "bs58": "^4.0.0",
+        "create-hash": "^1.1.0",
+        "safe-buffer": "^5.1.2"
       }
     },
     "buffer": {
@@ -1781,6 +1816,24 @@
       "version": "1.1.0",
       "resolved": "https://artifactory.secureserver.net/artifactory/api/npm/node-virt/code-point-at/-/code-point-at-1.1.0.tgz",
       "integrity": "sha1-DQcLTQQ6W+ozovGkDi7bPZpMz3c="
+    },
+    "coinstring": {
+      "version": "2.3.0",
+      "resolved": "https://artifactory.secureserver.net/artifactory/api/npm/node-virt/coinstring/-/coinstring-2.3.0.tgz",
+      "integrity": "sha1-zbYzY6lhUCQEolr7gsLibV/2J6Q=",
+      "dev": true,
+      "requires": {
+        "bs58": "^2.0.1",
+        "create-hash": "^1.1.1"
+      },
+      "dependencies": {
+        "bs58": {
+          "version": "2.0.1",
+          "resolved": "https://artifactory.secureserver.net/artifactory/api/npm/node-virt/bs58/-/bs58-2.0.1.tgz",
+          "integrity": "sha1-VZCNWPGYKrogCPob7Y+RmYopv40=",
+          "dev": true
+        }
+      }
     },
     "collection-visit": {
       "version": "1.0.0",
@@ -2693,6 +2746,46 @@
             "safe-buffer": "^5.1.1",
             "secp256k1": "^3.0.1"
           }
+        }
+      }
+    },
+    "ethereumjs-wallet": {
+      "version": "0.6.3",
+      "resolved": "https://artifactory.secureserver.net/artifactory/api/npm/node-virt/ethereumjs-wallet/-/ethereumjs-wallet-0.6.3.tgz",
+      "integrity": "sha1-sOrm8ydjfCrrnMuQR7mCrFQuarE=",
+      "dev": true,
+      "requires": {
+        "aes-js": "^3.1.1",
+        "bs58check": "^2.1.2",
+        "ethereumjs-util": "^6.0.0",
+        "hdkey": "^1.1.0",
+        "randombytes": "^2.0.6",
+        "safe-buffer": "^5.1.2",
+        "scrypt.js": "^0.3.0",
+        "utf8": "^3.0.0",
+        "uuid": "^3.3.2"
+      },
+      "dependencies": {
+        "ethereumjs-util": {
+          "version": "6.1.0",
+          "resolved": "https://artifactory.secureserver.net/artifactory/api/npm/node-virt/ethereumjs-util/-/ethereumjs-util-6.1.0.tgz",
+          "integrity": "sha1-6cUeVUno69dXoznMAPU4BQfnmcg=",
+          "dev": true,
+          "requires": {
+            "bn.js": "^4.11.0",
+            "create-hash": "^1.1.2",
+            "ethjs-util": "0.1.6",
+            "keccak": "^1.0.2",
+            "rlp": "^2.0.0",
+            "safe-buffer": "^5.1.1",
+            "secp256k1": "^3.0.1"
+          }
+        },
+        "utf8": {
+          "version": "3.0.0",
+          "resolved": "https://artifactory.secureserver.net/artifactory/api/npm/node-virt/utf8/-/utf8-3.0.0.tgz",
+          "integrity": "sha1-8FLu0TZNaW52nvBYsYPfiMh/adE=",
+          "dev": true
         }
       }
     },
@@ -4041,6 +4134,17 @@
       "dev": true,
       "requires": {
         "is-stream": "^1.0.1"
+      }
+    },
+    "hdkey": {
+      "version": "1.1.1",
+      "resolved": "https://artifactory.secureserver.net/artifactory/api/npm/node-virt/hdkey/-/hdkey-1.1.1.tgz",
+      "integrity": "sha1-wrO/1Yg/+VKbcvLwiyi+CXKp9ko=",
+      "dev": true,
+      "requires": {
+        "coinstring": "^2.0.0",
+        "safe-buffer": "^5.1.1",
+        "secp256k1": "^3.0.1"
       }
     },
     "he": {
@@ -6489,6 +6593,35 @@
         "ajv": "^6.1.0",
         "ajv-errors": "^1.0.0",
         "ajv-keywords": "^3.1.0"
+      }
+    },
+    "scrypt": {
+      "version": "6.0.3",
+      "resolved": "https://artifactory.secureserver.net/artifactory/api/npm/node-virt/scrypt/-/scrypt-6.0.3.tgz",
+      "integrity": "sha1-BOAUpWgrU/pQwtXM4WfXGcBthw0=",
+      "dev": true,
+      "optional": true,
+      "requires": {
+        "nan": "^2.0.8"
+      }
+    },
+    "scrypt.js": {
+      "version": "0.3.0",
+      "resolved": "https://artifactory.secureserver.net/artifactory/api/npm/node-virt/scrypt.js/-/scrypt.js-0.3.0.tgz",
+      "integrity": "sha1-bGLWFyitUzyMN2ouXj6G1BqVxMA=",
+      "dev": true,
+      "requires": {
+        "scrypt": "^6.0.2",
+        "scryptsy": "^1.2.1"
+      }
+    },
+    "scryptsy": {
+      "version": "1.2.1",
+      "resolved": "https://artifactory.secureserver.net/artifactory/api/npm/node-virt/scryptsy/-/scryptsy-1.2.1.tgz",
+      "integrity": "sha1-oyJfpLJST4AnAHYeKFW987LZIWM=",
+      "dev": true,
+      "requires": {
+        "pbkdf2": "^3.0.3"
       }
     },
     "secp256k1": {

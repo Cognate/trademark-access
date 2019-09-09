@@ -225,7 +225,97 @@ describe('Pulling Trademarks from Ethereum', () => {
 
     it('Design (initial)');
 
-    it('Word and Design');
+    it('Word and Design', async () => {
+      // listing id 1018479
+      await assertTrademark({
+        address: '0x18677086b71635a2ed499134d53e50b521737be7',
+        timeline: {
+          address: '0x80db63193a18d47e193b129be022d36378eb7db7',
+          documents: [
+            {
+              address: '0x08172156afc98dba316aeeb9826bb266bb221b6b',
+              firstName: 'Bennett',
+              lastName: 'Collen',
+              timestamp: 1531702832,
+              type: 'Assignment',
+            },
+            {
+              address: '0x60dc4dc6aa1229875c78022f2530dcf647c2953b',
+              regions: [
+                'AK',
+                'AL',
+                'AR',
+                'AZ',
+                'CA',
+                'CO',
+                'CT',
+                'DC',
+                'DE',
+                'FL',
+                'GA',
+                'HI',
+                'IA',
+                'ID',
+                'IL',
+                'IN',
+                'KS',
+                'KY',
+                'LA',
+                'MA',
+                'MD',
+                'ME',
+                'MI',
+                'MN',
+                'MO',
+                'MS',
+                'MT',
+                'NC',
+                'ND',
+                'NE',
+                'NH',
+                'NJ',
+                'NM',
+                'NV',
+                'NY',
+                'OH',
+                'OK',
+                'OR',
+                'PA',
+                'RI',
+                'SC',
+                'SD',
+                'TN',
+                'TX',
+                'UT',
+                'VA',
+                'VT',
+                'WA',
+                'WI',
+                'WV',
+                'WY',
+              ],
+              timestamp: 1531703260,
+              type: 'AreaOfUse',
+            },
+            {
+              address: '0xcf13f70c215c1bf91c1cc0cc37e9812a48830830',
+              classOfGoods: 35,
+              timestamp: 1531703528,
+              type: 'Classification',
+            },
+            {
+              address: '0x64443e03c47a9e4b6cee42690d301879cf89368e',
+              deprecatedLocation: 'https://s3.amazonaws.com/cog-usage-documents/42/42',
+              hash: '0x186bf0c2f317629879746230f5fa93fbabf8aee69c543f910f0e91b65e8a0ebe',
+              timestamp: 1531703774,
+              type: 'ProofOfUse',
+            },
+          ],
+        },
+        timestamp: 1531702530,
+        word: 'The Common Law Trademark Registry',
+      });
+    });
 
     it('Word and Design (initial)', async () => {
       // listing id 1023727
@@ -234,7 +324,7 @@ describe('Pulling Trademarks from Ethereum', () => {
         deprecatedDesignLocation: 'https://s3.amazonaws.com/cog-design-marks/1023727_design',
         design: '0x0ceb54a02272b7d30f9b6d005102b7dc2dd7887f9faf273fc6cc15439d9a979b',
         migratedHash: 'TODO',
-        migratedLocation: 'https://raw.github.com/Cognate/trademark-access/master/design_marks/1023727_design',
+        migratedLocation: 'https://cognate.github.io/trademark-access/design_marks/1023727_design',
         timeline: {
           address: '0x28e89eb6400e09e979320ed712f9e08fb2207cae',
           documents: [
@@ -488,7 +578,7 @@ describe('Pulling Trademarks from Ethereum', () => {
         deprecatedDesignLocation: 'https://s3.amazonaws.com/cog-design-marks/1021806_design',
         design: '0xf54f3b87eda462770230d060fce9b9f4876cb68fe8cd38d14c00356bcff7d690',
         migratedHash: 'TODO',
-        migratedLocation: 'https://raw.github.com/Cognate/trademark-access/master/design_marks/1021806_design',
+        migratedLocation: 'https://cognate.github.io/trademark-access/design_marks/1021806_design',
         timeline: {
           address: '0xe0679701c5c4258a4f6374acc7d384fe6b0c9308',
           documents: [
@@ -714,6 +804,14 @@ describe('Pulling Trademarks from Ethereum', () => {
         word: 'COGNATE',
       });
     });
+  });
+
+  describe('V1 Contracts', () => {
+    it('Word');
+
+    it('Design');
+
+    it('Word and Design');
   });
 
   async function assertTrademark(expected) {

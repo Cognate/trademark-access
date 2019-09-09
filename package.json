@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "access Cognate trademark data on the Ethereum network",
   "scripts": {
+    "build": "npx webpack",
     "lint": "eslint --ext .js .",
     "lint:fix": "npm run lint -- --fix",
     "test": "npm run lint && LOG_LEVEL=silent nyc mocha"
@@ -45,6 +46,7 @@
     "node-sass": "^4.12.0",
     "nyc": "~14.1.1",
     "prettier": "~1.18.2",
+    "ethereumjs-wallet": "~0.6.3",
     "sass-loader": "^8.0.0",
     "style-loader": "^1.0.0",
     "webpack": "^4.39.3",

@@ -11,7 +11,7 @@ const INFO = 1;
 /** base url for the deprecated S3 bucket location */
 const s3Base = 'https://s3.amazonaws.com/cog-design-marks/';
 /** base url for the github raw location */
-const githubBase = 'https://raw.github.com/Cognate/trademark-access/master/design_marks/';
+const githubBase = 'https://cognate.github.io/trademark-access/design_marks/';
 /** url to access Ethereum */
 const ethereumUrl = 'https://mainnet.infura.io/v3/6c62a9b1a3b640d587a70b105cbc3be9';
 /** level of logging */
@@ -37,6 +37,7 @@ const Contracts = {};
 Contracts.v4 = loadContracts('v4', web3);
 Contracts.v3 = loadContracts('v3', web3);
 Contracts.v2 = loadContracts('v2', web3);
+Contracts.v1 = loadContracts('v1', web3);
 log(INFO, 'completed loading contracts');
 
 function loadContracts(version, web3) {
@@ -57,6 +58,11 @@ function loadContracts(version, web3) {
 // TODO: poor mans byte map
 // noinspection JSUnresolvedVariable
 const ContractMap = {
+  // '0x6080604052600436106100ae5763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416634589fe': {
+  //   context: 'v1',
+  //   contract: Contracts.v1.Listing,
+  //   handler: processTrademark,
+  // },
   '0x606060405236156100725763ffffffff60e060020a6000350416632f64d386811461007757806341c0e1b5146101045780634c8fe526146101': {
     context: 'v2',
     contract: Contracts.v2.Trademark,
@@ -127,6 +133,11 @@ const ContractMap = {
     contract: Contracts.v4.ProofDocument,
     handler: processProofOfUse,
   },
+  '0x6080604052600436106100ae5763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416634589fe': {
+    context: 'v4',
+    contract: Contracts.v4.Assignment,
+    handler: processAssignment,
+  },
 };
 
 async function process(address) {
@@ -134,7 +145,7 @@ async function process(address) {
   const code = (await web3.eth.getCodeAsync(address)).substring(0, 116);
   const lookup = ContractMap[code];
   if (!lookup) {
-    console.log(code);
+    console.log(`failed ContractMap lookup: ${code}`);
     throw new Error('unidentifiable byte code for trademark');
   }
   return lookup.handler(await lookup.contract.at(address), address, lookup.context);
@@ -157,6 +168,7 @@ async function processTrademark(trademark, address, context) {
     if (design !== '0x0000000000000000000000000000000000000000000000000000000000000000') {
       log(DEBUG, ` - adding design ${context}`);
       result.design = design;
+      // noinspection JSUnresolvedVariable
       if (trademark.designLocation) {
         log(DEBUG, ` - adding design location ${context}`);
         const designLocation = await trademark.designLocation();
@@ -195,11 +207,13 @@ async function processTrademark(trademark, address, context) {
       documents: [],
     };
   }
+  // noinspection JSUnresolvedVariable
   if (trademark.initialProof) {
     log(DEBUG, `getting initial proof ${context}`);
     const initialProof = await trademark.initialProof();
     if (initialProof !== '0x') {
       log(DEBUG, `adding initial proof ${context}`);
+      // noinspection JSUnresolvedFunction
       const proof = {
         address: address,
         hash: await trademark.initialProof(),
@@ -252,12 +266,7 @@ async function processAreaOfUse(areaOfUse, address, context) {
     log(DEBUG, `   - adding countries ${context}`);
     result.countries = countries.split(',').sort();
   }
-  log(DEBUG, `   - getting next ${context}`);
-  const next = await areaOfUse.next();
-  if (next !== '0x0000000000000000000000000000000000000000') {
-    log(DEBUG, `   - adding next ${context}`);
-    result.next = next;
-  }
+  await addNext(areaOfUse, result, context);
   log(DEBUG, `   - getting proofs ${context}`);
   const proofs = await areaOfUse.proofs();
   if (proofs.length) {
@@ -297,12 +306,7 @@ async function processClassification(classification, address, context) {
     log(DEBUG, `   - adding details ${context}`);
     result.details = details.split('|').sort();
   }
-  log(DEBUG, `   - getting next ${context}`);
-  const next = await classification.next();
-  if (next !== '0x0000000000000000000000000000000000000000') {
-    log(DEBUG, `   - adding next ${context}`);
-    result.next = next;
-  }
+  await addNext(classification, result, context);
   log(DEBUG, `   - getting proofs ${context}`);
   const proofs = await classification.proofs();
   if (proofs.length) {
@@ -328,12 +332,7 @@ async function processProofOfUse(proofOfUse, address, context) {
   result.hash = await proofOfUse.hash();
   log(DEBUG, `   - adding location ${context}`);
   result.deprecatedLocation = await proofOfUse.location();
-  log(DEBUG, `   - getting next ${context}`);
-  const next = await proofOfUse.next();
-  if (next !== '0x0000000000000000000000000000000000000000') {
-    log(DEBUG, `   - adding next ${context}`);
-    result.next = next;
-  }
+  await addNext(proofOfUse, result, context);
   // TODO: Better way to check this?
   log(DEBUG, `   - getting timestamp ${context}`);
   const timestamp = await proofOfUse.timestamp();
@@ -349,18 +348,25 @@ async function processAssignment(assignment, address, context) {
   log(DEBUG, ` - processing Assignment ${context}`);
   const result = {};
   result.address = address;
-  log(DEBUG, `   - adding company name ${context}`);
-  result.companyName = await assignment.companyName();
-  log(DEBUG, `   - adding first name ${context}`);
-  result.firstName = await assignment.firstName();
-  log(DEBUG, `   - adding last name ${context}`);
-  result.lastName = await assignment.lastName();
-  log(DEBUG, `   - getting next ${context}`);
-  const next = await assignment.next();
-  if (next !== '0x0000000000000000000000000000000000000000') {
-    log(DEBUG, `   - adding next ${context}`);
-    result.next = next;
+  log(DEBUG, `   - getting company name ${context}`);
+  const companyName = await assignment.companyName();
+  if (companyName !== '') {
+    log(DEBUG, `   - adding company name ${context}`);
+    result.companyName = companyName;
   }
+  log(DEBUG, `   - getting first name ${context}`);
+  const firstName = await assignment.firstName();
+  if (firstName !== '') {
+    log(DEBUG, `   - adding first name ${context}`);
+    result.firstName = firstName;
+  }
+  log(DEBUG, `   - getting last name ${context}`);
+  const lastName = await assignment.lastName();
+  if (lastName !== '') {
+    log(DEBUG, `   - adding last name ${context}`);
+    result.lastName = lastName;
+  }
+  await addNext(assignment, result, context);
   // TODO: Better way to check this?
   log(DEBUG, `   - getting timestamp ${context}`);
   const timestamp = await assignment.timestamp();
@@ -370,6 +376,15 @@ async function processAssignment(assignment, address, context) {
   }
   result.type = 'Assignment';
   return sort(result);
+}
+
+async function addNext(document, result, context) {
+  log(DEBUG, `   - getting next ${context}`);
+  const next = await document.next();
+  if (next !== '0x0000000000000000000000000000000000000000') {
+    log(DEBUG, `   - adding next ${context}`);
+    result.next = next;
+  }
 }
 
 async function getTrademark(address) {

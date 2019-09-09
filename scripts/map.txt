@@ -1,6 +1,4 @@
-   id    |                          name                           |    location    |             blockchain_address             
----------+---------------------------------------------------------+----------------+--------------------------------------------
- 1018297 | Nosrac productions                                      | 1018297_design | 
+ 1018297 | Nosrac productions                                      | 1018297_design |
  1018474 | San Juan Worm                                           |                | 
  1018520 | Munchiees                                               |                | 
  1018496 | Jerez Electronics                                       | 1018496_design | 
@@ -499,7 +497,7 @@
  1021233 | Status Flatus                                           |                | 0xd58e50d43a420d378b1edb796d933ba2ca6cc9e2
  1019494 | Blame Blues                                             |                | 0x340c7315400c91855de5ac8d6b5c9476d1a9f963
  1019555 | Bull Dozer                                              |                | 0x6f11942a9515aa31cd39abbd8a60df5473d80a8a
- 1019565 | Can’t Cutter                                            |                | 0x3e942443d0fc6f0e0ebf573677b7a8a9a327fcc3
+ 1019565 | Can't Cutter                                            |                | 0x3e942443d0fc6f0e0ebf573677b7a8a9a327fcc3
  1019574 | Certainty Scissors                                      |                | 0xfaeff26a47d966d602af6d5973dc894734aded71
  1021681 | Wellpower                                               |                | 0xfccca7c3f26884f071d1b3ef7d5a9121537c537a
  1019124 | nuvoo                                                   |                | 0xfeD3668AcAD8A48c561749a665dEC71CA2960726
@@ -754,7 +752,7 @@
  1018728 | 7TH HEAVEN NATURAL SCIENCE                              |                | 
  1018729 | RODENTSTOP                                              |                | 
  1018732 | FIXSIT                                                  |                | 
- 1018745 | SANTA’S CANDY EXPRESS                                   |                | 
+ 1018745 | SANTA'S CANDY EXPRESS                                   |                |
  1019059 | Vasro                                                   |                | 0xf67dbc9f7c78f5d3981bd2de09446484b976d9fb
  1018696 | MISCELLANEOUS DESIGN (OR)                               |                | 
  1018604 | LOILLLOOX                                               |                | 
@@ -3222,7 +3220,7 @@
  1020493 | Judgment Junk                                           |                | 0x10a6b12e3656a3ebb9c686d1fbf7c05f23285e80
  1020297 | Happiness Coupon                                        |                | 0xa91a776816748872e22a149c2eb0bd2d5ef05f9c
  1020401 | Idiot Audit                                             |                | 0xe34f8bbe199469638ff70b2c8d017a1124904b28
- 1020399 | I’m Done Door                                           |                | 0x703d3b12af48d91eba44b8e4d92d3fbeacd839f2
+ 1020399 | I'm Done Door                                           |                | 0x703d3b12af48d91eba44b8e4d92d3fbeacd839f2
  1020264 | Grintention                                             |                | 0xeb0528fbb86cf9d4001ee128b7a3215c39af2cb3
  1020261 | Grinsane                                                |                | 0x98c0fe21dd2bdb62eb308966cc168badf2cd3d76
  1020353 | Higher Self Host                                        |                | 0xc1b40dbebd089fed5b6030ee7782b97b576fa337
@@ -4045,7 +4043,7 @@
  1019516 | Bold Oats                                               |                | 0x744f33659886a77787bda873cec46694da21f3c2
  1019517 | Bold Remedy                                             |                | 0x15281e825f4ad0d44439e6c95c0f6939398b2e8d
  1019518 | Bold Rush                                               |                | 0x1d7d1cbbfda648e3a42dd98780506cb8e280657b
- 1019520 | Bore d’oeuvres                                          |                | 0x3a45b0663035fdabaca7499d86ab3653168f80e2
+ 1019520 | Bore d'oeuvres                                          |                | 0x3a45b0663035fdabaca7499d86ab3653168f80e2
  1019521 | Bore Mat                                                |                | 0x491846bdfe7ee0c0d5d58c02186f2571d8e34eb6
  1019523 | Bottomless Grit                                         |                | 0xe2939ed87c4d92b798fa3609a36a3032f9edf15a
  1019524 | Bounce Bourbon                                          |                | 0x21eddaa52d82f3761bf685467676c94d1b9915c2
@@ -4635,7 +4633,7 @@
  1024170 | Shitstorm ER                                            |                | 0x966136e8740c954075a7fcdfa1da3abd882c190e
  1024168 | Shitcoin                                                |                | 0x7b58d28557841d2b53fd58920072948c2ed24645
  1024247 | Withinbox                                               |                | 0xc20f43e0d1222d127041072effc31e53f75dd6a1
- 1024245 | Winner’s DNA                                            |                | 0xe66fe85cc2b196c5ef25d3cd1eb4137c06c63038
+ 1024245 | Winner's DNA                                            |                | 0xe66fe85cc2b196c5ef25d3cd1eb4137c06c63038
  1024243 | Willing Hundo P                                         |                | 0xd26fc2cdc9667cd7692c87ed2a60789f6cabf987
  1024242 | Whycap                                                  |                | 0x2a1ec5a0da7008217fd9f94c0b4f0ea3f7b7e107
  1024241 | Why-tinerary                                            |                | 0xfe56d57f95cd2f730ca9d6b37b974ca590332d25
