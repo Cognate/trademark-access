@@ -8,8 +8,6 @@ const lineReader = readLine.createInterface({
 const baseUrl = 'https://cognate.github.io/trademark-access/design_marks';
 let i = 0;
 const data = {};
-data.words = {};
-data.designs = {};
 
 lineReader.on('line', line => {
   i++;
@@ -24,26 +22,23 @@ lineReader.on('line', line => {
     // this will build a map of words/designs to an array of addresses
     if (word !== '') {
       // add anything with a word
-      if (data.words[word] === undefined) {
-        data.words[word] = [];
+      if (data[word] === undefined) {
+        data[word] = [];
       }
-      data.words[word].push(address);
+      data[word].push(address);
     }
     if (designId !== '') {
       // add anything with a design
       const design = `${baseUrl}/${designId}`;
-      if (data.designs[design] === undefined) {
-        data.designs[design] = [];
+      if (data[design] === undefined) {
+        data[design] = [];
       }
-      data.designs[design].push(address);
+      data[design].push(address);
     }
   }
 });
 lineReader.on('close', () => {
-  data.words = sort(data.words);
-  data.designs = sort(data.designs);
-
-  console.log(JSON.stringify(data));
+  console.log(JSON.stringify(sort(data)));
   // console.log(`closed - processed ${i}`);
 });
 
