@@ -1,0 +1,53 @@
+// widths
+//-------
+
+$phone-width: 479px;
+$tablet-width: 767px;
+$md-screen-width: 991px;
+$lg-screen-width: 1199px;
+
+// bootstrap overrides
+//$grid-float-breakpoint: $md-screen-width;
+
+@mixin respond-to($media) {
+  @if $media == phones {
+    @media only screen and (max-width: $phone-width) {
+      @content;
+    }
+  } @else if $media == tablets {
+    @media only screen and (max-width: $tablet-width) {
+      @content;
+    }
+  } @else if $media == tablets-only {
+    @media only screen and (min-width: $phone-width) and (max-width: $tablet-width) {
+      @content;
+    }
+  } @else if $media == sm-screens {
+    @media only screen and (max-width: $md-screen-width) {
+      @content;
+    }
+  } @else if $media == sm-screens-only {
+    @media only screen and (min-width: $tablet-width) and (max-width: $md-screen-width) {
+      @content;
+    }
+  } @else if $media == md-screens {
+    @media only screen and (max-width: $lg-screen-width) {
+      @content;
+    }
+  }
+}
+
+/* Mixins */
+@mixin vertical-align($position: relative) {
+  position: $position;
+  top: 50%;
+  -webkit-transform: perspective(1px) translateY(-50%);
+  -ms-transform: perspective(1px) translateY(-50%);
+  transform: perspective(1px) translateY(-50%);
+}
+
+@mixin box_sizing {
+  -mox-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
