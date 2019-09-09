@@ -3,6 +3,7 @@ const Bluebird = require('bluebird');
 const Web3 = require('web3');
 const ProviderEngine = require('web3-provider-engine');
 const Web3SubProvider = require('web3-provider-engine/subproviders/web3.js');
+const Util = require('../src/util');
 
 /** url to access Ethereum */
 const ethereumUrl = 'https://mainnet.infura.io/v3/6c62a9b1a3b640d587a70b105cbc3be9';
@@ -52,7 +53,9 @@ async function run() {
     // design id
     const design = parts[2].trim();
     if (design !== '') {
-      listing.design = design;
+      const fs = require('fs');
+      const data = fs.readFileSync(`./design_marks/${design}`);
+      listing.design = Util.sha256(data);
     }
     // date of first use
     const dateOfFirstUse = parts[3].trim();
@@ -85,7 +88,7 @@ async function checkV1(registry, listing) {
 }
 
 async function checkV2(registry, listing) {
-  const lookup = listing.word;
+  const lookup = listing.word ? listing.word : listing.design;
   console.log(`looking up: ${lookup}`);
   const result = await registry.get(lookup);
   if (result.length > 0) {
@@ -249,7 +252,7 @@ const listings = [
   ' 1018670 | WILDQUEST                                          |                |                   | IP                                |',
   ' 1018678 | MACIEIRA                                           |                |                   | IP                                |',
   ' 1018681 | STREETGASM                                         |                |                   | IP                                |',
-  ' 1018607 |                                                    |                |                   | IP                                |',
+  // ' 1018607 |                                                    |                |                   | IP                                |',
   ' 1018717 | STITCH                                             |                |                   | IP                                |',
   ' 1018747 | PLANIPREP                                          |                |                   | IP                                |',
   ' 1018784 | VERMONT COOKIE BUTTONS                             |                |                   | IP                                |',
@@ -323,8 +326,8 @@ const listings = [
   ' 1018735 | SEMEON                                             |                |                   | IP                                |',
   ' 1018737 | TIGER  HONEY                                       |                |                   | IP                                |',
   ' 1018440 | TenTheApp                                          | 1018440_design | 2014-08-15        | Lopes                             |',
-  ' 1018606 |                                                    |                |                   | IP                                |',
-  ' 1018609 |                                                    |                |                   | IP                                |',
+  // ' 1018606 |                                                    |                |                   | IP                                |',
+  // ' 1018609 |                                                    |                |                   | IP                                |',
   ' 1019265 | SAFEGAUZE COTTON                                   |                |                   | IP                                |',
   ' 1019273 | SENTINEL ELIMINATOR VORTEX                         |                |                   | IP                                |',
   ' 1019274 | EYEPUTTI                                           |                |                   | IP                                |',
@@ -360,7 +363,7 @@ const listings = [
   ' 1019235 | THERMIC                                            |                |                   | IP                                |',
   ' 1018795 | BONNEVAL                                           |                |                   | IP                                |',
   ' 1018605 | Dai-ichi Life Holdings                             |                |                   | IP                                |',
-  ' 1018610 |                                                    |                |                   | IP                                |',
+  // ' 1018610 |                                                    |                |                   | IP                                |',
   ' 1018620 | The Future of Trademark Protection                 |                |                   | Collen                            |',
   ' 1018694 | VALENTINE                                          |                |                   | IP                                |',
   ' 1018697 | 4ROOTZ                                             |                |                   | IP                                |',

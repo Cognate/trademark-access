@@ -104,6 +104,16 @@ const ContractMap = {
     contract: Contracts.v1.UsageDocument,
     handler: processProofOfUse,
   },
+  '0x606060405236156100725763ffffffff60e060020a6000350416634589fe0c81146100775780634c8fe5261461010457806352effe11146101': {
+    context: 'v2',
+    contract: Contracts.v2.Assignment,
+    handler: processAssignment,
+  },
+  '0x606060405236156100885763ffffffff60e060020a6000350416633aa89aec811461008d5780634c8fe5261461011a57806352effe11146101': {
+    context: 'v2',
+    contract: Contracts.v2.UsageDocument,
+    handler: processProofOfUse,
+  },
   '0x6060604052600436106100af576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806303': {
     context: 'v3',
     contract: Contracts.v3.AreaOfUse,
@@ -218,6 +228,48 @@ async function processTrademark(trademark, address, context) {
       address: address,
       documents: [],
     };
+  }
+  if (trademark.next) {
+    log(DEBUG, `getting next ${context}`);
+    let next = await trademark.next();
+    while (next) {
+      if (next === '0x0000000000000000000000000000000000000000') {
+        log(DEBUG, ` - documents complete ${context}`);
+        break;
+      }
+      let document = await process(next);
+      if (document.classOfGoods || document.details) {
+        result.timeline.documents.push({
+          address: document.address,
+          classOfGoods: document.classOfGoods,
+          details: document.details,
+          timestamp: document.timestamp,
+          type: 'Classification',
+        });
+      }
+      if (document.regions) {
+        result.timeline.documents.push({
+          address: document.address,
+          countries: ['US'],
+          regions: document.regions,
+          timestamp: document.timestamp,
+          type: 'AreaOfUse',
+        });
+      }
+      if (document.hash) {
+        result.timeline.documents.push({
+          address: document.address,
+          hash: document.hash,
+          timestamp: document.timestamp,
+          type: 'ProofOfUse',
+        });
+      }
+      if (document.companyName || document.firstName || document.lastName) {
+        result.timeline.documents.push(document);
+      }
+      next = document.next;
+      delete document.next;
+    }
   }
   if (trademark.getAssignment) {
     log(DEBUG, `getting assignment ${context}`);
@@ -392,9 +444,25 @@ async function processProofOfUse(proofOfUse, address, context) {
       result.regions = regions.split(',').sort();
     }
   }
+  if (proofOfUse.geographicRegion) {
+    log(DEBUG, `   - getting regions ${context}`);
+    const regions = await proofOfUse.geographicRegion();
+    if (regions !== '') {
+      log(DEBUG, `   - adding regions ${context}`);
+      result.regions = regions.split(',').sort();
+    }
+  }
   if (proofOfUse.getClassOfGoods) {
     log(DEBUG, `   - getting class of goods ${context}`);
     const classOfGoods = await proofOfUse.getClassOfGoods();
+    if (classOfGoods) {
+      log(DEBUG, `   - adding class of goods ${context}`);
+      result.classOfGoods = parseInt(classOfGoods);
+    }
+  }
+  if (proofOfUse.classOfGoods) {
+    log(DEBUG, `   - getting class of goods ${context}`);
+    const classOfGoods = await proofOfUse.classOfGoods();
     if (classOfGoods) {
       log(DEBUG, `   - adding class of goods ${context}`);
       result.classOfGoods = parseInt(classOfGoods);
@@ -409,13 +477,34 @@ async function processProofOfUse(proofOfUse, address, context) {
   //     result.dateOfFirstUse = timestamp.toNumber();
   //   }
   // }
+  // if (proofOfUse.dateOfFirstUse) {
+  //   log(DEBUG, `   - getting date of first use ${context}`);
+  //   const timestamp = await proofOfUse.dateOfFirstUse();
+  //   // TODO: Better way to check this?
+  //   if (timestamp.greaterThan(0)) {
+  //     log(DEBUG, `   - adding date of first use ${context}`);
+  //     result.dateOfFirstUse = timestamp.toNumber();
+  //   }
+  // }
   if (proofOfUse.getProofOfUse) {
     log(DEBUG, `   - adding hash ${context}`);
     result.hash = await proofOfUse.getProofOfUse();
   }
+  if (proofOfUse.proofOfUse) {
+    log(DEBUG, `   - adding hash ${context}`);
+    result.hash = await proofOfUse.proofOfUse();
+  }
   if (proofOfUse.getDetails) {
     log(DEBUG, `   - getting details ${context}`);
     const details = await proofOfUse.getDetails();
+    if (details) {
+      log(DEBUG, `   - adding details ${context}`);
+      result.details = details.split('|').sort();
+    }
+  }
+  if (proofOfUse.details) {
+    log(DEBUG, `   - getting details ${context}`);
+    const details = await proofOfUse.details();
     if (details) {
       log(DEBUG, `   - adding details ${context}`);
       result.details = details.split('|').sort();
