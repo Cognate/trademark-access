@@ -1,70 +1,49 @@
  1018297 | Nosrac productions                                      | 1018297_design |
- 1018474 | San Juan Worm                                           |                | 
- 1018520 | Munchiees                                               |                | 
- 1018496 | Jerez Electronics                                       | 1018496_design | 
- 1018435 | Cognate Monitoring Service                              |                | 
- 1018453 | Triple Aim Technologies                                 | 1018453_design | 
+ 1018474 | San Juan Worm                                           |                |
+ 1018520 | Munchiees                                               |                |
+ 1018435 | Cognate Monitoring Service                              |                |
+ 1018453 | Triple Aim Technologies                                 | 1018453_design |
  1019019 | Cuchina Safe                                            |                | 0x228354899d3d12a5c1a71091eafebf941e84b5b9
  1018840 | COGNATE                                                 | 1018840_design | 0xa2a423a147ef2fe82f4613227f8c576fe635ec9b
- 1018748 | FORMcard Ltd                                            |                | 0x933c5dcc0dda52c29e5fd4570ab49d6a77d10259
- 1018442 | WGROUP & DESIGN                                         |                | 
- 1018311 | 3 Broke Girls                                           |                | 
- 1018312 | Mobile TekForce                                         | 1018312_design | 
- 1018327 | Bow Ties By Shaun                                       | 1018327_design | 
- 1018331 | Miss Murder                                             |                | 
- 1018333 | ViperNet Gaming                                         | 1018333_design | 
- 1018443 | GOGA & DESIGN                                           |                | 
+ 1018748 | FORMcard Ltd                                            |                |
+ 1018442 | WGROUP & DESIGN                                         |                |
+ 1018311 | 3 Broke Girls                                           |                |
+ 1018312 | Mobile TekForce                                         | 1018312_design |
+ 1018327 | Bow Ties By Shaun                                       | 1018327_design |
+ 1018331 | Miss Murder                                             |                |
+ 1018333 | ViperNet Gaming                                         | 1018333_design |
+ 1018443 | GOGA & DESIGN                                           |                |
  1019027 | expese                                                  |                | 0x6a0f64b7fd2dc74e9346f0c268c7e7cdf633a44d
  1019028 | Perfectosoft                                            |                | 0xdb3e220ee6cd3959b5ca4830a110e0788f986914
  1019029 | Emoji Pod                                               |                | 0x1412941e930828251d6cbe7c76537d0d309c2edd
- 1018476 | Tall Brews                                              |                | 
- 1018473 | Kevarta                                                 |                | 
- 1018559 | DatNap                                                  |                | 0xb006f0754014bf84c1510976f0ac301c26d3d008
- 1018451 | A's before J's                                          | 1018451_design | 
- 1018345 | Artistry Dance Project                                  | 1018345_design | 
+ 1018476 | Tall Brews                                              |                |
+ 1018473 | Kevarta                                                 |                |
+ 1018559 | DatNap                                                  |                |
+ 1018451 | A's before J's                                          | 1018451_design |
+ 1018345 | Artistry Dance Project                                  | 1018345_design |
  1018479 | The Common Law Trademark Registry                       | 1018479_design | 0x18677086b71635a2ed499134d53e50b521737be7
- 1018518 | Peel To Track                                           |                | 0xe737f5a339d93a0efe38a123c7cd3a859e6232c7
+ 1018518 | Peel To Track                                           |                |
  1018816 | Witmart                                                 |                | 0x11c4057a317d8e3331e03d45dd288fdf4f75146a
- 1018522 | Keycharm                                                | 1018522_design | 
- 1018523 | My-Storytellers                                         | 1018523_design | 
- 1018584 | AppMap                                                  |                | 0x9c7014631effe8de2fd679a60b2c44288e3f6e6a
- 1018722 | Mitsy Kit                                               |                | 
- 1018854 | COG                                                     | 1018854_design | 
+ 1018522 | Keycharm                                                | 1018522_design |
+ 1018523 | My-Storytellers                                         | 1018523_design |
+ 1018584 | AppMap                                                  |                |
+ 1018853 |                                                         | 1018853_design | 0x0
+ 1018854 | COG                                                     | 1018854_design |
  1018859 | Security Life Cycle                                     |                | 0x9684Ef683f6146A89D96A3E51C3D5e455fc8543C
- 1018414 | Rescuing Leftover Cuisine, Inc.                         | 1018414_design | 
  1019113 |                                                         | 1019113_design | 0xdcb8dab6cd0d5bae41cfa9940dffec0c77b85453
  1019114 | COGNATE                                                 | 1019114_design | 0xa2a423a147ef2fe82f4613227f8c576fe635ec9b
  1019122 | EVOKA                                                   | 1019122_design | 0x2e62b1099aca2484416701727e83cfce2db9b066
+ 1018414 | Rescuing Leftover Cuisine, Inc.                         | 1018414_design |
  1018861 | Double Coaster                                          |                | 0x84f5ac8923eabf375b2c7d64e5ff4e2942fd0598
  1019145 | THE TRUFFLEMAN                                          |                | 0xE339Bb7693275F4aD4D442bc00899C232201FDA7
  1019163 | Starixa                                                 |                | 0xc3d6cd93db3c2e550ac0d29746b893a4bb7b73e8
  1019157 | Halogen                                                 |                | 0xea02D1359666B5643744104a366d0F98Fdc01931
  1019158 | InterLink                                               |                | 0xf25dcbe6753d43f7fede63cd7afccd653c0cef6c
  1019289 |                                                         | 1019289_design | 0xd2c6d842dc20b7a37023e36aa67538643eaf69e8
- 1019164 | ADJUSTABLE COMFORT AFFORDAMATIC                         |                | 
- 1019165 | BETHEAD                                                 |                | 
- 1019166 | BUGHEAD                                                 |                | 
- 1019167 | CLASSIC FOAM MATTRESS                                   |                | 
- 1019199 | A-10 MILITARY STRENGTH                                  |                | 
- 1019200 | AQUILA & DESIGN                                         |                | 
- 1019203 | CHALKFITI                                               |                | 
- 1019182 | UBER COOL                                               |                | 
- 1019183 | UBER HOT                                                |                | 
- 1019195 | INTERNATIONAL CONSULTING NETWORK ICON & DESIGN          |                | 
- 1019214 | NOUVEAU LEAVERS & DESIGN                                |                | 
- 1019215 | RODIAL                                                  |                | 
- 1019226 | MADAM SATAN                                             |                | 
- 1019227 | MISCELLANEOUS DESIGN                                    |                | 
  1018891 | Doga                                                    |                | 0x30e095b3e310e89816990e48a926f4374ce2352a
- 1019192 | THERMAL CRUSHING TECHNOLOGY                             |                | 
- 1019194 | BISGRAF                                                 |                | 
- 1019198 | SIMPLYSOFT TECHNOLOGY                                   |                | 
- 1019260 | MYMEMORY                                                |                | 
- 1019261 | OCEAN BIKINI VILLAGE                                    |                | 
- 1019189 | CLOCKWORKS PRESS                                        |                | 
- 1019190 | Z ZOSO & DESIGN                                         |                | 
- 1019191 | LVER                                                    |                | 
- 1018508 | ForwardJump                                             | 1018508_design | 
+ 1019312 | Test Mark                                               |                | 0x0
+ 1018508 | ForwardJump                                             | 1018508_design |
+ 1019327 | knew it wasn't the last one                             | 1019327_design | 0x0
  1018503 | Faster. More affordable. Defensible.                    |                | 0x041fa2cdcba1d7fd80f8c4863a784e687ef0326f
  1019330 | ChainMark                                               |                | 0x972a66faed579633bb522e9df885aaf6b2d67e17
  1021552 | FORGIVE                                                 | 1021552_design | 0xa73a94d6d2e4de40c5a89df585385b8ae2cdf95c
@@ -76,7 +55,6 @@
  1019367 | Acceptance Desk                                         |                | 0x5ee14683a6473d010d87617ddc2e86b9625804c2
  1019659 | Confidence Connoisseur                                  |                | 0xcdcdddbff8bac2b42e9fa6240883713a34e4fceb
  1019660 | Confidence Door                                         |                | 0x61f3b298426e3f2008f6708a6fd61e1647979297
- 1019205 | FIDGET CANDY                                            |                | 
  1019566 | Capacity Audacity                                       |                | 0x06899d57ffa824ac857f60c6ef828ceacbfa9940
  1019567 | Care Freshener                                          |                | 0xeda6ecd276233e60d08847d05a1533d52aed22eb
  1019591 | Charmhouse                                              |                | 0x41e4143c0fd4eb195fd2cc0b1006010ada0fe1d5
@@ -325,7 +303,6 @@
  1021541 | Café Surprise                                           |                | 0x23a827a30667df85931fc79f8cc8c51cfa0918bb
  1021542 | Carefree Café                                           |                | 0xe7f3b824afcb289544a635ecc606b7cb20ae338a
  1021543 | Celestial Café                                          |                | 0xa7b9a59915d528687d23a6860e0a1ded69ebd79b
- 1019211 | LITTLE GREEN FINGERS                                    |                | 
  1021545 | Faith Flambé                                            |                | 0xeea92ab99c702379911bb9a77e3f41fc5fceac80
  1021548 | Cafè Compassion                                         |                | 0xc5cca28e0d89c69f4d17842e63fa50710f4d7fb6
  1019368 | AccomplishMint                                          |                | 0x23aa45663403fe2725a00bac689eed695dc05cd2
@@ -381,7 +358,6 @@
  1020306 | Hard Yard                                               |                | 0x9f29c792ac22d0acdfedc4bfa833ce27c5ae8694
  1020308 | Hardness Harpoon                                        |                | 0x9783ae6610f06f61256e765e17640fb64232ba1a
  1020304 | Happy Honey                                             |                | 0xb7ee1ce7bde14bfecff7623423b5bdc360b551e7
- 1019222 | COUGAR HONEY                                            |                | 
  1020427 | Improvement IV                                          |                | 0x26f04a278a83b755132f46743546a7066f662550
  1020425 | Impossibility Imp                                       |                | 0x9b47f2d4d520a1ef1229d2e74552e4e7fc437a36
  1020431 | Inner Divinity                                          |                | 0x7cca917398650d4d84c1eba02da3cae9769baf8d
@@ -429,7 +405,6 @@
  1019417 | Anger Hostage                                           |                | 0xfd1fa37b6db4d8f885efba4c1de6890c29c55eed
  1021644 | O-Yaki Products                                         |                | 0x1d195d8d2cc37593596be3353829f8b61a7dcb8c
  1019418 | Anger Infection                                         |                | 0x1186790ec1e25ec562816ffb0fe208c541519185
- 1019271 | TURQUOISE COUTURE                                       |                | 
  1019432 | Anxiety 911                                             |                | 0xa6c9ff28b9e485bcda49340b0afd48f1cd374104
  1019433 | Anxiety Detox                                           |                | 0x1af29892e32fc97f4f5b7182a105f34637a4564f
  1019434 | Anxiety Diet                                            |                | 0xa06ea2550df4a2adf24a95914dcc10d7ac2539d8
@@ -447,7 +422,6 @@
  1019752 | Creativity Crockpot                                     |                | 0x62b3a2d9587616dd36b66b8ecdd743d2db01a370
  1019755 | Creativity Quesadilla                                   |                | 0xfdb1558712aeeef715604d52c0062d8286ca3719
  1019411 | Anger Dragon                                            |                | 0xd16d48b9de4e1eef30876cc719c7d39db2e7aa72
- 1019197 | EGOV SYSTEMS & DESIGN                                   |                | 
  1019872 | Distraction Assassin                                    |                | 0x49e79fc43df3ab613716b87703251648828435dc
  1019887 | Divinity Dialer                                         |                | 0x1e1071e4dde875c9825b7e766b80214f290586c0
  1021659 | Brandsight                                              |                | 0x3f9d132d3ee9ab4be7667a421ae658a141dac1a5
@@ -458,8 +432,6 @@
  1020063 | Feelings Pharmacy                                       |                | 0x6044264bd2e84fac26bb9656032e4126629f9954
  1020085 | Flaws Kisser                                            |                | 0xd5f1ec57dd943f0308c6d9a0b6a805ed35591810
  1020089 | Flexible Flyer Miles                                    |                | 0x50d934796aff28573767bf98be85da4bbd40d3e8
- 1019174 | MISCELLANEOUS DESIGN (WISHBONE LOGO)                    |                | 
- 1019175 | NET GENERATION & DESIGN                                 |                | 
  1020096 | Focus Fountain                                          |                | 0x026277a6bfddbe0913db7ae030613319b236c38a
  1020224 | Gratitude GPA                                           |                | 0xc76ef1ea8a73f3ff9b9b23a2d40a8eb4e465f6df
  1020339 | Hellbreaker                                             |                | 0xa76617b08ab6abf2b9502cd6aeec62c3350f9873
@@ -497,7 +469,7 @@
  1021233 | Status Flatus                                           |                | 0xd58e50d43a420d378b1edb796d933ba2ca6cc9e2
  1019494 | Blame Blues                                             |                | 0x340c7315400c91855de5ac8d6b5c9476d1a9f963
  1019555 | Bull Dozer                                              |                | 0x6f11942a9515aa31cd39abbd8a60df5473d80a8a
- 1019565 | Can't Cutter                                            |                | 0x3e942443d0fc6f0e0ebf573677b7a8a9a327fcc3
+ 1019565 | Can’t Cutter                                            |                | 0x3e942443d0fc6f0e0ebf573677b7a8a9a327fcc3
  1019574 | Certainty Scissors                                      |                | 0xfaeff26a47d966d602af6d5973dc894734aded71
  1021681 | Wellpower                                               |                | 0xfccca7c3f26884f071d1b3ef7d5a9121537c537a
  1019124 | nuvoo                                                   |                | 0xfeD3668AcAD8A48c561749a665dEC71CA2960726
@@ -517,7 +489,6 @@
  1020241 | Gratitude Upgrade                                       |                | 0x0d8fc74e90a98ffd79b10977121bd75ff5a906d3
  1021758 | The Sporty Dog                                          |                | 0xcdf31d2764d37c4d169c8f504b19684a802b5a18
  1021691 | THE TRADEMARK BLOCKCHAIN                                |                | 0x24e104ea2c3671b726d59243b2758d2f7de8a11e
- 1019204 | ELEVENT                                                 |                | 
  1020293 | Gyration Gyro                                           |                | 0xfab3c194716296ba38abce7c46995afee8e6d5a1
  1020301 | Happiness Rx                                            |                | 0x917364947b9d70c93214a9ea4a0fc9044da223d4
  1020246 | Grief Greeter                                           |                | 0x6d4d4e97bcefc5010f32d5893c7e1e4d47cf3961
@@ -538,7 +509,6 @@
  1021711 | Joobool                                                 |                | 0x6f18b5a205b71ab7d16e005361500f95b12d6a83
  1019374 | Adios Narcissos                                         |                | 0xda58704d6fd09973597015d3e851394b64440ada
  1019375 | Adversity Adventure                                     |                | 0x9d64d87371e72eb27722d135a4d60488fd487af2
- 1019188 | TENNIS LIKE NEVER BEFORE                                |                | 
  1019380 | Adversity University                                    |                | 0x0aafb46adb0b1b1c07d0b5b52b5698183234779b
  1019457 | Awareness Horizon                                       |                | 0x515f3d1b55fcc02f57b48fd040d03440430ee39a
  1019458 | Awespresso                                              |                | 0xe43e72640b5d3dfb2f62c966fde50941de4cb1d0
@@ -580,54 +550,45 @@
  1020000 | Ever Smiling Sun                                        |                | 0x03d72a44453742e815d03b62371522679ff345bb
  1020018 | Facade God                                              |                | 0x02412f663f42fe1d6283d7a7179b4a23947a160f
  1020098 | Focus Pocus                                             |                | 0x12f1c8538dfdce044a24be27c6a13f7333e4655c
- 1018485 | Vouch                                                   |                | 
- 1018403 | Una Chispa Más                                          | 1018403_design | 
- 1018446 | Franklin Robotics                                       | 1018446_design | 
- 1018359 | Cognate Product Listing                                 | 1018359_design | 
- 1018357 | LeftyandRighty                                          | 1018357_design | 
- 1018445 | BLOCK TECH & DESIGN                                     |                | 
- 1018315 | The Headlinez Collection Custom Design and Prints       | 1018315_design | 
- 1018509 | GameFace Media                                          |                | 
- 1018519 | Tick Tock                                               |                | 
- 1018454 | Foresight Care                                          | 1018454_design | 
- 1018438 | Loil                                                    | 1018438_design | 
- 1018537 | Nextgengolf                                             |                | 
- 1018497 | Bronze Big Papi                                         |                | 
- 1018564 | Psychic Paper                                           |                | 0x8fadb4814a9914f08ae303f9a89e46d366ea0ebc
- 1018560 | PenSe                                                   |                | 0xa74c718c2d4829f255211c8dfa19da6ba37367be
- 1018568 | One Spot                                                |                | 
- 1018583 | Evolve Law                                              |                | 0x427b79d9b17e389659cdfe933a15e2fb3b27a9b1
- 1018588 | eCopters                                                |                | 0x395137c5191e0b15328bcfa71ecdad8fdc023f3e
- 1018653 | badass                                                  |                | 0x14c5234bad12c83f5260041bbec57d2430d45980
- 1018654 | BAD                                                     |                | 0x4c733eb96e7610ac9f5fadac069b0380ca7f107c
- 1018513 | Peel To Track                                           |                | 
- 1018656 | Badass Yoga Mats                                        |                | 0xbb4a2c780a4b9b6f5f77da8398bbf91c2106736a
+ 1018403 | Una Chispa Más                                          | 1018403_design |
+ 1018446 | Franklin Robotics                                       | 1018446_design |
+ 1018359 | Cognate Product Listing                                 | 1018359_design |
+ 1018357 | LeftyandRighty                                          | 1018357_design |
+ 1018445 | BLOCK TECH & DESIGN                                     |                |
+ 1018315 | The Headlinez Collection Custom Design and Prints       | 1018315_design |
+ 1018454 | Foresight Care                                          | 1018454_design |
+ 1018438 | Loil                                                    | 1018438_design |
+ 1018497 | Bronze Big Papi                                         |                |
+ 1018564 | Psychic Paper                                           |                |
+ 1018560 | PenSe                                                   |                |
+ 1018583 | Evolve Law                                              |                |
+ 1018588 | eCopters                                                |                |
+ 1018653 | badass                                                  |                |
+ 1018654 | BAD                                                     |                |
+ 1018656 | Badass Yoga Mats                                        |                |
  1018531 | The First Step in Trademark Protection                  |                | 0xfc3ce3252ef88bb8106bbe97cdb2e191bd7ed674
- 1018657 | BAD Yoga Mats                                           |                | 0x8337f436d739339be60fd49b8e451d86efc172de
- 1018510 | Rep Appeal Clothing                                     | 1018510_design | 
- 1018536 | NCCGA                                                   |                | 
- 1018724 | Activisor                                               |                | 0x34cce12dea80877bcf69d5f35b3ac609b15445c9
- 1018346 | ProperSee                                               | 1018346_design | 
- 1018720 | HABIT                                                   |                | 0x75fbaa1fdefac8f8f2828d007c259f102fed4e81
- 1018721 | Mitsy Kit                                               |                | 0x128f4deb78e9ca94c5a7ec8525cbf6a887ff2d03
- 1018723 | nohmii                                                  |                | 0x2f2b5578a02b826d9b8192efce497318e6b9abe6
- 1018725 | Cognate                                                 |                | 0x61d8e125bad1466c0031be6be3fa002a126e55e6
- 1018726 | KATRIS                                                  |                | 0xe636f021b09e2b3334a95d7f06c33e8042acbc84
- 1018751 | SMARTBLANKET.COM                                        |                | 0x9e6c2eabb33220b31fd7430edd6d7a90b48dec72
- 1018752 | Tertill                                                 |                | 0xb180dcdccb8e40861c447ed67329324496952881
- 1018769 | Three Point Group, LLC                                  |                | 0x0b0d5bd93ff5d664f1de5fa555d4bb48d386deb8
+ 1018657 | BAD Yoga Mats                                           |                |
+ 1018510 | Rep Appeal Clothing                                     | 1018510_design |
+ 1018724 | Activisor                                               |                |
+ 1018346 | ProperSee                                               | 1018346_design |
+ 1018720 | HABIT                                                   |                |
+ 1018721 | Mitsy Kit                                               |                |
+ 1018723 | nohmii                                                  |                |
+ 1018725 | Cognate                                                 |                |
+ 1018726 | KATRIS                                                  |                |
+ 1018751 | SMARTBLANKET.COM                                        |                |
+ 1018752 | Tertill                                                 |                |
+ 1018769 | Three Point Group, LLC                                  |                |
  1018807 | Muirwood Reclamations                                   |                | 0x83c6b40527b3719adaac391085ba5284c14287c6
  1018818 | VulSec                                                  |                | 0x632e458ceadd4d133a791fa95af557bf1d0c2aa0
  1018819 | Find The Data. Protect The Data.                        |                | 0x97cd07893a88dd4f891c08da6ae352f393b67ded
  1018803 | Railroad Spike Bottle Opener                            |                | 0x20759e94d951fff283947291b2671817c86e1151
  1018826 | Security As A Service                                   |                | 0x4f2d14291978ecadc114d5660304675b24094c01
  1018811 | kaviva                                                  |                | 0xca07a520272930b37f6187706ba96653a37354a7
- 1018444 | AIRISLED                                                |                | 
- 1018417 | Athletics Recruiting                                    | 1018417_design | 
+ 1018444 | AIRISLED                                                |                |
+ 1018417 | Athletics Recruiting                                    | 1018417_design |
  1020778 | Nowchemy                                                |                | 0x5c2e3cb6e22bc4ed6effbb01b78b373b54d11074
  1021799 | Test Mark 1                                             |                | 0xa2a423a147ef2fe82f4613227f8c576fe635ec9b
- 1018613 | MASK MASSIVE ARRAY OF STRUCTURED KEYWORDS               |                | 
- 1018566 | Truetone                                                |                | 
  1018982 | Urban Bucket                                            | 1018982_design | 0xe500c3243ce123aa7760dcf886b55a02d7083d24
  1020124 | Forward Foxtrot                                         |                | 0x9363d062dcd38d0ce2cf22eb1242ef01ca4420b3
  1020123 | Forward Factory                                         |                | 0x15d0fe1286344d853e14f182cb0b6da39d0441ae
@@ -637,15 +598,19 @@
  1020118 | Forgiveness Simulator                                   |                | 0xd8c3d8654799ee7292bdd195f092fb7568ca5260
  1020939 | Prediction Eviction                                     |                | 0xa0eb448dae07e7e394cbdaaeaeac824c39a166e5
  1020951 | Pride Ride                                              |                | 0xdaf29a03c3681412cd3c5598e608a219b12ad3cb
+ 1021800 | Test Mark 2                                             |                | 0x0
+ 1021801 | Trademarks for Corp                                     |                | 0x0
  1020204 | Grace Waves                                             |                | 0x988758eb5358f6e56121a4b1790913b29359a922
  1020782 | Obstacle Obituary                                       |                | 0xda02572796c398057eb795fb81ccf641f55252c7
  1020870 | Peace Mirror                                            |                | 0x64db92efd91bc325ad8f4ea77388d35c4a593dea
  1020871 | Peace Ninja                                             |                | 0x3c53f0c138d476e55a3a798e5d22db848370731a
  1020872 | Peace Opt In                                            |                | 0x6330d7ab400fa7a5c3ae3388f9b4ba4969a7cfa3
  1020875 | Peace Park                                              |                | 0x343101dd25fc2dc536552fe9746cfa15ad52d071
+ 1021802 | Acme Mark 2                                             |                | 0x0
  1020898 | Perception Door                                         |                | 0x468fdd72ad25b7a1aefc2a3833e312efa7fccdc3
  1020902 | Perception Prince                                       |                | 0x350039639d48596d22c6b0a177668793d1f4fcad
  1020906 | Perjury Surgery                                         |                | 0x1f1c2d59c819fafaeaf5373c115f925e65387252
+ 1021803 | Test Mark 3                                             |                | 0x0
  1021806 |                                                         | 1021806_design | 0xca6823878b5fc9390c21c652405b000e1daa734f
  1020961 | Procrastination Helpie                                  |                | 0x7cfbfd2630a00cab57006b78415764327377a438
  1020973 | Productivity Potato                                     |                | 0xee7f9ad53b82976aef24b46869a7f642c78750b7
@@ -662,8 +627,6 @@
  1021039 | Rebound Playground                                      |                | 0x866f20015a31819b9ddddfbe8e2c4953b8fcbdea
  1021687 | Ride Away Cars                                          |                | 0xcbfbe685934671410fe1deabaaf07fcf432ca417
  1020295 | Habitch                                                 |                | 0x79a905425f7bbb9d3d0d5937cd185498411bf1f9
- 1019181 | THE WISHBONE COLLECTION                                 |                | 
- 1019212 | MONKEY                                                  |                | 
  1021735 | fashant                                                 |                | 0xfdb49daacc92f74633613729b7998f583cc5363b
  1021041 | Reconciliation Refuge                                   |                | 0x4c898ec211c7a8c99a0402356ca3623d6e92d63d
  1021037 | Real Me Ruby                                            |                | 0x0d2aa8078bed711c9c4dedb72906aa6369e3c59c
@@ -725,7 +688,6 @@
  1020524 | Lesson Digestion                                        |                | 0x967754f44c9df19662f72f87370a0da411048b5e
  1021583 | Spiritual Genomics                                      |                | 0x1101434d69f592fb39d2cd79cc4c2d7d78904c90
  1020526 | Let Go Lounge                                           |                | 0x78f067f9dd548ee854b9e390767b4724929a8f26
- 1018679 | LORDAE DESIGN                                           |                | 
  1020552 | Love CPR                                                |                | 0x937090d99503554f68af7f82ac1840a8cea8bb86
  1020553 | Love Flood                                              |                | 0xac4577adb738b4be97973a9f297c6b76a71a1fac
  1020572 | Love Muffs                                              |                | 0xfc87a9b93ff0b34238fff69b5fd460e4a079fb38
@@ -739,34 +701,16 @@
  1020622 | Mind Body Maestro                                       |                | 0x4c0e14a8b86d30241c7df5ee8b9dc33bc3d20a0e
  1020623 | Mind Body Magic                                         |                | 0x7fa91345d55ca1a2a24fb4668da66f494bc4b11c
  1020624 | Mind Body Medic                                         |                | 0xeb279d197ebca5ac698f8e2be2434ca5f457a911
- 1018715 | MUC-OFF URBAN BICYCLE CARE & DESIGN                     |                | 
- 1018706 | DUTCH BROWN                                             |                | 
  1021817 | YourCoachKt                                             |                | 0xea732c2ff20607664ac5b8ab0b5082004aa1130e
- 1018599 | COOL SLEEP JADE                                         |                | 
  1020633 | Mind Minister                                           |                | 0x4f1b6d08c8f85e597f5d6b75791ce6c8e04f3f37
  1020634 | Mind Mirage                                             |                | 0x5835d0da5bef7b052080e723a725607267588d25
  1020635 | Mind Mocha                                              |                | 0x2d93b59ab13a0addef4298046713b2a16f4a7e92
  1020636 | Mind Muffler                                            |                | 0x04cc17d3e31a0baf7547ea8d35aca3648ecfccee
  1020641 | Mindset Sunset                                          |                | 0x2faf8d9f36c361fda4312e112e38a6be77699ea1
  1020642 | Miracle Awakener                                        |                | 0xc2d139240e1d4d85a80e9d30e269a84e86d5b9cf
- 1018728 | 7TH HEAVEN NATURAL SCIENCE                              |                | 
- 1018729 | RODENTSTOP                                              |                | 
- 1018732 | FIXSIT                                                  |                | 
- 1018745 | SANTA'S CANDY EXPRESS                                   |                |
  1019059 | Vasro                                                   |                | 0xf67dbc9f7c78f5d3981bd2de09446484b976d9fb
- 1018696 | MISCELLANEOUS DESIGN (OR)                               |                | 
- 1018604 | LOILLLOOX                                               |                | 
- 1018567 | 1 Spot                                                  |                | 
- 1018594 | VIBE MATTRESS                                           |                | 
- 1018596 | RADO                                                    |                | 
- 1018598 | ADJUSTABLE COMFORT                                      |                | 
- 1018602 | SAINT LAURENT PARIS                                     |                | 
  1020676 | Momentum Memento                                        |                | 0x450583cc0c684d2e4b56dc06c47fa2cafa60fec0
  1020678 | Monster Mocker                                          |                | 0x39906011a95241194bb08112a8f89cd2d71e2cb6
- 1018673 | MUSEE YSL PARIS & DESIGN                                |                | 
- 1018676 | NETWORK TOOLKIT & DESIGN                                |                | 
- 1018680 | MISCELLANEOUS DESIGN                                    |                | 
- 1018708 | DFC                                                     |                | 
  1020753 | Nice Cream                                              |                | 0x2002dc1102356ae204e014cd45b7576c5d073a10
  1020754 | Nice Spice                                              |                | 0x0198c1b1ae3936d40f6f92443fd1f3f02927f1f9
  1020755 | Niceberg                                                |                | 0xbbd0dc71778cc7f648635fe9f31e77b6a56ba95d
@@ -789,27 +733,12 @@
  1020956 | Problem Doctor                                          |                | 0x26b18218345e2103786d11845d24e74515c3f755
  1020957 | Problem Halver                                          |                | 0x9dbd4b1ff1ee6aa2ff4319ca343962ebe6fafb7e
  1021818 | Cognitive G Capital Group LLC                           | 1021818_design | 0x14db22f883b28dc4759d7f75d49322bf1cd32a67
- 1019184 | MISCELLANEOUS DESIGN (Roton Point Burgee)               |                | 
- 1019186 | MARTELL VS SINGLE DISTILLERY JEAN MARTELL & DESIGN      |                | 
- 1019201 | BELLHOP CIGARS                                          |                | 
- 1019202 | CALICO HILL                                             |                | 
- 1019206 | FIDGET CANDY                                            |                | 
- 1019208 | GOBAGOO                                                 |                | 
- 1019220 | BELLADAAR                                               |                | 
- 1019264 | RED FOX                                                 |                | 
- 1019266 | THE MALFUNCTION                                         |                | 
- 1019272 | BODY MIND SOUL                                          |                | 
- 1019276 | LIVESYNC                                                |                | 
  1020987 | Puzzle Peace                                            |                | 0xdc924a347799ca37ad0499a9da2c6ddd71516cf1
  1020989 | Quandary Detergent                                      |                | 0xd2335382a9ce1b3de965156d914dcb39c2edddf3
  1020990 | Quantum Awareness                                       |                | 0xa1ac2ba97d4cc4a17d8f5421caf74cab72f83e5d
  1020994 | Quantum Dimension                                       |                | 0x7004417a9ad1a5a5d93761e72e39eb2e2503d660
  1020999 | Quantum Intuition                                       |                | 0x1efff49289d6edb5d52e6020e93036fd37adbb7d
  1021001 | Quantum Shift                                           |                | 0x9f41dca0d205f5a8f1c44bf6ca3736fb83ab519e
- 1019255 | LA VIE EN ROSE AQUA                                     |                | 
- 1019269 | TITAN BED FRAME                                         |                | 
- 1019282 | PIZZAFIX                                                |                | 
- 1019284 | PIZZAFIXINGS                                            |                | 
  1021020 | Radical Amazement                                       |                | 0x1c2299b6b48be0b42f480c96cb20176714abd47d
  1021042 | Regret Opt Out                                          |                | 0x971da708983d319501494a4825f1dcc0d5ef91e0
  1021043 | Regret Refund                                           |                | 0xf349c488c01e4d25ca437051456525b571fbf771
@@ -827,8 +756,8 @@
  1021132 | Serenity Cereal                                         |                | 0xb9a7403f05429b0a999ce7dd5033c46f849cfdd0
  1021133 | Serenity Chef                                           |                | 0x9b7063b5f48d36a39292f73206827597b450ed83
  1021134 | Serenity CPR                                            |                | 0xa20bf56b298c313b186f9a0087910d382c67fee3
+ 1018512 | Tick Tock                                               | 1018512_design |
  1018478 | The first alternative to federal trademark registration |                | 0x1fe15109defee89b43aa25f1d62f51713df53765
- 1018512 | Tick Tock                                               | 1018512_design | 
  1021156 | Shame Shower                                            |                | 0xe06979b620585d271cd4b1b406849c20c02d6ff5
  1021263 | Stub Burn                                               |                | 0xcf110b1ef1db04df7556a684539ea22b488b18cd
  1021327 | Transcendence Beacon                                    |                | 0x18da37c7fadc221a4c29918eb5e39712ee2a8b17
@@ -837,45 +766,14 @@
  1021333 | Transcendental Peace                                    |                | 0x6b567f845fbbfcce4885db96920556cc71c58e03
  1021336 | Transcendental Voyage                                   |                | 0x54a2ba1e8b27931a5f3ed7df31acc7431e26246b
  1021337 | Transformation Bridge                                   |                | 0x8591a7d3da98ad63d4395c76998672dcc63e0eee
- 1018781 | HAYK                                                    |                | 
- 1018783 | MISCELLANEOUS DESIGN (Flik Flak boy and girl)           |                | 
- 1018744 | ORIGINAL & DESIGN                                       |                | 
- 1018714 | GOEN & DESIGN                                           |                | 
- 1018787 | 5-MINUTE FOUNDATION                                     |                | 
- 1018788 | HUG                                                     |                | 
  1019054 | webganic.com                                            |                | 0x471dbc7b6f24f51586f0154c0cad8435b3cbb01f
- 1018675 | EVERRUN                                                 |                | 
- 1018786 | CREAKYTOWN                                              |                | 
- 1018796 | DRYLOCK                                                 |                | 
- 1018797 | RED DRAGON                                              |                | 
- 1018877 | FINLAYS & DESIGN                                        |                | 
- 1018878 | CAMBRIDGE FAMILY ENTERPRISE GROUP & DESIGN              |                | 
- 1018782 | EVOLVE LAW                                              |                | 
- 1018727 | BAD MONKEY                                              |                | 
- 1018670 | WILDQUEST                                               |                | 
- 1018678 | MACIEIRA                                                |                | 
- 1018607 |                                                         |                | 
- 1018681 | STREETGASM                                              |                | 
- 1018717 | STITCH                                                  |                | 
- 1018747 | PLANIPREP                                               |                | 
- 1018784 | VERMONT COOKIE BUTTONS                                  |                | 
- 1018665 | Yogatini                                                |                | 0x78ae101d7e5d3ea9367bb4e9f71ea09f1d6dee34
- 1018666 | INTRA-MATIC                                             |                | 
- 1018667 | CAROL TONE BELLS                                        |                | 
- 1018668 | CONSTANT COMFORT                                        |                | 
+ 1018665 | Yogatini                                                |                |
  1018834 | wastetex                                                |                | 0x1a157dc052ab605c1ba2c8bcc3d4a4a51fcd5f6e
- 1018789 | CRIMEBLOCK                                              |                | 
- 1018683 | DISTILLED QUALITY & DESIGN                              |                | 
- 1018718 | L?OR DE JEAN MARTELL & DESIGN                           |                | 
- 1018740 | BLUEMED                                                 |                | 
- 1018741 | BLUEMED & DESIGN                                        |                | 
- 1018847 | 65 SAVINGS                                              |                | 
  1021355 | Trollapolooza                                           |                | 0x07a6ce41fb869e62d85d01db1a479897e5c7ee0d
  1021362 | True Self Treasures                                     |                | 0x79c5a3a93212da2ba868d8efa30b931d2f311114
  1021379 | Uncertainty Lover                                       |                | 0x6769d45ee5127fb28041914cdab7eb0520d564e3
- 1019207 | FILTH                                                   |                | 
- 1021382 | Unconditional XoXo                                      |                | 0x6c7181bb2e824fa8c3e7cf08d06440e186c9c4b5
  1018846 | Chill Boys                                              | 1018846_design | 0x9a92b48b60a90f2e4410af09167047266f09f4f8
+ 1021382 | Unconditional XoXo                                      |                | 0x6c7181bb2e824fa8c3e7cf08d06440e186c9c4b5
  1021461 | Willpower Wallet                                        |                | 0xff45555647dbc3f212c1d5cba65c6330ea843f06
  1021462 | Willpower Workout                                       |                | 0xda2aed8be079d96b80f7ab5057e923fe7cc16abd
  1021464 | Winner Boots                                            |                | 0x6ee4c15a898bd39118b4c3cf72b2ddf8541fbe66
@@ -886,27 +784,14 @@
  1021472 | Woe Whip                                                |                | 0x6c2cad663e19639b825ee56f4f738c0eba2e7700
  1021474 | Woe XoXo                                                |                | 0x85ff5cd93beff041cb6ec408409fd4d6b4e74b31
  1021477 | Wonder Waltz                                            |                | 0x0e206f625a83ab728a35e9303d9020c8d2b7bcc9
- 1018589 | LIQUID GOLD                                             |                | 
  1021480 | Wonder Window                                           |                | 0x38ffdff5d3cffb7b773b0246164f88c744001bbd
  1021482 | Wonder Wings                                            |                | 0x30f045ae4442dbc1a167973ae26ab37defa76dbe
  1021485 | Worry Amnesia                                           |                | 0x04942ddda2b920d9a9d4b36077a527df67c8604f
- 1018868 | NET GENERATION                                          |                | 
- 1018872 | ODYSSEY IMPACT                                          |                | 
- 1018595 | AMERICAN MAPLE                                          |                | 
- 1018601 | GROUPDOLISTS                                            |                | 
- 1018874 | ENGAGE ENTERTAINMENT                                    |                | 
  1018904 | babeup.com                                              |                | 0x2aaa94694d89bde49fb5669e564a8a98dce26b3a
- 1018875 | CAMBRIDGE FAMILY ENTERPRISE GROUP & DESIGN              |                | 
- 1018876 | CAMBRIDGE INSTITUTE FOR FAMILY ENTERPRISE               |                | 
  1021549 | Creativity Crêpe                                        |                | 0xac34f3860b9bec51a67ff1a413c7c41febe606c2
  1021550 | Haître d'                                               |                | 0x4795fdcc9ca369b878c360c4fb7cd04f85c6f623
  1021551 | Failure Fantástico                                      |                | 0xbe145277f24e2d4946a085ad3fcf88e95a6c24de
  1018910 | wastetech                                               |                | 0xe2de0399090ca9203285a5f760f9bbaa8842802c
- 1018996 | LUCY                                                    |                | 
- 1019229 | PARTNER IN ART                                          |                | 
- 1019231 | ROUTEWORTHY                                             |                | 
- 1019242 | MONROSSO & DESIGN                                       |                | 
- 1019244 | NET GENERATION & DESIGN                                 |                | 
  1018988 | the happy resident company                              |                | 0xca29c4d92b2ec565ab0c570f3b0f128ce7e0257b
  1019381 | Advice Vice                                             |                | 0xbc3cec5b57a557d5f5e29b970bc7a3aef0264c0a
  1019382 | Age Cage                                                |                | 0x36cc2f88ffe10b1c12b8cb7b8e4d751bf989e560
@@ -939,7 +824,6 @@
  1019851 | Destiny Doctor                                          |                | 0x53d7c74ef34688b2a247f1c308b247c40bdb1baa
  1019834 | Depression Confession                                   |                | 0x0fa71518a197515fd0455c7d04fc55c4ce1d7b88
  1019832 | Denial Spiral                                           |                | 0xe1e0575a772803cde73a7ac25d5c738496735f3a
- 1019281 | ANCILE                                                  |                | 
  1018970 | Paradigm Project                                        |                | 0xfc482daf50d3ccc0d7f74d986218a16591148da6
  1019998 | Ever Growing Garden                                     |                | 0x0ebc0c589c63e7898863b0a6de577ebe330913e3
  1019975 | Enlightenment Espresso                                  |                | 0x57d96ba74226ed2e351cc8e6f6c2602150bfe92d
@@ -950,8 +834,6 @@
  1019941 | EmbarrassMint                                           |                | 0xe2d49bab31b22ffb8ce8e515530450f5bab92399
  1019907 | Doubt Lover                                             |                | 0x1122026300a1ffed75ef046bf092ac11ec89e3b3
  1019906 | Doubt Hero                                              |                | 0x6560220f1b106456289834678eabfea29eb1666b
- 1018669 | REL61                                                   |                | 
- 1019239 | FABRIZIO BIANCHI NEMO CASTELLO MONSANTO & DESIGN        |                | 
  1021962 | Candy Cage                                              |                | 0x95ef40bc16539adea2d58791c20ccc825e43a22a
  1021961 | Candor Commander                                        |                | 0xd37202c0adb5b12f1e585153bc0afae2b457ea57
  1021960 | Can't Help Hell                                         |                | 0x7b060cc05a8b9eea27b348e57a40d68b120ce1c3
@@ -970,13 +852,7 @@
  1022057 | Dark Whispers                                           |                | 0xcd9c8e8363af3b581cf11852b1d5483914102ced
  1022054 | Damnesty                                                |                | 0x0336f941a7a3b2e835cb88594b0584779a3739f9
  1018890 | WasteTech.com                                           |                | 0x80b27e8c88e3b90e918f1847dc52965016085b8d
- 1018863 | CREAKY JOINTS                                           |                | 
- 1018600 | EROXON                                                  |                | 
- 1021838 | DREAM STREET                                            |                | 
  1023498 | FlyingFeathers                                          | 1023498_design | 0x16eeb475d5cbc7cfa43882972b34be20dd9c2612
- 1019217 | BAOSSANT                                                |                | 
- 1019218 | BARRACUDA                                               |                | 
- 1019277 | PILLOW PET SLEEPTIME LITE                               |                | 
  1022163 | Fabnormal                                               |                | 0x800cc0d7e290baaeead6e0d200e2a97745ba2def
  1022162 | F8 D8                                                   |                | 0x9a92200bd0571a8c8d27b0e1b217935cccf3226d
  1022161 | Extreme Cream                                           |                | 0xacf1eaacfce1180d34fdaeda437ed0919ab87a78
@@ -989,9 +865,6 @@
  1022284 | Habit Habitat                                           |                | 0x1e337e65bcceac54e087d969df221dc87d265108
  1022283 | Habit Abyss                                             |                | 0x7ab55f5f8977a9c8f4c11f5ca1c0a627d8430bc8
  1022406 | Life ILY                                                |                | 0xecea8b47cf1cdb90fd08940510888427f059b1d7
- 1019168 | ECONSULTZ                                               |                | 
- 1019169 | ESSENTIA                                                |                | 
- 1018736 | DRAGON HONEY                                            |                | 
  1023139 | App For That Syndrome                                   |                | 0xc99183a9f54f0e588a79a573951c244816d74f44
  1023132 | Fucking Incredible!                                     |                | 0xb15aae45ce14f64212fda75dbaa930778fc0927a
  1023131 | Fucking Amazing!                                        |                | 0x4483a0ef54671d2fd026f51c4464af01b78b4bff
@@ -1013,6 +886,8 @@
  1023299 | Multiple Personality Organizer                          |                | 0x3ced35ad6161d3ce481606d35e3e5edbdd801ad0
  1021891 | Anger ER                                                |                | 0x765b7b18ed135a9dc7bb5a798217d97048303e96
  1021966 | Canscripts                                              |                | 0x680b8084f71a84df59b6b892cd82533360dec505
+ 1023403 | Carson Carrington                                       |                |
+ 1023404 | Porch & Den                                             |                |
  1022099 | Disappointment Disser                                   |                | 0x55b49d68cbf53022f81413e3da4922d1c9744c01
  1022234 | Gem Cells                                               |                | 0xf877c8ac66f1d76051eb5865a33afad4e2cb5f6a
  1022233 | Garbage Gold                                            |                | 0xed8706378c2c09b1c3ed39012a3ef68c7841dd02
@@ -1396,28 +1271,11 @@
  1023157 | Chairman Of The Bored                                   |                | 0x793e2ec2d61fcd38d5b5dbb3fb8a20c82e7af73e
  1023156 | Chairman LMAO                                           |                | 0xab46adaed659a8630ad500f2c7bfa2b6d5b4c954
  1023213 | Fartsy                                                  |                | 0x8d80b7b2686078b07b51ddcc2b24c67f037d0a56
- 1018521 | Cognate                                                 |                | 
- 1018591 | REL22                                                   |                | 
- 1018693 | AEOLUS                                                  |                | 
- 1018705 | PAN CASTLE                                              |                | 
- 1018614 | BUDGE                                                   |                | 
- 1019230 | POWER BUILD                                             |                | 
- 1019233 | STATUS QUO                                              |                | 
- 1019238 | CHAINMARK                                               |                | 
  1023257 | iFuck                                                   |                | 0x60ef407e2b07b55e46540863e8abb845643fd9e7
  1023256 | iFridge                                                 |                | 0x55427a3a4aa74b59fb16a5d21c5298ac10690b5b
  1023255 | iFood                                                   |                | 0x2bc6dc43de1246d9550b80b4fe56e5f677ffde35
  1023254 | iFlush                                                  |                | 0xed81e3874697d604f31905ce8162bc044d0cb7dc
- 1019245 | THE CHILLING ADVENTURES OF SABRINA                      |                | 
- 1019248 | WHAT DO YOU MEME?                                       |                | 
- 1019249 | AQUAROSE                                                |                | 
- 1018590 | THE CATHOLIC THEOLOGICAL SOCIETY OF AMERICA             |                | 
- 1018592 | EURASIA GROUP                                           |                | 
- 1018593 | PUMA SWEDE                                              |                | 
- 1019240 | FRESH LOOK & DESIGN                                     |                | 
- 1019241 | KNAPP MONARCH                                           |                | 
  1023266 | Incompoop                                               |                | 0x3362937d7800f0ca73e7b8482764508dafdb1ec3
- 1018731 | MAÏS SOUFFLÉ BAD MONKEY POPCORN & DESIGN                |                | 
  1023305 | Neo Narcissist                                          |                | 0x4c6f5b0ab5f015e77ef0ffc24c1776226a437a55
  1023302 | Narcissidal                                             |                | 0x2b1632d103b279e0e3b064bf2d322be6dfc41293
  1020088 | Flexible Flower                                         |                | 0xac4717f6d35c91117aa8bc7463bb95c626964169
@@ -1475,7 +1333,6 @@
  1022217 | Freedom FYI                                             |                | 0x57e0e8b8523f4467bfed366c316e1b8c845c1307
  1022317 | Heroin Hell                                             |                | 0xd1187c9dd7721a942c8eb79be9000a45a26e1840
  1020483 | Joy Pearls                                              |                | 0x00fadd460c93b1b07c0ffc003ce398389cef9ada
- 1018619 | The Future of Trademarks                                |                | 
  1020555 | Love GPS                                                |                | 0x512d6725af5c4c39744db1ed2037f6b9c116a16e
  1020556 | Love Injection                                          |                | 0x807917fb0399661cd4a668e0792fc43f4288706c
  1020557 | Love Java                                               |                | 0x8e3659a120a3598a2839e69c5ec2385fb3294a0b
@@ -1484,6 +1341,7 @@
  1023443 | Learn Lingo 101                                         | 1023443_design | 0x13cc216a38bbe5967d810fa6c7fcd0fbbf94d97e
  1020683 | Mood Pantry                                             |                | 0x71775f24c3b8111f2f85bdce6d99928fe894c67e
  1021023 | Rage Requiem                                            |                | 0x2ed231e6bc3b597f0d4dec7c28ac7b1ccfce292a
+ 1023456 | HP                                                      |                |
  1021112 | Scar Tender                                             |                | 0xbbb5324d0531ca59f8c06cc558476177b8745600
  1021114 | Scare Dare                                              |                | 0x7e322b2943a9f49df282734164d7279c65f13375
  1021115 | Scare Hug                                               |                | 0x441d4c8ca0d3b02d7a424b5c11022b5234234f98
@@ -1495,12 +1353,10 @@
  1021127 | Self Loving Soul                                        |                | 0x7f24e06caa565f27349ee7a87c042e526dc551bc
  1021129 | Serene Season                                           |                | 0x18d059969f0d5b7e2b6822998bffb32f82b6710c
  1021130 | Sereni-Tea                                              |                | 0x51d6da5a93c8c2491f5b1632c60b8550e73a440e
- 1018689 | 10 CORSO COMO MILANO & DESIGN                           |                | 
- 1018691 | LIMBERBERRY                                             |                | 
  1021228 | Spiritual Map                                           |                | 0x850fc2a7022664a6d4887603380ed7ecbe96d2e6
  1021229 | Spite Chocolate                                         |                | 0xd3fb1937a3a03767212f5b456684bcf1625aad5f
  1021730 | webrax.com                                              | 1021730_design | 0xcc6fe18137fb6f6c64f4d91b1f1cfc232b125b41
- 1018695 | ORNELLI Design                                          |                | 
+ 1023465 | British American Tobacco                                | 1023465_design |
  1021305 | Thought Rape                                            |                | 0x5d1a450d03aa7e7f6f5cc1b6c78a1706e32e3d21
  1021423 | Void Avoider                                            |                | 0xadfe0723f7f8fb3bde6e6ff9eaa98c99e706c5ee
  1021424 | Vulnerabili-Tea                                         |                | 0xccdfc903ffc6780121bda07bb647bd6bde8b8e60
@@ -1512,29 +1368,14 @@
  1021879 | Aisle of Defile                                         |                | 0x581d04c6e9f2f3f3dc1b7b3afd3750ccdc46a50a
  1021433 | Weapons of Mass Distraction                             |                | 0xa10777ed3aadb1893efac4f1d2571876b60a2310
  1021434 | Weather Together                                        |                | 0xbfcbb6c0850ef9d4bb51dc77eb0e9ec5d7b2d384
- 1018597 | CO-EFFICIENT                                            |                | 
  1022081 | Depression Decrypter                                    |                | 0x83241f9fbdff955bb4f9c3b48051b9140a9e962c
  1022076 | Demon Dynamite                                          |                | 0x16af2ab5535fc0113bd710862b31020544f3fd59
  1022070 | Delay Bay                                               |                | 0xb406b7bc41ad9bc49e583cb12ebd0e927960f6d6
  1022050 | Criticism XoXo                                          |                | 0x99287d472be89c7ac03f97e0d0ca14becd1134ad
  1021533 | Gratitude Café                                          |                | 0x018aa9256d74329892868798069447bde10a8cf7
  1023470 | Hecio                                                   |                | 0xc8803f7b6694d16c92acda0bc6ca36ebf1e43bc7
- 1019216 | YFA                                                     |                | 
- 1018716 | MUC-OFF                                                 |                | 
- 1018440 | TenTheApp                                               | 1018440_design | 
- 1018719 | ELLA SIMONE                                             |                | 
- 1018730 | COOL CLOUD                                              |                | 
- 1018735 | SEMEON                                                  |                | 
- 1018737 | TIGER  HONEY                                            |                | 
- 1018606 |                                                         |                | 
- 1018609 |                                                         |                | 
- 1019265 | SAFEGAUZE COTTON                                        |                | 
- 1019273 | SENTINEL ELIMINATOR VORTEX                              |                | 
- 1019274 | EYEPUTTI                                                |                | 
- 1019275 | VISION SUITE                                            |                | 
- 1018545 | Drizly                                                  |                | 
- 1018686 | UDON GAMADASHI & DESIGN                                 |                | 
- 1018603 | Dai-ichi Life Group                                     |                | 
+ 1023475 | Pinterest                                               |                |
+ 1018440 | TenTheApp                                               | 1018440_design |
  1022119 | Dupe Deck                                               |                | 0xe3c21cfa8fd57df879af11d135a256f7714075e6
  1022112 | Double Healix                                           |                | 0x8c8c53653897b231ce56176a2e935855852c2e42
  1022106 | Divine Gifts                                            |                | 0x3fe7a50a9042fb1a7d00367424dce9eeaa9e3b1d
@@ -1555,12 +1396,9 @@
  1019447 | Attachment Attic                                        |                | 0x46c289d88d40a790e97700cc3e77f847b500dff7
  1019449 | Attitude Alchemy                                        |                | 0xb2eb98d3b76f27b7fe5e963dc9256d99ce3bd193
  1019450 | Attitude Audit                                          |                | 0x22ec4f61253c7e1af43fa229386c21b5559de4f2
- 1019213 | NIP & FAB                                               |                | 
  1022552 | Patience Sherpa                                         |                | 0x7bee6c81cd73d34e578cc71fbd8be36fb0e694bf
  1022547 | Patience 911                                            |                | 0x7ebf476d27fad13e2f7bc8c0ee77951c9e7010e1
  1022541 | Package Purgatory                                       |                | 0xdb4d077240115f3657461c812ced9795d7070071
- 1018687 | LORDAE                                                  |                | 
- 1018690 | 10 CORSO COMO MILANO & DESIGN                           |                | 
  1022535 | Optimism OFC                                            |                | 0xd0a3d5b58703308f277d4241a06ccd2873149484
  1022530 | OMG Moment                                              |                | 0x9dcd8e3458452293283487f9785ee3c1972d0f1d
  1022433 | Love Ticker                                             |                | 0xd730e77e5bdb68ed297e5636668de1b0eaf69cd7
@@ -1610,11 +1448,6 @@
  1019897 | Doubt Debugger                                          |                | 0xea8ef7255546aa287623182e233d9bface585622
  1019896 | Doubt Dance                                             |                | 0x6356829cbe588b5dc90477ee987421b88bec06af
  1019895 | Doubt Audit                                             |                | 0xdc3629744da91ad4e0aeb96f542e7d51b7d85d75
- 1018734 | TAKBO & DESIGN                                          |                | 
- 1019228 | NATURLITE                                               |                | 
- 1019278 | SLEEPTIME LITE                                          |                | 
- 1019279 | PHEMIUM                                                 |                | 
- 1019270 | TROPIK                                                  |                | 
  1021971 | Chance Chow                                             |                | 0xd15d1377996d626329773ce54f03cdfcfa5a4360
  1021969 | Challenge Sherpa                                        |                | 0xc88eebc44eb8c50c0f831a862f7ded656c71f6e1
  1021965 | Cangineer                                               |                | 0x7f69c2f04ba8afe1d24f548ca162f642cfb5363f
@@ -1624,8 +1457,6 @@
  1023519 | Tag Toolkit                                             |                | 0x0aef920ea6b16cd2387efa83fa95cb1d33654802
  1022171 | Father DUx                                              |                | 0x0357cbf40376884191e4a1dd74e8b9ab938f821d
  1022339 | Humility IV                                             |                | 0x0e3b1e4561c1fa99c1cdb3b566be17def042fd23
- 1018733 | PROMARKER                                               |                | 
- 1019268 | THOUGHT & DESIGN                                        |                | 
  1022422 | Love DNA                                                |                | 0x89aafabe35bbaf2b3c0365ef32d5dc4f027f2ce9
  1022421 | Love Coffee                                             |                | 0xf9683249f4d1a93959e596c38601fcc9c9321cd3
  1022420 | Love Code                                               |                | 0x6ad273830d06a6401bfae3f0ac73da12f024f74f
@@ -1652,11 +1483,6 @@
  1023143 | Backup Crackup                                          |                | 0xfeddba4bc57a17325922183866208e195ddc9a7b
  1023142 | Authenticity XoXo                                       |                | 0xf635c499c7d22711f7dfa23f8d548d812e2a512b
  1023140 | Artisinal Fartisinal                                    |                | 0x70298f25548d1fdf5cfc159ce9beff1a5b825674
- 1018864 | ARTHRITIS POWER                                         |                | 
- 1018865 | SIMPLIHOME DESIGN                                       |                | 
- 1018866 | SIMPLIHOME                                              |                | 
- 1018867 | WINSOR & NEWTON PROFESSIONAL                            |                | 
- 1018870 | FINANCING SMILES                                        |                | 
  1023541 | earningscast                                            |                | 0x167a7a73316eda8ee65ee130d35f903470eb4a1a
  1023243 | Hellarious                                              |                | 0x3cd196db2b7c95675789f62b06e42894f067870f
  1020166 | Garden of Possibilities                                 |                | 0x7d1eafd643c6a9768c1274c26165f68cc5612287
@@ -1668,17 +1494,6 @@
  1020197 | Goosebump Moment                                        |                | 0x8ddc695db5408a72145e9a2591200a86adec11f0
  1020196 | Good Will Gardener                                      |                | 0x6d679bc4cf371121b2c5bd7f459edcf190611d57
  1023553 | USCHAG                                                  | 1023553_design | 0x372af5d48f5a90e4d044addd1fb0c465a402cc23
- 1019209 | HANGMAN                                                 |                | 
- 1019210 | LEO PAUL                                                |                | 
- 1019219 | BATTLE BUNKERZ & DESIGN                                 |                | 
- 1019223 | ESTELLE FOURNIER PARTNER & DESIGN                       |                | 
- 1019224 | GIVE MORE H.U.G.S.                                      |                | 
- 1019250 | BEACH CLUB                                              |                | 
- 1019253 | INSPR                                                   |                | 
- 1019225 | GIVING SOULS                                            |                | 
- 1018674 | M YSL M & DESIGN                                        |                | 
- 1018743 | MISCELLANEOUS DESIGN (POD ICON)                         |                | 
- 1019235 | THERMIC                                                 |                | 
  1020517 | Lamentation Lodge                                       |                | 0x122eaf9728a0e049de3b92160d80c25bd17b9b34
  1020512 | Knee Jerk Clerk                                         |                | 0xdeee777c5f62a8b5efc2ee5d75306d08da1f37a8
  1020476 | Journey Truster                                         |                | 0x1318ce2c313e99bb9bfbe8bc289f5e864976b47c
@@ -3220,7 +3035,7 @@
  1020493 | Judgment Junk                                           |                | 0x10a6b12e3656a3ebb9c686d1fbf7c05f23285e80
  1020297 | Happiness Coupon                                        |                | 0xa91a776816748872e22a149c2eb0bd2d5ef05f9c
  1020401 | Idiot Audit                                             |                | 0xe34f8bbe199469638ff70b2c8d017a1124904b28
- 1020399 | I'm Done Door                                           |                | 0x703d3b12af48d91eba44b8e4d92d3fbeacd839f2
+ 1020399 | I’m Done Door                                           |                | 0x703d3b12af48d91eba44b8e4d92d3fbeacd839f2
  1020264 | Grintention                                             |                | 0xeb0528fbb86cf9d4001ee128b7a3215c39af2cb3
  1020261 | Grinsane                                                |                | 0x98c0fe21dd2bdb62eb308966cc168badf2cd3d76
  1020353 | Higher Self Host                                        |                | 0xc1b40dbebd089fed5b6030ee7782b97b576fa337
@@ -3278,9 +3093,6 @@
  1020704 | Motivation Motel                                        |                | 0x5fd7657a87610320ab6feecc1d55d1444153c017
  1020740 | Never Ever Land                                         |                | 0xdaaa3fd7d78674ac32425f9c6b34394d35b4356e
  1020772 | Noose Loosener                                          |                | 0x03e8b15f1f3a933b4d0bc3fc3a675803bbf29750
- 1018795 | BONNEVAL                                                |                | 
- 1018610 |                                                         |                | 
- 1018605 | Dai-ichi Life Holdings                                  |                | 
  1020504 | Kindness Kabob                                          |                | 0xe60171527592de1406a08b4f0829efe5a305c249
  1020495 | Junk Mood                                               |                | 0x84ee90859b5a947baef94179c111501659970d06
  1020489 | Jubilance Jubilee                                       |                | 0xc07218f3f4a9f2dfbdb463300a4b20ebaed0ddd5
@@ -3306,9 +3118,6 @@
  1020908 | Persistence Percolator                                  |                | 0x9451400c3b7804e701e6b89fbb12ab39a6f75253
  1020963 | Procrastination Police                                  |                | 0x4682e4197ddef956257537c402e08fae44d90cf1
  1020969 | Productivity Pearls                                     |                | 0x8e319ff77c69b05fcfbe4657d49e70e717ddd324
- 1018620 | The Future of Trademark Protection                      |                | 
- 1018694 | VALENTINE                                               |                | 
- 1018697 | 4ROOTZ                                                  |                | 
  1020702 | Motivation Mocha                                        |                | 0x68c758ae384807fc8976603c1d46115f3d0bc887
  1020759 | Nirvana Now                                             |                | 0xdd6496fe8983434fd3d118fa238c5e0d36334e28
  1020765 | No Sweat Sweater                                        |                | 0x92f4f73e1c51d4be1baab47f03b3d86b5273107d
@@ -3406,7 +3215,6 @@
  1021405 | Venom Vaporizer                                         |                | 0x23c2b5cec38e42061a7da31e5deb2e5966d90c8f
  1021408 | Vexation Vacation                                       |                | 0x95a85c043388a032bc2ce7bfc8abed5c29da1260
  1021422 | Vogue Rogue                                             |                | 0x0eec098b90f0bbb1e108753b3f723dceea5786e5
- 1018698 | BE CURIOUS                                              |                | 
  1021090 | Rumor Humor                                             |                | 0x2a2c00b49483afc7a15c50613e954754ebcde140
  1021163 | Shouldite                                               |                | 0x67afb49fe4864b54fc550793558db9f6ab1a714b
  1021174 | Sloth Broth                                             |                | 0xece5d56d37607b52fcbd33126c52a7af567b7cfa
@@ -3833,7 +3641,6 @@
  1021091 | Rumor Tumor                                             |                | 0xc3dbdf2233deb893c0a83fcc0598f8f92f7bb9e3
  1021092 | Rush Free Frontier                                      |                | 0x06d65f83a81fbd48f0ad279a80675d0ab2151170
  1021093 | Rushin' Roulette                                        |                | 0xcb443a2015527256cedaf0e6757efbf33b6531d7
- 1019267 | THE MALFUNCTION                                         |                | 
  1021095 | Sabotage Sabbath                                        |                | 0x0817dc77e51c3ae262e91d6c2d9bc21884b37ba8
  1021098 | Sacred Depths                                           |                | 0x6ace905df1f4b07848bd9e04c581660772060238
  1021099 | Sacred Dimension                                        |                | 0x13f3b7532ae3335ec74f4a7c362f154f2ee7608a
@@ -3851,8 +3658,6 @@
  1021118 | Scream House                                            |                | 0xf09f0555e37b578552299aa1282eab30c06a5106
  1021119 | Secret Garden                                           |                | 0xe3306296e35b17f51c8e8a9ea792d5d3bcea6041
  1021121 | Self Esteem CPR                                         |                | 0x2066b97005bf0eedc01e4f1f51af9584ee6ae975
- 1019262 | PERFORMIND                                              |                | 
- 1018684 | HEALTHEFFICIENT                                         |                | 
  1023562 | Frictionless Funnel                                     |                | 0xf11fc8d56cc93577b215c6242198bc5583abb705
  1021151 | Shame Game                                              |                | 0x4a86fb2cad9eb73a44311973e0e0fc6b89acebea
  1021157 | Shame Shredder                                          |                | 0xd4d32804aa6cf4f4086f9f1cd41bc8ea511c1dd1
@@ -3864,8 +3669,6 @@
  1021171 | Slip Care                                               |                | 0x7d3d6ca18320823523948a5a5819659b824e1dce
  1021178 | Slowbiotic                                              |                | 0x139f886f322a3f16e27c88a7cf8bad384e75fb1e
  1021179 | SmartSoul                                               |                | 0x2d94aac98c8b32814c3c74ba76ed4bfb2fb7c11b
- 1019246 | THE NEXT GENERATION OF GREATS                           |                | 
- 1019263 | PLANET E BY ECO-STREAM & DESIGN                         |                | 
  1021189 | Soul CPU                                                |                | 0x221b68f088c331ec5a600eb2defe7a0e306834d3
  1021201 | Soul Sequencing                                         |                | 0xa4db567113e822a043b10e6f2eb6e433d80668c6
  1021202 | Soul Settings                                           |                | 0x10b47e89fe4f4544096dca3ecc9c384bb45dd296
@@ -3874,7 +3677,6 @@
  1021206 | Soul Storm                                              |                | 0xb018837f6f318241e19be27a0e4f3cbd2a74ec8c
  1021207 | Soul Stress                                             |                | 0x9b7b18a2754fadac70d79e1a480722834360b47f
  1021208 | Soul Sugar                                              |                | 0x734c4cb3a98bac3b66439dbf3e2356bc14293173
- 1018997 | FOCUS                                                   |                | 
  1021209 | Soul Surgeon                                            |                | 0x21348a1f09b33b2308abc0c5bcafc0fcfb2c1d1e
  1021212 | Soul Sync                                               |                | 0xd0b84f50a40b7e26d8bafbeffd4e53939448ce7f
  1021213 | Soul Syrup                                              |                | 0x0444e6099e4122771892ee911a004ffd3f7434f9
@@ -3941,16 +3743,7 @@
  1021420 | Vitamin See                                             |                | 0x7f1a07901d113de40a429c10b4c69e149ce08b74
  1021428 | Vulnerability Vinaigrette                               |                | 0x23dd2408b35b69637f24bdb05a6a3dac3bb824c5
  1021430 | Vulnerability Vitamins                                  |                | 0x05c063baa4b7e341e84f0c74c118e75ceffbf1ad
- 1018452 | Studio 26 Associates, LLC                               | 1018452_design | 
- 1018608 | UNITED FOR THE TROOPS                                   |                | 
- 1018611 | OCEANA POKE                                             |                | 
- 1018612 | ARGENTO PASTA                                           |                | 
- 1018703 | H-30 FLEX                                               |                | 
- 1018704 | THE FUTURE OF ROLLING                                   |                | 
- 1018707 | DENSIFIED FOAM CORE                                     |                | 
- 1018709 | TRUE GROUT                                              |                | 
- 1018710 | MY MINIWORLD                                            |                | 
- 1018711 | NO 18 & DESIGN                                          |                | 
+ 1018452 | Studio 26 Associates, LLC                               | 1018452_design |
  1021497 | Worry Whip                                              |                | 0x247c526a1d6ba8a883aa4f9197cb3269f3029717
  1021499 | Worry Wormhole                                          |                | 0x069620b21b0e42d1b6cc9f861bfdb890699952a2
  1021500 | Worry X-ray                                             |                | 0x39c16ff1ed4c5a97a2d3bbf2a0349195245068f7
@@ -3976,8 +3769,6 @@
  1019377 | Adversity Kisser                                        |                | 0x6cfa36b45c7533569636e256f8936a1fdb52864b
  1019378 | Adversity Ninja                                         |                | 0x3bfae3a4063d77f4e9f789faa2bb42410a50f05d
  1019389 | Agree Tea                                               |                | 0x305e5799293f7c20cefa4386334e5afeab4212d4
- 1019236 | VIZISYNC                                                |                | 
- 1019259 | M Design                                                |                | 
  1019390 | AgreeMint                                               |                | 0x87b40e1017f1a9280e38c6785b982194288547c5
  1019391 | Ah Haha Therapy                                         |                | 0xcaf3ffecac4a506209c602e17aa608575c007051
  1019393 | Allowism                                                |                | 0x3b48136975a4c2b2717e1452370177ddc965112c
@@ -4043,15 +3834,13 @@
  1019516 | Bold Oats                                               |                | 0x744f33659886a77787bda873cec46694da21f3c2
  1019517 | Bold Remedy                                             |                | 0x15281e825f4ad0d44439e6c95c0f6939398b2e8d
  1019518 | Bold Rush                                               |                | 0x1d7d1cbbfda648e3a42dd98780506cb8e280657b
- 1019520 | Bore d'oeuvres                                          |                | 0x3a45b0663035fdabaca7499d86ab3653168f80e2
+ 1019520 | Bore d’oeuvres                                          |                | 0x3a45b0663035fdabaca7499d86ab3653168f80e2
  1019521 | Bore Mat                                                |                | 0x491846bdfe7ee0c0d5d58c02186f2571d8e34eb6
  1019523 | Bottomless Grit                                         |                | 0xe2939ed87c4d92b798fa3609a36a3032f9edf15a
  1019524 | Bounce Bourbon                                          |                | 0x21eddaa52d82f3761bf685467676c94d1b9915c2
  1019525 | Boundary Barista                                        |                | 0x3ed42f0e25441ad5e8bd9e6fbab8b817bd597fdc
  1019526 | Boundary Bridge                                         |                | 0x56d06ab3e177fb0ccaf117feb1c8a1e7f3c97ee2
  1019527 | Brain Tattoo                                            |                | 0xcacf8e6db4ad2f2d60eca41baf923031c84535fb
- 1018750 | keracolor                                               |                | 
- 1018712 | FANSCORE                                                |                | 
  1019547 | Broken Heart Hotline                                    |                | 0x0646aa85cdcef391549adf258913727bd0456a60
  1019548 | Broken Heart Refuge                                     |                | 0xc49bfd1ec0f1c7645add840ed87defefb2f2e408
  1019550 | Broken Heart Smoothie                                   |                | 0xbf8c89046bca759a497519b3f39e4403780d0e68
@@ -4063,8 +3852,6 @@
  1019563 | Can Do Canoe                                            |                | 0x5dc5b5862bf1979846039787dfdfcfc42d61af37
  1019564 | Can'ticipation                                          |                | 0x07462ac7cdf5eee57198b3c71533b20cf1f5659e
  1019569 | Celestial Love                                          |                | 0x59718470023bad5859bb6da5e795da086e19cdb1
- 1018785 | ADRIANNA VINEYARD MUNDUS BACILLUS TERRAE                |                | 
- 1019034 | Money Cleanse                                           |                | 
  1019572 | Certain Curtain                                         |                | 0xf3064e7ed8df83cf5051b55f6e0089576eecbc8a
  1019573 | Certainty Cereal                                        |                | 0x6572f30d8548e1e8d1af135c174a87b55fe17cf1
  1019577 | Challenge Cha-Cha                                       |                | 0x4148fb1d921b71ede9119a74a630aa6abbaf8f90
@@ -4090,45 +3877,6 @@
  1019617 | Compassion Catalyst                                     |                | 0xbe2c48739ccd0ff6694bdbd9d9f0ded4b5f6efd2
  1019622 | Compassion Cologne                                      |                | 0xf0b603a90ff2b77121fad4272338edccad8c38db
  1019626 | Compassion Cookie                                       |                | 0x56d1f7439e0446aa3d9fab75ab8b75115fdfc691
- 1019177 | SCIENCE SQUAD & DESIGN                                  |                | 
- 1019237 | AFTERLIFE WITH ARCHIE                                   |                | 
- 1019185 | MEDICALLY NECESSARY                                     |                | 
- 1019196 | THE BUSTED KNUCKLE GARAGE & DESIGN                      |                | 
- 1018685 | NET GENERATION                                          |                | 
- 1018692 | BABY YOURSELF                                           |                | 
- 1019280 | VREST                                                   |                | 
- 1019283 | GET YOUR PIZZAFIX                                       |                | 
- 1018869 | OBSTACLE COURSE RACING WORLD SERIES                     |                | 
- 1018871 | OBSTACLE COURSE RACING WORLD CUP                        |                | 
- 1018699 | HUGSTORY & DESIGN                                       |                | 
- 1018700 | RETURN ON HUMAN INVESTMENT                              |                | 
- 1018738 | SWATCH                                                  |                | 
- 1018746 | S&B WASABI POWDER & DESIGN                              |                | 
- 1018790 | OMNITEST                                                |                | 
- 1018791 | REP-HAIR                                                |                | 
- 1018792 | MAD RADISH                                              |                | 
- 1018793 | AQUATILE                                                |                | 
- 1019247 | VIZITOUCH                                               |                | 
- 1019251 | BODY ROSE                                               |                | 
- 1018873 | GAMEHEDGE & DESIGN                                      |                | 
- 1019252 | COTEAM                                                  |                | 
- 1019254 | JPL TELE.COM & DESIGN                                   |                | 
- 1019170 | FAST-ED                                                 |                | 
- 1019171 | GO PLAY! BY GRAFIX & DESIGN                             |                | 
- 1019172 | HOW DO YOU APÉRITIF?                                    |                | 
- 1019256 | LA VIE EN ROSE MUSE                                     |                | 
- 1018794 | FROCCELLA                                               |                | 
- 1018671 | VALGRANGES                                              |                | 
- 1018677 | SEASONPROOF YOUR HOME                                   |                | 
- 1019257 | LCM & Design                                            |                | 
- 1019258 | LCM PARTNERS & Design                                   |                | 
- 1018702 | YIELD DEVELOPMENT                                       |                | 
- 1018742 | IFS AURENA                                              |                | 
- 1018713 | MARTELL EXTRAITS & DESIGN                               |                | 
- 1018672 | MUSEE YVES SAINT LAURENT PARIS & DESIGN                 |                | 
- 1018682 | STREETGASM.COM & DESIGN                                 |                | 
- 1018739 | DOMAINE MUMM                                            |                | 
- 1018688 | CHEESE PEARLS                                           |                | 
  1023581 | A Game EKG                                              |                | 0xd024b8611e80bf566ab4c56bcdf78acc9053b7d9
  1023584 | Abundance Antenna                                       |                | 0xeb637bfea593d80ebf24111abeeeee06d879eaa5
  1023580 | A Game Doctor                                           |                | 0x965af8f6c750a67e458a2097b7cb4b5a2c0bac29
@@ -4156,7 +3904,6 @@
  1023610 | Anger Refund                                            |                | 0xd1d9d96707b7fbc3f9a67d94b663b62bb52064ed
  1023611 | Anger Traffic                                           |                | 0x4c9cfa4e62b8077ef2273d16973777b2d81f61c9
  1023613 | Anger: Reroute                                          |                | 0xa0525e1743ca5f93ba23666bd66973f894bfc5e0
- 1018701 | ROHI                                                    |                | 
  1023616 | Anxiety GOMB                                            |                | 0xef3b9f3d6ff8e259701463fef393fb7fdc520385
  1023617 | Anxiety ICU                                             |                | 0x9b9a4220e478e9ac8970dfbbffdb3c1b01a9c233
  1023619 | Anxiety Red-Eye                                         |                | 0x913d39bb892cf3abeeb7cdc297ca0f6ef2de7e54
@@ -4633,7 +4380,7 @@
  1024170 | Shitstorm ER                                            |                | 0x966136e8740c954075a7fcdfa1da3abd882c190e
  1024168 | Shitcoin                                                |                | 0x7b58d28557841d2b53fd58920072948c2ed24645
  1024247 | Withinbox                                               |                | 0xc20f43e0d1222d127041072effc31e53f75dd6a1
- 1024245 | Winner's DNA                                            |                | 0xe66fe85cc2b196c5ef25d3cd1eb4137c06c63038
+ 1024245 | Winner’s DNA                                            |                | 0xe66fe85cc2b196c5ef25d3cd1eb4137c06c63038
  1024243 | Willing Hundo P                                         |                | 0xd26fc2cdc9667cd7692c87ed2a60789f6cabf987
  1024242 | Whycap                                                  |                | 0x2a1ec5a0da7008217fd9f94c0b4f0ea3f7b7e107
  1024241 | Why-tinerary                                            |                | 0xfe56d57f95cd2f730ca9d6b37b974ca590332d25
@@ -5236,11 +4983,6 @@
  1024690 | Stress Stroller                                         |                | 0x5ce057edcfa8876b95a19660ea5940cb533b61cf
  1024695 | Thought Thermometer                                     |                | 0xb5c0768b84ef2713637dbd4832ce82f2ecec6dd9
  1024702 | Winoculars                                              |                | 0x61f9e6fd7764c37359b84909588da1ccbfba68da
- 1019221 | BELLOF & DESIGN                                         |                | 
- 1019178 | SCIENCE SQUAD                                           |                | 
- 1019173 | LUCA DEL FORTE                                          |                | 
- 1019176 | PUAROT. & DESIGN                                        |                | 
- 1019232 | SILVERSMART                                             |                | 
  1024713 | Inner Scoreboard                                        |                | 0x7c5f4a6add3136eebadaf2f5572455efce6efb2a
  1024715 | Kindness KPI                                            |                | 0x9dcb9e73c7d985c3510d3c083e3673a8eb95a87a
  1024712 | Inner Gallery                                           |                | 0x7200a4afd87651fbaa310c87f712f10c8dfca861
@@ -5263,10 +5005,4 @@
  1024724 | Stupidi-Tea                                             |                | 0x4cb91feeeef51b3be8cb8f00310c69f63e540beb
  1024725 | Wellness KPI                                            |                | 0x68b122d62d3d2e4dbbcb7c49e805d4b2dd4df8cd
   483055 | GLOVES ACQUISITION CORPORATION                          |                | 0x7e48c3ff77f2c476559c5e57e1f3138e7752dd08
- 1019243 | MONROSSO & DESIGN                                       |                | 
  1024571 | Nextrue                                                 |                | 0x032b847a8ced9ccd63c02853ebb4ac6588156eaf
- 1019187 | REEVES & DESIGN                                         |                | 
- 1019193 | ODYSSEY IMPACT & DESIGN                                 |                | 
- 1019234 | THE MIGHTY CRUSADERS                                    |                | 
- 1019179 | SIERRA PINE                                             |                | 
- 1019180 | SWISSMATIC                                              |                | 
