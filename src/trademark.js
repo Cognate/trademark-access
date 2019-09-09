@@ -7,6 +7,7 @@ const contractMap = require('./contracts/map');
 
 const DEBUG = 0;
 const INFO = 1;
+const ERROR = 2;
 
 /** base url for the deprecated S3 bucket location */
 const s3Base = 'https://s3.amazonaws.com/cog-design-marks/';
@@ -15,7 +16,7 @@ const githubBase = 'https://cognate.github.io/trademark-access/design_marks/';
 /** url to access Ethereum */
 const ethereumUrl = 'https://mainnet.infura.io/v3/6c62a9b1a3b640d587a70b105cbc3be9';
 /** level of logging */
-const LEVEL = INFO;
+const LEVEL = DEBUG;
 
 function log(level, text) {
   if (level >= LEVEL) {
@@ -58,11 +59,11 @@ function loadContracts(version, web3) {
 // TODO: poor mans byte map
 // noinspection JSUnresolvedVariable
 const ContractMap = {
-  // '0x6080604052600436106100ae5763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416634589fe': {
-  //   context: 'v1',
-  //   contract: Contracts.v1.Listing,
-  //   handler: processTrademark,
-  // },
+  '0x606060405236156100825760e060020a600035046306f9fcd481146100875780633cecd719146100e257806341c0e1b5146103095780634c16': {
+    context: 'v1',
+    contract: Contracts.v1.Listing,
+    handler: processTrademark,
+  },
   '0x606060405236156100725763ffffffff60e060020a6000350416632f64d386811461007757806341c0e1b5146101045780634c8fe526146101': {
     context: 'v2',
     contract: Contracts.v2.Trademark,
@@ -97,6 +98,11 @@ const ContractMap = {
     context: 'v4',
     contract: Contracts.v4.Timeline,
     handler: processTimeline,
+  },
+  '0x606060405236156100825760e060020a600035046305c7e05481146100875780633cecd719146100b157806341c0e1b51461017f5780637e05': {
+    context: 'v1',
+    contract: Contracts.v1.UsageDocument,
+    handler: processProofOfUse,
   },
   '0x6060604052600436106100af576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806303': {
     context: 'v3',
@@ -145,23 +151,21 @@ async function process(address) {
   const code = (await web3.eth.getCodeAsync(address)).substring(0, 116);
   const lookup = ContractMap[code];
   if (!lookup) {
-    console.log(`failed ContractMap lookup: ${code}`);
+    log(ERROR, `failed ContractMap lookup: ${code}`);
     throw new Error('unidentifiable byte code for trademark');
   }
-  return lookup.handler(await lookup.contract.at(address), address, lookup.context);
+  const Contract = lookup.contract;
+  Contract.defaults({
+    from: '88a80b35014fe7c33b4568cb818f2e16ba799b23',
+  });
+  return lookup.handler(await Contract.at(address), address, lookup.context);
 }
 
 async function processTrademark(trademark, address, context) {
   log(DEBUG, `processing Trademark ${context}`);
   const result = {};
   result.address = address;
-  // TODO: Better way to check this?
-  log(DEBUG, ` - getting timestamp ${context}`);
-  const timestamp = await trademark.timestamp();
-  if (timestamp.greaterThan(0)) {
-    log(DEBUG, ` - adding timestamp ${context}`);
-    result.timestamp = timestamp.toNumber();
-  }
+  await addTimestamp(trademark, result, context);
   if (trademark.design) {
     log(DEBUG, ` - getting design ${context}`);
     const design = await trademark.design();
@@ -187,6 +191,14 @@ async function processTrademark(trademark, address, context) {
       result.word = word;
     }
   }
+  if (trademark.getMark) {
+    log(DEBUG, ` - getting word ${context}`);
+    const word = await trademark.getMark();
+    if (word !== '') {
+      log(DEBUG, ` - adding word ${context}`);
+      result.word = word;
+    }
+  }
   if (trademark.timeline) {
     log(DEBUG, ` - getting timeline ${context}`);
     const timeline = await trademark.timeline();
@@ -207,6 +219,52 @@ async function processTrademark(trademark, address, context) {
       documents: [],
     };
   }
+  if (trademark.getAssignment) {
+    log(DEBUG, `getting assignment ${context}`);
+    const assignment = await trademark.getUsageDocument();
+    if (assignment !== '0x0000000000000000000000000000000000000000') {
+      log(DEBUG, `adding assignment ${context}`);
+      const document = await process(assignment);
+      if (document.companyName || document.firstName || document.lastName) {
+        result.timeline.documents.push(document);
+      }
+    }
+  }
+  if (trademark.getUsageDocument) {
+    log(DEBUG, `getting usage document ${context}`);
+    const usageDocument = await trademark.getUsageDocument();
+    if (usageDocument !== '0x0000000000000000000000000000000000000000') {
+      log(DEBUG, `adding usage document ${context}`);
+      const document = await process(usageDocument);
+      if (document.classOfGoods || document.details) {
+        result.timeline.documents.push({
+          address: document.address,
+          classOfGoods: document.classOfGoods,
+          details: document.details,
+          timestamp: document.timestamp,
+          type: 'Classification',
+        });
+      }
+      if (document.regions) {
+        result.timeline.documents.push({
+          address: document.address,
+          countries: ['US'],
+          regions: document.regions,
+          timestamp: document.timestamp,
+          type: 'AreaOfUse',
+        });
+      }
+      if (document.hash) {
+        result.timeline.documents.push({
+          address: document.address,
+          hash: document.hash,
+          timestamp: document.timestamp,
+          type: 'ProofOfUse',
+        });
+      }
+    }
+  }
+  await addAmendment(trademark, result, context);
   // noinspection JSUnresolvedVariable
   if (trademark.initialProof) {
     log(DEBUG, `getting initial proof ${context}`);
@@ -279,13 +337,7 @@ async function processAreaOfUse(areaOfUse, address, context) {
     log(DEBUG, `   - adding regions ${context}`);
     result.regions = regions.split(',').sort();
   }
-  // TODO: Better way to check this?
-  log(DEBUG, `   - getting timestamp ${context}`);
-  const timestamp = await areaOfUse.timestamp();
-  if (timestamp.greaterThan(0)) {
-    log(DEBUG, `   - adding timestamp ${context}`);
-    result.timestamp = timestamp.toNumber();
-  }
+  await addTimestamp(areaOfUse, result, context, '  ');
   result.type = 'AreaOfUse';
   return sort(result);
 }
@@ -313,13 +365,7 @@ async function processClassification(classification, address, context) {
     log(DEBUG, `   - adding proofs ${context}`);
     result.proofs = proofs;
   }
-  // TODO: Better way to check this?
-  log(DEBUG, `   - getting timestamp ${context}`);
-  const timestamp = await classification.timestamp();
-  if (timestamp.greaterThan(0)) {
-    log(DEBUG, `   - adding timestamp ${context}`);
-    result.timestamp = timestamp.toNumber();
-  }
+  await addTimestamp(classification, result, context, '  ');
   result.type = 'Classification';
   return sort(result);
 }
@@ -328,17 +374,52 @@ async function processProofOfUse(proofOfUse, address, context) {
   log(DEBUG, ` - processing Proof of Use ${context}`);
   const result = {};
   result.address = address;
-  log(DEBUG, `   - adding hash ${context}`);
-  result.hash = await proofOfUse.hash();
-  log(DEBUG, `   - adding location ${context}`);
-  result.deprecatedLocation = await proofOfUse.location();
+  if (proofOfUse.hash) {
+    log(DEBUG, `   - adding hash ${context}`);
+    result.hash = await proofOfUse.hash();
+  }
+  if (proofOfUse.location) {
+    log(DEBUG, `   - adding location ${context}`);
+    result.deprecatedLocation = await proofOfUse.location();
+  }
   await addNext(proofOfUse, result, context);
-  // TODO: Better way to check this?
-  log(DEBUG, `   - getting timestamp ${context}`);
-  const timestamp = await proofOfUse.timestamp();
-  if (timestamp.greaterThan(0)) {
-    log(DEBUG, `   - adding timestamp ${context}`);
-    result.timestamp = timestamp.toNumber();
+  await addTimestamp(proofOfUse, result, context, '  ');
+  if (proofOfUse.getGeographicRegion) {
+    log(DEBUG, `   - getting regions ${context}`);
+    const regions = await proofOfUse.getGeographicRegion();
+    if (regions !== '') {
+      log(DEBUG, `   - adding regions ${context}`);
+      result.regions = regions.split(',').sort();
+    }
+  }
+  if (proofOfUse.getClassOfGoods) {
+    log(DEBUG, `   - getting class of goods ${context}`);
+    const classOfGoods = await proofOfUse.getClassOfGoods();
+    if (classOfGoods) {
+      log(DEBUG, `   - adding class of goods ${context}`);
+      result.classOfGoods = parseInt(classOfGoods);
+    }
+  }
+  // if (proofOfUse.getDateOfFirstUse) {
+  //   log(DEBUG, `   - getting date of first use ${context}`);
+  //   const timestamp = await proofOfUse.getDateOfFirstUse();
+  //   // TODO: Better way to check this?
+  //   if (timestamp.greaterThan(0)) {
+  //     log(DEBUG, `   - adding date of first use ${context}`);
+  //     result.dateOfFirstUse = timestamp.toNumber();
+  //   }
+  // }
+  if (proofOfUse.getProofOfUse) {
+    log(DEBUG, `   - adding hash ${context}`);
+    result.hash = await proofOfUse.getProofOfUse();
+  }
+  if (proofOfUse.getDetails) {
+    log(DEBUG, `   - getting details ${context}`);
+    const details = await proofOfUse.getDetails();
+    if (details) {
+      log(DEBUG, `   - adding details ${context}`);
+      result.details = details.split('|').sort();
+    }
   }
   result.type = 'ProofOfUse';
   return sort(result);
@@ -348,42 +429,107 @@ async function processAssignment(assignment, address, context) {
   log(DEBUG, ` - processing Assignment ${context}`);
   const result = {};
   result.address = address;
-  log(DEBUG, `   - getting company name ${context}`);
-  const companyName = await assignment.companyName();
-  if (companyName !== '') {
-    log(DEBUG, `   - adding company name ${context}`);
-    result.companyName = companyName;
+  if (assignment.companyName) {
+    log(DEBUG, `   - getting company name ${context}`);
+    const companyName = await assignment.companyName();
+    if (companyName !== '') {
+      log(DEBUG, `   - adding company name ${context}`);
+      result.companyName = companyName;
+    }
   }
-  log(DEBUG, `   - getting first name ${context}`);
-  const firstName = await assignment.firstName();
-  if (firstName !== '') {
-    log(DEBUG, `   - adding first name ${context}`);
-    result.firstName = firstName;
+  if (assignment.getCompanyName) {
+    log(DEBUG, `   - getting company name ${context}`);
+    const companyName = await assignment.getCompanyName();
+    if (companyName !== '') {
+      log(DEBUG, `   - adding company name ${context}`);
+      result.companyName = companyName;
+    }
   }
-  log(DEBUG, `   - getting last name ${context}`);
-  const lastName = await assignment.lastName();
-  if (lastName !== '') {
-    log(DEBUG, `   - adding last name ${context}`);
-    result.lastName = lastName;
+  if (assignment.firstName) {
+    log(DEBUG, `   - getting first name ${context}`);
+    const firstName = await assignment.firstName();
+    if (firstName !== '') {
+      log(DEBUG, `   - adding first name ${context}`);
+      result.firstName = firstName;
+    }
+  }
+  if (assignment.getFirstName) {
+    log(DEBUG, `   - getting first name ${context}`);
+    const firstName = await assignment.getFirstName();
+    if (firstName !== '') {
+      log(DEBUG, `   - adding first name ${context}`);
+      result.firstName = firstName;
+    }
+  }
+  if (assignment.lastName) {
+    log(DEBUG, `   - getting last name ${context}`);
+    const lastName = await assignment.lastName();
+    if (lastName !== '') {
+      log(DEBUG, `   - adding last name ${context}`);
+      result.lastName = lastName;
+    }
+  }
+  if (assignment.getLastName) {
+    log(DEBUG, `   - getting last name ${context}`);
+    const lastName = await assignment.getLastName();
+    if (lastName !== '') {
+      log(DEBUG, `   - adding last name ${context}`);
+      result.lastName = lastName;
+    }
   }
   await addNext(assignment, result, context);
-  // TODO: Better way to check this?
-  log(DEBUG, `   - getting timestamp ${context}`);
-  const timestamp = await assignment.timestamp();
-  if (timestamp.greaterThan(0)) {
-    log(DEBUG, `   - adding timestamp ${context}`);
-    result.timestamp = timestamp.toNumber();
-  }
+  await addTimestamp(assignment, result, context, '  ');
+  await addAmendment(assignment, result, context, '  ');
   result.type = 'Assignment';
   return sort(result);
 }
 
 async function addNext(document, result, context) {
-  log(DEBUG, `   - getting next ${context}`);
-  const next = await document.next();
-  if (next !== '0x0000000000000000000000000000000000000000') {
-    log(DEBUG, `   - adding next ${context}`);
-    result.next = next;
+  if (document.next) {
+    log(DEBUG, `   - getting next ${context}`);
+    const next = await document.next();
+    if (next !== '0x0000000000000000000000000000000000000000') {
+      log(DEBUG, `   - adding next ${context}`);
+      result.next = next;
+    }
+  }
+}
+
+async function addTimestamp(document, result, context, prefix) {
+  if (!prefix) {
+    prefix = '';
+  }
+  if (document.timestamp) {
+    log(DEBUG, `${prefix} - getting timestamp ${context}`);
+    const timestamp = await document.timestamp();
+    // TODO: Better way to check this?
+    if (timestamp.greaterThan(0)) {
+      log(DEBUG, `${prefix} - adding timestamp ${context}`);
+      result.timestamp = timestamp.toNumber();
+    }
+  }
+  if (document.getCreatedAt) {
+    log(DEBUG, `${prefix} - getting timestamp ${context}`);
+    const timestamp = await document.getCreatedAt();
+    // TODO: Better way to check this?
+    if (timestamp.greaterThan(0)) {
+      log(DEBUG, `${prefix} - adding timestamp ${context}`);
+      result.timestamp = timestamp.toNumber();
+    }
+  }
+}
+
+async function addAmendment(document, result, context, prefix) {
+  if (!prefix) {
+    prefix = '';
+  }
+  if (document.getAmendment) {
+    log(DEBUG, `${prefix} - getting amendment ${context}`);
+    const amendment = await document.getAmendment();
+    if (amendment !== '0x0000000000000000000000000000000000000000') {
+      log(DEBUG, `${prefix} - adding amendment ${context}`);
+      result.amendment = await process(amendment);
+    }
   }
 }
 

@@ -6,7 +6,7 @@
  1018453 | Triple Aim Technologies                                 | 1018453_design | 
  1019019 | Cuchina Safe                                            |                | 0x228354899d3d12a5c1a71091eafebf941e84b5b9
  1018840 | COGNATE                                                 | 1018840_design | 0xa2a423a147ef2fe82f4613227f8c576fe635ec9b
- 1018748 | FORMcard Ltd                                            |                | 
+ 1018748 | FORMcard Ltd                                            |                | 0x933c5dcc0dda52c29e5fd4570ab49d6a77d10259
  1018442 | WGROUP & DESIGN                                         |                | 
  1018311 | 3 Broke Girls                                           |                | 
  1018312 | Mobile TekForce                                         | 1018312_design | 
@@ -19,15 +19,15 @@
  1019029 | Emoji Pod                                               |                | 0x1412941e930828251d6cbe7c76537d0d309c2edd
  1018476 | Tall Brews                                              |                | 
  1018473 | Kevarta                                                 |                | 
- 1018559 | DatNap                                                  |                | 
+ 1018559 | DatNap                                                  |                | 0xb006f0754014bf84c1510976f0ac301c26d3d008
  1018451 | A's before J's                                          | 1018451_design | 
  1018345 | Artistry Dance Project                                  | 1018345_design | 
  1018479 | The Common Law Trademark Registry                       | 1018479_design | 0x18677086b71635a2ed499134d53e50b521737be7
- 1018518 | Peel To Track                                           |                | 
+ 1018518 | Peel To Track                                           |                | 0xe737f5a339d93a0efe38a123c7cd3a859e6232c7
  1018816 | Witmart                                                 |                | 0x11c4057a317d8e3331e03d45dd288fdf4f75146a
  1018522 | Keycharm                                                | 1018522_design | 
  1018523 | My-Storytellers                                         | 1018523_design | 
- 1018584 | AppMap                                                  |                | 
+ 1018584 | AppMap                                                  |                | 0x9c7014631effe8de2fd679a60b2c44288e3f6e6a
  1018722 | Mitsy Kit                                               |                | 
  1018854 | COG                                                     | 1018854_design | 
  1018859 | Security Life Cycle                                     |                | 0x9684Ef683f6146A89D96A3E51C3D5e455fc8543C
@@ -593,29 +593,29 @@
  1018438 | Loil                                                    | 1018438_design | 
  1018537 | Nextgengolf                                             |                | 
  1018497 | Bronze Big Papi                                         |                | 
- 1018564 | Psychic Paper                                           |                | 
- 1018560 | PenSe                                                   |                | 
+ 1018564 | Psychic Paper                                           |                | 0x8fadb4814a9914f08ae303f9a89e46d366ea0ebc
+ 1018560 | PenSe                                                   |                | 0xa74c718c2d4829f255211c8dfa19da6ba37367be
  1018568 | One Spot                                                |                | 
- 1018583 | Evolve Law                                              |                | 
- 1018588 | eCopters                                                |                | 
- 1018653 | badass                                                  |                | 
- 1018654 | BAD                                                     |                | 
+ 1018583 | Evolve Law                                              |                | 0x427b79d9b17e389659cdfe933a15e2fb3b27a9b1
+ 1018588 | eCopters                                                |                | 0x395137c5191e0b15328bcfa71ecdad8fdc023f3e
+ 1018653 | badass                                                  |                | 0x14c5234bad12c83f5260041bbec57d2430d45980
+ 1018654 | BAD                                                     |                | 0x4c733eb96e7610ac9f5fadac069b0380ca7f107c
  1018513 | Peel To Track                                           |                | 
- 1018656 | Badass Yoga Mats                                        |                | 
+ 1018656 | Badass Yoga Mats                                        |                | 0xbb4a2c780a4b9b6f5f77da8398bbf91c2106736a
  1018531 | The First Step in Trademark Protection                  |                | 0xfc3ce3252ef88bb8106bbe97cdb2e191bd7ed674
- 1018657 | BAD Yoga Mats                                           |                | 
+ 1018657 | BAD Yoga Mats                                           |                | 0x8337f436d739339be60fd49b8e451d86efc172de
  1018510 | Rep Appeal Clothing                                     | 1018510_design | 
  1018536 | NCCGA                                                   |                | 
- 1018724 | Activisor                                               |                | 
+ 1018724 | Activisor                                               |                | 0x34cce12dea80877bcf69d5f35b3ac609b15445c9
  1018346 | ProperSee                                               | 1018346_design | 
- 1018720 | HABIT                                                   |                | 
- 1018721 | Mitsy Kit                                               |                | 
- 1018723 | nohmii                                                  |                | 
- 1018725 | Cognate                                                 |                | 
- 1018726 | KATRIS                                                  |                | 
- 1018751 | SMARTBLANKET.COM                                        |                | 
- 1018752 | Tertill                                                 |                | 
- 1018769 | Three Point Group, LLC                                  |                | 
+ 1018720 | HABIT                                                   |                | 0x75fbaa1fdefac8f8f2828d007c259f102fed4e81
+ 1018721 | Mitsy Kit                                               |                | 0x128f4deb78e9ca94c5a7ec8525cbf6a887ff2d03
+ 1018723 | nohmii                                                  |                | 0x2f2b5578a02b826d9b8192efce497318e6b9abe6
+ 1018725 | Cognate                                                 |                | 0x61d8e125bad1466c0031be6be3fa002a126e55e6
+ 1018726 | KATRIS                                                  |                | 0xe636f021b09e2b3334a95d7f06c33e8042acbc84
+ 1018751 | SMARTBLANKET.COM                                        |                | 0x9e6c2eabb33220b31fd7430edd6d7a90b48dec72
+ 1018752 | Tertill                                                 |                | 0xb180dcdccb8e40861c447ed67329324496952881
+ 1018769 | Three Point Group, LLC                                  |                | 0x0b0d5bd93ff5d664f1de5fa555d4bb48d386deb8
  1018807 | Muirwood Reclamations                                   |                | 0x83c6b40527b3719adaac391085ba5284c14287c6
  1018818 | VulSec                                                  |                | 0x632e458ceadd4d133a791fa95af557bf1d0c2aa0
  1018819 | Find The Data. Protect The Data.                        |                | 0x97cd07893a88dd4f891c08da6ae352f393b67ded
@@ -859,7 +859,7 @@
  1018717 | STITCH                                                  |                | 
  1018747 | PLANIPREP                                               |                | 
  1018784 | VERMONT COOKIE BUTTONS                                  |                | 
- 1018665 | Yogatini                                                |                | 
+ 1018665 | Yogatini                                                |                | 0x78ae101d7e5d3ea9367bb4e9f71ea09f1d6dee34
  1018666 | INTRA-MATIC                                             |                | 
  1018667 | CAROL TONE BELLS                                        |                | 
  1018668 | CONSTANT COMFORT                                        |                | 

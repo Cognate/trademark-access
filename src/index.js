@@ -1,4 +1,4 @@
-import "./listings.scss";
+import './listings.scss';
 
 // es-lint-ignore
 const $ = require('jquery');
