@@ -1,6 +1,6 @@
-import "./listings.scss";
-import "jquery-typeahead";
-import "jquery-typeahead/dist/jquery.typeahead.min.css";
+import './listings.scss';
+import 'jquery-typeahead';
+import 'jquery-typeahead/dist/jquery.typeahead.min.css';
 
 // es-lint-ignore
 const $ = require('jquery');

@@ -32,14 +32,13 @@ web3.eth = Bluebird.promisifyAll(web3.eth);
 engine.addProvider(new Web3SubProvider(new Web3.providers.HttpProvider(ethereumUrl)));
 engine.start();
 
-log(INFO, 'loading contracts...');
-
+log(DEBUG, 'loading contracts...');
 const Contracts = {};
 Contracts.v4 = loadContracts('v4', web3);
 Contracts.v3 = loadContracts('v3', web3);
 Contracts.v2 = loadContracts('v2', web3);
 Contracts.v1 = loadContracts('v1', web3);
-log(INFO, 'completed loading contracts');
+log(DEBUG, 'completed loading contracts');
 
 function loadContracts(version, web3) {
   const results = {};
@@ -439,6 +438,7 @@ async function processProofOfUse(proofOfUse, address, context) {
   }
   await addNext(proofOfUse, result, context);
   await addTimestamp(proofOfUse, result, context, '  ');
+  // version 1
   if (proofOfUse.getGeographicRegion) {
     log(DEBUG, `   - getting regions ${context}`);
     const regions = await proofOfUse.getGeographicRegion();
@@ -450,6 +450,7 @@ async function processProofOfUse(proofOfUse, address, context) {
       }
     }
   }
+  // version 2
   if (proofOfUse.geographicRegion) {
     log(DEBUG, `   - getting regions ${context}`);
     const regions = await proofOfUse.geographicRegion();
@@ -461,6 +462,7 @@ async function processProofOfUse(proofOfUse, address, context) {
       }
     }
   }
+  // version 1 and 2
   if (proofOfUse.getClassOfGoods) {
     log(DEBUG, `   - getting class of goods ${context}`);
     const classOfGoods = await proofOfUse.getClassOfGoods();
@@ -469,6 +471,7 @@ async function processProofOfUse(proofOfUse, address, context) {
       result.classOfGoods = parseInt(classOfGoods);
     }
   }
+  // version 3 and 4
   if (proofOfUse.classOfGoods) {
     log(DEBUG, `   - getting class of goods ${context}`);
     const classOfGoods = await proofOfUse.classOfGoods();
@@ -477,6 +480,7 @@ async function processProofOfUse(proofOfUse, address, context) {
       result.classOfGoods = parseInt(classOfGoods);
     }
   }
+  // // version 1
   // if (proofOfUse.getDateOfFirstUse) {
   //   log(DEBUG, `   - getting date of first use ${context}`);
   //   const timestamp = await proofOfUse.getDateOfFirstUse();
@@ -486,6 +490,7 @@ async function processProofOfUse(proofOfUse, address, context) {
   //     result.dateOfFirstUse = timestamp.toNumber();
   //   }
   // }
+  // // version 2
   // if (proofOfUse.dateOfFirstUse) {
   //   log(DEBUG, `   - getting date of first use ${context}`);
   //   const timestamp = await proofOfUse.dateOfFirstUse();
@@ -495,14 +500,17 @@ async function processProofOfUse(proofOfUse, address, context) {
   //     result.dateOfFirstUse = timestamp.toNumber();
   //   }
   // }
+  // version 1
   if (proofOfUse.getProofOfUse) {
     log(DEBUG, `   - adding hash ${context}`);
     result.hash = await proofOfUse.getProofOfUse();
   }
+  // version 2
   if (proofOfUse.proofOfUse) {
     log(DEBUG, `   - adding hash ${context}`);
     result.hash = await proofOfUse.proofOfUse();
   }
+  // version 1 and 2
   if (proofOfUse.getDetails) {
     log(DEBUG, `   - getting details ${context}`);
     const details = await proofOfUse.getDetails();
@@ -511,6 +519,7 @@ async function processProofOfUse(proofOfUse, address, context) {
       result.details = details.split('|').sort();
     }
   }
+  // version 3 and 4
   if (proofOfUse.details) {
     log(DEBUG, `   - getting details ${context}`);
     const details = await proofOfUse.details();
@@ -527,6 +536,7 @@ async function processAssignment(assignment, address, context) {
   log(DEBUG, ` - processing Assignment ${context}`);
   const result = {};
   result.address = address;
+  // version 3 and 4
   if (assignment.companyName) {
     log(DEBUG, `   - getting company name ${context}`);
     const companyName = await assignment.companyName();
@@ -535,6 +545,7 @@ async function processAssignment(assignment, address, context) {
       result.companyName = companyName;
     }
   }
+  // version 1 and 2
   if (assignment.getCompanyName) {
     log(DEBUG, `   - getting company name ${context}`);
     const companyName = await assignment.getCompanyName();
@@ -543,6 +554,7 @@ async function processAssignment(assignment, address, context) {
       result.companyName = companyName;
     }
   }
+  // version 3 and 4
   if (assignment.firstName) {
     log(DEBUG, `   - getting first name ${context}`);
     const firstName = await assignment.firstName();
@@ -551,6 +563,7 @@ async function processAssignment(assignment, address, context) {
       result.firstName = firstName;
     }
   }
+  // version 1 and 2
   if (assignment.getFirstName) {
     log(DEBUG, `   - getting first name ${context}`);
     const firstName = await assignment.getFirstName();
@@ -559,6 +572,7 @@ async function processAssignment(assignment, address, context) {
       result.firstName = firstName;
     }
   }
+  // version 3 and 4
   if (assignment.lastName) {
     log(DEBUG, `   - getting last name ${context}`);
     const lastName = await assignment.lastName();
@@ -567,6 +581,7 @@ async function processAssignment(assignment, address, context) {
       result.lastName = lastName;
     }
   }
+  // version 1 and 2
   if (assignment.getLastName) {
     log(DEBUG, `   - getting last name ${context}`);
     const lastName = await assignment.getLastName();
@@ -597,6 +612,7 @@ async function addTimestamp(document, result, context, prefix) {
   if (!prefix) {
     prefix = '';
   }
+  // version 3 and 4
   if (document.timestamp) {
     log(DEBUG, `${prefix} - getting timestamp ${context}`);
     const timestamp = await document.timestamp();
@@ -606,9 +622,20 @@ async function addTimestamp(document, result, context, prefix) {
       result.timestamp = timestamp.toNumber();
     }
   }
+  // version 1
   if (document.getCreatedAt) {
     log(DEBUG, `${prefix} - getting timestamp ${context}`);
     const timestamp = await document.getCreatedAt();
+    // TODO: Better way to check this?
+    if (timestamp.greaterThan(0)) {
+      log(DEBUG, `${prefix} - adding timestamp ${context}`);
+      result.timestamp = timestamp.toNumber();
+    }
+  }
+  // version 2
+  if (document.createdAt) {
+    log(DEBUG, `${prefix} - getting timestamp ${context}`);
+    const timestamp = await document.createdAt();
     // TODO: Better way to check this?
     if (timestamp.greaterThan(0)) {
       log(DEBUG, `${prefix} - adding timestamp ${context}`);
