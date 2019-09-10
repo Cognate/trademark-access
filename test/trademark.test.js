@@ -221,12 +221,108 @@ describe('Pulling Trademarks from Ethereum', () => {
       });
     });
 
-    it('Design');
+    it('Design', async () => {
+      await assertTrademark({
+        address: '0xaaf6b1d8558770b3c95fa528a60030a3ebb4a6de',
+        deprecatedDesignLocation: 'https://s3.amazonaws.com/cog-design-marks/1023516_design',
+        design: '0x1ee850e4b38456d501a6e568af1c8042d34596a6e4ec4333ac864451747008ae',
+        migratedHash: 'TODO',
+        migratedLocation: 'https://cognate.github.io/trademark-access/design_marks/1023516_design',
+        timeline: {
+          address: '0x3c93de76d1343914a1693b1eb37474ca57e98f96',
+          documents: [
+            {
+              address: '0x430abf51e9ee368ce767de7ec74dbc41885aefc5',
+              countries: ['US'],
+              regions: [
+                'AK',
+                'AL',
+                'AR',
+                'AS',
+                'AZ',
+                'CA',
+                'CO',
+                'CT',
+                'DC',
+                'DE',
+                'FL',
+                'FM',
+                'GA',
+                'GU',
+                'HI',
+                'IA',
+                'ID',
+                'IL',
+                'IN',
+                'KS',
+                'KY',
+                'LA',
+                'MA',
+                'MD',
+                'ME',
+                'MH',
+                'MI',
+                'MN',
+                'MO',
+                'MP',
+                'MS',
+                'MT',
+                'NC',
+                'ND',
+                'NE',
+                'NH',
+                'NJ',
+                'NM',
+                'NV',
+                'NY',
+                'OH',
+                'OK',
+                'OR',
+                'PA',
+                'PR',
+                'PW',
+                'RI',
+                'SC',
+                'SD',
+                'TN',
+                'TX',
+                'UT',
+                'VA',
+                'VI',
+                'VT',
+                'WA',
+                'WI',
+                'WV',
+                'WY',
+              ],
+              timestamp: 1532466397,
+              type: 'AreaOfUse',
+            },
+            {
+              address: '0x991abc3217cac77ab512774d2889cb5ba6bd33a6',
+              classOfGoods: 42,
+              details: ['Information technology [IT] consulting services'],
+              timestamp: 1532466718,
+              type: 'Classification',
+            },
+            {
+              address: '0x75194f25dd57d4a1538a1250db68054eb7946e7b',
+              deprecatedLocation: 'https://s3.amazonaws.com/cog-usage-documents/4188/4187',
+              hash: '0xeab32fb706f21b5b5510c9a0d936d707a73acefdc622ce0ce841e57e353112cb',
+              timestamp: 1532466831,
+              type: 'ProofOfUse',
+            },
+          ],
+        },
+        timestamp: 1532466301,
+      });
+    });
 
     it('Design (initial)');
 
-    it('Word and Design', async () => {
+    it('Word - Should be with design', async () => {
       // listing id 1018479
+      // This should be a word and design...
       await assertTrademark({
         address: '0x18677086b71635a2ed499134d53e50b521737be7',
         timeline: {
@@ -342,10 +438,14 @@ describe('Pulling Trademarks from Ethereum', () => {
       });
     });
 
-    it('Word and Design 2 (initial)', async () => {
+    it('Word and Design 2', async () => {
       // listing id 1023468
       await assertTrademark({
         address: '0xbe2779c097ce2c1192d50a6de7a01b31e6990338',
+        deprecatedDesignLocation: 'https://s3.amazonaws.com/cog-design-marks/1023468_design',
+        design: '0x55ef72888ed0d59dd6fa9113622b5ef525cbcb042e463380bbb82660952664a4',
+        migratedHash: 'TODO',
+        migratedLocation: 'https://cognate.github.io/trademark-access/design_marks/1023468_design',
         timeline: {
           address: '0x2eceb99187504e199330758e8cb517a14752dcb1',
           documents: [
@@ -668,6 +768,7 @@ describe('Pulling Trademarks from Ethereum', () => {
       // listing id 1021552
       await assertTrademark({
         address: '0xa73a94d6d2e4de40c5a89df585385b8ae2cdf95c',
+        // this one was a bug in which it has two proofs and no design
         timeline: {
           address: '0xb563a1918a94e0acf38dbf099bb5f24a7d722690',
           documents: [
@@ -905,7 +1006,6 @@ describe('Pulling Trademarks from Ethereum', () => {
   });
 
   describe('V1 Contracts', () => {
-    // 0x61d8e125bad1466c0031be6be3fa002a126e55e6
     it('Word', async () => {
       // listing id 1018725
       await assertTrademark({
