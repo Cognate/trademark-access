@@ -8,6 +8,7 @@ const Trademark = require('./trademark');
 const BuildTimeline = require('./BuildTimeline');
 const trademarkMap = require('./trademarkMap');
 const templateService = require('./SimpleTemplateService');
+const Handlebars = require('handlebars');
 
 $().ready(function() {
   $('.js-typeahead').typeahead({
@@ -26,11 +27,21 @@ $().ready(function() {
     const results = await Trademark.getTrademarkForAddress(address);
     if (mark.indexOf('http') !== -1) {
       $('#timeline-content').html(
-        `<div class="tmark"><img class="mark-img" src="${mark}"/><div>${results.design}</div></div>`,
+        templateService.getTemplate('timelineHeader', {
+          address,
+          mark: results.design,
+          markHtml: new Handlebars.SafeString(`<img class="mark-img" src="${mark}"/><div>${results.design}</div>`),
+          results: JSON.stringify(results),
+        }),
       );
     } else {
       $('#timeline-content').html(
-        `<div class="tmark"><div><h2 class="mark-title">${mark}</h2></div><div><a href="https://etherscan.io/address/${address}" target="_blank">See it on Etherscan</a></div></div>`,
+        templateService.getTemplate('timelineHeader', {
+          address,
+          mark: results.word,
+          markHtml: new Handlebars.SafeString(`<h2 class="mark-title">${results.word}</h2>`),
+          results: JSON.stringify(results),
+        }),
       );
     }
     if (results.timeline && results.timeline.documents) {

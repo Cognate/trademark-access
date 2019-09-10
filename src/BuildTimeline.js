@@ -76,7 +76,6 @@ function createEntry(element, entry) {
 }
 
 function populateEntry(entryDiv, entryPart, contentType) {
-  var entryContent = '';
   if (contentType === 'Assignment') {
     var assignmentTable = {};
     if (entryPart.companyName) {
@@ -96,19 +95,24 @@ function populateEntry(entryDiv, entryPart, contentType) {
       entryContent: new Handlebars.SafeString(table),
     });
   } else if (contentType === 'Proof of use') {
-    entryContent += `<div class="proof-hash">${entryPart.hash}</div>`;
+    var proofTable = {};
+    proofTable.Hash = entryPart.hash;
+    if (entryPart.deprecatedLocation) {
+      proofTable.ID = entryPart.deprecatedLocation.slice(25);
+    }
+    var table = templateService.getTemplate('timelineEntryDataTable', { tableData: proofTable });
     appendContentToEntry(entryDiv, {
       address: entryPart.address,
       contentType: contentType,
-      entryContent: new Handlebars.SafeString(entryContent),
+      entryContent: new Handlebars.SafeString(table),
     });
   } else if (contentType === 'Classification') {
-    var cogData = {};
-    cogData.Classification = `${entryPart.classOfGoods} | ${cogMap[entryPart.classOfGoods]}`;
+    var cogTable = {};
+    cogTable.Classification = `${entryPart.classOfGoods} | ${cogMap[entryPart.classOfGoods]}`;
     if (entryPart.details) {
-      cogData.Identifications = new Handlebars.SafeString(entryPart.details.join('<br>'));
+      cogTable.Identifications = new Handlebars.SafeString(entryPart.details.join('<br>'));
     }
-    var table = templateService.getTemplate('timelineEntryDataTable', { tableData: cogData });
+    var table = templateService.getTemplate('timelineEntryDataTable', { tableData: cogTable });
 
     appendContentToEntry(entryDiv, {
       address: entryPart.address,

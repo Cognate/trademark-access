@@ -44,7 +44,7 @@ h1.title {
   }
 
   .panel-content {
-    padding: 20px 40px;
+    padding: 20px 0px;
 
     &.timeline-panel {
       padding-top: 0px;
@@ -155,8 +155,8 @@ h1.title {
   }
 
   .timeline {
-    border-left: solid 1px #ddd;
-    margin-left: -1px;
+    // border-left: solid 1px #ddd;
+    // margin-left: -1px;
 
     .actions {
       border-bottom: solid 1px #ddd;
@@ -208,7 +208,6 @@ h1.title {
           padding: 8px;
           max-width: 200px;
           margin-bottom: 10px;
-          box-shadow: 1px 1px 2px #ccc;
         }
       }
 
