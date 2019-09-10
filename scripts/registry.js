@@ -96,6 +96,7 @@ async function checkV2(registry, listing) {
   }
 }
 
+// commented out entries have been resolved
 // noinspection SpellCheckingInspection
 const listings = [
   '1018297 | Nosrac productions                                | 1018297_design | 2012-12-12        | carson           | ',
