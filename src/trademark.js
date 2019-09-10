@@ -199,8 +199,6 @@ async function processTrademark(trademark, address, context) {
         const designLocation = await trademark.designLocation();
         result.deprecatedDesignLocation = designLocation;
         result.migratedLocation = designLocation.replace(s3Base, githubBase);
-        // TODO: download the migrated location and calculate the SHA256
-        result.migratedHash = 'TODO';
       }
     }
   }
