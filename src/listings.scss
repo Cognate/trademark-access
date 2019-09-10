@@ -9,30 +9,59 @@ h1.title {
   color: $brand;
 }
 
+.instructions {
+  padding: 20px 20px 0px 20px;
+  margin-bottom: 0px !important;
+  font-size: 14px;
+}
+
+.sha-tool-container {
+  text-align: center;
+  margin-bottom: 20px;
+
+  .sha-tool {
+    display: inline-block;
+    width: 60%;
+
+    h2 {
+      color: $brand;
+    }
+
+    .dropzone {
+      min-height: 80px;
+      background: #f6f6f6;
+      border: solid 1px #eeeeee;
+
+      .dz-message {
+        font-weight: 600;
+        line-height: 80px;
+        text-align: center;
+      }
+
+      .dz-progress {
+        display: none;
+      }
+
+      .dz-preview {
+        vertical-align: top;
+      }
+    }
+  }
+}
+
+.typeahead-thumbnail {
+  max-height: 50px;
+  max-width: 100px;
+}
+
 .listing-show {
   background-color: #fff;
   color: $brand;
   text-align: center;
   padding: 20px;
 
-  .buttons {
-    text-align: left;
-
-    .address-input {
-      padding: 10px 0px;
-
-      input {
-        margin-right: 10px;
-      }
-    }
-
-    .design-input {
-      padding: 10px 0px;
-
-      input {
-        margin-right: 10px;
-      }
-    }
+  .select-mark {
+    margin-bottom: 30px;
   }
 
   .panel-title {
@@ -44,7 +73,7 @@ h1.title {
   }
 
   .panel-content {
-    padding: 20px 40px;
+    padding: 20px 0px;
 
     &.timeline-panel {
       padding-top: 0px;
@@ -155,8 +184,8 @@ h1.title {
   }
 
   .timeline {
-    border-left: solid 1px #ddd;
-    margin-left: -1px;
+    // border-left: solid 1px #ddd;
+    // margin-left: -1px;
 
     .actions {
       border-bottom: solid 1px #ddd;
@@ -198,7 +227,8 @@ h1.title {
       .tmark {
         padding: 20px;
         margin: 10px 0px;
-        background-color: #efefef;
+        color: $brand;
+        background-color: $clouds;
 
         h2.mark-title {
           margin-bottom: 0px !important;
@@ -207,8 +237,10 @@ h1.title {
         img.mark-img {
           padding: 8px;
           max-width: 200px;
-          margin-bottom: 10px;
-          box-shadow: 1px 1px 2px #ccc;
+        }
+
+        .design-hash {
+          font-size: 12px;
         }
       }
 

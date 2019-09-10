@@ -78,7 +78,7 @@ async function run() {
 async function checkV1(registry, listing) {
   if (listing.word && listing.dateOfFirstUse) {
     const lookup = listing.word.replace(new RegExp(' ', 'g'), '') + listing.dateOfFirstUse + listing.lastName;
-    console.log(`looking up: ${lookup}`);
+    console.log(`looking up: "${lookup}"`);
     // noinspection JSUnresolvedFunction
     const result = await registry.getListing(lookup);
     if (result !== '0x0000000000000000000000000000000000000000') {
@@ -89,13 +89,14 @@ async function checkV1(registry, listing) {
 
 async function checkV2(registry, listing) {
   const lookup = listing.word ? listing.word : listing.design;
-  console.log(`looking up: ${lookup}`);
+  console.log(`looking up: "${lookup}"`);
   const result = await registry.get(lookup);
   if (result.length > 0) {
     console.log(`v2 ${listing.id} : ${result}`);
   }
 }
 
+// commented out entries have been resolved
 // noinspection SpellCheckingInspection
 const listings = [
   '1018297 | Nosrac productions                                | 1018297_design | 2012-12-12        | carson           | ',

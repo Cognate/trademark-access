@@ -221,12 +221,107 @@ describe('Pulling Trademarks from Ethereum', () => {
       });
     });
 
-    it('Design');
+    it('Design', async () => {
+      await assertTrademark({
+        address: '0xaaf6b1d8558770b3c95fa528a60030a3ebb4a6de',
+        deprecatedDesignLocation: 'https://s3.amazonaws.com/cog-design-marks/1023516_design',
+        design: '0x1ee850e4b38456d501a6e568af1c8042d34596a6e4ec4333ac864451747008ae',
+        migratedLocation: 'https://cognate.github.io/trademark-access/design_marks/1023516_design',
+        timeline: {
+          address: '0x3c93de76d1343914a1693b1eb37474ca57e98f96',
+          documents: [
+            {
+              address: '0x430abf51e9ee368ce767de7ec74dbc41885aefc5',
+              countries: ['US'],
+              regions: [
+                'AK',
+                'AL',
+                'AR',
+                'AS',
+                'AZ',
+                'CA',
+                'CO',
+                'CT',
+                'DC',
+                'DE',
+                'FL',
+                'FM',
+                'GA',
+                'GU',
+                'HI',
+                'IA',
+                'ID',
+                'IL',
+                'IN',
+                'KS',
+                'KY',
+                'LA',
+                'MA',
+                'MD',
+                'ME',
+                'MH',
+                'MI',
+                'MN',
+                'MO',
+                'MP',
+                'MS',
+                'MT',
+                'NC',
+                'ND',
+                'NE',
+                'NH',
+                'NJ',
+                'NM',
+                'NV',
+                'NY',
+                'OH',
+                'OK',
+                'OR',
+                'PA',
+                'PR',
+                'PW',
+                'RI',
+                'SC',
+                'SD',
+                'TN',
+                'TX',
+                'UT',
+                'VA',
+                'VI',
+                'VT',
+                'WA',
+                'WI',
+                'WV',
+                'WY',
+              ],
+              timestamp: 1532466397,
+              type: 'AreaOfUse',
+            },
+            {
+              address: '0x991abc3217cac77ab512774d2889cb5ba6bd33a6',
+              classOfGoods: 42,
+              details: ['Information technology [IT] consulting services'],
+              timestamp: 1532466718,
+              type: 'Classification',
+            },
+            {
+              address: '0x75194f25dd57d4a1538a1250db68054eb7946e7b',
+              deprecatedLocation: 'https://s3.amazonaws.com/cog-usage-documents/4188/4187',
+              hash: '0xeab32fb706f21b5b5510c9a0d936d707a73acefdc622ce0ce841e57e353112cb',
+              timestamp: 1532466831,
+              type: 'ProofOfUse',
+            },
+          ],
+        },
+        timestamp: 1532466301,
+      });
+    });
 
     it('Design (initial)');
 
-    it('Word and Design', async () => {
+    it('Word - Should be with design', async () => {
       // listing id 1018479
+      // This should be a word and design...
       await assertTrademark({
         address: '0x18677086b71635a2ed499134d53e50b521737be7',
         timeline: {
@@ -323,7 +418,6 @@ describe('Pulling Trademarks from Ethereum', () => {
         address: '0x28e89eb6400e09e979320ed712f9e08fb2207cae',
         deprecatedDesignLocation: 'https://s3.amazonaws.com/cog-design-marks/1023727_design',
         design: '0x0ceb54a02272b7d30f9b6d005102b7dc2dd7887f9faf273fc6cc15439d9a979b',
-        migratedHash: 'TODO',
         migratedLocation: 'https://cognate.github.io/trademark-access/design_marks/1023727_design',
         timeline: {
           address: '0x28e89eb6400e09e979320ed712f9e08fb2207cae',
@@ -342,10 +436,13 @@ describe('Pulling Trademarks from Ethereum', () => {
       });
     });
 
-    it('Word and Design 2 (initial)', async () => {
+    it('Word and Design 2', async () => {
       // listing id 1023468
       await assertTrademark({
         address: '0xbe2779c097ce2c1192d50a6de7a01b31e6990338',
+        deprecatedDesignLocation: 'https://s3.amazonaws.com/cog-design-marks/1023468_design',
+        design: '0x55ef72888ed0d59dd6fa9113622b5ef525cbcb042e463380bbb82660952664a4',
+        migratedLocation: 'https://cognate.github.io/trademark-access/design_marks/1023468_design',
         timeline: {
           address: '0x2eceb99187504e199330758e8cb517a14752dcb1',
           documents: [
@@ -577,7 +674,6 @@ describe('Pulling Trademarks from Ethereum', () => {
         address: '0xca6823878b5fc9390c21c652405b000e1daa734f',
         deprecatedDesignLocation: 'https://s3.amazonaws.com/cog-design-marks/1021806_design',
         design: '0xf54f3b87eda462770230d060fce9b9f4876cb68fe8cd38d14c00356bcff7d690',
-        migratedHash: 'TODO',
         migratedLocation: 'https://cognate.github.io/trademark-access/design_marks/1021806_design',
         timeline: {
           address: '0xe0679701c5c4258a4f6374acc7d384fe6b0c9308',
@@ -664,10 +760,11 @@ describe('Pulling Trademarks from Ethereum', () => {
       });
     });
 
-    it('Word and Design', async () => {
+    it('Word and Design (bug)', async () => {
       // listing id 1021552
       await assertTrademark({
         address: '0xa73a94d6d2e4de40c5a89df585385b8ae2cdf95c',
+        // this one was a bug in which it has two proofs and no design
         timeline: {
           address: '0xb563a1918a94e0acf38dbf099bb5f24a7d722690',
           documents: [
@@ -789,6 +886,72 @@ describe('Pulling Trademarks from Ethereum', () => {
         word: 'FORGIVE',
       });
     });
+
+    it('Word and Design', async () => {
+      await assertTrademark({
+        address: '0x2022e7859281b85ab6e26e46bdd188830ac31fd1',
+        deprecatedDesignLocation: 'https://s3.amazonaws.com/cog-design-marks/1021599_design',
+        design: '0xab176c00850581fb92ba46e40cda1be991f186b61ff59ed6272f0671f67137a7',
+        migratedLocation: 'https://cognate.github.io/trademark-access/design_marks/1021599_design',
+        timeline: {
+          address: '0xa1e7ada5c950ada2899818e6aee7f38b240f1b62',
+          documents: [
+            {
+              address: '0xc5d2ac365bd9bf9b67023deb5887caa6ad299a8f',
+              companyName: 'Karl Brown',
+              firstName: 'Karl',
+              lastName: 'Brown',
+              timestamp: 1523903796,
+              type: 'Assignment',
+            },
+            {
+              address: '0x1c64d32e739906c58d5e0450fd022e2e24711db2',
+              countries: ['US'],
+              regions: ['IL', 'IN', 'MI', 'MN', 'OH', 'WI'],
+              timestamp: 1523904446,
+              type: 'AreaOfUse',
+            },
+            {
+              address: '0x10ee52b2142c6031e11a24bb89e3d0da3e7c97f0',
+              classOfGoods: 35,
+              details: ['Online advertising and marketing services in the field of Medical and recreational marijuana'],
+              timestamp: 1523905305,
+              type: 'Classification',
+            },
+            {
+              address: '0x4b7e9a743cb970c7286712ad02ba2c748138188c',
+              deprecatedLocation: 'https://s3.amazonaws.com/cog-usage-documents/L1021599/P2480',
+              hash: '0x0d60b8456916e8cb57b34ce751d0174a88434bf079f8a1de97f7185e92e7e6d9',
+              timestamp: 1523905798,
+              type: 'ProofOfUse',
+            },
+            {
+              address: '0x93d6320bfeb8064189494b81a79634a85df71aa3',
+              deprecatedLocation: 'https://s3.amazonaws.com/cog-usage-documents/L1021599/P2525',
+              hash: '0x1e4ea77542f77a22bed5ed27eb915c8a3de4d01db4484e5309d2dfa3c863a7ce',
+              timestamp: 1523906919,
+              type: 'ProofOfUse',
+            },
+            {
+              address: '0x61cf21d8b9f5cbf3a96ec8136ffb7f79bc3ed504',
+              deprecatedLocation: 'https://s3.amazonaws.com/cog-usage-documents/L1021599/P2526',
+              hash: '0xa8baf1852bc913d4c6d64017fe8057ccfbb2032264b4eda33fea7ec4bfa8a797',
+              timestamp: 1523907199,
+              type: 'ProofOfUse',
+            },
+            {
+              address: '0xc6337bf779c8d07a570c689b826c65e9bb44681b',
+              deprecatedLocation: 'https://s3.amazonaws.com/cog-usage-documents/L1021599/P2527',
+              hash: '0xcd9148ef234390e501e8633fd55449bb160596a4596a38f8aed805b36a3394af',
+              timestamp: 1523907387,
+              type: 'ProofOfUse',
+            },
+          ],
+        },
+        timestamp: 1523899294,
+        word: 'Ohio Cannabusiness Magazine',
+      });
+    });
   });
 
   describe('V2 Contracts', () => {
@@ -808,6 +971,7 @@ describe('Pulling Trademarks from Ethereum', () => {
               address: '0xa98a68f298c5d620a4ccb7fc2c7226af354b2016',
               firstName: 'Bennett',
               lastName: 'Collen',
+              timestamp: 1490911649,
               type: 'Assignment',
             },
             {
@@ -825,6 +989,7 @@ describe('Pulling Trademarks from Ethereum', () => {
                 'Trademark monitoring [legal services]',
                 'Trademark watch services',
               ],
+              timestamp: 1490911958,
               type: 'Classification',
             },
             {
@@ -885,22 +1050,24 @@ describe('Pulling Trademarks from Ethereum', () => {
                 'WV',
                 'WY',
               ],
+              timestamp: 1490911958,
               type: 'AreaOfUse',
             },
             {
               address: '0xa0810b4586830754b7b662ed9e6c6cc3be9222d6',
               hash: '0xa824c2af26da03e565dfd786c58764a5ff13cde44c1ad4bd934927ffd34a4bb1',
+              timestamp: 1490911958,
               type: 'ProofOfUse',
             },
           ],
         },
+        timestamp: 1490910360,
         word: 'COGNATE',
       });
     });
   });
 
   describe('V1 Contracts', () => {
-    // 0x61d8e125bad1466c0031be6be3fa002a126e55e6
     it('Word', async () => {
       // listing id 1018725
       await assertTrademark({
@@ -1086,7 +1253,7 @@ describe('Pulling Trademarks from Ethereum', () => {
   });
 
   async function assertTrademark(expected) {
-    const actual = await Trademark.getTrademark(expected.address);
+    const actual = await Trademark.getTrademarkForAddress(expected.address);
     expect(JSON.stringify(actual)).to.equal(JSON.stringify(expected));
   }
 });
