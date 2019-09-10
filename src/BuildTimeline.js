@@ -16,7 +16,7 @@ function groupEntriesByDate(entries) {
   var dates = {};
   for (var i = 0; i < entries.length; i++) {
     var entry = entries[i];
-    var date = new Date(entry.timestamp * 1000);
+    var date = moment(new Date(entry.timestamp * 1000)).format('LL');
     if (dates[date] === undefined) {
       dates[date] = {
         date: date,
@@ -56,7 +56,7 @@ function createEntry(element, entry) {
   appendEntry(
     element,
     {
-      formattedDate: moment(entry.date).format('MM/DD/YYYY'),
+      formattedDate: entry.date,
     },
     function(entryDiv) {
       for (var i = 0; i < entry.assignment.length; i++) {
@@ -91,12 +91,14 @@ function populateEntry(entryDiv, entryPart, contentType) {
     var table = templateService.getTemplate('timelineEntryDataTable', { tableData: assignmentTable });
 
     appendContentToEntry(entryDiv, {
+      address: entryPart.address,
       contentType: contentType,
       entryContent: new Handlebars.SafeString(table),
     });
   } else if (contentType === 'Proof of use') {
     entryContent += `<div class="proof-hash">${entryPart.hash}</div>`;
     appendContentToEntry(entryDiv, {
+      address: entryPart.address,
       contentType: contentType,
       entryContent: new Handlebars.SafeString(entryContent),
     });
@@ -109,6 +111,7 @@ function populateEntry(entryDiv, entryPart, contentType) {
     var table = templateService.getTemplate('timelineEntryDataTable', { tableData: cogData });
 
     appendContentToEntry(entryDiv, {
+      address: entryPart.address,
       contentType: contentType,
       entryContent: new Handlebars.SafeString(table),
     });
@@ -123,6 +126,7 @@ function populateEntry(entryDiv, entryPart, contentType) {
     var table = templateService.getTemplate('timelineEntryDataTable', { tableData: aouTable });
 
     appendContentToEntry(entryDiv, {
+      address: entryPart.address,
       contentType: contentType,
       entryContent: new Handlebars.SafeString(table),
     });
