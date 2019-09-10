@@ -808,6 +808,7 @@ describe('Pulling Trademarks from Ethereum', () => {
               address: '0xa98a68f298c5d620a4ccb7fc2c7226af354b2016',
               firstName: 'Bennett',
               lastName: 'Collen',
+              timestamp: 1490911649,
               type: 'Assignment',
             },
             {
@@ -825,6 +826,7 @@ describe('Pulling Trademarks from Ethereum', () => {
                 'Trademark monitoring [legal services]',
                 'Trademark watch services',
               ],
+              timestamp: 1490911958,
               type: 'Classification',
             },
             {
@@ -885,15 +887,18 @@ describe('Pulling Trademarks from Ethereum', () => {
                 'WV',
                 'WY',
               ],
+              timestamp: 1490911958,
               type: 'AreaOfUse',
             },
             {
               address: '0xa0810b4586830754b7b662ed9e6c6cc3be9222d6',
               hash: '0xa824c2af26da03e565dfd786c58764a5ff13cde44c1ad4bd934927ffd34a4bb1',
+              timestamp: 1490911958,
               type: 'ProofOfUse',
             },
           ],
         },
+        timestamp: 1490910360,
         word: 'COGNATE',
       });
     });
@@ -1086,7 +1091,7 @@ describe('Pulling Trademarks from Ethereum', () => {
   });
 
   async function assertTrademark(expected) {
-    const actual = await Trademark.getTrademark(expected.address);
+    const actual = await Trademark.getTrademarkForAddress(expected.address);
     expect(JSON.stringify(actual)).to.equal(JSON.stringify(expected));
   }
 });

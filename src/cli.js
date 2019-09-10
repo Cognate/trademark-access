@@ -34,5 +34,5 @@ function usage() {
 
 async function getTrademark(address) {
   const Trademark = require('./trademark');
-  return await Trademark.getTrademark(address);
+  return await Trademark.getTrademarkForAddress(address);
 }

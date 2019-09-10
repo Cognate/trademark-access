@@ -32,7 +32,7 @@ module.exports = {
   31: 'Natural Agricultural Products',
   32: 'Light Beverages',
   33: 'Wines and Spirits',
-  34: 'Smokers’ Articles',
+  34: "Smokers' Articles",
   35: 'Advertising and Business',
   36: 'Insurance and Financial',
   37: 'Building Construction and Repair',
