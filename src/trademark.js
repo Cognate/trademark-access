@@ -388,6 +388,9 @@ async function processAreaOfUse(areaOfUse, address, context) {
   if (regions !== '') {
     log(DEBUG, `   - adding regions ${context}`);
     result.regions = regions.split(',').sort();
+    if (result.regions.length > 0 && result.regions[0] === '') {
+      result.regions.shift();
+    }
   }
   await addTimestamp(areaOfUse, result, context, '  ');
   result.type = 'AreaOfUse';
@@ -442,6 +445,9 @@ async function processProofOfUse(proofOfUse, address, context) {
     if (regions !== '') {
       log(DEBUG, `   - adding regions ${context}`);
       result.regions = regions.split(',').sort();
+      if (result.regions.length > 0 && result.regions[0] === '') {
+        result.regions.shift();
+      }
     }
   }
   if (proofOfUse.geographicRegion) {
@@ -450,6 +456,9 @@ async function processProofOfUse(proofOfUse, address, context) {
     if (regions !== '') {
       log(DEBUG, `   - adding regions ${context}`);
       result.regions = regions.split(',').sort();
+      if (result.regions.length > 0 && result.regions[0] === '') {
+        result.regions.shift();
+      }
     }
   }
   if (proofOfUse.getClassOfGoods) {
