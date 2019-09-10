@@ -21,7 +21,7 @@ const Templates = function() {
   this.loading = Handlebars.compile([
       /* eslint-disable indent, quotes */
       '<div class="loading-screen">',
-          '<div><img src="/assets/spinner.png"> Loading&hellip;</div>',
+          '<div class="loader">Loading&hellip;</div>',
       '</div>'
       /* eslint-enable indent, quotes */
   ].join("\n"));
@@ -37,7 +37,10 @@ const Templates = function() {
 
   this.timelineEntryContent = Handlebars.compile([
       /* eslint-disable indent, quotes */
-      '<div class="type">{{contentType}}</div>',
+      '<div class="type">',
+        '<span class="content-type">{{contentType}}</span>',
+        '<a href="https://etherscan.io/address/{{address}}" class="etherscan-link" target="_blank">See it on Etherscan</a>',
+      '</div>',
       '{{entryContent}}',
       '<ul class="proofs">',
           '{{#each proofs}}',
