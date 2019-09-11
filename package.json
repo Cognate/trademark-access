@@ -23,12 +23,16 @@
     "url": "https://github.com/Cognate/trademark-access/issues"
   },
   "nyc": {
-    "reporter": ["text","html"]
+    "reporter": [
+      "text",
+      "html"
+    ]
   },
   "homepage": "https://github.com/Cognate/trademark-access#readme",
   "dependencies": {
     "bluebird": "~3.5.5",
     "bootstrap": "^4.3.1",
+    "handlebars": "~4.0.14",
     "jquery": "^3.4.1",
     "jquery-typeahead": "^2.10.6",
     "moment": "^2.24.0",

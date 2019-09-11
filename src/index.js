@@ -1,8 +1,6 @@
-import "./listings.scss";
-import "jquery-typeahead";
-import "jquery-typeahead/dist/jquery.typeahead.min.css";
-
-import { resolve } from "url";
+import './listings.scss';
+import 'jquery-typeahead';
+import 'jquery-typeahead/dist/jquery.typeahead.min.css';
 
 // es-lint-ignore
 const $ = require('jquery');
@@ -11,7 +9,7 @@ const BuildTimeline = require('./BuildTimeline');
 const trademarkMap = require('./trademarkMap');
 const templateService = require('./SimpleTemplateService');
 const Handlebars = require('handlebars');
-const crypto = require('crypto');
+const Util = require('./util');
 
 window.Dropzone = require('./dropzone');
 
@@ -25,7 +23,6 @@ $().ready(function() {
     addRemoveLinks: true,
     maxFiles: 1,
     addedfile: async file => {
-      const hash = crypto.createHash('sha256');
       const reader = new FileReader();
       const fileData = await new Promise((resolve, reject) => {
         reader.onloadend = () => {
@@ -36,9 +33,8 @@ $().ready(function() {
         };
         reader.readAsBinaryString(file);
       });
-      // console.log(fileData);
-      hash.update(fileData, 'utf8');
-      $('#sha-result').html(hash.digest('hex'));
+      const buffer = new Buffer(fileData, 'binary');
+      $('#sha-result').html(Util.sha256(buffer, 'utf8'));
     },
   });
 
