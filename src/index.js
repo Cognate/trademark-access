@@ -1,6 +1,6 @@
-import './listings.scss';
-import 'jquery-typeahead';
-import 'jquery-typeahead/dist/jquery.typeahead.min.css';
+import "./listings.scss";
+import "jquery-typeahead";
+import "jquery-typeahead/dist/jquery.typeahead.min.css";
 
 // es-lint-ignore
 const $ = require('jquery');
@@ -17,7 +17,7 @@ Dropzone.autoDiscover = false;
 
 $().ready(function() {
   new Dropzone('#dropzone-sha', {
-    dictDefaultMessage: 'Drop image here to generate SHA-256 hash',
+    dictDefaultMessage: 'Drop file here to generate SHA-256 hash',
     url: '/',
     autoQueue: false,
     addRemoveLinks: true,
@@ -34,7 +34,7 @@ $().ready(function() {
         reader.readAsBinaryString(file);
       });
       const buffer = new Buffer(fileData, 'binary');
-      $('#sha-result').html(Util.sha256(buffer, 'utf8'));
+      $('#sha-result').html(Util.sha256(buffer));
     },
   });
 
