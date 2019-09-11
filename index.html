@@ -10,27 +10,40 @@
       <h1 class="title">Cognate Legacy Trademark Record Access</h1>
     </div>
 
-    <p class="instructions">
-      This tool is for legacy Cognate customers who wish to retrieve their Trademark Documentation records from the
-      Ethereum blockchain. To retrieve your records, use the input field below to enter a Word Mark or the Design Mark
-      location (provided in the email you received from Cognate regarding this tool) and select your mark from the
-      options that are shown. The result data that appears below includes your mark and the documentation associated
-      with it that is stored on the Ethereum blockchain. We also provide links to the Etherscan record for each Ethereum
-      Smart Contract associated with the data. It is in these contracts that your data is stored in byte code, our tool
-      is extracting the data and displaying it in a more appropriate format for you. For design marks (those consisting
-      of an image), we include the design hash along with the mark image. This hash is a SHA-256 hash representation of
-      the image data (the EXACT IMAGE that was provided to Cognate at the time of your data submission, the image shown
-      here in this tool IS THAT IMAGE, however another version of your design mark image will not work) and is what is
-      stored on the Ethereum blockchain (the image is not). You can however, use this hash to prove the existence of
-      your mark image at the point the time that the blockchain record exists. To do this, you can use any
-      <a href="https://hash.online-convert.com/sha256-generator" target="_blank">third party SHA-256 converter</a>
-      or the SHA-256 tool provided below. The SHA-256 hash of your design image will match the hash that is stored on
-      the blockchain. This is known as
-      <a href="https://en.wikipedia.org/wiki/Proof_of_Existence">Proof of Existence</a>. We have employed the same
-      methodology for your Proof of Use documents, however for data protection reasons, those documents have been
-      provided to you to keep hold of outside of this tool. Finally here is a link to the
-      <a href="https://github.com/Cognate/trademark-access">github repository for this tool's source code</a>.
-    </p>
+    <div class="instructions">
+      <p>
+        This tool is for legacy Cognate customers who wish to retrieve their trademark documentation records from the
+        Ethereum blockchain.
+      </p>
+      <p>
+        To retrieve your records, use the input field below to enter a Word Mark or the Design Mark location (provided
+        in the email you received from Cognate regarding this tool) and select your mark from the options that are
+        shown. The result data that appears below includes your mark and the documentation associated with it that is
+        stored on the Ethereum blockchain.
+      </p>
+      <p>
+        We also provide links to the Etherscan (an Ethereum blockchain “explorer” - like a search engine for a
+        blockchain) record for each Ethereum Smart Contract associated with the data. It is in these contracts that your
+        data is stored in “byte code.” Our tool is extracting the data and displaying it in a more user-friendly format
+        for you. For design marks (those consisting of an image), we include the design hash along with the mark image.
+        This hash is a SHA-256 hash representation of the image data (the EXACT IMAGE that was provided to Cognate at
+        the time of your data submission, the image shown here in this tool IS THAT IMAGE -- another version of your
+        design mark image will not work) and is what is stored on the Ethereum blockchain (the image is not). You can
+        use this hash to prove the existence of your mark image at the point in time that the blockchain record exists.
+      </p>
+      <p>
+        To generate a SHA-256 hash for your image or other file, you can use the SHA-256 Generator tool provided below.
+        Just drag and drop a file into the box or use any SHA-256 tool
+        <a href="https://hash.online-convert.com/sha256-generator" target="_blank">like this one</a>. The SHA-256 hash
+        of your design image will match the hash that is stored on the blockchain. This is known as Proof of Existence.
+        We have employed the same methodology for your Proof of Use documents, however for data protection reasons,
+        those documents have been provided to you to keep hold of outside of this tool. It’s crucial that you use the
+        exact image file for your Proof of Use document when generating the hash. Finally, here is a link to the
+        <a href="https://github.com/Cognate/trademark-access" target="_blank"
+          >GitHub repository for this tool's source code</a
+        >.
+      </p>
+    </div>
 
     <div class="sha-tool-container">
       <div class="sha-tool">
