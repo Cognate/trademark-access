@@ -182,12 +182,21 @@ async function process(address) {
   return entry.handler(await Contract.at(address), address, entry.context);
 }
 
+const DesignBugAddresses = [
+  '0x2e62b1099aca2484416701727e83cfce2db9b066',
+  '0xa73a94d6d2e4de40c5a89df585385b8ae2cdf95c',
+  '0x13dd01ccddba43ff6167e80bc2effa2e132a7e45',
+];
+
 async function processTrademark(trademark, address, context) {
   log(DEBUG, `processing Trademark ${context}`);
   const result = {};
   result.address = address;
   await addTimestamp(trademark, result, context);
   if (trademark.design) {
+    if (DesignBugAddresses.indexOf(address) >= 0) {
+      result.designNote = 'Design image represented as ProofOfUse in the timeline';
+    }
     log(DEBUG, ` - getting design ${context}`);
     const design = await trademark.design();
     if (design !== '0x0000000000000000000000000000000000000000000000000000000000000000') {

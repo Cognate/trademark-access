@@ -32,7 +32,7 @@ const Templates = function() {
         '<div>{{markHtml}}</div>',
         '<div>',
             '<a href="https://etherscan.io/address/{{address}}" target="_blank">See it on Etherscan</a> | ',
-            '<a href="data:text/json;charset=utf-8,{{results}}" download="{{mark}}.json">Download Raw JSON Data</a>',
+            '<a href="data:text/json;charset=utf-8,{{fileData}}" download="{{fileName}}.json">Download Raw JSON Data</a>',
         '</div>',
       '</div>',
       /* eslint-enable indent, quotes */

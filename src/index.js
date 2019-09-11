@@ -1,8 +1,6 @@
-import "./listings.scss";
-import "jquery-typeahead";
-import "jquery-typeahead/dist/jquery.typeahead.min.css";
-
-import { resolve } from "url";
+import './listings.scss';
+import 'jquery-typeahead';
+import 'jquery-typeahead/dist/jquery.typeahead.min.css';
 
 // es-lint-ignore
 const $ = require('jquery');
@@ -11,21 +9,20 @@ const BuildTimeline = require('./BuildTimeline');
 const trademarkMap = require('./trademarkMap');
 const templateService = require('./SimpleTemplateService');
 const Handlebars = require('handlebars');
-const crypto = require('crypto');
+const Util = require('./util');
 
 window.Dropzone = require('./dropzone');
 
 Dropzone.autoDiscover = false;
 
-$().ready(function() {
+$().ready(() => {
   new Dropzone('#dropzone-sha', {
-    dictDefaultMessage: 'Drop image here to generate SHA-256 hash',
+    dictDefaultMessage: 'Drop file here to generate SHA-256 hash',
     url: '/',
     autoQueue: false,
     addRemoveLinks: true,
     maxFiles: 1,
     addedfile: async file => {
-      const hash = crypto.createHash('sha256');
       const reader = new FileReader();
       const fileData = await new Promise((resolve, reject) => {
         reader.onloadend = () => {
@@ -36,9 +33,8 @@ $().ready(function() {
         };
         reader.readAsBinaryString(file);
       });
-      // console.log(fileData);
-      hash.update(fileData, 'utf8');
-      $('#sha-result').html(hash.digest('hex'));
+      const buffer = new Buffer(fileData, 'binary');
+      $('#sha-result').html(Util.sha256(buffer));
     },
   });
 
@@ -57,66 +53,72 @@ $().ready(function() {
       return '<span>{{display}}</span>';
     },
     callback: {
-      onClickAfter: async function() {
+      onClickAfter: async () => {
         $('#timeline-content').html(templateService.getTemplate('loading'));
         const mark = $('#trademark').val();
-        const address = trademarkMap[mark][0];
-        const results = await Trademark.getTrademarkForAddress(address);
-        if (mark.startsWith('http')) {
-          $('#timeline-content').html(
-            templateService.getTemplate('timelineHeader', {
-              address,
-              mark: results.design,
-              markHtml: new Handlebars.SafeString(
-                `<img class="mark-img" src="${mark}"/><div class="design-hash">${results.design}</div>`,
-              ),
-              results: JSON.stringify(results),
-            }),
-          );
-        } else {
-          $('#timeline-content').html(
-            templateService.getTemplate('timelineHeader', {
-              address,
-              mark: results.word,
-              markHtml: new Handlebars.SafeString(`<h2 class="mark-title">${results.word}</h2>`),
-              results: JSON.stringify(results),
-            }),
-          );
+        const trademarkEntry = trademarkMap[mark][0]; // TODO: index zero
+        const results = await Trademark.getTrademarkForAddress(trademarkEntry.address);
+
+        const fileName = results.word ? results.word : `trademark`;
+        const fileData = JSON.stringify(results, null, 2);
+
+        // this is due to an on chain data discrepancy.
+        // we are modifying the results rendered in the UI but not the raw data downloaded
+        if (trademarkEntry.design && !results.design) {
+          // set the design location as we know it
+          results.migratedLocation = trademarkEntry.design;
         }
+        if (results.migratedLocation && !results.design) {
+          // determine and set the design hash
+          const data = await new Promise((resolve, reject) => {
+            const httpRequest = new XMLHttpRequest();
+            httpRequest.open('GET', results.migratedLocation, true);
+            httpRequest.responseType = 'arraybuffer';
+            httpRequest.onload = () => {
+              resolve(httpRequest.response);
+            };
+            httpRequest.send();
+          });
+          results.design = `0x${Util.sha256(new Buffer(data, 'binary'))}`;
+          // remove the proof if it happened to have been there
+          if (results.timeline && results.timeline.documents) {
+            let i = 0;
+            let found = false;
+            while (i < results.timeline.documents.length) {
+              const document = results.timeline.documents[i];
+              if (document.hash === results.design) {
+                found = true;
+                break;
+              }
+              i++;
+            }
+            if (found) {
+              results.timeline.documents.splice(i);
+            }
+          }
+        }
+
+        let markHtml = '';
+        if (results.word) {
+          markHtml += `<h2 class="mark-title">${results.word}</h2>`;
+        }
+        if (results.design) {
+          markHtml += `<img class="mark-img" src="${results.migratedLocation}" alt="${fileName}"/>
+                         <div class="design-hash">${results.design}
+                       </div>`;
+        }
+        $('#timeline-content').html(
+          templateService.getTemplate('timelineHeader', {
+            address: trademarkEntry.address,
+            fileData,
+            fileName: fileName,
+            markHtml: new Handlebars.SafeString(markHtml),
+          }),
+        );
         if (results.timeline && results.timeline.documents) {
           BuildTimeline.buildTimeline($('#timeline-content'), results.timeline.documents);
         }
       },
     },
   });
-  /*$('#submit-address').on('click', async function() {
-    $('#timeline-content').html(templateService.getTemplate('loading'));
-    const mark = $('#trademark').val();
-    const address = trademarkMap[mark][0];
-    const results = await Trademark.getTrademarkForAddress(address);
-    if (mark.startsWith('http')) {
-      $('#timeline-content').html(
-        templateService.getTemplate('timelineHeader', {
-          address,
-          mark: results.design,
-          markHtml: new Handlebars.SafeString(
-            `<img class="mark-img" src="${mark}"/><div class="design-hash">${results.design}</div>`,
-          ),
-          results: JSON.stringify(results),
-        }),
-      );
-    } else {
-      $('#timeline-content').html(
-        templateService.getTemplate('timelineHeader', {
-          address,
-          mark: results.word,
-          markHtml: new Handlebars.SafeString(`<h2 class="mark-title">${results.word}</h2>`),
-          results: JSON.stringify(results),
-        }),
-      );
-    }
-    if (results.timeline && results.timeline.documents) {
-      BuildTimeline.buildTimeline($('#timeline-content'), results.timeline.documents);
-    }
-  });*/
 });

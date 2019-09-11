@@ -12,28 +12,33 @@ const data = {};
 lineReader.on('line', line => {
   i++;
   const parts = line.split('|');
-  const id = parts[0].trim();
+  // const id = parts[0].trim();
   const word = parts[1].trim().toLocaleUpperCase();
   const designId = parts[2].trim(); // lowercase
   const address = parts[3].trim();
   if (address === '') {
     // console.log(`no address : ${id}`);
   } else {
+    const design = designId === '' ? '' : `${baseUrl}/${designId}`;
+    const entry = {
+      address: address,
+      design: design === '' ? undefined : design,
+      word: word === '' ? undefined : word,
+    };
     // this will build a map of words/designs to an array of addresses
     if (word !== '') {
       // add anything with a word
       if (data[word] === undefined) {
         data[word] = [];
       }
-      data[word].push(address);
+      data[word].push(entry);
     }
-    if (designId !== '') {
+    if (design !== '') {
       // add anything with a design
-      const design = `${baseUrl}/${designId}`;
       if (data[design] === undefined) {
         data[design] = [];
       }
-      data[design].push(address);
+      data[design].push(entry);
     }
   }
 });

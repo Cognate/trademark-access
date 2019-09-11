@@ -9,7 +9,8 @@ timestamps.
 
 ## Pulling Data
 
-TODO: how to pull the data specifically.
+Visit the [Cognate GitHub.io page](https://cognate.github.io/trademark-access/) for
+instructions and the ability to pull data.
 
 ## Data Format
 
@@ -22,6 +23,7 @@ The raw data is constructed into several objects.
 | address | yes | Ethereum | The Ethereum address of this trademark. | 0xb35d271ffbd783ffb6ccb227b932298e03e15f24 |
 | deprecatedDesignLocation | no | Ethereum | The original location of the design image, which may now be gone. | `{URL}` |
 | design | no | Ethereum | A SHA-256 hash representation of the image data at the time of creation. | 0xf54f3b87eda462770230d060fce9b9f4876cb68fe8cd38d14c00356bcff7d690 |
+| designNote | no | Code | A message indicating that the design is part of a subsequent proof of use | `{String}` |
 | migratedLocation | no | Code | An adjusted URL to match where the original design images were migrated into this git repository. | `{URL}` |
 | timeline | no  | Ethereum | The timeline of claims and proofs for this trademark. | `{Object}` | 
 | timestamp | yes  | Ethereum | The unix timestamp of this trademark in Ethereum. | 1523899114 |
@@ -55,9 +57,13 @@ The raw data is constructed into several objects.
 
 This project was tested with Node 10.
 
+This project is dependent upon Infura and it limited to 100,000 requests per day.
+
 ## Building
 
-* clone this repo
+* `git clone` this repo
 * `npm install` - installs all the dependencies
 * `npm test` - executes the tests
 * `node src/cli.js` - executes the script; arguments required
+* `npm run build` - web-packs the project into the dist directory for deployment
+* `index.html` can be viewed in a browser to see results locally

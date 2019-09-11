@@ -765,6 +765,7 @@ describe('Pulling Trademarks from Ethereum', () => {
       await assertTrademark({
         address: '0xa73a94d6d2e4de40c5a89df585385b8ae2cdf95c',
         // this one was a bug in which it has two proofs and no design
+        designNote: 'Design image represented as ProofOfUse in the timeline',
         timeline: {
           address: '0xb563a1918a94e0acf38dbf099bb5f24a7d722690',
           documents: [
