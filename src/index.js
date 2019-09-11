@@ -74,7 +74,7 @@ $().ready(() => {
             const httpRequest = new XMLHttpRequest();
             httpRequest.open('GET', results.migratedLocation, true);
             httpRequest.responseType = 'arraybuffer';
-            httpRequest.onload = function () {
+            httpRequest.onload = () => {
               resolve(httpRequest.response);
             };
             httpRequest.send();
