@@ -61,3 +61,4 @@ This project was tested with Node 10.
 * `npm install` - installs all the dependencies
 * `npm test` - executes the tests
 * `node src/cli.js` - executes the script; arguments required
+* `npm run build` - web-packs the project into the dist directory for deployment

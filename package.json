@@ -13,7 +13,6 @@
     "url": "git+https://github.com/Cognate/trademark-access.git"
   },
   "keywords": [
-    "typescript",
     "trademarks",
     "ethereum",
     "cognate"
@@ -22,6 +21,9 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Cognate/trademark-access/issues"
+  },
+  "nyc": {
+    "reporter": ["text","html"]
   },
   "homepage": "https://github.com/Cognate/trademark-access#readme",
   "dependencies": {
