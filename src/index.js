@@ -64,7 +64,7 @@ $().ready(() => {
 
         // this is due to an on chain data discrepancy.
         // we are modifying the results rendered in the UI but not the raw data downloaded
-        if (trademarkEntry.design && !results.design) {
+        if (trademarkEntry.design && !results.migratedLocation) {
           // set the design location as we know it
           results.migratedLocation = trademarkEntry.design;
         }
