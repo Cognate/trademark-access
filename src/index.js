@@ -47,16 +47,16 @@ $().ready(() => {
       },
     },
     template: (query, item) => {
-      if (item.display.startsWith('http')) {
-        return `<img src="${item.display}" class="typeahead-thumbnail"/>`;
+      const entry = trademarkMap[item.display];
+      if (entry && entry.design) {
+        return `<img src="${entry.design}" class="typeahead-thumbnail" alt="${item.display}" title="${item.display}"/>`;
       }
-      return '<span>{{display}}</span>';
+      return `<span>${item.display}</span>`;
     },
     callback: {
       onClickAfter: async () => {
         $('#timeline-content').html(templateService.getTemplate('loading'));
-        const mark = $('#trademark').val();
-        const trademarkEntry = trademarkMap[mark][0]; // TODO: index zero
+        const trademarkEntry = trademarkMap[$('#trademark').val()];
         const results = await Trademark.getTrademarkForAddress(trademarkEntry.address);
 
         const fileName = results.word ? results.word : `trademark`;
@@ -64,7 +64,7 @@ $().ready(() => {
 
         // this is due to an on chain data discrepancy.
         // we are modifying the results rendered in the UI but not the raw data downloaded
-        if (trademarkEntry.design && !results.design) {
+        if (trademarkEntry.design && !results.migratedLocation) {
           // set the design location as we know it
           results.migratedLocation = trademarkEntry.design;
         }
