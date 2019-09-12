@@ -219,6 +219,7 @@ async function processTrademark(trademark, address, context) {
       result.word = word;
     }
   }
+  // noinspection JSUnresolvedVariable
   if (trademark.getMark) {
     log(DEBUG, ` - getting word ${context}`);
     const word = await trademark.getMark();
@@ -289,8 +290,10 @@ async function processTrademark(trademark, address, context) {
       delete document.next;
     }
   }
+  // noinspection JSUnresolvedVariable
   if (trademark.getAssignment) {
     log(DEBUG, `getting assignment ${context}`);
+    // noinspection JSUnresolvedFunction
     const assignment = await trademark.getUsageDocument();
     if (assignment !== '0x0000000000000000000000000000000000000000') {
       log(DEBUG, `adding assignment ${context}`);
@@ -300,6 +303,7 @@ async function processTrademark(trademark, address, context) {
       }
     }
   }
+  // noinspection JSUnresolvedVariable
   if (trademark.getUsageDocument) {
     log(DEBUG, `getting usage document ${context}`);
     const usageDocument = await trademark.getUsageDocument();
@@ -458,6 +462,7 @@ async function processProofOfUse(proofOfUse, address, context) {
   await addNext(proofOfUse, result, context);
   await addTimestamp(proofOfUse, result, context, '  ');
   // version 1
+  // noinspection JSUnresolvedVariable
   if (proofOfUse.getGeographicRegion) {
     log(DEBUG, `   - getting regions ${context}`);
     const regions = await proofOfUse.getGeographicRegion();
@@ -470,6 +475,7 @@ async function processProofOfUse(proofOfUse, address, context) {
     }
   }
   // version 2
+  // noinspection JSUnresolvedVariable
   if (proofOfUse.geographicRegion) {
     log(DEBUG, `   - getting regions ${context}`);
     const regions = await proofOfUse.geographicRegion();
@@ -482,6 +488,7 @@ async function processProofOfUse(proofOfUse, address, context) {
     }
   }
   // version 1 and 2
+  // noinspection JSUnresolvedVariable
   if (proofOfUse.getClassOfGoods) {
     log(DEBUG, `   - getting class of goods ${context}`);
     const classOfGoods = await proofOfUse.getClassOfGoods();
@@ -520,16 +527,19 @@ async function processProofOfUse(proofOfUse, address, context) {
   //   }
   // }
   // version 1
+  // noinspection JSUnresolvedVariable
   if (proofOfUse.getProofOfUse) {
     log(DEBUG, `   - adding hash ${context}`);
     result.hash = await proofOfUse.getProofOfUse();
   }
   // version 2
+  // noinspection JSUnresolvedVariable
   if (proofOfUse.proofOfUse) {
     log(DEBUG, `   - adding hash ${context}`);
     result.hash = await proofOfUse.proofOfUse();
   }
   // version 1 and 2
+  // noinspection JSUnresolvedVariable
   if (proofOfUse.getDetails) {
     log(DEBUG, `   - getting details ${context}`);
     const details = await proofOfUse.getDetails();
@@ -565,6 +575,7 @@ async function processAssignment(assignment, address, context) {
     }
   }
   // version 1 and 2
+  // noinspection JSUnresolvedVariable
   if (assignment.getCompanyName) {
     log(DEBUG, `   - getting company name ${context}`);
     const companyName = await assignment.getCompanyName();
@@ -583,6 +594,7 @@ async function processAssignment(assignment, address, context) {
     }
   }
   // version 1 and 2
+  // noinspection JSUnresolvedVariable
   if (assignment.getFirstName) {
     log(DEBUG, `   - getting first name ${context}`);
     const firstName = await assignment.getFirstName();
@@ -601,6 +613,7 @@ async function processAssignment(assignment, address, context) {
     }
   }
   // version 1 and 2
+  // noinspection JSUnresolvedVariable
   if (assignment.getLastName) {
     log(DEBUG, `   - getting last name ${context}`);
     const lastName = await assignment.getLastName();
@@ -642,6 +655,7 @@ async function addTimestamp(document, result, context, prefix) {
     }
   }
   // version 1
+  // noinspection JSUnresolvedVariable
   if (document.getCreatedAt) {
     log(DEBUG, `${prefix} - getting timestamp ${context}`);
     const timestamp = await document.getCreatedAt();
@@ -652,6 +666,7 @@ async function addTimestamp(document, result, context, prefix) {
     }
   }
   // version 2
+  // noinspection JSUnresolvedVariable
   if (document.createdAt) {
     log(DEBUG, `${prefix} - getting timestamp ${context}`);
     const timestamp = await document.createdAt();
@@ -667,6 +682,7 @@ async function addAmendment(document, result, context, prefix) {
   if (!prefix) {
     prefix = '';
   }
+  // noinspection JSUnresolvedVariable
   if (document.getAmendment) {
     log(DEBUG, `${prefix} - getting amendment ${context}`);
     const amendment = await document.getAmendment();
