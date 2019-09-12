@@ -1,11 +1,11 @@
-const fs = require('fs');
 const readLine = require('readline');
 
 const lineReader = readLine.createInterface({
   input: require('fs').createReadStream('scripts/map.txt'),
 });
 
-const baseUrl = 'https://cognate.github.io/trademark-access/design_marks';
+const path = 'design_marks';
+const baseUrl = `https://cognate.github.io/trademark-access/${path}`;
 let i = 0;
 const data = {};
 
@@ -19,33 +19,31 @@ lineReader.on('line', line => {
   if (address === '') {
     // console.log(`no address : ${id}`);
   } else {
-    const design = designId === '' ? '' : `${baseUrl}/${designId}`;
+    const design = designId === '' ? '' : `${path}/${designId}`;
     const entry = {
       address: address,
-      design: design === '' ? undefined : design,
+      design: designId === '' ? undefined : `${baseUrl}/${designId}`,
       word: word === '' ? undefined : word,
     };
     // this will build a map of words/designs to an array of addresses
-    if (word !== '') {
-      // add anything with a word
-      if (data[word] === undefined) {
-        data[word] = [];
-      }
-      data[word].push(entry);
-    }
-    if (design !== '') {
-      // add anything with a design
-      if (data[design] === undefined) {
-        data[design] = [];
-      }
-      data[design].push(entry);
-    }
+    addEntry(data, word, entry, 0);
+    addEntry(data, design, entry, 0);
   }
 });
 lineReader.on('close', () => {
-  console.log(JSON.stringify(sort(data)));
-  // console.log(`closed - processed ${i}`);
+  console.log(JSON.stringify(sort(data), null, 2));
 });
+
+function addEntry(data, key, entry, index) {
+  if (key !== '') {
+    const lookup = index > 0 ? `${key} [${index}]` : key;
+    if (data[lookup] === undefined) {
+      data[lookup] = entry;
+    } else {
+      addEntry(data, key, entry, index + 1);
+    }
+  }
+}
 
 function sort(unordered) {
   const ordered = {};
