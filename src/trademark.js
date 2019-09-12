@@ -362,6 +362,19 @@ async function processTrademark(trademark, address, context) {
   if (result.timeline.documents.length === 0) {
     log(DEBUG, `deleting empty timeline ${context}`);
     delete result.timeline;
+  } else {
+    // sort the documents
+    result.timeline.documents.sort((a, b) => {
+      if (!a.timestamp && !b.timestamp) {
+        return 0;
+      } else if (!a.timestamp) {
+        return 1;
+      } else if (!b.timestamp) {
+        return -1;
+      } else {
+        return a.timestamp - b.timestamp;
+      }
+    });
   }
   return sort(result);
 }
