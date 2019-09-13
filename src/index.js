@@ -107,6 +107,7 @@ $().ready(() => {
                          <div class="design-hash">${results.design}
                        </div>`;
         }
+        // noinspection JSUnresolvedFunction
         $('#timeline-content').html(
           templateService.getTemplate('timelineHeader', {
             address: trademarkEntry.address,

@@ -4,20 +4,7 @@ const Handlebars = require('handlebars');
 const Templates = function() {
 
   // Handlebars Templates
-  this.dialog = Handlebars.compile([
-      /* eslint-disable indent, quotes */
-      '<div class="dialog">',
-          '<div class="dialog-alert">',
-          '</div>',
-          '<div class="dialog-content">',
-              '<div class="cancel-dialog-btn destroy-dialog"><span class="glyphicon glyphicon-remove"></span></div>',
-              '{{{content}}}',
-          '</div>',
-          '<div class="overlay"></div>',
-      '</div>',
-      /* eslint-enable indent, quotes */
-  ].join("\n"));
-
+  // noinspection JSUnresolvedFunction
   this.loading = Handlebars.compile([
       /* eslint-disable indent, quotes */
       '<div class="loading-screen">',
@@ -26,6 +13,7 @@ const Templates = function() {
       /* eslint-enable indent, quotes */
   ].join("\n"));
 
+  // noinspection JSUnresolvedFunction
   this.timelineHeader = Handlebars.compile([
       /* eslint-disable indent, quotes */
       '<div class="tmark">',
@@ -38,6 +26,7 @@ const Templates = function() {
       /* eslint-enable indent, quotes */
   ].join("\n"));
 
+  // noinspection JSUnresolvedFunction
   this.timelineEntry = Handlebars.compile([
       /* eslint-disable indent, quotes */
       '<div class="entry">',
@@ -47,6 +36,7 @@ const Templates = function() {
       /* eslint-enable indent, quotes */
   ].join("\n"));
 
+  // noinspection JSUnresolvedFunction
   this.timelineEntryContent = Handlebars.compile([
       /* eslint-disable indent, quotes */
       '<div class="type">',
@@ -66,6 +56,7 @@ const Templates = function() {
       /* eslint-enable indent, quotes */
   ].join("\n"));
 
+  // noinspection JSUnresolvedFunction
   this.timelineEntryDataTable = Handlebars.compile([
       /* eslint-disable indent, quotes */
       '<table class="table">',

@@ -94,6 +94,10 @@ h2 {
 
   .select-mark {
     margin-bottom: 30px;
+
+    label {
+      display: none;
+    }
   }
 
   .panel-title {
@@ -137,6 +141,7 @@ h2 {
   table.listing-info {
     text-align: left;
     margin-top: 15px;
+
     td.fieldname {
       vertical-align: middle;
     }
@@ -150,23 +155,27 @@ h2 {
         &.snapshot-frequency {
           td.fieldname {
             text-align: center;
+
             button.website-capture-form {
               margin-top: 5px;
               padding-top: 2px;
               height: 25px;
             }
           }
+
           table {
             tr {
               &:not(:last-child) {
                 border-bottom: 1px solid #ccc;
               }
+
               td {
                 padding: 5px;
               }
             }
           }
         }
+
         &.submitted-by,
         &.report-frequency {
           td {
@@ -239,12 +248,14 @@ h2 {
               }
             }
           }
+
           span {
             &.frequency,
             &.next-run {
               color: $bs-blue;
             }
           }
+
           .edit-btn {
             margin-top: 10px;
           }
@@ -473,6 +484,7 @@ h2 {
   .loader:after {
     border-radius: 50%;
   }
+
   .loader {
     color: $bs-blue;
     font-size: 8px;
@@ -486,11 +498,13 @@ h2 {
     -ms-transform: translateZ(0);
     transform: translateZ(0);
   }
+
   .loader:before,
   .loader:after {
     position: absolute;
     content: '';
   }
+
   .loader:before {
     width: 5.2em;
     height: 10.2em;
@@ -503,6 +517,7 @@ h2 {
     -webkit-animation: load2 2s infinite ease 1.5s;
     animation: load2 2s infinite ease 1.5s;
   }
+
   .loader:after {
     width: 5.2em;
     height: 10.2em;
@@ -515,6 +530,7 @@ h2 {
     -webkit-animation: load2 2s infinite ease;
     animation: load2 2s infinite ease;
   }
+
   @-webkit-keyframes load2 {
     0% {
       -webkit-transform: rotate(0deg);

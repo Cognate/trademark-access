@@ -6,17 +6,17 @@ const cogMap = require('./cogMap');
 
 function buildTimeline(element, entries) {
   entries = groupEntriesByDate(entries);
-  for (var i = 0; i < entries.length; i++) {
+  for (let i = 0; i < entries.length; i++) {
     createEntry(element, entries[i]);
   }
 }
 
 function groupEntriesByDate(entries) {
   // Use object keys to group entries by date
-  var dates = {};
-  for (var i = 0; i < entries.length; i++) {
-    var entry = entries[i];
-    var date = moment(new Date(entry.timestamp * 1000)).format('LL');
+  let dates = {};
+  for (let i = 0; i < entries.length; i++) {
+    const entry = entries[i];
+    const date = moment(new Date(entry.timestamp * 1000)).format('LL');
     if (dates[date] === undefined) {
       dates[date] = {
         date: date,
@@ -44,10 +44,10 @@ function groupEntriesByDate(entries) {
     }
   }
   // Convert object to list so entries can be ordered by date
-  dates = Object.keys(dates).map(function(key) {
+  dates = Object.keys(dates).map(key => {
     return dates[key];
   });
-  return dates.sort(function(d1, d2) {
+  return dates.sort((d1, d2) => {
     return d2.date - d1.date;
   });
 }
@@ -58,17 +58,17 @@ function createEntry(element, entry) {
     {
       formattedDate: entry.date,
     },
-    function(entryDiv) {
-      for (var i = 0; i < entry.assignment.length; i++) {
+    entryDiv => {
+      for (let i = 0; i < entry.assignment.length; i++) {
         populateEntry(entryDiv, entry.assignment[i], 'Assignment');
       }
-      for (var i = 0; i < entry.classification.length; i++) {
+      for (let i = 0; i < entry.classification.length; i++) {
         populateEntry(entryDiv, entry.classification[i], 'Classification');
       }
-      for (var i = 0; i < entry.area_of_use.length; i++) {
+      for (let i = 0; i < entry.area_of_use.length; i++) {
         populateEntry(entryDiv, entry.area_of_use[i], 'Area of use');
       }
-      for (var i = 0; i < entry.proof_of_use.length; i++) {
+      for (let i = 0; i < entry.proof_of_use.length; i++) {
         populateEntry(entryDiv, entry.proof_of_use[i], 'Proof of use');
       }
     },
@@ -77,7 +77,7 @@ function createEntry(element, entry) {
 
 function populateEntry(entryDiv, entryPart, contentType) {
   if (contentType === 'Assignment') {
-    var assignmentTable = {};
+    const assignmentTable = {};
     if (entryPart.companyName) {
       assignmentTable.CompanyName = entryPart.companyName;
     }
@@ -87,48 +87,50 @@ function populateEntry(entryDiv, entryPart, contentType) {
     if (entryPart.lastName) {
       assignmentTable.LastName = entryPart.lastName;
     }
-    var table = templateService.getTemplate('timelineEntryDataTable', { tableData: assignmentTable });
-
+    const table = templateService.getTemplate('timelineEntryDataTable', { tableData: assignmentTable });
+    // noinspection JSUnresolvedFunction
     appendContentToEntry(entryDiv, {
       address: entryPart.address,
       contentType: contentType,
       entryContent: new Handlebars.SafeString(table),
     });
   } else if (contentType === 'Proof of use') {
-    var proofTable = {};
+    const proofTable = {};
     proofTable.Hash = entryPart.hash;
     if (entryPart.deprecatedLocation) {
       proofTable.ID = entryPart.deprecatedLocation.slice(25);
     }
-    var table = templateService.getTemplate('timelineEntryDataTable', { tableData: proofTable });
+    const table = templateService.getTemplate('timelineEntryDataTable', { tableData: proofTable });
+    // noinspection JSUnresolvedFunction
     appendContentToEntry(entryDiv, {
       address: entryPart.address,
       contentType: contentType,
       entryContent: new Handlebars.SafeString(table),
     });
   } else if (contentType === 'Classification') {
-    var cogTable = {};
+    const cogTable = {};
     cogTable.Classification = `${entryPart.classOfGoods} | ${cogMap[entryPart.classOfGoods]}`;
     if (entryPart.details) {
+      // noinspection JSUnresolvedFunction
       cogTable.Identifications = new Handlebars.SafeString(entryPart.details.join('<br>'));
     }
-    var table = templateService.getTemplate('timelineEntryDataTable', { tableData: cogTable });
-
+    const table = templateService.getTemplate('timelineEntryDataTable', { tableData: cogTable });
+    // noinspection JSUnresolvedFunction
     appendContentToEntry(entryDiv, {
       address: entryPart.address,
       contentType: contentType,
       entryContent: new Handlebars.SafeString(table),
     });
   } else if (contentType === 'Area of use') {
-    var aouTable = {};
+    const aouTable = {};
     if (entryPart.regions) {
       aouTable.States = entryPart.regions.join(', ');
     }
     if (entryPart.countries) {
       aouTable.Countries = entryPart.countries.join(', ');
     }
-    var table = templateService.getTemplate('timelineEntryDataTable', { tableData: aouTable });
-
+    const table = templateService.getTemplate('timelineEntryDataTable', { tableData: aouTable });
+    // noinspection JSUnresolvedFunction
     appendContentToEntry(entryDiv, {
       address: entryPart.address,
       contentType: contentType,
@@ -138,14 +140,14 @@ function populateEntry(entryDiv, entryPart, contentType) {
 }
 
 function appendEntry(element, entryData, callback) {
-  var template = templateService.getTemplate('timelineEntry', entryData);
-  var div = $(template);
+  const template = templateService.getTemplate('timelineEntry', entryData);
+  const div = $(template);
   element.append(div);
   callback(div);
 }
 
 function appendContentToEntry(entryDiv, content) {
-  var template = templateService.getTemplate('timelineEntryContent', content);
+  const template = templateService.getTemplate('timelineEntryContent', content);
   entryDiv.find('.content').append(template);
 }
 
