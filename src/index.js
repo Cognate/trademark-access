@@ -10,6 +10,7 @@ const trademarkMap = require('./trademarkMap');
 const templateService = require('./SimpleTemplateService');
 const Handlebars = require('handlebars');
 const Util = require('./util');
+const moment = require('moment');
 
 window.Dropzone = require('./dropzone');
 
@@ -34,7 +35,7 @@ $().ready(() => {
         reader.readAsBinaryString(file);
       });
       const buffer = new Buffer(fileData, 'binary');
-      $('#sha-result').html(Util.sha256(buffer));
+      $('#sha-result').html(`0x${Util.sha256(buffer)}`);
     },
   });
 
@@ -107,12 +108,14 @@ $().ready(() => {
                          <div class="design-hash">${results.design}
                        </div>`;
         }
+        const date = results.timestamp ? moment(new Date(results.timestamp * 1000)).format('LL') : '';
         // noinspection JSUnresolvedFunction
         $('#timeline-content').html(
           templateService.getTemplate('timelineHeader', {
             address: trademarkEntry.address,
             fileData,
             fileName: fileName,
+            formattedDate: date,
             markHtml: new Handlebars.SafeString(markHtml),
           }),
         );

@@ -17,6 +17,7 @@ const Templates = function() {
   this.timelineHeader = Handlebars.compile([
       /* eslint-disable indent, quotes */
       '<div class="tmark">',
+        '<div class="date">{{formattedDate}}</div>',
         '<div>{{markHtml}}</div>',
         '<div>',
             '<a href="https://etherscan.io/address/{{address}}#code" target="_blank">See it on Etherscan</a> | ',
