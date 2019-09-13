@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <title>Cognate Legacy TM Record Access</title>
+  <link rel="apple-touch-icon" sizes="57x57" href="../favicons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="../favicons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="../favicons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="../favicons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="../favicons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="../favicons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="../favicons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="../favicons/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="../favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="../favicons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="../favicons/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="../favicons/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="../favicons/favicon-192x192.png" sizes="192x192">
+  <meta name="msapplication-TileColor" content="#2b5797">
+  <meta name="msapplication-TileImage" content="../favicons/mstile-144x144.png">
+</head>
+<body>
+<div class="header">
+  <img src="../cog_logo_cm.png" alt="Cognate"/>
+  <h1 class="title">Technical Details</h1>
+</div>
+<div class="instructions">
+  <h5>Ethereum</h5>
+  <p>
+    <a target="_blank" href="https://www.ethereum.org/">Ethereum</a> is the backing blockchain network where Cognate
+    chose to store trademark data. We developed a series of smart contracts that are published to Ethereum and were
+    used in the creation and retrieve of trademark data. With the Ethereum address of your trademark can you can pull up
+    the raw bytecode data that is stored within. Using our smart contract code it is possible to retrieve and view said
+    data. This is what our tool does for you.
+  </p>
+  <p>
+    <a target="_blank" href="https://etherscan.io/">Etherscan</a> is a blockchain explorer. It can be used to see
+    transactions committed to Ethereum. This includes the trademark data that we stored within. Knowing your address you
+    can view the raw bytecode in a web browser as well as see other related bits of information such as (but not
+    including) any child transactions and documents or other unrelated transactions what utilized our smart contract
+    code. You can even view statistics about ETH including how much we might have spent to store data there.
+  </p>
+  <h5>SHA-256 and Proof of Existence</h5>
+  <p>
+    Cognate never actually stored images on the blockchain. There are two driving factors behind this. First, storing
+    images and other large documents in a public blockchain is just too expensive. Second, data that is put on the
+    blockchain is there for the life of the blockchain (read forever). This would make it hard to allow a user to be
+    forgotten.
+  </p>
+  <p>
+    What this means for a design mark or proof of use is that we took the
+    <a target="_blank" href="https://en.wikipedia.org/wiki/SHA-2">SHA-256</a> hash of the file and stored that on the
+    blockchain. This would be something like:
+    <code>0xd0470b0caabac1bed10bf1f958d14117f8996a85d4caaa8c3fc363994180b414</code>. A SHA hash is not reversible so the
+    data represented is blind. SHA-256 allows for 2^256 different outcomes; thus the likelihood of a collision (meaning
+    two different pieces of data produce the same hash) becomes statistically probable with half that number of keys.
+    So it is impossible for someone to alter a design image or proof in a meaningful way and hope to be able to produce
+    the same hash. This, too, is why it is is important to use the same, unaltered file or one would end up with a
+    different hash entirely.
+  </p>
+  <p>
+    All of this plays into
+    <a target="_blank"
+       href="https://medium.com/@kiknaio/what-is-proof-of-existence-and-how-will-it-help-to-protect-intellectual-or-private-property-77aa97a3fbb1">
+      Proof of Existence
+    </a>
+    and its strength on a blockchain. A set of data is stored on a blockchain of which there is a hash and a timestamp.
+    An individual has a file (image) which can be used to produce a hash. If the hash of the file and the hash in the
+    blockchain are the same one can reason that the file existed at the timestamp in the blockchain. Thus proving that
+    the file existed, in an unaltered form compared to now, at that time. Couple that with the fact that the blockchain
+    is tamper-proof, this makes for infallible evidence that a trademark's design or proof of use existed and was in use
+    at the time.
+  </p>
+  <h5>This Codebase</h5>
+  <p>
+    If you are curious, this code is mostly just HTML and JavaScript. The project is hosted in
+    <a target="_blank" href="https://github.com/Cognate/trademark-access/">GitHub</a>.
+  </p>
+  <ul>
+    <li>
+      We use <a target="_blank" href="https://github.com/ethereum/web3.js">Web3</a> to connect to and pull information
+      out of Ethereum.
+    </li>
+    <li>
+      We use the <a target="_blank" href="https://infura.io/">Infura network</a> to access Ethereum without needing our
+      own node.
+    </li>
+    <li>
+      Our smart contract code is available
+      <a target="_blank" href="https://github.com/Cognate/trademark-access/tree/master/src/contracts">here</a>. We have
+      4 versions of the code as it evolved over the years we operated. There are trademarks on Ethereum in existence
+      that use each version.
+    </li>
+    <li>
+      The code that pulls the data from Ethereum is located
+      <a target="_blank" href="https://github.com/Cognate/trademark-access/blob/master/src/trademark.js">here</a>. It
+      simply looks up an address and then resolves as much raw data as possible. This is what would be downloaded by a
+      trademark lookup.
+    </li>
+    <li>
+      The code that generates the SHA-256 for an image is located
+      <a target="_blank" href="https://github.com/Cognate/trademark-access/blob/master/src/util.js">here</a>. It simply
+      takes the data (as a buffer) and returns the code.
+    </li>
+    <li>
+      We utilize <a target="_blank" href="https://pages.github.com/">GitHub Pages</a> to host our site. It offers an
+      indefinite solution which will hopefully be available as long as the Ethereum network is.
+    </li>
+  </ul>
+  <script src="../dist/bundle.js"></script>
+</div>
+</body>
+</html>
