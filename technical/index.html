@@ -52,11 +52,12 @@
     <a target="_blank" href="https://en.wikipedia.org/wiki/SHA-2">SHA-256</a> hash of the file and stored that on the
     blockchain. This would be something like:
     <code>0xd0470b0caabac1bed10bf1f958d14117f8996a85d4caaa8c3fc363994180b414</code>. A SHA hash is not reversible so the
-    data represented is blind. SHA-256 allows for 2^256 different outcomes; thus the likelihood of a collision (meaning
-    two different pieces of data produce the same hash) becomes statistically probable with half that number of keys.
-    So it is impossible for someone to alter a design image or proof in a meaningful way and hope to be able to produce
-    the same hash. This, too, is why it is is important to use the same, unaltered file or one would end up with a
-    different hash entirely.
+    data represented is blind. It will also always produce the same output for a given input. SHA-256 allows for 2^256
+    different outcomes; thus the likelihood of a collision (meaning two different pieces of data produce the same hash)
+    becomes statistically probable with half that number of keys. So it is impossible for someone to alter a design
+    image or proof in a meaningful way and hope to be able to produce the same hash. This, too, is why it is is
+    important to use the same, unaltered file or one would end up with a different hash entirely. Even a single pixel
+    difference will produce an entirely different hash and void that file's ability to help prove claims.
   </p>
   <p>
     All of this plays into
