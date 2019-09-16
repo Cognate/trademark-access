@@ -51,14 +51,20 @@
         What this means for a design mark or proof of use is that we took the
         <a target="_blank" href="https://en.wikipedia.org/wiki/SHA-2">SHA-256</a> hash of the file and stored that on
         the blockchain. This would be something like:
-        <code>0xd0470b0caabac1bed10bf1f958d14117f8996a85d4caaa8c3fc363994180b414</code>. A SHA hash is not reversible so
-        the data represented is blind. It will also always produce the same output for a given input. SHA-256 allows for
-        2^256 different outcomes; thus the likelihood of a collision (meaning two different pieces of data produce the
-        same hash) becomes statistically probable with half that number of keys. So it is impossible for someone to
-        alter a design image or proof in a meaningful way and hope to be able to produce the same hash. This, too, is
-        why it is is important to use the same, unaltered file or one would end up with a different hash entirely. Even
-        a single pixel difference will produce an entirely different hash and void that file's ability to help prove
-        claims.
+        <code>0xd0470b0caabac1bed10bf1f958d14117f8996a85d4caaa8c3fc363994180b414</code>. The blockchain secures both the
+        hash and the timestamp of the block that the hash is included in, creating an immutable, timestamped record of
+        the hash. A SHA hash has two important mathematical properties that make it reliable for this use case. It is
+        not reversible so the data represented is blind. It will also always produce the same output for a given input
+        (in this case the input is your proof document and the output is the hash that goes on the blockchain). This
+        means that the when you provide your proof document file to the SHA-256 function as input, it will always
+        produce the same output. SHA-256 allows for 2^256 different outcomes; thus the likelihood of a collision
+        (meaning two different pieces of data produce the same hash) becomes statistically probable with half that
+        number of keys. So it is impossible for someone to alter a design image or proof in a meaningful way and hope to
+        be able to produce the same hash. This, too, is why it is is important to use the same, unaltered file or one
+        would end up with a different hash entirely. Even a single pixel difference will produce an entirely different
+        hash and void that file's ability to help prove claims. With these properties, you can make the infallible claim
+        that if the SHA-256 hash produced from your proof document matches the hash that was stored in the blockchain,
+        the document existed at the point in time when that hash was added to the blockchain.
       </p>
       <p>
         All of this plays into
