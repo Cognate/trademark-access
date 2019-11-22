@@ -13,5 +13,5 @@ IMAGES="./scripts/images.csv" # the list of images to copy
 aws s3 sync "s3://cog-usage-documents" "${INPUT}"
 while read LINE; do
   mkdir -p "${OUTPUT}/${LINE}" ;
-  cp -p -R "${INPUT}/${LINE}" "${OUTPUT}/${LINE}" ;
+  cp -p -R "${INPUT}/${LINE}" "${OUTPUT}/" ;
 done <"${IMAGES}"
